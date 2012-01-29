@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}DMCM: Update{% endblock %}
+
+{% block banner %}DMCM: Update Options{% endblock %}
+
+{% block content %}
+    <p>Jump to: 
+    <a href="#page-heading">Options</a>,
+    <a href="#publish">Publish Site</a>, 
+    <a href="#navimenu">Navigation Menu</a>,
+    <a href="#sitemap">Site Map</a>,
+    <a href="#pagetem">Page Template</a>,
+    <a href="#blog">Blog</a>.</p>
+    
+    <form action="" method="post"> {% csrf_token %}
+        <h2 id="page-heading">Options</h2>
+        <h3>Deployment Directory</h3>
+        {{ form.deploy_path }} 
+        <p>Path to directory that site (i.e. .html) files will be written to.</p>
+        <h3>Source Directory</h3>
+        {{ form.source_dir }}
+        <p>Directory, within Deployment directory, that markup source (.txt files) will be written to.</p>
+        <input type="submit" name="save" value="Save">
+        
+        <h2 id="publish">Publish Site</h2>
+        <p><input type="submit" name="publish" value="Publish All"></p>
+        <p><a href="#">Back to Top</a></p>
+
+        <h2 id="navimenu">Navigation Menu</h2>
+        {{ form.nav_menu_body }}
+        <p><input type="submit" name="navmenu" value="Save"></p>
+        <p><a href="#">Back to Top</a></p>
+        
+        <h2 id="sitemap">Site Map</h2>
+        <p>Root page of site: {{ form.root_page }}</p>
+        <p>Site Map List: {{ form.sitemap_list }}</p>
+        <p><input type="submit" name="sitemap" value="Generate Site Map">
+            <a href="/dmcm/listupdt/{{ sitemap.pk }}" title="Show List">List</a></p>
+        <p><a href="#">Back to Top</a></p>
+
+        <h2 id="pagetem">Page Template</h2>
+        {{ form.page_template }}
+        <p><input type="submit" name="pagetemplate" value="Save Page Template"></p>
+        <p><a href="#">Back to Top</a></p>
+
+        <h2 id="blog">Blog</h2>
+        <p>Root page of blog: {{ form.blog_root_page }}</p>
+        <p>Blog Summary Size: {{ form.blog_summary_size }}</p>
+        <h3>Deployment Directory</h3>
+        {{ form.blog_deploy_dir }} 
+        <p>Directory that blog entries (i.e. .html) files will be written to.</p>
+        <h3>Source Directory</h3>
+        {{ form.blog_source_dir }}
+        <p>Directory, within Deployment directory, that markup source (.txt files) will be written to.</p>
+        <p><input type="submit" name="navmenu" value="Save"></p>
+        <p><a href="#">Back to Top</a></p>
+    </form>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}DMCM: Index{% endblock %}
+
+{% block banner %}DMCM: Index{% endblock %}
+
+{% block content %}
+    <h2 id="page-heading">Pages Lists and Blog Entries</h2>
+    <p>Enter and manage site contents using Markdown text. 
+    <a href="/dmcm/options" title="Publish">Publish</a> site as static html.</p>
+    <p>Jump to: 
+        <a href="#lists">Lists</a>,
+        <a href="#blog">Blog</a>.
+    <h2>Pages</h2>
+    <table>
+        <thead><tr>
+            <th>Title</th>
+            <th>Filename</th>
+            <th>Parent</th>
+            <th>Updated</th>
+        </tr></thead>
+        <tbody>
+        {% for page in pages %}
+            <tr>
+                <td>{{ page.title }}</td>
+                <td><a href="/dmcm/pageupdt/{{ page.pk }}" title="Update Page">{{ page.filename }}</a></td>
+                <td>{{ page.parent }}</td>
+                <td>{{ page.updated|date:"Y-m-d H:i:s" }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="#">Back to Top</a></p>
+
+    <h2 id="lists">Lists</h2>
+    <table>
+        <thead><tr>
+            <th>Title</th>
+            <th>Update</th>
+            <th>Parent</th>
+            <th>Updated</th>
+        </tr></thead>
+        <tbody>
+        {% for list in lists %}
+            <tr>
+                <td>{{ list.title }}</td>
+                <td><a href="/dmcm/listupdt/{{ list.pk }}" title="Update List">Update</a></td>
+                <td>{{ list.parent }}</td>
+                <td>{{ list.updated|date:"Y-m-d h:i:s" }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="#">Back to Top</a></p>
+
+    <h2 id="blog">Blog Entries</h2>
+    <table>
+        <thead><tr>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Update</th>
+            <th>Updated</th>
+        </tr></thead>
+        <tbody>
+        {% for blog_entry in blog_entries %}
+            <tr>
+                <td>{{ blog_entry.date }}</td>
+                <td>{{ blog_entry.title }}</td>
+                <td><a href="/dmcm/blogupdt/{{ blog_entry.pk }}" title="Update Blog Entry">Update</a></td>
+                <td>{{ blog_entry.updated|date:"Y-m-d h:i:s" }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="#">Back to Top</a></p>
+{% endblock %}

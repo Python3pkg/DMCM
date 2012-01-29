@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}DMCM: Add List{% endblock %}
+
+{% block banner %}DMCM: Add List{% endblock %}
+
+{% block content %}
+    <h2 id="page-heading">Add List</h2>
+    <form action="" method="post"> {% csrf_token %}
+		<div class="box">
+			<div class="grid_3">
+				<fieldset>
+					<legend>Description</legend>
+					<p><label>Title: </label> {{ form.title }}</p>
+					<p><label>Parent: </label> {{ form.parent }}</p>
+					<p><label>Delimiter: </label> {{ form.delimiter }}</p>
+				</fieldset>
+				<input type="submit" name="save" value="Save">
+			</div>
+			<div class="grid_9">
+				<fieldset class="login">
+					<legend>Content</legend>
+					<p><label>Prefix (Use Markdown syntax): </label> {{ form.prefix }}</p>
+					<p><label>Template: </label> {{ form.template }}</p>
+					<p><label>Data: </label> {{ form.data }}</p>
+					<p><label>Suffix (Use Markdown syntax): </label> {{ form.suffix }}</p>
+				</fieldset>
+			</div>
+			<div class="clear"></div>
+		</div>
+    </form>
+{% endblock %}

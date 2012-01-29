@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}DMCM: Update List{% endblock %}
+
+{% block banner %}DMCM: Update List{% endblock %}
+
+{% block content %}
+    <h2 id="page-heading">Update List: {{ list.title }}</h2>
+    <p>Jump to: 
+        <a href="#body">Body</a>.</p>
+    <form action="" method="post"> {% csrf_token %}
+        <p>Actions: 
+            <input type="submit" name="save" value="Save">,
+            <a href="/dmcm/pageupdt/{{ parent_id }}" title="Edit Parent Page">Edit Parent</a>.</p>
+        <h4>Prefix (Use Markdown syntax)</h4>
+        {{ form.prefix }} 
+        <h4>Template</h4>
+        {{ form.template }} 
+        <h4>Data</h4>
+        {{ form.data }} 
+        <p><input type="submit" name="save" value="Save"></p>
+        <h4>Suffix (Use Markdown syntax)</h4>
+        {{ form.suffix }} 
+        <p>Title: {{ form.title }}; 
+            Parent: {{ form.parent }}; 
+            Delimiter: {{ form.delimiter }};</p>
+        <p><input type="submit" name="save" value="Save"></p>
+    </form>
+    <p><a href="#">Back to Top</a></p>
+    <h3 id="body">Body</h3>
+    <pre>{{ list.list_body }}</pre>
+    <p><a href="#">Back to Top</a></p>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="/site_media/css/reset.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/site_media/css/text.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/site_media/css/grid.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/site_media/css/layout.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/site_media/css/nav.css" media="screen" />
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="../css/ie6.css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="../css/ie.css" media="screen" /><![endif]-->
+		<script type="text/javascript" src="/site_media/js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="/site_media/js/jquery.dataTables.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("table").dataTable({"bPaginate": false});
+			});
+		</script>
+
+		<script type="text/javascript" src="/site_media/lightbox/js/jquery.lightbox.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("a[href$='.jpg']").lightbox();
+		});
+
+		</script>
+
+	</head>
+	<body style="background-color:#FFA500;border-top: 5px solid #FFA500;">
+		<div class="container_12">
+			<div class="grid_12">
+				<h1 id="branding">{% block banner %}{% endblock %}</h1>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12">
+				<ul class="nav main">
+					<li><a href="/dmcm/" title="Index"> Index</a></li>
+					<li><a href="/dmcm/blogadd/" title="Add Blog Entry"> Add Blog</a></li>
+					<li><a href="/dmcm/pageadd/" title="Add Page"> Add Page</a></li>
+					<li><a href="/dmcm/listadd/" title="Add List"> Add List</a></li>
+					<li><a href="/dmcm/options/" title="Options"> Options</a></li>
+					<li><a href="/dmcm/admin/" title="Django Admin"> Admin</a></li>
+					<li><a href="/dmcm/accounts/logout/" title="Logout"> Logout</a></li>
+					<li class="secondary"><a href="/" title="Published Site"> Site</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12">
+				{% block content %}{% endblock %}
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12" id="site_info">
+				<div class="box">
+					<p>DMCM v 0.3.</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>
