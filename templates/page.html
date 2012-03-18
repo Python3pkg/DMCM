@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{% if page.title != 'ahernp.com' %}
+		ahernp.com:
+	{% endif %}
+	{{ page.title }}
+{% endblock %}
+
+{% block navigation %}
+	{% for parent in page.navigation_path %}
+		<a href="{{ parent.address }}">{{ parent.title }}</a> &gt
+	{% endfor %}
+	{{ page.title }}
+{% endblock %}
+
+{% load markup %}
+
+{% block content %}
+{% if page.title == 'ahernp.com' %} 
+	<div id="content" style="width:45em; margin-left:auto; margin-right:auto;">
+{% else %}
+	<div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
+{% endif %}
+		{{ page.content|markdown:"tables,toc" }}
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<p>
+		Last Updated: {{ page.updated }};
+		<span id="source_label">Markdown Source</span>;
+		<a href="/admin/cm/page/{{ page.id }}/" title="Edit this page">Edit</a> 
+	</p>
+	<div id="source_body" style="display: none">
+		<pre>{{page.content}}</pre>
+	</div>
+{% endblock %}
