@@ -1,4 +1,3 @@
-import os
 # Django settings for userid project.
 
 DEBUG = True
@@ -36,12 +35,12 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/ahernp/code/dmcm/site_media/'
+MEDIA_ROOT = '/home/ahernp/Documents/ahernp.com/site/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -70,7 +69,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'dmcm.urls'
 
 TEMPLATE_DIRS = (
-    '/home/ahernp/code/dmcm/templates'
+    '/home/ahernp/code/dmcm/dmcm/templates'
 )
 
 INSTALLED_APPS = (
@@ -78,8 +77,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.contenttypes',
-    #'django.contrib.sessions',
+    'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.markup',
     'reversion',
     'dmcm.cm',
 )
