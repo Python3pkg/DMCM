@@ -23,13 +23,12 @@
 			#source_label {color:#046; text-decoration:underline; cursor:pointer;}
 		</style>
 		<script type="text/javascript" src="/static/site_media/js/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="/static/site_media/js/jquery.dataTables.js"></script>
-		<script type="text/javascript" src="/static/site_media/lightbox/js/jquery.lightbox.min.js"></script>
+		<script type="text/javascript" src="/static/site_media/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="/static/site_media/slideshow/scripts/jquery.lightbox.js?show_linkback=false&amp;show_helper_text=false"></script>
 		<script type="text/javascript">
 		$(function() {
 			$("table").dataTable({"bPaginate": false, "aaSorting": []});
-			$("a[href$='.jpg']").lightbox();
-			$("a[href$='.png']").lightbox();
+			$('a:has(img)').lightbox();
 			$('#source_label').click(function() {
 				$('#source_body').toggle('slow', function() {});
 			});
