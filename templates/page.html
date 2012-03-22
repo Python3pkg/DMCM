@@ -9,7 +9,7 @@
 
 {% block navigation %}
 	{% for parent in page.navigation_path %}
-		<a href="{{ parent.address }}">{{ parent.title }}</a> &gt
+		<a href="{{ parent.address }}">{{ parent.title }}</a> &rsaquo;
 	{% endfor %}
 	{{ page.title }}
 {% endblock %}

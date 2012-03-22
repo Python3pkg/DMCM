@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}ahernp.com: {{ title }} {% endblock %}
+
+{% block extrastyle %}
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<style>
+body, .form-row label {font-family:'Droid Sans', Arial, sans-serif; background:#fff;color:#444;}
+h1, h2, h3, h4, a, th {color:#046;}
+
+#header {background-color:#fff; border-bottom:solid 1px #ccc;}
+#user-tools {color:#444;}
+#header h1, #header a:link, #header a:visited {color:#046;}
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="/">ahernp.com</a> administration</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

@@ -8,8 +8,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^$', page, {'page_id': 3}), # Homepage
     (r'^page/(\d+)/$', page),
-    (r'^admin/', include(admin.site.urls)),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    (r'^admin/', include(admin.site.urls)),
     (r'^admin/jsi18n/$', 'django.views.i18n.javascript_catalog'),
     )
 
