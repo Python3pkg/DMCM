@@ -17,7 +17,7 @@
 {% load markup %}
 
 {% block content %}
-{% if page.title == 'ahernp.com' %} 
+{% if page.wide %} 
 	<div id="content" style="width:45em; margin-left:auto; margin-right:auto;">
 {% else %}
 	<div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
@@ -28,7 +28,7 @@
 
 {% block footer %}
 	<p>
-		Last Updated: {{ page.updated }};
+		Last Updated: {{ page.updated|date:"Y-m-d H:i" }};
 		<span id="source_label">Markdown Source</span>;
 		<a href="/admin/cm/page/{{ page.id }}/" title="Edit this page">Edit</a> 
 	</p>

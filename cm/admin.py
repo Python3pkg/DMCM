@@ -5,17 +5,19 @@ from dmcm.cm.models import Page
 from reversion.admin import VersionAdmin
 
 class PageAdmin(VersionAdmin):
-    list_display = ('title', 'parent', 'updated')
+    list_display = ('title', 'parent', 'updated', 'wide')
+    list_filter = ('wide',)
+    list_editable = ('wide',)
     ordering = ('parent', 'title',)
     fieldsets = (
         (None, {
-            'fields': (('title', 'parent',),
+            'fields': (('title', 'parent', 'wide'),
                        ('content',),
                        )
         }),
     )
     formfield_overrides = {
-        models.CharField: {'widget': TextInput(attrs={'size':'60'})},
+        models.CharField: {'widget': TextInput(attrs={'size':'40'})},
         models.TextField: {'widget': Textarea(attrs={'rows':25, 'cols':110})},
     }
 

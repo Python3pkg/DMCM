@@ -19,6 +19,7 @@ class Page(models.Model):
     parent = models.ForeignKey('self')
     updated = models.DateTimeField(verbose_name = 'Time Updated', auto_now = True)
     content = models.TextField(verbose_name = 'Page body', help_text = 'Use Markdown syntax.')
+    wide = models.BooleanField()
 
     def navigation_path(self):
         path = []
@@ -29,6 +30,9 @@ class Page(models.Model):
                 parent = parent.parent
             path.insert(0, {'title': parent.title, 'address': '/'})
         return path
+
+    class Meta:
+        ordering = ['title']
 
     def __unicode__(self):
         return self.title
