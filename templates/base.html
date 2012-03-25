@@ -32,13 +32,35 @@
 			$('#source_label').click(function() {
 				$('#source_body').toggle('slow', function() {});
 			});
+			$('.text').focus(function () {
+				if ($(this).val() == $(this).attr("title")) {
+					$(this).val("");
+					$(this).css('color', '#000');
+				}
+			}).blur(function () {
+				if ($(this).val() == "") {
+					$(this).val($(this).attr("title"));
+					$(this).css('color', '#ccc');
+				}
+			});
 		});
 		</script>
 
 	</head>
-	<body{% if debug %} style="background:#ccf"{% endif %}>
-		<div id="navigation" style="padding:0.2em 1em 0.2em 1em; margin:0; width:100%;">
-			{% block navigation %}{% endblock %}
+	<body>
+		<div id="navigation" style="padding-bottom:0.2em; margin:0; width:100%;">
+			<div style="width:65%;float:left;padding:0.2em 0em 0.2em 1em;">
+				{% block nav_path %}{% endblock %}
+			</div>
+			<div style="width:30%;float:right;padding:0em;text-align:right;">
+				<form name="input" action="/search_pages/" method="get" style="padding-right:1em;">
+					<input type="text" tabindex="1" size="10"
+						{% if search_string %}style="color:#000;"{% else %}style="color:#ccc;"{% endif %}
+						name="search_string" title="Search Site" class="text" 
+						value="{% if search_string %}{{search_string}}{% else %}Search Site{% endif %}"/>
+				</form> 
+			</div>
+			<div style="clear:both"></div>
 		</div>
 		<hr size="1">
 		{% block content %}{% endblock %}

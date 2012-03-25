@@ -9,15 +9,17 @@ class PageAdmin(VersionAdmin):
     list_filter = ('wide',)
     list_editable = ('wide',)
     ordering = ('parent', 'title',)
+    save_on_top = True
     fieldsets = (
         (None, {
-            'fields': (('title', 'parent', 'wide'),
-                       ('content',),
+            'fields': (('content',),
+                       ('title', 'parent',),
+                       ('wide',),
                        )
         }),
     )
     formfield_overrides = {
-        models.CharField: {'widget': TextInput(attrs={'size':'40'})},
+        models.CharField: {'widget': TextInput(attrs={'size':70})},
         models.TextField: {'widget': Textarea(attrs={'rows':25, 'cols':110})},
     }
 

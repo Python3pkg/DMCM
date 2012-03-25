@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import patterns, include
 from django.contrib import admin
-from dmcm.cm.views import page, site_map
+from dmcm.cm.views import page, site_map, search_pages
 from dmcm.settings import DEBUG
 
 admin.autodiscover()
@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^$', page, {'page_id': 3}), # Homepage
     (r'^page/(\d+)/$', page),
+    (r'^search_pages/$', search_pages),
     (r'^site_map/$', site_map),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),

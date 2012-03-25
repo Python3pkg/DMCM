@@ -19,7 +19,7 @@ class Page(models.Model):
     parent = models.ForeignKey('self')
     updated = models.DateTimeField(verbose_name = 'Time Updated', auto_now = True)
     content = models.TextField(verbose_name = 'Page body', help_text = 'Use Markdown syntax.')
-    wide = models.BooleanField()
+    wide = models.BooleanField(verbose_name = 'Wider Page')
 
     def navigation_path(self):
         path = []

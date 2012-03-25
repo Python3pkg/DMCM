@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}ahernp.com: Site Map{% endblock %}
+
+{% block nav_path %}<a href="/">ahernp.com</a> &rsaquo; Site Map{% endblock %}
+
+{% load markup %}
+
+{% block content %}
+	<div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
+		{{ site_map|markdown:"tables,toc" }}
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<p>
+		<span id="source_label">Markdown Source</span>.
+	</p>
+	<div id="source_body" style="display: none">
+		<pre>{{site_map}}</pre>
+	</div>
+{% endblock %}
