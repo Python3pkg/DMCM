@@ -11,9 +11,9 @@
 	{% else %}
 		<h1>Search Results for "{{ search_string }}"</h1>
 		<h2>Title Matches</h2> 
-		{% if title_match_pages %}
+		{% if title_matches %}
 			<ol>
-			{% for page in title_match_pages %}
+			{% for page in title_matches %}
 				<li><a href="/page/{{ page.id }}">{{ page.title }}</a></li>
 			{% endfor %}
 			</ol>
@@ -25,11 +25,7 @@
 			<ol>
 			{% for match in content_matches %}
 				<li><a href="/page/{{ match.page.id }}">{{ match.page.title }}</a>,
-					{% if match.number_found == 1 %} 
-						matching line:
-					{% else %}
-						found {{ match.number_found }} matches:
-					{% endif %}
+					found {{ match.number_found }} {% if match.number_found == 1 %}match{% else %}matches{% endif %}:
 					<ul>
 						{% for matching_line in match.matching_lines %}
 							<li><code>{{ matching_line }}</code></li>

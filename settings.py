@@ -1,5 +1,7 @@
 # Django settings for userid project.
 
+SITE_ROOT_ID = 3 # Homepage
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -49,6 +51,11 @@ ADMIN_MEDIA_PREFIX = '/site_media/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'b_x^kb%jwavk)(qr)4)l#nls=)l55#a2j878dx@6uh4uye-h2&'
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    "dmcm.cm.utils.context_processor",
+)
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
