@@ -1,6 +1,7 @@
 # Django settings for userid project.
 
 SITE_ROOT_ID = 3 # Homepage
+BLOG_ROOT_ID = 1
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG

@@ -8,13 +8,14 @@ class PageAdmin(VersionAdmin):
     list_display = ('title', 'parent', 'updated', 'wide')
     list_filter = ('wide',)
     list_editable = ('wide',)
+    readonly_fields = ('updated',)
     ordering = ('parent', 'title',)
     save_on_top = True
     fieldsets = (
         (None, {
             'fields': (('content',),
                        ('title', 'parent',),
-                       ('wide',),
+                       ('wide', 'published', 'updated'),
                        )
         }),
     )

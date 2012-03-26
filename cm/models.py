@@ -17,6 +17,7 @@ class Page(models.Model):
     """
     title = models.CharField(max_length = 250, unique = True)
     parent = models.ForeignKey('self')
+    published = models.DateField(null=True,blank=True)
     updated = models.DateTimeField(verbose_name = 'Time Updated', auto_now = True)
     content = models.TextField(verbose_name = 'Page body', help_text = 'Use Markdown syntax.')
     wide = models.BooleanField(verbose_name = 'Wider Page')
