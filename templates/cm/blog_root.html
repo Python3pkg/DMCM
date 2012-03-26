@@ -8,18 +8,20 @@
 
 {% block content %}
 	<div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
-		<h1>Blog</h1>
 		{% for page in object_list %}
 			<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>
 			{{ page.content|markdown:"tables,toc" }}
 			<hr size="1">
 			<p>
 				Last Updated: {{ page.updated|date:"Y-m-d H:i" }};
-				<a href="/page/{{ page.id }}/">Entry</a>. 
+				<a href="/page/{{ page.id }}/">Comment</a>. 
 			</p>
 		{% endfor %}
 	</div>
 	<br>
 {% endblock %}
 
-{% block footer %}<a href="/blog/archive/">Blog Archive</a>{% endblock %}
+{% block footer %}
+	<a href="/blog/archive/">Blog Archive</a>;
+	<a href="/blog/feed/">Feed</a>.
+{% endblock %}

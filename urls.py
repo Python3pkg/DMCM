@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.views.generic import DetailView, ListView
 from dmcm.cm.models import Page
 from dmcm.cm.views import search_pages
+from dmcm.cm.utils import LatestBlogPostsFeed
 from dmcm.settings import DEBUG, SITE_ROOT_ID, BLOG_ROOT_ID
 
 BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)
@@ -26,6 +27,7 @@ urlpatterns = patterns('',
                                           queryset=Page.objects.filter(parent__exact=BLOG_ROOT).order_by('-published'),
                                           template_name='cm/blog_archive.html')
                                           ),
+    (r'^blog/feed/$', LatestBlogPostsFeed()),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^admin/jsi18n/$', 'django.views.i18n.javascript_catalog'),
