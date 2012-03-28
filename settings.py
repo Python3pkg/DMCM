@@ -1,3 +1,4 @@
+import sys
 # Django settings for userid project.
 
 SITE_ROOT_ID = 3 # Homepage
@@ -28,7 +29,7 @@ TIME_ZONE = 'Europe/London'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-gb'
 
 SITE_ID = 1
 
@@ -51,7 +52,7 @@ MEDIA_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/site_media/admin/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'b_x^kb%jwavk)(qr)4)l#nls=)l55#a2j878dx@6uh4uye-h2&'
+SECRET_KEY = ''
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS += (
@@ -92,18 +93,20 @@ INSTALLED_APPS = (
     'dmcm.cm',
 )
 
-# userid-mcm settings
-FTP_HOST = "127.0.0.1"
-FTP_USERNAME = "ahernp"
-FTP_PASSWORD = "c3072naj"
-FTP_TEMPLATE_DIR = '/home/ahernp/code/dmcm/templates'
-MAIN_TEMPLATE = "main.html"
-LOGIN_URL = '/dmcm/accounts/login/'
-
-import logging
-logging.basicConfig(
-    level = logging.DEBUG,
-    format = '%(asctime)s %(levelname)s %(message)s',
-    filename = '/home/ahernp/code/dmcm/dmcm.log',
-    filemode = 'w'
-)
+#import logging
+#logging.basicConfig(
+#    level = logging.DEBUG,
+#    format = '%(asctime)s %(levelname)s %(message)s',
+#    filename = '/home/ahernp/code/dmcm/dmcm.log',
+#    filemode = 'w'
+#)
+try:
+    from localsettings import *
+except ImportError:
+    print >> sys.stderr, """
+    -------------------------------------------------------------------------
+    Passwords and other confidential settings are held in a localsettings.py 
+    on the server but not in the code repository.
+    -------------------------------------------------------------------------
+    """
+    sys.exit(1)

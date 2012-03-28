@@ -22,46 +22,47 @@
 	{% else %}
 		<div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
 	{% endif %}
-			{% if object.published %}<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>{% endif %}
-			{{ object.content|markdown:"tables,toc" }}
-			{% if object.published %}
-				<div id="disqus_thread"></div>
-				<script type="text/javascript">
-				  /**
+		{% if object.published %}<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>{% endif %}
+		{{ object.content|markdown:"tables,toc" }}
+	
+		{% if object.parent.id == BLOG_ROOT_ID %} <!-- Disqus Comment functionality -->
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				/**
 					* var disqus_identifier; [Optional but recommended: 
 					* Define a unique identifier (e.g. post id or slug) for this thread] 
 				  */
-				  (function() {
-				   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				   dsq.src = 'http://ahernpcom.disqus.com/embed.js';
-				   (document.getElementsByTagName('head')[0] || 
-					   document.getElementsByTagName('body')    [0]).appendChild(dsq);
-				  })();
-				</script>
-				<noscript>Please enable JavaScript to view the 
-					<a href="http://disqus.com/?ref_noscript=ahernpcom">
-					   comments powered by Disqus.</a>
-				</noscript>
-				<a href="http://disqus.com" class="dsq-brlink">blog comments powered by 
-				   <span class="logo-disqus">Disqus</span></a>
-				<script type="text/javascript">
-					//<![CDATA[
-					(function() {
-						var links = document.getElementsByTagName('a');
-						var query = '?';
-						for(var i = 0; i < links.length; i++) {
-						if(links[i].href.indexOf('#disqus_thread') >= 0) {
-							query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-						}
-						}
-						document.write('<script charset="utf-8"  
-							  type="text/javascript" 
-							  src="http://disqus.com/forums/ahernpcom/get_num_replies.js' + query + '"></' + 'script>');
-							})();
-					//]]>
-				</script>
-			{% endif %}
-		</div>
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://ahernpcom.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || 
+						document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			<noscript>
+				Please enable JavaScript to view the 
+				<a href="http://disqus.com/?ref_noscript=ahernpcom">
+				comments powered by Disqus.</a>
+			</noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+			<script type="text/javascript">
+				//<![CDATA[
+				(function() {
+					var links = document.getElementsByTagName('a');
+					var query = '?';
+					for(var i = 0; i < links.length; i++) {
+					if(links[i].href.indexOf('#disqus_thread') >= 0) {
+						query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+					}
+					}
+					document.write('<script charset="utf-8"  
+						  type="text/javascript" 
+						  src="http://disqus.com/forums/ahernpcom/get_num_replies.js' + query + '"></' + 'script>');
+						})();
+				//]]>
+			</script>
+		{% endif %} <!-- Disqus Comment functionality -->
+	</div>
 {% endblock %}
 
 {% block footer %}

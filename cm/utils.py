@@ -1,14 +1,14 @@
-from dmcm.settings import DEBUG, SITE_ROOT_ID
-
-def context_processor(request):
-    return {'DEBUG': DEBUG, 'SITE_ROOT_ID': SITE_ROOT_ID}
-
+from dmcm.settings import DEBUG, SITE_ROOT_ID, BLOG_ROOT_ID
 from django.contrib.syndication.views import Feed
 from dmcm.cm.models import Page
-from dmcm.settings import BLOG_ROOT_ID
 import markdown
 
 BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)
+
+def context_processor(request):
+    return {'DEBUG': DEBUG, 
+            'SITE_ROOT_ID': SITE_ROOT_ID,
+            'BLOG_ROOT_ID': BLOG_ROOT_ID}
 
 class LatestBlogPostsFeed(Feed):
     title = "ahernp.com blog"
