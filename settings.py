@@ -93,13 +93,6 @@ INSTALLED_APPS = (
     'dmcm.cm',
 )
 
-#import logging
-#logging.basicConfig(
-#    level = logging.DEBUG,
-#    format = '%(asctime)s %(levelname)s %(message)s',
-#    filename = '/home/ahernp/code/dmcm/dmcm.log',
-#    filemode = 'w'
-#)
 try:
     from localsettings import *
 except ImportError:
