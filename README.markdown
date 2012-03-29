@@ -13,8 +13,3 @@ The site has a very simple structure. Features:
 Dependencies:
 
 * Uses [django-reversion](https://github.com/etianen/django-reversion) to keep a history of changes.
-
-Todo:
-
-* Natural Keys.
-* Fixtures.

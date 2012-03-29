@@ -10,10 +10,14 @@ class Page(models.Model):
             Title of page.
         parent : foreign_key on page
             Parent page in site structure.
+        published : date
+            When page was published (usually on the blog).
         updated : date_time
             When page was last updated.
         content : text
             Page content in markdown format.
+        wide : boolean
+            If page is rendered in a wide format (2-column home page and some html tables).
     """
     title = models.CharField(max_length = 250, unique = True)
     parent = models.ForeignKey('self')

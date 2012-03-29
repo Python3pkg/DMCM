@@ -94,6 +94,7 @@ class Command(BaseCommand):
 
         table_count = 0
         field_count = 0
+        difference_count = 0
         for content_type in content_types:
             model_class = content_type.model_class()
             if not model_class:
@@ -142,20 +143,26 @@ class Command(BaseCommand):
                     elif field_db_type in COLUMN_DEFINITIONS:
                         if COLUMN_DEFINITIONS[field_db_type] != column_attr['type']:
                             print '%s Expected column type "%s"; Found "%s".' % (msg_pfx, COLUMN_DEFINITIONS[field_type], column_attr['type'])
+                            difference_count += 1
                     elif field_db_type != column_attr['type']:
                         print '%s Expected column type "%s"; Found "%s".' % (msg_pfx, field_db_type, column_attr['type'])
-
+                        difference_count += 1
                     if field.null != column_attr['null']:
                         print '%s On model null is "%s" but on table null is "%s".' % (msg_pfx, field.null, column_attr['null'])
+                        difference_count += 1
                     if field.primary_key != column_attr['primary_key']:
                         print '%s On model primary_key is "%s" but on table primary_key is "%s".' % (msg_pfx, field.primary_key, column_attr['field_name'])
+                        difference_count += 1
                     if field.db_index and not column_attr['index']:
                         print '%s Should have been an index key.' % (msg_pfx)
+                        difference_count += 1
                     if field_type == AutoField and column_attr['extra'] != 'auto_increment':
                         print '%s Expected "auto_increment" attribute on column.' % (msg_pfx)
+                        difference_count += 1
                 else:
                     print '%s Column missing from table.' % (msg_pfx)
-        print 'Checked %s columns on %s tables.' % (field_count, table_count)
+                    difference_count += 1
+        print 'Checked %s columns on %s tables, %s differences found.' % (field_count, table_count, difference_count)
 """
 
 Table containing all types of fields. Add to a models.py and run syncdb to test.
