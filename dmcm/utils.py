@@ -1,6 +1,6 @@
-from dmcm.settings import DEVELOP, SITE_ROOT_ID, BLOG_ROOT_ID
+from project.settings import DEVELOP, SITE_ROOT_ID, BLOG_ROOT_ID
 from django.contrib.syndication.views import Feed
-from dmcm.cm.models import Page
+from project.dmcm.models import Page
 import markdown
 
 BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)

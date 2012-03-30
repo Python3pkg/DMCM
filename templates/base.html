@@ -47,7 +47,7 @@
 		</script>
 
 	</head>
-	<body{% if DEVELOP %} style="background-color:#ccf"{% endif %}>
+	<body{% if DEVELOP %} style="background-color:#eef"{% endif %}>
 		<div id="navigation" style="padding-bottom:0.2em; margin:0; width:100%;">
 			<div style="width:65%;float:left;padding:0.2em 0em 0.2em 1em;">
 				{% block nav_path %}{% endblock %}
@@ -63,7 +63,13 @@
 			<div style="clear:both"></div>
 		</div>
 		<hr size="1">
-		{% block content %}{% endblock %}
+		{% if object.wide %} 
+			<div id="content" style="width:45em; margin-left:auto; margin-right:auto;">
+		{% else %}
+			<div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
+		{% endif %}
+			{% block content %}{% endblock %}
+		</div>
 		<hr size="1">
 		<div id="footer" style="font-size:.9em;padding-left:1em; margin-top:1em;">
 			{% block footer %}{% endblock %}

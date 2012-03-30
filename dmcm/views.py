@@ -1,14 +1,24 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.views.generic import ListView
+from datetime import datetime
+from project.dmcm.models import Page
+from project.dmcm.forms import StringSearchForm
+from project import settings
 
-from dmcm.cm.models import Page
-from dmcm.cm.forms import StringSearchForm
-
+class WideListView(ListView):
+    
+    def get_context_data(self, **kwargs):
+        context = super(WideListView, self).get_context_data(**kwargs)
+        context['object'] = {'wide': True}
+        return context
+    
 def search_pages(request):
     form = StringSearchForm(request.GET)
     search_string = form.cleaned_data['search_string'] if form.is_valid() else ''
     if len(search_string) < 3:
-        return render_to_response('cm/search_results.html', 
+        return render_to_response('dmcm/search_results.html', 
                                   {'search_string': search_string, 'too_small': True},
                                   RequestContext(request))
     title_matches = Page.objects.filter(title__icontains=search_string)
@@ -40,12 +50,9 @@ def search_pages(request):
     context = {'title_matches': title_matches,
                'content_matches': content_matches,
                'search_string': search_string,
+               'object': {'wide': True}
     }
-    return render_to_response('cm/search_results.html', context, RequestContext(request))
-
-from django.contrib.auth.decorators import login_required
-from datetime import datetime
-from dmcm import settings
+    return render_to_response('dmcm/search_results.html', context, RequestContext(request))
 
 @login_required
 def server_status_dashboard(request):
@@ -77,7 +84,7 @@ def server_status_dashboard(request):
             stdout = stdout.strip()
         return stdout
     
-    context = {}
+    context = {'object': {'wide': True}}
 
     # Versions
     context['django_version'] = '%s.%s.%s (%s, %s)' % (django.VERSION)

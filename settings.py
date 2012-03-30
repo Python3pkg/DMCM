@@ -53,11 +53,11 @@ MEDIA_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/site_media/admin/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = ''
+#SECRET_KEY = '' # Populated in localsettings.py
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS += (
-    "dmcm.cm.utils.context_processor",
+    "project.dmcm.utils.context_processor",
 )
 
 # List of callables that know how to import templates from various sources.
@@ -76,10 +76,10 @@ MIDDLEWARE_CLASSES = (
     'reversion.middleware.RevisionMiddleware',
 )
 
-ROOT_URLCONF = 'dmcm.urls'
+ROOT_URLCONF = 'project.urls'
 
 TEMPLATE_DIRS = (
-    '/home/ahernp/code/dmcm/dmcm/templates'
+    '/home/ahernp/code/dmcm/project/templates'
 )
 
 INSTALLED_APPS = (
@@ -91,7 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.markup',
     'reversion',
-    'dmcm.cm',
+    'project.dmcm',
 )
 
 try:
