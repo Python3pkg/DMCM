@@ -1,4 +1,4 @@
-from dmcm.settings import DEBUG, SITE_ROOT_ID, BLOG_ROOT_ID
+from dmcm.settings import DEVELOP, SITE_ROOT_ID, BLOG_ROOT_ID
 from django.contrib.syndication.views import Feed
 from dmcm.cm.models import Page
 import markdown
@@ -6,7 +6,7 @@ import markdown
 BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)
 
 def context_processor(request):
-    return {'DEBUG': DEBUG, 
+    return {'DEVELOP': DEVELOP, 
             'SITE_ROOT_ID': SITE_ROOT_ID,
             'BLOG_ROOT_ID': BLOG_ROOT_ID}
 

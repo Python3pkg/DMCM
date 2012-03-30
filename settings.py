@@ -4,11 +4,12 @@ import sys
 SITE_ROOT_ID = 3 # Homepage
 BLOG_ROOT_ID = 1
 
-DEBUG = True
+DEBUG = False
+DEVELOP = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Paul Ahern', 'userid@userid.com'),
+     ('Paul Ahern', 'ahernp@ahernp.com'),
 )
 
 MANAGERS = ADMINS

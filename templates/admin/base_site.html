@@ -20,4 +20,19 @@ h1, h2, h3, h4, a, th {color:#046;}
 <h1 id="site-name"><a href="/">ahernp.com</a> administration</h1>
 {% endblock %}
 
+{% block userlinks %}
+	{% url 'django-admindocs-docroot' as docsroot %}
+	<a href="/server_status">{% trans 'Dashboard' %}</a> /
+	{% if docsroot %}
+		<a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+	{% endif %}
+	{% url 'admin:logout' as logout_url %}
+	{% if logout_url %}
+		<a href="{{ logout_url }}">
+	{% else %}
+		<a href="{{ root_path }}logout/">
+	{% endif %}
+	{% trans 'Log out' %}</a>
+{% endblock %}
+
 {% block nav-global %}{% endblock %}
