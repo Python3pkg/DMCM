@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     )
 
 if DEVELOP:
+    # When running in development mode use Django to server the static files.
     urlpatterns += patterns('',
         (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/ahernp/Documents/ahernp.com/site/site_media/'}),
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/ahernp/Documents/ahernp.com/site/'}),

@@ -8,13 +8,20 @@ from project.dmcm.forms import StringSearchForm
 from project import settings
 
 class WideListView(ListView):
-    
+    """
+    Add extra context value 'object.wide'. Gets base template to make content area wider.
+    """
     def get_context_data(self, **kwargs):
         context = super(WideListView, self).get_context_data(**kwargs)
         context['object'] = {'wide': True}
         return context
     
 def search_pages(request):
+    """
+    Simple string search.
+    
+    Display pages with titles and/or content which contain the string searched for.
+    """
     form = StringSearchForm(request.GET)
     search_string = form.cleaned_data['search_string'] if form.is_valid() else ''
     if len(search_string) < 3:
@@ -28,6 +35,7 @@ def search_pages(request):
     for page in content_match_pages:
         content_lower = page.content.lower()
         number_found = content_lower.count(search_string_lower)
+        # Display each line containing matches only once.
         matching_lines = []
         match_pos = content_lower.find(search_string_lower)
         while match_pos > 0:
@@ -50,14 +58,14 @@ def search_pages(request):
     context = {'title_matches': title_matches,
                'content_matches': content_matches,
                'search_string': search_string,
-               'object': {'wide': True}
+               'object': {'wide': True} # Dispplay results in a wide content area on page.
     }
     return render_to_response('dmcm/search_results.html', context, RequestContext(request))
 
 @login_required
 def server_status_dashboard(request):
     """
-    Dashboard providing information about the state of the system.
+    Build page providing information about the state of the system.
     """
     import django
     import os
