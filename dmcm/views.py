@@ -1,11 +1,11 @@
+from datetime import datetime
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 from django.views.generic import ListView
-from datetime import datetime
-from project.dmcm.models import Page
-from project.dmcm.forms import StringSearchForm
 from project import settings
+from project.dmcm.forms import StringSearchForm
+from project.dmcm.models import Page
 
 class WideListView(ListView):
     """
@@ -61,6 +61,14 @@ def search_pages(request):
                'object': {'wide': True} # Dispplay results in a wide content area on page.
     }
     return render_to_response('dmcm/search_results.html', context, RequestContext(request))
+
+@login_required
+def edit_page(request, slug=""):
+    """
+    Redirect edit requests to Admin.
+    """
+    page = get_object_or_404(Page, slug=slug)
+    return redirect('/admin/dmcm/page/'+str(page.id)+'/')
 
 @login_required
 def server_status_dashboard(request):

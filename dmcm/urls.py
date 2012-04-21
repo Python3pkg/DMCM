@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import patterns
 from django.views.generic import DetailView, ListView
 from project.dmcm.models import Page
-from project.dmcm.views import search_pages, WideListView
+from project.dmcm.views import edit_page, search_pages, WideListView
 from project.dmcm.utils import LatestBlogPostsFeed
 from project.settings import SITE_ROOT_ID, BLOG_ROOT_ID
 
@@ -19,6 +19,8 @@ urlpatterns = patterns('',
     (r'^blog/archive/$', WideListView.as_view(queryset=Page.objects.filter(parent__exact=BLOG_ROOT).order_by('-published'),
                                           template_name='dmcm/blog_archive.html')),
     (r'^blog/feed/$', LatestBlogPostsFeed()),
+    (r'^edit/(?P<slug>[-\w]+).html$', edit_page),
+    (r'^edit/(?P<slug>[-\w]+)[|/]$', edit_page),
     (r'^(?P<slug>[-\w]+).html$', DetailView.as_view(model=Page, slug_field='slug')),
     (r'^(?P<slug>[-\w]+)[|/]$', DetailView.as_view(model=Page, slug_field='slug')),
     )

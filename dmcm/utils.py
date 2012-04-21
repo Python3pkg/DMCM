@@ -36,4 +36,4 @@ class LatestBlogPostsFeed(Feed):
         return item.content
 
     def item_link(self, item):
-        return u'/page/%d/' % (item.id)
+        return u'/%s/' % (item.slug)
