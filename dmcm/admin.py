@@ -8,6 +8,7 @@ class PageAdmin(VersionAdmin):
     list_display = ('title', 'parent', 'updated', 'wide')
     list_filter = ('wide',)
     list_editable = ('wide',)
+    prepopulated_fields = {'slug': ('title',)}
     readonly_fields = ('updated',)
     ordering = ('parent', 'title',)
     save_on_top = True
@@ -15,12 +16,14 @@ class PageAdmin(VersionAdmin):
         (None, {
             'fields': (('content',),
                        ('title', 'parent',),
-                       ('wide', 'published', 'updated'),
+                       ('slug',),
+                       ('published', 'updated'),
+                       ('wide',),
                        )
         }),
     )
     formfield_overrides = {
-        models.CharField: {'widget': TextInput(attrs={'size':70})},
+        models.CharField: {'widget': TextInput(attrs={'size':60})},
         models.TextField: {'widget': Textarea(attrs={'rows':25, 'cols':110})},
     }
 

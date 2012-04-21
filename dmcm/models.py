@@ -8,6 +8,8 @@ class Page(models.Model):
     
         title : char
             Title of page.
+        slug : slug
+            Slugified version of Title.
         parent : foreign_key on page
             Parent page in site structure.
         published : date
@@ -19,7 +21,8 @@ class Page(models.Model):
         wide : boolean
             If page is rendered in a wide format (2-column home page and some html tables).
     """
-    title = models.CharField(max_length = 250, unique = True)
+    title = models.CharField(max_length = 250)
+    slug = models.SlugField(max_length = 250, unique = True)
     parent = models.ForeignKey('self')
     published = models.DateField(null=True,blank=True)
     updated = models.DateTimeField(verbose_name = 'Time Updated', auto_now = True)
@@ -31,7 +34,7 @@ class Page(models.Model):
         parent = self.parent
         if parent != self:
             while parent != parent.parent:
-                path.insert(0, {'title': parent.title, 'address': '/page/'+str(parent.id)+'/'})
+                path.insert(0, {'title': parent.title, 'address': '/'+parent.slug+'/'})
                 parent = parent.parent
             path.insert(0, {'title': parent.title, 'address': '/'})
         return path

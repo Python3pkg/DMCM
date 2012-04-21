@@ -14,7 +14,7 @@
 		{% if title_matches %}
 			<ol>
 			{% for page in title_matches %}
-				<li><a href="/page/{{ page.id }}">{{ page.title }}</a></li>
+				<li><a href="/{{ page.slug }}">{{ page.title }}</a></li>
 			{% endfor %}
 			</ol>
 		{% else %}
@@ -24,7 +24,7 @@
 		{% if content_matches %}
 			<ol>
 			{% for match in content_matches %}
-				<li><a href="/page/{{ match.page.id }}">{{ match.page.title }}</a>,
+				<li><a href="/{{ match.page.slug }}">{{ match.page.title }}</a>,
 					found {{ match.number_found }} {% if match.number_found == 1 %}match{% else %}matches{% endif %}:
 					<ul>
 						{% for matching_line in match.matching_lines %}

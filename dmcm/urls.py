@@ -19,4 +19,6 @@ urlpatterns = patterns('',
     (r'^blog/archive/$', WideListView.as_view(queryset=Page.objects.filter(parent__exact=BLOG_ROOT).order_by('-published'),
                                           template_name='dmcm/blog_archive.html')),
     (r'^blog/feed/$', LatestBlogPostsFeed()),
+    (r'^(?P<slug>[-\w]+).html$', DetailView.as_view(model=Page, slug_field='slug')),
+    (r'^(?P<slug>[-\w]+)[|/]$', DetailView.as_view(model=Page, slug_field='slug')),
     )
