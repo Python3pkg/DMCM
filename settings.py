@@ -57,7 +57,7 @@ ADMIN_MEDIA_PREFIX = '/site_media/admin/'
 
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS += (
-    "project.dmcm.utils.context_processor",
+    "project.dmcm.context_processors.context_processor",
 )
 
 # List of callables that know how to import templates from various sources.

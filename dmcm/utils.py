@@ -1,17 +1,9 @@
-from project.settings import DEVELOP, SITE_ROOT_ID, BLOG_ROOT_ID
+from project.settings import BLOG_ROOT_ID
 from django.contrib.syndication.views import Feed
 from project.dmcm.models import Page
 import markdown
 
 BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)
-
-def context_processor(request):
-    """
-    Add values to the context of all templates.
-    """
-    return {'DEVELOP': DEVELOP, 
-            'SITE_ROOT_ID': SITE_ROOT_ID,
-            'BLOG_ROOT_ID': BLOG_ROOT_ID}
 
 class LatestBlogPostsFeed(Feed):
     """
