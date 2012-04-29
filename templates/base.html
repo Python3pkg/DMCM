@@ -53,7 +53,7 @@
 				{% block nav_path %}{% endblock %}
 			</div>
 			<div style="width:30%;float:right;padding:0em;text-align:right;">
-				<form name="input" action="/search_pages/" method="get" style="padding-right:1em;">
+				<form name="input" action="{% url dmcm_search_pages %}" method="get" style="padding-right:1em;">
 					<input type="text" tabindex="1" size="10"
 						{% if search_string %}style="color:#000;"{% else %}style="color:#ccc;"{% endif %}
 						name="search_string" title="Search Site" class="text" 

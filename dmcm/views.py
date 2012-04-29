@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 from django.views.generic import ListView
@@ -68,7 +69,7 @@ def edit_page(request, slug=""):
     Redirect edit requests to Admin.
     """
     page = get_object_or_404(Page, slug=slug)
-    return redirect('/admin/dmcm/page/'+str(page.id)+'/')
+    return redirect(reverse('admin:dmcm_page_change', args=(page.id,)))
 
 @login_required
 def server_status_dashboard(request):
