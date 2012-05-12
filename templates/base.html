@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="shortcut icon" href="/static/favicon.ico" type="image/ico" /> 
+		<link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" type="image/ico" /> 
 		<title>{% block title %}{% endblock %}</title>
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 		<style TYPE="text/css">
@@ -21,10 +21,10 @@
 			tr.odd:hover {background-color:#ace;}
 			#source_label {color:#046; text-decoration:underline; cursor:pointer;}
 		</style>
-		<script type="text/javascript" src="/static/site_media/js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="/static/site_media/js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="/static/site_media/fancybox/jquery.fancybox.pack.js"></script>
-		<link rel="stylesheet" href="/static/site_media/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 		<script type="text/javascript">
 		$(function() {
 			$("table").dataTable({"bPaginate": false, "aaSorting": []});
