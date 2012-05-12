@@ -18,7 +18,7 @@
 
 {% block content %}
 	{% if object.published %}<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>{% endif %}
-	{{ object.content|markdown:"tables,toc" }}
+	{{ object.content|markdown:"extra,tables,toc" }}
 	
 	{% if object.parent.id == BLOG_ROOT_ID %} <!-- Disqus Comment functionality -->
 		<div id="disqus_thread"></div>
