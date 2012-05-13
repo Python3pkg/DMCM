@@ -2,7 +2,7 @@
 """
 Python Script to setup development environment.
 """
-import codecs, os, sys
+import codecs, os, sys, argparse
 from subprocess import Popen, PIPE, STDOUT
 
 TOP_LEVEL_DIRECTORY = os.path.expanduser('~/code/dmcm')
@@ -47,11 +47,11 @@ DATABASE_NAME = 'dmcm'
 DROP_DATABASE = 'mysql --user=root --execute="drop database if exists %s"' % (DATABASE_NAME)
 CREATE_DATABASE = 'mysql --user=root --execute="create database if not exists %s character set utf8"' % (DATABASE_NAME)
 
-COMMANDS = [{'django': False, 'command': 'mysql --user=root --execute="drop database if exists %s"' % (DATABASE_NAME)},
-            {'django': False, 'command': 'mysql --user=root --execute="create database if not exists %s character set utf8"' % (DATABASE_NAME)},
-            {'django': True, 'command': 'syncdb --noinput'},
-            {'django': True, 'command': 'loaddata auth.json'},
-            {'django': True, 'command': 'collectstatic --noinput'},
+DATABASE_COMMANDS = [{'django': False, 'command': 'mysql --user=root --execute="drop database if exists %s"' % (DATABASE_NAME)},
+                    {'django': False, 'command': 'mysql --user=root --execute="create database if not exists %s character set utf8"' % (DATABASE_NAME)},
+                    {'django': True, 'command': 'syncdb --noinput'},
+                    {'django': True, 'command': 'loaddata auth.json'},
+                    {'django': True, 'command': 'collectstatic --noinput'},
 ]
 
 LOCALSETTINGS = """DEBUG = True
@@ -59,9 +59,8 @@ DEVELOP = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dmcm',
+        'NAME': '',
         'USER': '',
-        'PASSWORD': '',
     }
 }
 SECRET_KEY = ''
@@ -108,7 +107,7 @@ def run_shell_command(command, cwd):
     stdout = p.communicate()[0]
     if stdout:
         stdout = stdout.strip()
-    print('# Command \'%s\' returned: %s' % (command, '...%s' % (stdout[-200:]) if len(stdout) > 200 else stdout))
+    print('# Command \'%s\' returned: \'%s\'' % (command, '...%s' % (stdout[-200:]) if len(stdout) > 200 else stdout))
     return stdout
 
 def run_django_command(command):
@@ -121,33 +120,52 @@ def write_file(filename, data):
 
 #import pdb; pdb.set_trace() # Start debugging
 
+parser = argparse.ArgumentParser(description='Updates development environment for dmcm.',
+                                epilog='By default the repositories and database are regenerated.')
+parser.add_argument('-r', '--no-repo', action='store_true',
+                    help='do not update application code repositories')
+parser.add_argument('-d', '--no-db', action='store_true',
+                    help='do not rebuild the database')
+parser.add_argument('-v, --version', action='version', version='%(prog)s 1.0')
+args = parser.parse_args()
+
 if not os.path.isdir(TOP_LEVEL_DIRECTORY):
     print('# Create directory or virtualenvironment at "%s"' % (TOP_LEVEL_DIRECTORY))
     sys.exit()
 
-application_directories = set()
-print('# Clone or update application repositories:')
-for application in APPLICATIONS:
-    if os.path.isdir(application['directory']):
-        print('# Updating %s' % (application['name']))
-        run_shell_command(application['update'], application['directory'])
-    else:
-        print('# Cloning %s' % (application['name']))
-        run_shell_command(application['clone'], TOP_LEVEL_DIRECTORY)
-    application_directories.add(application['path_to'])
+if not args.no_repo:
+    application_directories = set()
+    print('# Clone or update application repositories:')
+    for application in APPLICATIONS:
+        if os.path.isdir(application['directory']):
+            print('# Updating %s' % (application['name']))
+            run_shell_command(application['update'], application['directory'])
+        else:
+            print('# Cloning %s' % (application['name']))
+            run_shell_command(application['clone'], TOP_LEVEL_DIRECTORY)
+        application_directories.add(application['path_to'])
 
-if os.path.isdir(VIRTUALENV_PACKAGES):
-    print('# Add paths to applications to PYTHONPATH. (%s)' % (', '.join(application_directories)))
-    output_files.append({'name': EXTRA_PATHS_FILE, 'data': '\n'.join(application_directories)})
+    if os.path.isdir(VIRTUALENV_PACKAGES):
+        print('# Add paths to applications to PYTHONPATH. (%s)' % (', '.join(application_directories)))
+        output_files.append({'name': EXTRA_PATHS_FILE, 'data': '\n'.join(application_directories)})
 
 for output_file in output_files:
     if not os.path.isfile(output_file['name']):
         print('# Writing file \'%s\'' % (output_file['name']))
         write_file(output_file['name'], output_file['data'])
 
-print('# Recreate database "%s"' % (DATABASE_NAME))
-for command in COMMANDS:
-    if command['django']:
-        run_django_command(command['command'])
-    else:
-        run_shell_command(command['command'], TOP_LEVEL_DIRECTORY)
+print('# Get initial_data from ahernp.com')
+run_shell_command('ssh web '
+                    '"export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH";'
+                    'cd ~/project;'
+                    'python2.7 manage.py dumpdata --indent 4 dmcm | gzip -c" | '
+                    'gunzip > ~/code/dmcm/project/dmcm/fixtures/initial_data.json',
+                TOP_LEVEL_DIRECTORY)
+
+if not args.no_db:
+    print('# Recreate database "%s"' % (DATABASE_NAME))
+    for command in DATABASE_COMMANDS:
+        if command['django']:
+            run_django_command(command['command'])
+        else:
+            run_shell_command(command['command'], TOP_LEVEL_DIRECTORY)
