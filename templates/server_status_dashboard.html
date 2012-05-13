@@ -15,6 +15,8 @@
 	{% endfor %}
 	<h2>Versioning</h2>
 	{% if django_version %}<p><strong>Django:</strong> {{ django_version }}</p>{% endif %}
+    {% if markdown_version %}<p><strong>Python-Markdown:</strong> {{ markdown_version }}</p>{% endif %}
+    {% if reversion_version %}<p><strong>Django-Reversion:</strong> {{ reversion_version }}</p>{% endif %}
 	{% if mysql_version %}<p><strong>MySQL:</strong> {{ mysql_version }}</p>{% endif %}
 	{% if gitversion %}
 		<strong>Application code:</strong><br>
