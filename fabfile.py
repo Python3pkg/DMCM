@@ -2,8 +2,11 @@
 Fabfile for ahernp.com.
 """
 import os
-from fabric.api import env, local, lcd, cd, run, task, hosts, settings, abort
+from fabric.api import (env, local, lcd, cd, run, 
+                        task, hosts, settings, abort,
+                        prefix)
 from fabric.contrib.console import confirm
+from fabric.operations import get
 from datetime import datetime
 from decorator import decorator
 
@@ -23,11 +26,16 @@ def timer(func, *args, **kwargs):
     return result
 
 @task
-@hosts('localhost')
 def setup():
     """Setup development environment."""
+    #with lcd(TOP_LEVEL_PATH):
+    #    local('git pull')
+    code_dir = '~/project'
+    with cd(code_dir):
+        with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
+            run('python2.7 manage.py dumpdata --indent 4 dmcm > ~/initial_data.json')
+    get('initial_data.json', os.path.join(TOP_LEVEL_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
     with lcd(TOP_LEVEL_PATH):
-        local('git pull')
         local('python manage.py syncdb')
         local('python manage.py runserver')
 
