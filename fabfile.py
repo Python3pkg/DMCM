@@ -171,15 +171,9 @@ def test():
 @task
 @timer
 def deliver():
-    """Add and commit changes"""
-    local("git add -p && git commit")
-
-@task
-@timer
-def prepare_deploy():
     """Test, commit and push changes. """
     test()
-    deliver()
+    local("git add -p && git commit")
     local("git push")
 
 @task
