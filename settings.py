@@ -64,6 +64,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'reversion',
     'project.dmcm',
+    'project.bugtracker',
 )
 
 try:
@@ -71,7 +72,7 @@ try:
 except ImportError:
     print >> sys.stderr, """
     -------------------------------------------------------------------------
-    Passwords and other confidential settings are held in a localsettings.py 
+    Passwords and other confidential settings are held in a localsettings.py
     on the server but not in the code repository.
     -------------------------------------------------------------------------
     """
