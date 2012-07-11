@@ -9,6 +9,7 @@ The site has a very simple structure. Features:
 * Site-wide string-search.
 * Context processor to make some variables available to all templates.
 * Command to `check_mysql_structure` matches what the Models expect.
+* Simple Bugtracker application.
 
 Dependencies:
 

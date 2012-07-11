@@ -1,5 +1,5 @@
 """
-DMCM Unit Test. 
+DMCM Unit Test.
 
 Expects initial_data.json fixture contains a copy of the ahernp.com site.
 """
@@ -23,10 +23,10 @@ class WorkingURLsTest(TestCase):
     """
     Visit various URLs on the site to ensure they are working.
     """
-    
+
     # (url, status_code, text_on_page)
     def test_urls(self):
-        "Visit each URL in turn"        
+        "Visit each URL in turn"
         self.user = User.objects.create_user('john', 'john@montypython.com', 'password')
         self.user.is_staff = True
         self.user.save()
@@ -34,7 +34,7 @@ class WorkingURLsTest(TestCase):
         self.client.login(username = 'john', password = 'password')
         for url, status_code, expected_text in TEST_URLS:
             response = self.client.get(url)
-            self.assertEqual(response.status_code, status_code, 
+            self.assertEqual(response.status_code, status_code,
                              'URL %s: Unexpected status code, got %s expected %s' % (url, response.status_code, 200))
             if response.status_code == 200:
                 self.assertContains(response, expected_text, msg_prefix='URL %s' % (url))
