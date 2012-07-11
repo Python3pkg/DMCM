@@ -1,0 +1,29 @@
+[
+    {
+        "pk": 1,
+        "model": "bugtracker.ticket",
+        "fields": {
+            "status": "I",
+            "description": "Indexes for the bugtracker application could not be created by syncdb. \r\n\r\nError message:\r\n\r\ndjango.db.utils.DatabaseError: (1005, \"Can't create table 'ahernp_dmcm.#sql-5d91_bec33c' (errno: 150)\")",
+            "title": "Bugtracker Indexes",
+            "created_by": 1,
+            "updated_time": "2012-07-11T19:31:01",
+            "priority": "M",
+            "attachment": "",
+            "assigned_to": 1,
+            "created_time": "2012-07-11T19:22:10"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "bugtracker.ticketupdate",
+        "fields": {
+            "update_text": "This is a known problem (see https://code.djangoproject.com/ticket/18256) when you have a mix of MySQL tables are using the different storage engines (i.e. MyISM and InnoDB). The default used to be MyISM and changed to InnoDB.",
+            "updated_by": 1,
+            "title": "",
+            "updated_time": "2012-07-11T19:31:01",
+            "attachment": "",
+            "ticket": 1
+        }
+    }
+]
