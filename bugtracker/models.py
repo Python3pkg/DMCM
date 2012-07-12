@@ -14,7 +14,7 @@ PRIORITIES = (('L', 'Low'),
 class Ticket(models.Model):
     title = models.CharField(max_length=250)
     description = models.TextField()
-    attachment = models.FileField(upload_to='static',blank=True,null=True)
+    attachment = models.FileField(upload_to='bugtracker',blank=True,null=True)
     status = models.CharField(max_length=1, choices=STATUSES)
     priority = models.CharField(max_length=1, choices=PRIORITIES)
     created_time = models.DateTimeField(auto_now_add=True)
@@ -32,7 +32,7 @@ class TicketUpdate(models.Model):
     ticket = models.ForeignKey(Ticket)
     title = models.CharField(max_length=250)
     update_text = models.TextField()
-    attachment = models.FileField(upload_to='output',blank=True,null=True)
+    attachment = models.FileField(upload_to='bugtracker',blank=True,null=True)
     updated_time = models.DateTimeField(auto_now=True)
     updated_by = models.ForeignKey(User, related_name='+')
 
