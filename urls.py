@@ -9,8 +9,10 @@ from project.settings import MEDIA_URL, MEDIA_ROOT
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^accounts/login/$', login),
-    (r'^accounts/logout/$', logout),
+    (r'^accounts/login/$', 'django.contrib.auth.views.login', 
+        {'template_name': 'admin/login.html'}),
+    (r'^logout/$', 'django.contrib.auth.views.logout', 
+        {'next_page':'/'}), # Redirect to home page on logout 
     (r'^server_status/$', server_status_dashboard),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
