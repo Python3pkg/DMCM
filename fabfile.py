@@ -172,6 +172,13 @@ def test():
 @timer
 def deliver():
     """Test, commit and push changes. """
+    local("git status")
+    with lcd(DJANGO_PROJECT_PATH):
+        local('grep -r --include="*.py" --exclude="fabfile.py" "pdb" . || [ $? -lt 2 ]')
+        # grep issues a return code of 1 if no matches were found
+        # '|| [ $? -lt 2 ]' ensures a zero return code to local
+    if not confirm('Check status. Continue with delivery?'):
+        abort('Aborting at user request.')
     test()
     local("git add -p && git commit")
     local("git push")
