@@ -1,10 +1,10 @@
 """
-This command reads through the Django model definitions and compares each field 
+This command reads through the Django model definitions and compares each field
 with the equivalent column in MySQL, printing any differences found.
 
-It is intended that this be run when you have to update a database, as opposed to 
-recreating it using syncdb. Having delivered new code it can be run to see what needs 
-to change. Having updated the database structure it can be run again to confirm that 
+It is intended that this be run when you have to update a database, as opposed to
+recreating it using syncdb. Having delivered new code it can be run to see what needs
+to change. Having updated the database structure it can be run again to confirm that
 that matches the models.
 
 It prints out any differences; Output structure: Model.Field v Table.Column: Difference
@@ -20,27 +20,28 @@ Usage
  * The second parameter is the name of a Django application. If present then only
    models/tables in that application are checked.
  * The third parameter is the name of a Django model. If present then only that model
-   is checked. 
+   is checked.
 """
 from django.contrib.contenttypes.models import ContentType
+from django.db import connection as db_connection
 from django.db.models.fields import AutoField, BigIntegerField, BooleanField, CharField,\
                 CommaSeparatedIntegerField, DateField, DateTimeField, DecimalField,\
                 EmailField, FilePathField, FloatField, IPAddressField, IntegerField,\
                 NullBooleanField, PositiveIntegerField, PositiveSmallIntegerField,\
-                SlugField, SmallIntegerField, TextField, TimeField, URLField, XMLField
+                SlugField, SmallIntegerField, TextField, TimeField, URLField
 from django.db.models.fields.files import FileField, ImageField
 from django.db.models.fields.related import ForeignKey, ManyToManyField, OneToOneField
 from django.core.management.base import BaseCommand
 from django.conf import settings
 import MySQLdb
 
-FIELD_TYPES_CHECKED = [AutoField, BigIntegerField, BooleanField, CharField, 
-                       CommaSeparatedIntegerField, DateField, DateTimeField, 
-                       DecimalField, EmailField, FileField, FilePathField, 
-                       FloatField, ForeignKey, IPAddressField, ImageField, 
-                       IntegerField, ManyToManyField, NullBooleanField, 
-                       OneToOneField, PositiveIntegerField, PositiveSmallIntegerField, 
-                       SlugField, SmallIntegerField, TextField, TimeField, URLField, XMLField]
+FIELD_TYPES_CHECKED = [AutoField, BigIntegerField, BooleanField, CharField,
+                       CommaSeparatedIntegerField, DateField, DateTimeField,
+                       DecimalField, EmailField, FileField, FilePathField,
+                       FloatField, ForeignKey, IPAddressField, ImageField,
+                       IntegerField, ManyToManyField, NullBooleanField,
+                       OneToOneField, PositiveIntegerField, PositiveSmallIntegerField,
+                       SlugField, SmallIntegerField, TextField, TimeField, URLField]
 
 # MySQL Column definitions which are not exact matches for equivalent Django Field.db_type():
 COLUMN_DEFINITIONS = {
@@ -64,7 +65,7 @@ class Command(BaseCommand):
         defined correctly in the database.
         """
         database_name = args[0] if len(args) > 0 else settings.DATABASES['default']['NAME']
-        app_label = args[1].lower() if len(args) > 1 else None 
+        app_label = args[1].lower() if len(args) > 1 else None
         model_name = args[2].lower() if len(args) > 2 else None
         if model_name:
             try:
@@ -137,7 +138,7 @@ class Command(BaseCommand):
                 field_count += 1
                 if column_name in columns:
                     column_attr = columns[column_name]
-                    field_db_type = field.db_type()
+                    field_db_type = field.db_type(db_connection)
                     if field_type == DecimalField:
                         field_db_type = 'decimal(%s,%s)' % (field.max_digits, field.decimal_places)
                     elif field_db_type in COLUMN_DEFINITIONS:
@@ -189,7 +190,6 @@ class FieldsTestModel(models.Model):
     SlugField = models.SlugField()
     SmallIntegerField = models.SmallIntegerField()
     URLField = models.URLField()
-    XMLField = models.XMLField()
     FileField = models.FileField(upload_to='/')
     ImageField = models.ImageField(upload_to='/')
     ForeignKey = models.ForeignKey('self', related_name='foreignkey')

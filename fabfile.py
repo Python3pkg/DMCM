@@ -198,8 +198,9 @@ def deploy():
 @task
 @hosts('localhost')
 @timer
-def manage(*args):
+def manage(*args, **kwargs):
     """Locally execute Django command."""
     with settings(warn_only=True):
         with lcd(DJANGO_PROJECT_PATH):
-            local('python manage.py %s' % (' '.join(args)))
+            local('python manage.py %s %s' % (' '.join(args),
+                                              ' '.join(['%s=%s' % (option, kwargs[option]) for option in kwargs])))
