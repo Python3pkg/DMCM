@@ -5,6 +5,31 @@
 		<link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" type="image/ico" /> 
 		<title>{% block title %}{% endblock %}</title>
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+      	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript">
+			$(function() {
+				$("table").dataTable({"bPaginate": false, "aaSorting": []});
+				$('a:has(img)').attr('rel', 'gallery').fancybox();
+				$('#source_label').click(function() {
+					$('#source_body').toggle('slow', function() {});
+				});
+				$('.text').focus(function () {
+					if ($(this).val() == $(this).attr("title")) {
+						$(this).val("");
+						$(this).css('color', '#000');
+					}
+				}).blur(function () {
+					if ($(this).val() == "") {
+						$(this).val($(this).attr("title"));
+						$(this).css('color', '#ccc');
+					}
+				});
+			});
+		</script>
 		<style TYPE="text/css">
 			body {font-family:'Droid Sans', Arial, sans-serif; background:#fff;color:#444;}
 			h1, h2, h3, h4, a, th {color:#046;}
@@ -21,30 +46,6 @@
 			tr.odd:hover {background-color:#ace;}
 			#source_label {color:#046; text-decoration:underline; cursor:pointer;}
 		</style>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox.pack.js"></script>
-		<link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-		<script type="text/javascript">
-		$(function() {
-			$("table").dataTable({"bPaginate": false, "aaSorting": []});
-			$('a:has(img)').attr('rel', 'gallery').fancybox();
-			$('#source_label').click(function() {
-				$('#source_body').toggle('slow', function() {});
-			});
-			$('.text').focus(function () {
-				if ($(this).val() == $(this).attr("title")) {
-					$(this).val("");
-					$(this).css('color', '#000');
-				}
-			}).blur(function () {
-				if ($(this).val() == "") {
-					$(this).val($(this).attr("title"));
-					$(this).css('color', '#ccc');
-				}
-			});
-		});
-		</script>
 
 	</head>
 	<body{% if DEVELOP %} style="background-color:#eef"{% endif %}>
