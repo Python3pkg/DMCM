@@ -46,7 +46,7 @@
 			tr.odd:hover {background-color:#ace;}
 			#source_label {color:#046; text-decoration:underline; cursor:pointer;}
 		</style>
-
+		{% block extra_head %}{% endblock %}
 	</head>
 	<body{% if DEVELOP %} style="background-color:#eef"{% endif %}>
 		<div id="navigation" style="padding-bottom:0.2em; margin:0; width:100%;">

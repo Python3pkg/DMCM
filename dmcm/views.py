@@ -1,6 +1,7 @@
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
+from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 from django.views.generic import ListView
@@ -62,6 +63,19 @@ def search_pages(request):
                'object': {'wide': True} # Dispplay results in a wide content area on page.
     }
     return render_to_response('dmcm/search_results.html', context, RequestContext(request))
+
+TOOL_NAMES = ['cardgen', 'deduplicate', 'compare']
+
+def show_tool(request, tool_name=""):
+    """
+    Render template containing requested (javascript) tool.
+    """
+    context = {}
+    if tool_name in TOOL_NAMES:
+        template = 'dmcm/tool_%s.html' % (tool_name)
+        return render_to_response(template, context, RequestContext(request))
+    else:
+        raise Http404
 
 @login_required
 def edit_page(request, slug=""):

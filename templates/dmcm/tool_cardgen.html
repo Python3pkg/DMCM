@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}ahernp.com: Cardgen{% endblock %}
+
+{% block nav_path %}
+	<a href="/">ahernp.com</a> &rsaquo; 
+	<a href="/tools">Tools</a> &rsaquo;
+	Cardgen
+{% endblock %}
+
+{% block extra_head %}
+  	<script type = "text/javascript">
+		function generate_cards() {
+			var delimiter = $('#delim').val();
+			var data_records = $('#datarecs').val().split('\n');
+			var template = $('#template').val();
+			// First data record contains labels
+			var labels = data_records[0].split(delimiter);
+		    var output_string = '';
+		    for (var i = 1; i < data_records.length; i++) {
+		    	var curr_card = template;
+		    	var curr_data = data_records[i].split(delimiter);
+		    	for (var j = 0; j < curr_data.length; j++) {
+		            var curr_label = new RegExp(labels[j], "g");
+		            // Replace all occurrances of label with the equivalent data
+		            curr_card = curr_card.replace(curr_label, curr_data[j]);
+		    	}
+		        output_string = output_string + curr_card + "\n";
+		    }
+		    $('#generatedcards').val(output_string);
+		}
+  		$(document).ready(function() {
+			$('#generate').button().click(function() { generate_cards() });
+        });
+	</script>
+	<link rel="stylesheet" href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
+{% endblock %}
+
+{% block content %}
+	<h1>Generate Card Output</h1>
+  	<p>
+  		Generate multiple cards from a single template by replacing 
+  		label/references with equivalent data.
+  	</p>
+  	<p>
+  		<label>Data:<br />
+     		<textarea id = "datarecs" rows = "4" cols = "56">
+#Name,#URL,#Description
+Google,www.google.com,Search engine.
+Amazon,www.amazon.co.uk,Bookshop.</textarea>
+		</label>
+	</p>
+  	<p>Delimiter used in data: <input id="delim" type="text" size="1" value="," /></p>
+  	<p>
+  		<label>Template:<br />
+     		<textarea id = "template" rows = "4" cols = "56">
+<li>#Name <a href="http://#URL" title="#Description"> #URL</a> #Description</li></textarea>
+		</label>
+	</p>
+  	<p id="generate">Generate Cards</p>   
+  	<p>
+  		<label>Output:<br />
+     		<textarea id = "generatedcards" rows = "4" cols = "56">
+<li>Google <a href="http://www.google.com" title="Search engine."> www.google.com</a> Search engine.</li>
+<li>Amazon <a href="http://www.amazon.co.uk" title="Bookshop."> www.amazon.co.uk</a> Bookshop.</li></textarea>
+		</label>
+	</p>
+{% endblock %}
