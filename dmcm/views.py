@@ -9,6 +9,7 @@ from project import settings
 from project.dmcm.forms import StringSearchForm
 from project.dmcm.models import Page
 
+
 class WideListView(ListView):
     """
     Add extra context value 'object.wide'. Gets base template to make content area wider.
@@ -17,17 +18,18 @@ class WideListView(ListView):
         context = super(WideListView, self).get_context_data(**kwargs)
         context['object'] = {'wide': True}
         return context
-    
+
+
 def search_pages(request):
     """
     Simple string search.
-    
+
     Display pages with titles and/or content which contain the string searched for.
     """
     form = StringSearchForm(request.GET)
     search_string = form.cleaned_data['search_string'] if form.is_valid() else ''
     if len(search_string) < 3:
-        return render_to_response('dmcm/search_results.html', 
+        return render_to_response('dmcm/search_results.html',
                                   {'search_string': search_string, 'too_small': True},
                                   RequestContext(request))
     title_matches = Page.objects.filter(title__icontains=search_string)
@@ -53,18 +55,17 @@ def search_pages(request):
                 matching_line = page.content
             matching_lines.append(matching_line)
             match_pos = content_lower.find(search_string_lower, next_newline) if next_newline > 0 else -1
-        content_matches.append({'page': page, 
-                                'matching_lines': matching_lines, 
-                                'number_found': number_found,
-                            })
+        content_matches.append({'page': page,
+                                'matching_lines': matching_lines,
+                                'number_found': number_found})
     context = {'title_matches': title_matches,
                'content_matches': content_matches,
                'search_string': search_string,
-               'object': {'wide': True} # Dispplay results in a wide content area on page.
-    }
+               'object': {'wide': True}}  # Dispplay results in a wide content area on page.
     return render_to_response('dmcm/search_results.html', context, RequestContext(request))
 
 TOOL_NAMES = ['cardgen', 'deduplicate', 'compare']
+
 
 def show_tool(request, tool_name=""):
     """
@@ -77,6 +78,7 @@ def show_tool(request, tool_name=""):
     else:
         raise Http404
 
+
 @login_required
 def edit_page(request, slug=""):
     """
@@ -85,26 +87,31 @@ def edit_page(request, slug=""):
     page = get_object_or_404(Page, slug=slug)
     return redirect(reverse('admin:dmcm_page_change', args=(page.id,)))
 
+
 @login_required
 def server_status_dashboard(request):
     """
     Build page providing information about the state of the system.
     """
-    import django, reversion, markdown
+    import django
+    import reversion
+    import markdown
     import os
     from subprocess import Popen, PIPE
-    
+
     # Shell commands: Name and command
-    SHELL_COMMANDS = [('hostname','hostname'), 
-                      ('gitversion', 'git log -n 1'),
-                      ('mysql_version', 'mysql --version'),
-                     ]
-    
+    SHELL_COMMANDS = [
+        ('hostname', 'hostname'),
+        ('gitversion', 'git log -n 1'),
+        ('mysql_version', 'mysql --version'),
+    ]
+
     # Flags in settings: Their expected  and actual values.
-    SETTINGS_FLAGS = [('DEBUG', False),
-                      ('DEVELOP', False),
-                     ]
-    
+    SETTINGS_FLAGS = [
+        ('DEBUG', False),
+        ('DEVELOP', False),
+    ]
+
     def run_shell_command(command, cwd):
         """
         Run command in shell and return results.
@@ -114,25 +121,27 @@ def server_status_dashboard(request):
         if stdout:
             stdout = stdout.strip()
         return stdout
-    
+
     context = {'object': {'wide': True}}
 
     # Versions
     context['django_version'] = '%s.%s.%s (%s, %s)' % (django.VERSION)
     context['markdown_version'] = '%s.%s.%s (%s)' % (markdown.version_info)
     context['reversion_version'] = '%s.%s.%s' % (reversion.VERSION)
-    
+
     curr_dir = os.path.realpath(os.path.dirname(__file__))
     for name, shell_command in SHELL_COMMANDS:
         context[name] = run_shell_command(shell_command, curr_dir)
-    
+
     # Settings Flags
     context['settings_flags'] = []
     for name, expected in SETTINGS_FLAGS:
         actual_setting = getattr(settings, name, None)
-        context['settings_flags'].append({'name': name, 
-                                  'unexpected': expected != actual_setting, 
-                                  'actual': actual_setting})
+        context['settings_flags'].append({
+            'name': name,
+            'unexpected': expected != actual_setting,
+            'actual': actual_setting
+        })
 
     context['time_checked'] = datetime.now()
     return render_to_response('server_status_dashboard.html', context, RequestContext(request))

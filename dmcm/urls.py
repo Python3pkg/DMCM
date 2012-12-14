@@ -7,14 +7,15 @@ from project.settings import SITE_ROOT_ID, BLOG_ROOT_ID
 
 BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     url(r'^$', DetailView.as_view(model=Page), {'pk': SITE_ROOT_ID}, name='dmcm_root'),
     url(r'^search_pages/$', search_pages, name='dmcm_search_pages'),
     url(r'^site_map/$', ListView.as_view(queryset=Page.objects.exclude(parent__exact=BLOG_ROOT)), name='dmcm_site_map'),
-    url(r'^blog/$', 
+    url(r'^blog/$',
         ListView.as_view(queryset=Page.objects.filter(parent__exact=BLOG_ROOT).order_by('-published')[:2], template_name='dmcm/blog_root.html'),
         name='dmcm_blog_summary'),
-    url(r'^blog/archive/$', 
+    url(r'^blog/archive/$',
         WideListView.as_view(queryset=Page.objects.filter(parent__exact=BLOG_ROOT).order_by('-published'), template_name='dmcm/blog_archive.html'),
         name='dmcm_blog_archive'),
     url(r'^blog/feed/$', LatestBlogPostsFeed(), name='dmcm_blog_feed'),

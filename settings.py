@@ -1,7 +1,7 @@
 """Django settings for dmcm project."""
 import sys
 
-SITE_ROOT_ID = 3 # Homepage
+SITE_ROOT_ID = 3  # Homepage
 BLOG_ROOT_ID = 1
 
 DEBUG = False
@@ -9,18 +9,15 @@ DEVELOP = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-     ('Paul Ahern', 'ahernp@ahernp.com'),
+    ('Paul Ahern', 'ahernp@ahernp.com'),
 )
-
 MANAGERS = ADMINS
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dmcm'
     }
 }
-
 TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-gb'
 SITE_ID = 1
@@ -30,7 +27,7 @@ MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATIC_ROOT = '/home/ahernp/code/dmcm/static/'
 STATIC_URL = '/static/'
-#SECRET_KEY = '' # Populated in localsettings.py
+#SECRET_KEY = ''  # Populated in localsettings.py
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',

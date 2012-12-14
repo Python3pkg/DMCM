@@ -25,35 +25,38 @@ Usage
 from django.contrib.contenttypes.models import ContentType
 from django.db import connection as db_connection
 from django.db.models.fields import AutoField, BigIntegerField, BooleanField, CharField,\
-                CommaSeparatedIntegerField, DateField, DateTimeField, DecimalField,\
-                EmailField, FilePathField, FloatField, IPAddressField, IntegerField,\
-                NullBooleanField, PositiveIntegerField, PositiveSmallIntegerField,\
-                SlugField, SmallIntegerField, TextField, TimeField, URLField
+    CommaSeparatedIntegerField, DateField, DateTimeField, DecimalField,\
+    EmailField, FilePathField, FloatField, IPAddressField, IntegerField,\
+    NullBooleanField, PositiveIntegerField, PositiveSmallIntegerField,\
+    SlugField, SmallIntegerField, TextField, TimeField, URLField
 from django.db.models.fields.files import FileField, ImageField
 from django.db.models.fields.related import ForeignKey, ManyToManyField, OneToOneField
 from django.core.management.base import BaseCommand
 from django.conf import settings
 import MySQLdb
 
-FIELD_TYPES_CHECKED = [AutoField, BigIntegerField, BooleanField, CharField,
-                       CommaSeparatedIntegerField, DateField, DateTimeField,
-                       DecimalField, EmailField, FileField, FilePathField,
-                       FloatField, ForeignKey, IPAddressField, ImageField,
-                       IntegerField, ManyToManyField, NullBooleanField,
-                       OneToOneField, PositiveIntegerField, PositiveSmallIntegerField,
-                       SlugField, SmallIntegerField, TextField, TimeField, URLField]
+FIELD_TYPES_CHECKED = [
+    AutoField, BigIntegerField, BooleanField, CharField,
+    CommaSeparatedIntegerField, DateField, DateTimeField,
+    DecimalField, EmailField, FileField, FilePathField,
+    FloatField, ForeignKey, IPAddressField, ImageField,
+    IntegerField, ManyToManyField, NullBooleanField,
+    OneToOneField, PositiveIntegerField, PositiveSmallIntegerField,
+    SlugField, SmallIntegerField, TextField, TimeField, URLField
+]
 
 # MySQL Column definitions which are not exact matches for equivalent Django Field.db_type():
 COLUMN_DEFINITIONS = {
-                      'bool': 'tinyint(1)',                               # BooleanField
-                      'bigint': 'bigint(20)',                             # BigIntegerField
-                      'double precision': 'double',                       # FloatField
-                      'integer': 'int(11)',                               # IntegerField
-                      'integer AUTO_INCREMENT': 'int(11)',                # AutoField
-                      'integer UNSIGNED': 'int(10) unsigned',             # PositiveIntegerField
-                      'smallint UNSIGNED': 'smallint(5) unsigned',        # PositiveSmallIntegerField
-                      'smallint': 'smallint(6)',                          # SmallIntegerField
-                      }
+    'bool': 'tinyint(1)',                               # BooleanField
+    'bigint': 'bigint(20)',                             # BigIntegerField
+    'double precision': 'double',                       # FloatField
+    'integer': 'int(11)',                               # IntegerField
+    'integer AUTO_INCREMENT': 'int(11)',                # AutoField
+    'integer UNSIGNED': 'int(10) unsigned',             # PositiveIntegerField
+    'smallint UNSIGNED': 'smallint(5) unsigned',        # PositiveSmallIntegerField
+    'smallint': 'smallint(6)',                          # SmallIntegerField
+}
+
 
 class Command(BaseCommand):
     args = 'database_name app_name model_name'
@@ -78,7 +81,7 @@ class Command(BaseCommand):
         else:
             content_types = ContentType.objects.all()
         if not content_types:
-            print 'No ContentType found'+' for app "%s"' % (app_label) if app_label else ''
+            print 'No ContentType found' + ' for app "%s"' % (app_label) if app_label else ''
 
         try:
             connection = MySQLdb.connect(
@@ -120,15 +123,23 @@ class Command(BaseCommand):
             # | msg      | varchar(600) | YES  |     | NULL    |                |
             # | datetime | datetime     | NO   |     | NULL    |                |
             # +----------+--------------+------+-----+---------+----------------+
-            columns = {row[0]: {'type': row[1], 'null': row[2] == 'YES', 'primary_key': row[3] == 'PRI',
-                        'index': row[3] != '', 'default': row[4], 'extra': row[5], } for row in rows}
+            columns = {
+                row[0]: {
+                    'type': row[1],
+                    'null': row[2] == 'YES',
+                    'primary_key': row[3] == 'PRI',
+                    'index': row[3] != '',
+                    'default': row[4],
+                    'extra': row[5],
+                } for row in rows
+            }
             for field in model_class._meta.fields:
                 field_type = type(field)
                 field_name = field.name
                 if field.db_column:
                     column_name = field.db_column
                 elif field_type == ForeignKey or field_type == OneToOneField:
-                    column_name = field_name+'_id'
+                    column_name = field_name + '_id'
                 else:
                     column_name = field_name
                 msg_pfx = '%s.%s v %s.%s:' % (model_name, field_name, table_name, column_name)
@@ -168,7 +179,7 @@ class Command(BaseCommand):
 
 Table containing all types of fields. Add to a models.py and run syncdb to test.
 
-class FieldsTestModel(models.Model):
+ class FieldsTestModel(models.Model):
     AutoField = models.AutoField(primary_key=True)
     BooleanField = models.BooleanField()
     CharField = models.CharField(max_length=10)

@@ -1,7 +1,8 @@
 """
 Fabfile for ahernp.com.
 """
-import codecs, os
+import codecs
+import os
 from fabric.api import (env, local, lcd, cd, run,
                         task, hosts, settings, abort,
                         prefix)
@@ -19,8 +20,7 @@ PARENT_PATH = os.path.join(DJANGO_PROJECT_PATH, os.pardir)
 VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packages')
 EXTRA_PYTHONPATHS_FILE = os.path.join(VIRTUALENV_PACKAGES, 'extra.pth')
 
-DEPENDENCIES = [
-                {
+DEPENDENCIES = [{
                 'name': 'dmcm',
                 'install_dir': 'project',
                 'pythonpath': PARENT_PATH,
@@ -47,8 +47,7 @@ DEPENDENCIES = [
                 'pythonpath': os.path.join(PARENT_PATH, 'reversion', 'src'),
                 'update': 'git pull',
                 'clone': 'git clone https://github.com/etianen/django-reversion.git reversion',
-                },
-]
+                }]
 
 LOCALSETTINGS = """DEBUG = True
 DEVELOP = True
@@ -84,24 +83,24 @@ AUTH_JSON = """[
 ]
 """
 
-STATIC_FILES = [
-                {
+STATIC_FILES = [{
                 'path': os.path.join(DJANGO_PROJECT_PATH, 'localsettings.py'),
                 'data': LOCALSETTINGS,
                 },
                 {
                 'path': os.path.join(DJANGO_PROJECT_PATH, 'dmcm', 'fixtures', 'auth.json'),
                 'data': AUTH_JSON,
-                },
-]
+                }]
 
 env.hosts = ['web']
+
 
 def write_file(filename, data):
     """Write data to file."""
     output_file = codecs.open(filename, 'w', 'utf-8')
     output_file.write(data)
     output_file.close()
+
 
 @decorator
 def timer(func, *args, **kwargs):
@@ -110,15 +109,16 @@ def timer(func, *args, **kwargs):
     result = func(*args, **kwargs)
     end_time = datetime.now()
     duration = end_time - start_time
-    print(magenta('# {} ran for {} (started at {:%H:%M:%S}, ended at {:%H:%M:%S})'\
+    print(magenta('# {} ran for {} (started at {:%H:%M:%S}, ended at {:%H:%M:%S})'
           .format(func.__name__, duration, start_time, end_time)))
     return result
+
 
 @task
 @timer
 def setup():
     """Setup development environment."""
-    repo_dirs = set() # Directories needed on pythonpath
+    repo_dirs = set()  # Directories needed on pythonpath
     for repo in DEPENDENCIES:
         install_path = os.path.join(PARENT_PATH, repo['install_dir'])
         if os.path.exists(install_path):
@@ -158,6 +158,7 @@ def setup():
     manage('loaddata auth.json')
     manage('collectstatic --noinput')
 
+
 @task
 @hosts('localhost')
 @timer
@@ -167,6 +168,7 @@ def test():
         result = local('python manage.py test dmcm', capture=True)
     if result.failed and not confirm("Tests failed. Continue anyway?"):
         abort("Aborting at user request.")
+
 
 @task
 @timer
@@ -183,6 +185,7 @@ def deliver():
     local("git add -p && git commit")
     local("git push")
 
+
 @task
 @timer
 def deploy():
@@ -194,6 +197,7 @@ def deploy():
     with cd(code_dir):
         run("git pull")
         run("~/webapps/django/apache2/bin/restart")
+
 
 @task
 @hosts('localhost')

@@ -4,6 +4,7 @@ from django.forms.widgets import TextInput, Textarea
 from project.dmcm.models import Page
 from reversion.admin import VersionAdmin
 
+
 class PageAdmin(VersionAdmin):
     search_fields = ['title']
     list_display = ['title', 'parent', 'updated', 'wide']
@@ -24,8 +25,8 @@ class PageAdmin(VersionAdmin):
         }),
     )
     formfield_overrides = {
-        models.CharField: {'widget': TextInput(attrs={'size':60})},
-        models.TextField: {'widget': Textarea(attrs={'rows':25, 'cols':110})},
+        models.CharField: {'widget': TextInput(attrs={'size': 60})},
+        models.TextField: {'widget': Textarea(attrs={'rows': 25, 'cols': 110})},
     }
 
 admin.site.register(Page, PageAdmin)
@@ -33,6 +34,7 @@ admin.site.register(Page, PageAdmin)
 from django.contrib.admin.models import LogEntry, ADDITION, CHANGE, DELETION
 from django.utils.html import escape
 from django.core.urlresolvers import reverse
+
 
 class LogEntryAdmin(admin.ModelAdmin):
     date_hierarchy = 'action_time'
@@ -43,7 +45,7 @@ class LogEntryAdmin(admin.ModelAdmin):
 
     search_fields = ['object_repr', 'change_message']
 
-    list_display = ['action_time', 'user', 'content_type', 'object_link', 
+    list_display = ['action_time', 'user', 'content_type', 'object_link',
                     'action_description', 'change_message']
 
     def has_add_permission(self, request):
@@ -79,4 +81,4 @@ class LogEntryAdmin(admin.ModelAdmin):
         return action_names[obj.action_flag]
     action_description.short_description = 'Action'
 
-admin.site.register(LogEntry,LogEntryAdmin)
+admin.site.register(LogEntry, LogEntryAdmin)

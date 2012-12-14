@@ -1,7 +1,6 @@
 from django.contrib import admin
-from django.db import models
-from django.forms.widgets import TextInput, Textarea
 from project.bugtracker.models import Ticket, TicketUpdate
+
 
 class TicketUpdateInline(admin.TabularInline):
     model = TicketUpdate
@@ -10,13 +9,14 @@ class TicketUpdateInline(admin.TabularInline):
     can_delete = False
     extra = 0
 
+
 class TicketAdmin(admin.ModelAdmin):
     list_display = ('title', 'status', 'priority',
                     'created_by', 'created_time', 'updated_time')
     list_filter = ('status', 'priority', 'updated_time', 'assigned_to')
     search_fields = ('title', 'description',)
     readonly_fields = ('created_by', 'created_time', 'updated_time',)
-    inlines = [TicketUpdateInline,]
+    inlines = [TicketUpdateInline]
     fieldsets = (
         (None, {
             'fields': (('title',),

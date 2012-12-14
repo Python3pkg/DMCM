@@ -5,6 +5,7 @@ import markdown
 
 BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)
 
+
 class LatestBlogPostsFeed(Feed):
     """
     RSS feed containing the latest blog entries.
@@ -22,9 +23,9 @@ class LatestBlogPostsFeed(Feed):
     def item_description(self, item):
         if len(item.content) > 100:
             para_end = item.content.find('\n', 100)
-            if para_end > 0: 
-                description = item.content[:para_end]+'...'
-                return markdown.markdown(description, ['tables', 'toc',])
+            if para_end > 0:
+                description = item.content[:para_end] + '...'
+                return markdown.markdown(description, ['tables', 'toc'])
         return item.content
 
     def item_link(self, item):
