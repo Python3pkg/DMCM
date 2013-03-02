@@ -5,8 +5,8 @@
 		<link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" type="image/ico" /> 
 		<title>{% block title %}{% endblock %}</title>
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-      	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-      	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+      	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+      	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
 		<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox.pack.js"></script>
 		<link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -54,7 +54,7 @@
 				{% block nav_path %}{% endblock %}
 			</div>
 			<div style="width:30%;float:right;padding:0em;text-align:right;">
-				<form name="input" action="{% url dmcm_search_pages %}" method="get" style="padding-right:1em;">
+				<form name="input" action="{% url 'dmcm_search_pages' %}" method="get" style="padding-right:1em;">
 					<input type="text" tabindex="1" size="10"
 						{% if search_string %}style="color:#000;"{% else %}style="color:#ccc;"{% endif %}
 						name="search_string" title="Search Site" class="text" 

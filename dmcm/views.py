@@ -126,8 +126,8 @@ def server_status_dashboard(request):
 
     # Versions
     context['django_version'] = '%s.%s.%s (%s, %s)' % (django.VERSION)
-    context['markdown_version'] = '%s.%s.%s (%s)' % (markdown.version_info)
-    context['reversion_version'] = '%s.%s.%s' % (reversion.VERSION)
+    context['markdown_version'] = '%s.%s.%s (%s %s)' % (markdown.version_info)
+    context['reversion_version'] = '%s.%s' % (reversion.VERSION)
 
     curr_dir = os.path.realpath(os.path.dirname(__file__))
     for name, shell_command in SHELL_COMMANDS:

@@ -20,19 +20,16 @@ PARENT_PATH = os.path.join(DJANGO_PROJECT_PATH, os.pardir)
 VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packages')
 EXTRA_PYTHONPATHS_FILE = os.path.join(VIRTUALENV_PACKAGES, 'extra.pth')
 
+DJANGO_VERSION = '1.5'
+DJANGO_ARCHIVE = 'Django-%s.tar.gz' % (DJANGO_VERSION)
+DJANGO_ARCHIVE_URL = 'http://ahernp.com/static/download/%s' % (DJANGO_ARCHIVE)
+
 DEPENDENCIES = [{
                 'name': 'dmcm',
                 'install_dir': 'project',
                 'pythonpath': PARENT_PATH,
                 'update': 'git pull',
                 'clone': 'git clone git@github.com:ahernp/DMCM.git project',
-                },
-                {
-                'name': 'django',
-                'install_dir': 'django',
-                'pythonpath': PARENT_PATH,
-                'update': 'svn up',
-                'clone': 'svn co http://code.djangoproject.com/svn/django/branches/releases/1.4.X/django',
                 },
                 {
                 'name': 'markdown',
@@ -119,6 +116,18 @@ def timer(func, *args, **kwargs):
 def setup():
     """Setup development environment."""
     repo_dirs = set()  # Directories needed on pythonpath
+
+    # Install Django, if necessary
+    if os.path.isfile(os.path.join(PARENT_PATH, DJANGO_ARCHIVE)):
+        pass  # Already up to date
+    else:
+        with lcd(PARENT_PATH):
+            local('wget %s' % (DJANGO_ARCHIVE_URL))
+            local('tar xzvf %s' % (DJANGO_ARCHIVE))
+            if os.path.islink(os.path.join(PARENT_PATH, 'django')):
+                local('rm %s' % (os.path.join(PARENT_PATH, 'django')))
+            local('ln -s %s django' % (os.path.join(PARENT_PATH, 'Django-%s' % (DJANGO_VERSION), 'django')))
+
     for repo in DEPENDENCIES:
         install_path = os.path.join(PARENT_PATH, repo['install_dir'])
         if os.path.exists(install_path):
@@ -144,8 +153,8 @@ def setup():
             write_file(output_file['path'], output_file['data'])
 
     # Get current data from live
-    code_dir = '~/project'
-    with cd(code_dir):
+    CODE_DIR = '~/project'
+    with cd(CODE_DIR):
         with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
             run('python2.7 manage.py dumpdata --indent 4 dmcm > ~/initial_data.json')
     get('initial_data.json', os.path.join(DJANGO_PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))

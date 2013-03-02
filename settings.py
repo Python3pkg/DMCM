@@ -1,5 +1,8 @@
 """Django settings for dmcm project."""
 import sys
+import os
+
+PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
 
 SITE_ROOT_ID = 3  # Homepage
 BLOG_ROOT_ID = 1
@@ -22,10 +25,10 @@ TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-gb'
 SITE_ID = 1
 USE_I18N = True
-MEDIA_ROOT = '/home/ahernp/Documents/ahernp.com/site/'
+MEDIA_ROOT = ''  # From localsettings.py 
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
-STATIC_ROOT = '/home/ahernp/code/dmcm/static/'
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'dmcm', 'static')
 STATIC_URL = '/static/'
 #SECRET_KEY = ''  # Populated in localsettings.py
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -48,7 +51,7 @@ MIDDLEWARE_CLASSES = (
 )
 ROOT_URLCONF = 'project.urls'
 TEMPLATE_DIRS = (
-    '/home/ahernp/code/dmcm/project/templates'
+    os.path.join(PROJECT_PATH, 'templates')
 )
 INSTALLED_APPS = (
     'django.contrib.auth',

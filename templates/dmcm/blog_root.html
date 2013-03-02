@@ -2,7 +2,7 @@
 
 {% block title %}ahernp.com: Blog{% endblock %}
 
-{% block nav_path %}<a href="{% url dmcm_root %}">ahernp.com</a> &rsaquo; Blog{% endblock %}
+{% block nav_path %}<a href="{% url 'dmcm_root' %}">ahernp.com</a> &rsaquo; Blog{% endblock %}
 
 {% load markup %}
 
@@ -20,6 +20,6 @@
 {% endblock %}
 
 {% block footer %}
-	<a href="{% url dmcm_blog_archive %}">Blog Archive</a>;
-	<a href="{% url dmcm_blog_feed %}">RSS Feed</a>.
+	<a href="{% url 'dmcm_blog_archive' %}">Blog Archive</a>;
+	<a href="{% url 'dmcm_blog_feed' %}">RSS Feed</a>.
 {% endblock %}
