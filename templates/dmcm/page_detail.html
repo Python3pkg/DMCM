@@ -14,7 +14,7 @@
 	{{ object.title }}
 {% endblock %}
 
-{% load markup %}
+{% load dmcm_markup %}
 
 {% block content %}
 	{% if object.published %}<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>{% endif %}

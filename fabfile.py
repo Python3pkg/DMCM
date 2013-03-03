@@ -1,5 +1,5 @@
 """
-Fabfile for ahernp.com.
+Fabfile for DMCM.
 """
 import codecs
 import os
@@ -14,37 +14,18 @@ from decorator import decorator
 
 DATABASE_NAME = 'dmcm'
 
-DJANGO_PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
-PARENT_PATH = os.path.join(DJANGO_PROJECT_PATH, os.pardir)
+PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
+PARENT_PATH = os.path.join(PROJECT_PATH, os.pardir)
 
 VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packages')
-EXTRA_PYTHONPATHS_FILE = os.path.join(VIRTUALENV_PACKAGES, 'extra.pth')
 
-DJANGO_VERSION = '1.5'
-DJANGO_ARCHIVE = 'Django-%s.tar.gz' % (DJANGO_VERSION)
-DJANGO_ARCHIVE_URL = 'http://ahernp.com/static/download/%s' % (DJANGO_ARCHIVE)
-
-DEPENDENCIES = [{
-                'name': 'dmcm',
-                'install_dir': 'project',
-                'pythonpath': PARENT_PATH,
-                'update': 'git pull',
-                'clone': 'git clone git@github.com:ahernp/DMCM.git project',
-                },
-                {
-                'name': 'markdown',
-                'install_dir': 'markdown',
-                'pythonpath': os.path.join(PARENT_PATH, 'markdown'),
-                'update': 'git pull',
-                'clone': 'git clone git://github.com/waylan/Python-Markdown.git markdown',
-                },
-                {
-                'name': 'reversion',
-                'install_dir': 'reversion',
-                'pythonpath': os.path.join(PARENT_PATH, 'reversion', 'src'),
-                'update': 'git pull',
-                'clone': 'git clone https://github.com/etianen/django-reversion.git reversion',
-                }]
+# PIP requirements file
+REQUIREMENTS = """Django==1.5
+Markdown==2.2.1
+argparse==1.2.1
+django-reversion==1.7
+wsgiref==0.1.2
+"""
 
 LOCALSETTINGS = """DEBUG = True
 DEVELOP = True
@@ -81,11 +62,15 @@ AUTH_JSON = """[
 """
 
 STATIC_FILES = [{
-                'path': os.path.join(DJANGO_PROJECT_PATH, 'localsettings.py'),
+                'path': os.path.join(PARENT_PATH, 'requirements.txt'),
+                'data': REQUIREMENTS,
+                },
+                {
+                'path': os.path.join(PROJECT_PATH, 'localsettings.py'),
                 'data': LOCALSETTINGS,
                 },
                 {
-                'path': os.path.join(DJANGO_PROJECT_PATH, 'dmcm', 'fixtures', 'auth.json'),
+                'path': os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'auth.json'),
                 'data': AUTH_JSON,
                 }]
 
@@ -114,53 +99,24 @@ def timer(func, *args, **kwargs):
 @task
 @timer
 def setup():
-    """Setup development environment."""
-    repo_dirs = set()  # Directories needed on pythonpath
-
-    # Install Django, if necessary
-    if os.path.isfile(os.path.join(PARENT_PATH, DJANGO_ARCHIVE)):
-        pass  # Already up to date
-    else:
-        with lcd(PARENT_PATH):
-            local('wget %s' % (DJANGO_ARCHIVE_URL))
-            local('tar xzvf %s' % (DJANGO_ARCHIVE))
-            if os.path.islink(os.path.join(PARENT_PATH, 'django')):
-                local('rm %s' % (os.path.join(PARENT_PATH, 'django')))
-            local('ln -s %s django' % (os.path.join(PARENT_PATH, 'Django-%s' % (DJANGO_VERSION), 'django')))
-
-    for repo in DEPENDENCIES:
-        install_path = os.path.join(PARENT_PATH, repo['install_dir'])
-        if os.path.exists(install_path):
-            print('# Updating %s' % (repo['name']))
-            with lcd(install_path):
-                local(repo['update'])
-        else:
-            print(yellow('# Cloning %s' % (repo['name'])))
-            with lcd(PARENT_PATH):
-                local(repo['clone'])
-        repo_dirs.add(os.path.join(PARENT_PATH, repo['pythonpath']))
-
-    # Ensure dependencies are available on pythonpath.
-    print('# Add applications to PYTHONPATH. (%s)' % (', '.join(repo_dirs)))
-    static_files = STATIC_FILES
-    static_files.append({'path': EXTRA_PYTHONPATHS_FILE,
-                         'data': '\n'.join(repo_dirs)})
-    if os.path.isfile(EXTRA_PYTHONPATHS_FILE):
-        local('rm %s' % (EXTRA_PYTHONPATHS_FILE))
-    for output_file in static_files:
+    """Setup development environment in current virtualenv."""
+    for output_file in STATIC_FILES:
         if not os.path.isfile(output_file['path']):
             print('# Writing file \'%s\'' % (output_file['path']))
             write_file(output_file['path'], output_file['data'])
+
+    with lcd(PARENT_PATH):
+        local('pip install -r requirements.txt')
 
     # Get current data from live
     CODE_DIR = '~/project'
     with cd(CODE_DIR):
         with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
             run('python2.7 manage.py dumpdata --indent 4 dmcm > ~/initial_data.json')
-    get('initial_data.json', os.path.join(DJANGO_PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
+    get('initial_data.json', os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
 
     # Recreate database
-    with lcd(DJANGO_PROJECT_PATH):
+    with lcd(PROJECT_PATH):
         local('mysql --user=root --execute="drop database if exists %s"' % (DATABASE_NAME))
         local('mysql --user=root --execute="create database if not exists %s character set utf8"' % (DATABASE_NAME))
     manage('syncdb --noinput')
@@ -173,7 +129,7 @@ def setup():
 @timer
 def test():
     """Test dmcm."""
-    with settings(warn_only=True), lcd(DJANGO_PROJECT_PATH):
+    with settings(warn_only=True), lcd(PROJECT_PATH):
         result = local('python manage.py test dmcm', capture=True)
     if result.failed and not confirm("Tests failed. Continue anyway?"):
         abort("Aborting at user request.")
@@ -184,7 +140,7 @@ def test():
 def deliver():
     """Test, commit and push changes. """
     local("git status")
-    with lcd(DJANGO_PROJECT_PATH):
+    with lcd(PROJECT_PATH):
         local('grep -r --include="*.py" --exclude="fabfile.py" "pdb" . || [ $? -lt 2 ]')
         # grep issues a return code of 1 if no matches were found
         # '|| [ $? -lt 2 ]' ensures a zero return code to local
@@ -214,6 +170,6 @@ def deploy():
 def manage(*args, **kwargs):
     """Locally execute Django command."""
     with settings(warn_only=True):
-        with lcd(DJANGO_PROJECT_PATH):
+        with lcd(PROJECT_PATH):
             local('python manage.py %s %s' % (' '.join(args),
                                               ' '.join(['%s=%s' % (option, kwargs[option]) for option in kwargs])))
