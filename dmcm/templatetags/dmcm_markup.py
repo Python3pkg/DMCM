@@ -1,5 +1,5 @@
 """
-Markdown template filter.  
+Markdown template filter.
 
 Requires the Python-markdown library from
       http://www.freewisdom.org/projects/python-markdown
@@ -7,10 +7,11 @@ Requires the Python-markdown library from
 
 from django import template
 from django.conf import settings
-from django.utils.encoding import force_bytes, force_text
+from django.utils.encoding import force_text
 from django.utils.safestring import mark_safe
 
 register = template.Library()
+
 
 @register.filter(is_safe=True)
 def markdown(value, arg=''):

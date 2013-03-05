@@ -13,4 +13,6 @@ The site has a very simple structure. Features:
 
 Dependencies:
 
+* [Django 1.5](https://pypi.python.org/pypi/Django/1.5) web framework.
+* [Markdown](https://pypi.python.org/pypi/Markdown) text-to-HTML converter.
 * Uses [django-reversion](https://github.com/etianen/django-reversion) to keep a history of changes.
