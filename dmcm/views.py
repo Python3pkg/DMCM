@@ -125,9 +125,9 @@ def server_status_dashboard(request):
     context = {'object': {'wide': True}}
 
     # Versions
-    context['django_version'] = '%s.%s.%s (%s, %s)' % (django.VERSION)
-    context['markdown_version'] = '%s.%s.%s (%s %s)' % (markdown.version_info)
-    context['reversion_version'] = '%s.%s' % (reversion.VERSION)
+    context['django_version'] = '.'.join(str(i) for i in django.VERSION)
+    context['markdown_version'] = '.'.join(str(i) for i in markdown.version_info)
+    context['reversion_version'] = '.'.join(str(i) for i in reversion.VERSION)
 
     curr_dir = os.path.realpath(os.path.dirname(__file__))
     for name, shell_command in SHELL_COMMANDS:
