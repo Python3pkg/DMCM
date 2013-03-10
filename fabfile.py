@@ -26,7 +26,7 @@ wsgiref==0.1.2
 
 LOCALSETTINGS = """DEBUG = True
 DEVELOP = True
-SECRET_KEY = ''
+SECRET_KEY = 'Default for testing; Override with random data when deployed'
 """
 
 AUTH_JSON = """[
@@ -107,7 +107,7 @@ def setup():
         get('initial_data.json', os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
 
     # Recreate database
-    with lcd(PROJECT_PATH):
+    with settings(warn_only=True), lcd(PROJECT_PATH):
         local('rm dmcm.sqlite3')
     manage('syncdb --noinput')
     manage('loaddata auth.json')

@@ -25,12 +25,11 @@ TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-gb'
 SITE_ID = 1
 USE_I18N = True
-MEDIA_ROOT = ''  # From localsettings.py 
+MEDIA_ROOT = os.path.join(PROJECT_PATH, os.pardir, 'media') 
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATIC_ROOT = os.path.join(PROJECT_PATH, 'dmcm', 'static')
 STATIC_URL = '/static/'
-#SECRET_KEY = ''  # Populated in localsettings.py
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
