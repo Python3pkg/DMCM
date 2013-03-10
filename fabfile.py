@@ -1,18 +1,14 @@
-"""
-Fabfile for DMCM.
-"""
+"""Fabfile for DMCM."""
 import codecs
 import os
 from fabric.api import (env, local, lcd, cd, run,
                         task, hosts, settings, abort,
                         prefix)
-from fabric.colors import magenta, yellow
+from fabric.colors import magenta
 from fabric.contrib.console import confirm
 from fabric.operations import get
 from datetime import datetime
 from decorator import decorator
-
-DATABASE_NAME = 'dmcm'
 
 PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
 PARENT_PATH = os.path.join(PROJECT_PATH, os.pardir)
@@ -22,6 +18,7 @@ VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packag
 # PIP requirements file
 REQUIREMENTS = """Django==1.5
 Markdown==2.2.1
+MySQL-python==1.2.4
 argparse==1.2.1
 django-reversion==1.7
 wsgiref==0.1.2
@@ -29,13 +26,6 @@ wsgiref==0.1.2
 
 LOCALSETTINGS = """DEBUG = True
 DEVELOP = True
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dmcm',
-        'USER': 'root',
-    }
-}
 SECRET_KEY = ''
 """
 
@@ -109,16 +99,16 @@ def setup():
         local('pip install -r requirements.txt')
 
     # Get current data from live
-    CODE_DIR = '~/project'
-    with cd(CODE_DIR):
-        with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
-            run('python2.7 manage.py dumpdata --indent 4 dmcm > ~/initial_data.json')
-    get('initial_data.json', os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
+    if confirm('Get data from live system?'):
+        CODE_DIR = '~/project'
+        with cd(CODE_DIR):
+            with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
+                run('python2.7 manage.py dumpdata --indent 4 dmcm > ~/initial_data.json')
+        get('initial_data.json', os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
 
     # Recreate database
     with lcd(PROJECT_PATH):
-        local('mysql --user=root --execute="drop database if exists %s"' % (DATABASE_NAME))
-        local('mysql --user=root --execute="create database if not exists %s character set utf8"' % (DATABASE_NAME))
+        local('rm dmcm.sqlite3')
     manage('syncdb --noinput')
     manage('loaddata auth.json')
     manage('collectstatic --noinput')
@@ -141,7 +131,7 @@ def deliver():
     """Test, commit and push changes. """
     local("git status")
     with lcd(PROJECT_PATH):
-        local('grep -r --include="*.py" --exclude="fabfile.py" "pdb" . || [ $? -lt 2 ]')
+        local('grep -r --include="*.py" "pdb" . || [ $? -lt 2 ]')
         # grep issues a return code of 1 if no matches were found
         # '|| [ $? -lt 2 ]' ensures a zero return code to local
     if not confirm('Check status. Continue with delivery?'):
