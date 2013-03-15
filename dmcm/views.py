@@ -5,9 +5,9 @@ from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 from django.views.generic import ListView
-from project import settings
-from project.dmcm.forms import StringSearchForm
-from project.dmcm.models import Page
+from django.conf import settings
+from dmcm.forms import StringSearchForm
+from dmcm.models import Page
 
 
 class WideListView(ListView):

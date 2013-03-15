@@ -2,8 +2,8 @@ from django.conf.urls import patterns, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from project.dmcm.views import server_status_dashboard
-from project.settings import MEDIA_URL, MEDIA_ROOT
+from dmcm.views import server_status_dashboard
+from django.conf import settings
 
 admin.autodiscover()
 
@@ -17,8 +17,8 @@ urlpatterns = patterns(
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^admin/jsi18n/$', 'django.views.i18n.javascript_catalog'),
-    (r'^', include('project.dmcm.urls')),
+    (r'^', include('dmcm.urls')),
 )
 
 # When running in development mode use Django to serve the static files.
-urlpatterns += staticfiles_urlpatterns() + static(MEDIA_URL, document_root=MEDIA_ROOT)
+urlpatterns += staticfiles_urlpatterns() + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

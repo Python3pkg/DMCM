@@ -1,15 +1,15 @@
 from django.conf.urls import patterns, url
 from django.views.generic import DetailView, ListView
-from project.dmcm.models import Page
-from project.dmcm.views import edit_page, search_pages, show_tool, WideListView
-from project.dmcm.utils import LatestBlogPostsFeed
-from project.settings import SITE_ROOT_ID, BLOG_ROOT_ID
+from dmcm.models import Page
+from dmcm.views import edit_page, search_pages, show_tool, WideListView
+from dmcm.utils import LatestBlogPostsFeed
+from django.conf import settings
 
-BLOG_ROOT = Page.objects.get(pk=BLOG_ROOT_ID)
+BLOG_ROOT = Page.objects.get(pk=settings.BLOG_ROOT_ID)
 
 urlpatterns = patterns(
     '',
-    url(r'^$', DetailView.as_view(model=Page), {'pk': SITE_ROOT_ID}, name='dmcm_root'),
+    url(r'^$', DetailView.as_view(model=Page), {'pk': settings.SITE_ROOT_ID}, name='dmcm_root'),
     url(r'^search_pages/$', search_pages, name='dmcm_search_pages'),
     url(r'^site_map/$', ListView.as_view(queryset=Page.objects.exclude(parent__exact=BLOG_ROOT)), name='dmcm_site_map'),
     url(r'^blog/$',

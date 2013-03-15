@@ -37,7 +37,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
-    'project.dmcm.context_processors.context_processor',
+    'dmcm.context_processors.context_processor',
 )
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -62,8 +62,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.markup',
     'reversion',
-    'project.dmcm',
-    'project.bugtracker',
+    'dmcm',
+    'bugtracker',
 )
 
 try:

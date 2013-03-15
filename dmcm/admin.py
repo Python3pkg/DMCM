@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db import models
 from django.forms.widgets import TextInput, Textarea
-from project.dmcm.models import Page
+from dmcm.models import Page
 from reversion.admin import VersionAdmin
 
 
