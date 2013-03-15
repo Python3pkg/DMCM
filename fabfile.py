@@ -103,7 +103,7 @@ def setup():
         CODE_DIR = '~/project'
         with cd(CODE_DIR):
             with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
-                run('python2.7 manage.py dumpdata --indent 4 dmcm > ~/initial_data.json')
+                run('python2.7 manage.py dumpdata --indent 4 dmcm sites.site > ~/initial_data.json')
         get('initial_data.json', os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
 
     # Recreate database
