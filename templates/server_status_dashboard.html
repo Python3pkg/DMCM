@@ -5,25 +5,25 @@
 {% block nav_path %}<a href="/">ahernp.com</a> &rsaquo; Server Status Dashboard{% endblock %}
 
 {% block content %}
-	<h1>Server Status at {{ time_checked|date:"Y-m-d H:i"}}</h1>
-	{% if hostname %}<p><strong>Hostname:</strong> {{ hostname }}</p>{% endif %}
-	<h2>Settings</h2>
-	{% for flag in settings_flags %}
-		<span {% if flag.unexpected %}style="background-color:maroon;color:white;{% endif %}">
-			{{ flag.name }}: {{flag.actual}}
-		</span> &ensp;
-	{% endfor %}
-	<h2>Versioning</h2>
-	{% if django_version %}<p><strong>Django:</strong> {{ django_version }}</p>{% endif %}
+    <h1>Server Status at {{ time_checked|date:"Y-m-d H:i"}}</h1>
+    {% if hostname %}<p><strong>Hostname:</strong> {{ hostname }}</p>{% endif %}
+    <h2>Settings</h2>
+    {% for flag in settings_flags %}
+        <span {% if flag.unexpected %}style="background-color:maroon;color:white;{% endif %}">
+            {{ flag.name }}: {{flag.actual}}
+        </span> &ensp;
+    {% endfor %}
+    <h2>Versioning</h2>
+    {% if django_version %}<p><strong>Django:</strong> {{ django_version }}</p>{% endif %}
     {% if markdown_version %}<p><strong>Python-Markdown:</strong> {{ markdown_version }}</p>{% endif %}
     {% if reversion_version %}<p><strong>Django-Reversion:</strong> {{ reversion_version }}</p>{% endif %}
-	{% if mysql_version %}<p><strong>MySQL:</strong> {{ mysql_version }}</p>{% endif %}
-	{% if gitversion %}
-		<strong>Application code:</strong><br>
-		<div style="padding-left:1em;">
-			<pre>{{ gitversion }}</pre>
-		</div>
-	{% endif %}
+    {% if mysql_version %}<p><strong>MySQL:</strong> {{ mysql_version }}</p>{% endif %}
+    {% if gitversion %}
+        <strong>Application code:</strong><br>
+        <div style="padding-left:1em;">
+            <pre>{{ gitversion }}</pre>
+        </div>
+    {% endif %}
 {% endblock %}
 
 {% block footer %}<a href="/accounts/logout">Logout</a>{% endblock %}

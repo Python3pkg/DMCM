@@ -7,19 +7,19 @@
 {% load dmcm_markup %}
 
 {% block content %}
-	{% for page in object_list %}
-		<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>
-		{{ page.content|markdown:"extra,tables,toc" }}
-		<hr size="1">
-		<p>
-			Last Updated: {{ page.updated|date:"Y-m-d H:i" }};
-			<a href="/{{ page.slug }}/">Comments</a>. 
-		</p>
-	{% endfor %}
-	<br>
+    {% for page in object_list %}
+        <h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>
+        {{ page.content|markdown:"extra,tables,toc" }}
+        <hr size="1">
+        <p>
+            Last Updated: {{ page.updated|date:"Y-m-d H:i" }};
+            <a href="/{{ page.slug }}/">Comments</a>. 
+        </p>
+    {% endfor %}
+    <br>
 {% endblock %}
 
 {% block footer %}
-	<a href="{% url 'dmcm_blog_archive' %}">Blog Archive</a>;
-	<a href="{% url 'dmcm_blog_feed' %}">RSS Feed</a>.
+    <a href="{% url 'dmcm_blog_archive' %}">Blog Archive</a>;
+    <a href="{% url 'dmcm_blog_feed' %}">RSS Feed</a>.
 {% endblock %}

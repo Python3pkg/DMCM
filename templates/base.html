@@ -1,79 +1,79 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" type="image/ico" /> 
-		<title>{% block title %}{% endblock %}</title>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" type="image/ico" /> 
+        <title>{% block title %}{% endblock %}</title>
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-      	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
-      	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox.pack.js"></script>
-		<link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-		<script type="text/javascript">
-			$(function() {
-				$("table").dataTable({"bPaginate": false, "aaSorting": []});
-				$('a:has(img)').attr('rel', 'gallery').fancybox();
-				$('#source_label').click(function() {
-					$('#source_body').toggle('slow', function() {});
-				});
-				$('.text').focus(function () {
-					if ($(this).val() == $(this).attr("title")) {
-						$(this).val("");
-						$(this).css('color', '#000');
-					}
-				}).blur(function () {
-					if ($(this).val() == "") {
-						$(this).val($(this).attr("title"));
-						$(this).css('color', '#ccc');
-					}
-				});
-			});
-		</script>
-		<style type="text/css">
-			body {font-family:'Droid Sans', Arial, sans-serif; background:#fff;color:#444;}
-			h1, h2, h3, h4, a, th {color:#046;}
-			h1 {font-size:1.5em;}
-			h2 {font-size:1.25em;}
-			h3 {font-size:1em;}
-			h4 {font-size:.75em;}
-			code {font-family:'Droid Sans Mono', Monospace; color:#000;font-size:14px;}
-			hr {margin:0}
-			table {border-collapse:collapse;}
-			th, td {border:1px solid #000; padding:0 0.5em 0 0.5em;}
-			tr.even {background-color:#ddd;}
-			tr.even:hover {background-color:#ace;}
-			tr.odd:hover {background-color:#ace;}
-			#source_label {color:#046; text-decoration:underline; cursor:pointer;}
-		</style>
-		{% block extra_head %}{% endblock %}
-	</head>
-	<body{% if DEVELOP %} style="background-color:#ddf"{% endif %}>
-		<div id="navigation" style="padding-bottom:0.2em; margin:0; width:100%;">
-			<div style="width:65%;float:left;padding:0.2em 0em 0.2em 1em;">
-				{% block nav_path %}{% endblock %}
-			</div>
-			<div style="width:30%;float:right;padding:0em;text-align:right;">
-				<form name="input" action="{% url 'dmcm_search_pages' %}" method="get" style="padding-right:1em;">
-					<input type="text" tabindex="1" size="10"
-						{% if search_string %}style="color:#000;"{% else %}style="color:#ccc;"{% endif %}
-						name="search_string" title="Search Site" class="text" 
-						value="{% if search_string %}{{search_string}}{% else %}Search Site{% endif %}"/>
-				</form> 
-			</div>
-			<div style="clear:both"></div>
-		</div>
-		<hr size="1">
-		{% if object.wide %} 
-			<div id="content" style="width:45em; margin-left:auto; margin-right:auto;">
-		{% else %}
-			<div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
-		{% endif %}
-			{% block content %}{% endblock %}
-		</div>
-		<hr size="1">
-		<div id="footer" style="font-size:.9em;padding-left:1em; margin-top:1em;">
-			{% block footer %}{% endblock %}
-		</div>
-	</body>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox.pack.js"></script>
+        <link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+        <script type="text/javascript">
+            $(function() {
+                $("table").dataTable({"bPaginate": false, "aaSorting": []});
+                $('a:has(img)').attr('rel', 'gallery').fancybox();
+                $('#source_label').click(function() {
+                    $('#source_body').toggle('slow', function() {});
+                });
+                $('.text').focus(function () {
+                    if ($(this).val() == $(this).attr("title")) {
+                        $(this).val("");
+                        $(this).css('color', '#000');
+                    }
+                }).blur(function () {
+                    if ($(this).val() == "") {
+                        $(this).val($(this).attr("title"));
+                        $(this).css('color', '#ccc');
+                    }
+                });
+            });
+        </script>
+        <style type="text/css">
+            body {font-family:'Droid Sans', Arial, sans-serif; background:#fff;color:#444;}
+            h1, h2, h3, h4, a, th {color:#046;}
+            h1 {font-size:1.5em;}
+            h2 {font-size:1.25em;}
+            h3 {font-size:1em;}
+            h4 {font-size:.75em;}
+            code {font-family:'Droid Sans Mono', Monospace; color:#000;font-size:14px;}
+            hr {margin:0}
+            table {border-collapse:collapse;}
+            th, td {border:1px solid #000; padding:0 0.5em 0 0.5em;}
+            tr.even {background-color:#ddd;}
+            tr.even:hover {background-color:#ace;}
+            tr.odd:hover {background-color:#ace;}
+            #source_label {color:#046; text-decoration:underline; cursor:pointer;}
+        </style>
+        {% block extra_head %}{% endblock %}
+    </head>
+    <body{% if DEVELOP %} style="background-color:#ddf"{% endif %}>
+        <div id="navigation" style="padding-bottom:0.2em; margin:0; width:100%;">
+            <div style="width:65%;float:left;padding:0.2em 0em 0.2em 1em;">
+                {% block nav_path %}{% endblock %}
+            </div>
+            <div style="width:30%;float:right;padding:0em;text-align:right;">
+                <form name="input" action="{% url 'dmcm_search_pages' %}" method="get" style="padding-right:1em;">
+                    <input type="text" tabindex="1" size="10"
+                        {% if search_string %}style="color:#000;"{% else %}style="color:#ccc;"{% endif %}
+                        name="search_string" title="Search Site" class="text" 
+                        value="{% if search_string %}{{search_string}}{% else %}Search Site{% endif %}"/>
+                </form> 
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <hr size="1">
+        {% if object.wide %} 
+            <div id="content" style="width:45em; margin-left:auto; margin-right:auto;">
+        {% else %}
+            <div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
+        {% endif %}
+            {% block content %}{% endblock %}
+        </div>
+        <hr size="1">
+        <div id="footer" style="font-size:.9em;padding-left:1em; margin-top:1em;">
+            {% block footer %}{% endblock %}
+        </div>
+    </body>
 </html>

@@ -3,75 +3,75 @@
 {% block title %}ahernp.com: Comnpare{% endblock %}
 
 {% block nav_path %}
-	<a href="/">ahernp.com</a> &rsaquo; 
-	<a href="/tools">Tools</a> &rsaquo;
-	Compare
+    <a href="/">ahernp.com</a> &rsaquo; 
+    <a href="/tools">Tools</a> &rsaquo;
+    Compare
 {% endblock %}
 
 {% block extra_head %}
-  	<script type = "text/javascript">
+    <script type = "text/javascript">
         function compare() {
-			var input_lines1 = $('#input1').val().split('\n').sort();
-			var input_lines2 = $('#input2').val().split('\n').sort();
-			var output_string = ""; pos1 = 0; pos2 = 0;
-			var count_matches = 0; var count_inserts = 0; var count_deletes = 0;
-		  	while (pos1 < input_lines1.length && pos2 < input_lines2.length) {
-				if (input_lines1[pos1] > input_lines2[pos2]) {
-					output_string = output_string + "I:" + input_lines2[pos2] + "\n";
-					pos2++; count_inserts++;
-				}
-				else if (input_lines1[pos1] < input_lines2[pos2]) {
-					output_string = output_string + "D:" + input_lines1[pos1] + "\n";
-					pos1++; count_deletes++;
-				}
-				else {
-					pos1++; pos2++; count_matches++;
-				}
-			}
-			while (pos1 < input_lines1.length) {
-				output_string = output_string + "D:" + input_lines1[pos1] + "\n";
-				pos1++; count_deletes++;
-			}
-			while (pos2 < input_lines2.length) {
-				output_string = output_string + "I:" + input_lines2[pos2] + "\n";
-				pos1 = pos2 + 2; count_inserts++;
-			}
-			output_string = "Results: " + count_matches + " matches; " + count_inserts + " inserts; " + count_deletes + " deletes.\n" + output_string;
-			$('#output').val(output_string);
-		}
-  		$(document).ready(function() {
-			$('#compare').button().click(function() { compare() });
+            var input_lines1 = $('#input1').val().split('\n').sort();
+            var input_lines2 = $('#input2').val().split('\n').sort();
+            var output_string = ""; pos1 = 0; pos2 = 0;
+            var count_matches = 0; var count_inserts = 0; var count_deletes = 0;
+            while (pos1 < input_lines1.length && pos2 < input_lines2.length) {
+                if (input_lines1[pos1] > input_lines2[pos2]) {
+                    output_string = output_string + "I:" + input_lines2[pos2] + "\n";
+                    pos2++; count_inserts++;
+                }
+                else if (input_lines1[pos1] < input_lines2[pos2]) {
+                    output_string = output_string + "D:" + input_lines1[pos1] + "\n";
+                    pos1++; count_deletes++;
+                }
+                else {
+                    pos1++; pos2++; count_matches++;
+                }
+            }
+            while (pos1 < input_lines1.length) {
+                output_string = output_string + "D:" + input_lines1[pos1] + "\n";
+                pos1++; count_deletes++;
+            }
+            while (pos2 < input_lines2.length) {
+                output_string = output_string + "I:" + input_lines2[pos2] + "\n";
+                pos1 = pos2 + 2; count_inserts++;
+            }
+            output_string = "Results: " + count_matches + " matches; " + count_inserts + " inserts; " + count_deletes + " deletes.\n" + output_string;
+            $('#output').val(output_string);
+        }
+        $(document).ready(function() {
+            $('#compare').button().click(function() { compare() });
         });
-	</script>
-	<link rel="stylesheet" href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
+    </script>
+    <link rel="stylesheet" href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
 {% endblock %}
 
 {% block content %}
-	<h1>Compare two lists</h1>
+    <h1>Compare two lists</h1>
     <p>Sort and compare inputs. If line in input1 is missing from input2 then it is included in output with the prefix "D:". If line in input2 is missing from input1 then it is included in output with the prefix "I:".</p>
     <p>
-    	<label>Input1:<br />
-    	<textarea id = "input1" rows = "4" cols = "56">
+        <label>Input1:<br />
+        <textarea id = "input1" rows = "4" cols = "56">
 Record1
 Record3
 Record4</textarea>
-		</label>
-	</p>
+        </label>
+    </p>
     <p>
-    	<label>Input2:<br />
+        <label>Input2:<br />
         <textarea id = "input2" rows = "4" cols = "56">
 Record1
 Record2
 Record3</textarea>
-		</label>
-	</p>
+        </label>
+    </p>
     <p id="compare">Sort &amp; Compare</p>
     <p>
-    	<label>Output:<br />
+        <label>Output:<br />
         <textarea id = "output" rows = "4" cols = "56">
 Results: 2 matches; 1 inserts; 1 deletes.
 I:Record2
 D:Record4</textarea>
-		</label>
-	</p>
+        </label>
+    </p>
 {% endblock %}

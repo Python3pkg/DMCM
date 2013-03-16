@@ -3,55 +3,55 @@
 {% block title %}ahernp.com: Deduplicate{% endblock %}
 
 {% block nav_path %}
-	<a href="/">ahernp.com</a> &rsaquo; 
-	<a href="/tools">Tools</a> &rsaquo;
-	Deduplicate
+    <a href="/">ahernp.com</a> &rsaquo; 
+    <a href="/tools">Tools</a> &rsaquo;
+    Deduplicate
 {% endblock %}
 
 {% block extra_head %}
-  	<script type = "text/javascript">
+    <script type = "text/javascript">
         function deduplicate() {
-			input_records = $('#input').val().split('\n').sort();
-	        output_records = "";
-		    for (var i = 0; i < input_records.length - 1; i++) {
-		    	// If next record is different add current to output 
-	            if (input_records[i] != input_records[i + 1]) 
-	                output_records = output_records + input_records[i] + "\n";
-	        }
-	           
-	        if (input_records.length == 0 || input_records.length == 1)
-	            output_records = input_records;
-	        else 
-	            output_records = output_records + input_records[input_records.length - 1] + "\n";
-	        $('#output').val(output_records);
-	    }
-  		$(document).ready(function() {
-			$('#deduplicate').button().click(function() { deduplicate() });
+            input_records = $('#input').val().split('\n').sort();
+            output_records = "";
+            for (var i = 0; i < input_records.length - 1; i++) {
+                // If next record is different add current to output 
+                if (input_records[i] != input_records[i + 1]) 
+                    output_records = output_records + input_records[i] + "\n";
+            }
+               
+            if (input_records.length == 0 || input_records.length == 1)
+                output_records = input_records;
+            else 
+                output_records = output_records + input_records[input_records.length - 1] + "\n";
+            $('#output').val(output_records);
+        }
+        $(document).ready(function() {
+            $('#deduplicate').button().click(function() { deduplicate() });
         });
-	</script>
-	<link rel="stylesheet" href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
+    </script>
+    <link rel="stylesheet" href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
 {% endblock %}
 
 {% block content %}
-	<h1>Sort and Deduplicate</h1>
+    <h1>Sort and Deduplicate</h1>
     <p>Sort and remove duplicates from a list:</p>
     <p>
-    	<label>Input:<br />
-    	<textarea id = "input" rows = "4" cols = "56">
+        <label>Input:<br />
+        <textarea id = "input" rows = "4" cols = "56">
 Record3
 Record4
 Record4
 Record1</textarea>
-		</label>
-	</p>
-  	<p id="deduplicate">Run Deduplicate</p>   
+        </label>
+    </p>
+    <p id="deduplicate">Run Deduplicate</p>   
     <p>
-    	<label>Output:<br />
+        <label>Output:<br />
         <textarea id = "output" rows = "4" cols = "56">
 Record1
 Record3
 Record4</textarea>
-		</label>
-	</p>
+        </label>
+    </p>
 
 {% endblock %}
