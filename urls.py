@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from feed_reader.views import feeds
 from dmcm.views import server_status_dashboard
 from django.conf import settings
 
@@ -13,6 +14,7 @@ urlpatterns = patterns(
         {'template_name': 'admin/login.html'}),
     (r'^logout/$', 'django.contrib.auth.views.logout',
         {'next_page': '/'}),  # Redirect to home page on logout
+    (r'^feed_reader/$', 'feed_reader.views.feeds'),
     (r'^server_status/$', server_status_dashboard),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),

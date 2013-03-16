@@ -61,9 +61,10 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.staticfiles',
     'django.contrib.markup',
-    'reversion',
-    'dmcm',
     'bugtracker',
+    'dmcm',
+    'feed_reader',
+    'reversion',
 )
 
 try:
