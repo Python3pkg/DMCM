@@ -64,9 +64,9 @@ class Feed(models.Model):
         group : ForeignKey
             Group this feed is a part of.
     """
-    title = models.CharField(max_length=250, blank=True, null=True)
-    xml_url = models.CharField(max_length=250, unique=True)
-    link = models.CharField(max_length=250, blank=True, null=True)
+    title = models.TextField(max_length=250, blank=True, null=True)
+    xml_url = models.TextField(max_length=250, unique=True)
+    link = models.TextField(max_length=250, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     published_time = models.DateTimeField(blank=True, null=True)
     last_polled_time = models.DateTimeField(blank=True, null=True)
@@ -97,8 +97,8 @@ class Entry(models.Model):
             When entry was last updated.
     """
     feed = models.ForeignKey(Feed)
-    title = models.CharField(max_length=250, blank=True, null=True)
-    link = models.CharField(max_length=250)
+    title = models.TextField(max_length=250, blank=True, null=True)
+    link = models.TextField(max_length=250)
     description = models.TextField(blank=True, null=True)
     published_time = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
