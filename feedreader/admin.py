@@ -34,8 +34,8 @@ admin.site.register(Feed, FeedAdmin)
 
 
 class EntryAdmin(VersionAdmin):
-    list_display = ['link', 'title', 'feed', 'published_time']
-    search_fields = ['link', 'title']
+    list_display = ['title', 'feed', 'published_time']
+    search_fields = ['title', 'link']
     readonly_fields = ['published_time', 'feed']
     fieldsets = (
         (None, {

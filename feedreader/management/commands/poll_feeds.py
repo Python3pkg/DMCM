@@ -8,7 +8,7 @@ from django.core.management.base import BaseCommand
 from feedreader.models import Feed, Entry
 
 import logging
-logger = logging.getLogger('monitoring')
+logger = logging.getLogger('feedreader')
 
 class Command(BaseCommand):
     args = 'none'
@@ -40,9 +40,10 @@ class Command(BaseCommand):
                 entry, created = Entry.objects.get_or_create(feed=feed, link=e.link)
                 if hasattr(e, 'published_parsed'):
                     published_time = datetime.fromtimestamp(mktime(e.published_parsed))
+                    if entry.published_time and entry.published_time >= published_time:
+                        continue
                     entry.published_time = published_time
-                elif not created:
-                    # Existing entry & no published_date: do not update
+                elif not created and entry.title == e.title and entry.description == e.description:
                     continue
                 entry.feed = feed
                 entry.title = e.title

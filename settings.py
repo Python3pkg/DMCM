@@ -94,7 +94,7 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
-        'monitoring': {
+        'feedreader': {
             'handlers': ['db_log', ],
             'level': 'INFO',
             'propagate': True,
