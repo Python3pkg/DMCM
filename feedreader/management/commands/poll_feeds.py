@@ -40,7 +40,9 @@ class Command(BaseCommand):
                 entry, created = Entry.objects.get_or_create(feed=feed, link=e.link)
                 if hasattr(e, 'published_parsed'):
                     published_time = datetime.fromtimestamp(mktime(e.published_parsed))
-                    if entry.published_time and entry.published_time >= published_time:
+                    if (not created and 
+                        entry.published_time and 
+                        entry.published_time >= published_time):
                         continue
                     entry.published_time = published_time
                 elif not created and entry.title == e.title and entry.description == e.description:
