@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db import models
 from django.forms.widgets import TextInput, Textarea
-from feed_reader.models import Options, Group, Feed, Entry
+from feedreader.models import Options, Group, Feed, Entry
 from reversion.admin import VersionAdmin
 
 
@@ -18,13 +18,13 @@ admin.site.register(Group, GroupAdmin)
 
 
 class FeedAdmin(VersionAdmin):
-    list_display = ['link', 'title', 'group', 'published_time', 'last_polled_time']
+    list_display = ['xml_url', 'title', 'group', 'published_time', 'last_polled_time']
     search_fields = ['link', 'title']
     readonly_fields = ['last_polled_time']
     fieldsets = (
         (None, {
             'fields': (('title',),
-                       ('link', 'xml_url',),
+                       ('xml_url', 'link',),
                        ('published_time', 'last_polled_time',),
                        ('description',),
                        ('group',),

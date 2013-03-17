@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from feed_reader.models import Options, Group, Feed, Entry
+from feedreader.models import Options, Group, Feed, Entry
 
 @login_required
 def feeds(request):
@@ -21,7 +21,6 @@ def feeds(request):
         except Group.DoesNotExist:
             pass
     context = {}
-    context['object'] = {'wide': True}  # Use wide webpage layout 
     options = Options.objects.get(pk=1)
     if feed:
         entries = Entry.objects.filter(feed=feed)[:options.number_initially_displayed]
@@ -35,5 +34,5 @@ def feeds(request):
     context['entries'] = entries
     context['groups'] = Group.objects.all()
     context['no_group'] = Feed.objects.filter(group=None)
-    # groups[0].feed_set.all()
-    return render_to_response('feeds.html', context, RequestContext(request))
+    context['feed_meta'] = Feed._meta
+    return render_to_response('feedreader/feeds.html', context, RequestContext(request))

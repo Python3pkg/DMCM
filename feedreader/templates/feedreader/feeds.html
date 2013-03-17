@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% load admin_urls %}
+
+{% block extra_head %}
+    <link rel="stylesheet" 
+        href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" 
+    />
+    <style type="text/css">
+        p.feedreader_menu {font-size: small;margin:0;}
+        p.feedreader_subtitle {font-size: small;}
+        #content {width: 80%;}
+        .feed_entry {padding: 0.2em 0.5em; margin: 0.5em; border: 1px solid #046; border-radius: 1em;}
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $('#accordion').accordion({heightStyle: 'content', collapsible: true, active: false});
+            $('.ui-accordion-content').css({'padding': '1em'});
+        });
+    </script>
+{% endblock %}
+
+{% block title %}ahernp.com: Feed Reader{% endblock %}
+
+{% block nav_path %}<a href="/">ahernp.com</a> &rsaquo; Feed Reader{% endblock %}
+
+{% block content %}
+    <h1>Feed Reader</h1>
+    <div style="width:20%;float:left">
+        <h3><a href="{% url 'feedreader.views.feeds' %}">All items</a></h3>
+        <div id="accordion">
+            {% for group in groups %}
+                <h3>{{ group.name }}</h3>
+                <div>
+                    <p class="feedreader_menu">
+                        <a href="{% url 'feedreader.views.feeds' %}?group={{group.id}}">
+                            All {{ group.name }}
+                        </a>
+                    <p>
+                    {% for feed in group.feed_set.all %}
+                        <p class="feedreader_menu">
+                            <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}" 
+                                title="{{ feed.description }}">
+                                {{ feed.title }}
+                            </a>
+                        </p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div> <!-- accordion -->
+        {% for feed in no_group %}
+            <p>
+                <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}" 
+                    title="{{ feed.description }}">
+                    {{ feed.title }}
+                </a>
+            </p>
+        {% endfor %}
+    </div>
+    <div style="width:75%;float:left;padding-left:1em;">
+        <h2>{{ entries_header }}</h2>
+        {% for entry in entries %}
+            <div class="feed_entry">
+                <h3><a href="{{ entry.link }}">{{ entry.title }}</a></h3>
+                <p class="feedreader_subtitle">
+                    from 
+                    <a href="{{ entry.feed.link }}" title="{{ entry.feed.description }}">
+                        {{ entry.feed.title}}
+                    </a>
+                    on {{ entry.published_time|date:"d M Y" }} ({{ entry.published_time|timesince }} ago)
+                </p>
+                <p>{{ entry.description|safe }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div style="clear:both"></div>
+{% endblock %}
+
+{% block footer %}
+    <a href="{% url feed_meta|admin_urlname:"changelist" %}" title="Edit Feeds">Edit</a>
+    <a href="/accounts/logout">Logout</a>
+{% endblock %}

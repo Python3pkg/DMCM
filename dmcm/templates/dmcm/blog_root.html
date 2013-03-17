@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+    <script type="text/javascript">
+        $(function() {
+            $("table").dataTable({"bPaginate": false, "aaSorting": []});
+        });
+    </script>
+{% endblock %}
+
 {% block title %}ahernp.com: Blog{% endblock %}
 
 {% block nav_path %}<a href="{% url 'dmcm_root' %}">ahernp.com</a> &rsaquo; Blog{% endblock %}

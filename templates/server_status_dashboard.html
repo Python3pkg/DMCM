@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+    <style type="text/css">
+        #content {width: 80%;}
+    </style>
+{% endblock %}
+
 {% block title %}ahernp.com: Server Status Dashboard{% endblock %}
 
 {% block nav_path %}<a href="/">ahernp.com</a> &rsaquo; Server Status Dashboard{% endblock %}

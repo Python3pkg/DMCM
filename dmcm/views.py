@@ -12,11 +12,11 @@ from dmcm.models import Page
 
 class WideListView(ListView):
     """
-    Add extra context value 'object.wide'. Gets base template to make content area wider.
+    Add extra context value 'wide_page'. Gets base template to make content area wider.
     """
     def get_context_data(self, **kwargs):
         context = super(WideListView, self).get_context_data(**kwargs)
-        context['object'] = {'wide': True}
+        context['wide_page'] = True
         return context
 
 
@@ -61,7 +61,7 @@ def search_pages(request):
     context = {'title_matches': title_matches,
                'content_matches': content_matches,
                'search_string': search_string,
-               'object': {'wide': True}}  # Dispplay results in a wide content area on page.
+              }
     return render_to_response('dmcm/search_results.html', context, RequestContext(request))
 
 TOOL_NAMES = ['cardgen', 'deduplicate', 'compare']
@@ -122,7 +122,7 @@ def server_status_dashboard(request):
             stdout = stdout.strip()
         return stdout
 
-    context = {'object': {'wide': True}}
+    context = {}
 
     # Versions
     context['django_version'] = '.'.join(str(i) for i in django.VERSION)

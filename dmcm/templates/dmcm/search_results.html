@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
+{% block extra_head %}
+    <style type="text/css">
+        #content {width: 80%;}
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("table").dataTable({"bPaginate": false, "aaSorting": []});
+        });
+    </script>
+{% endblock %}
+
 {% block title %}ahernp.com: Search Results{% endblock %}
 
 {% block nav_path %}<a href="/">ahernp.com</a> &rsaquo; Search Results{% endblock %}

@@ -5,7 +5,7 @@ import feedparser
 from datetime import datetime
 from time import mktime
 from django.core.management.base import BaseCommand
-from feed_reader.models import Feed, Entry
+from feedreader.models import Feed, Entry
 
 
 class Command(BaseCommand):

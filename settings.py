@@ -63,7 +63,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'bugtracker',
     'dmcm',
-    'feed_reader',
+    'feedreader',
     'reversion',
 )
 

@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox.css" type="text/css" media="screen" />
         <script type="text/javascript">
             $(function() {
-                $("table").dataTable({"bPaginate": false, "aaSorting": []});
                 $('a:has(img)').attr('rel', 'gallery').fancybox();
                 $('#source_label').click(function() {
                     $('#source_body').toggle('slow', function() {});
@@ -44,6 +43,7 @@
             tr.even {background-color:#ddd;}
             tr.even:hover {background-color:#ace;}
             tr.odd:hover {background-color:#ace;}
+            #content {width:{% if object.wide %}80%{% else %}70%{% endif %}; margin-left:auto; margin-right:auto;}
             #source_label {color:#046; text-decoration:underline; cursor:pointer;}
         </style>
         {% block extra_head %}{% endblock %}
@@ -64,11 +64,7 @@
             <div style="clear:both"></div>
         </div>
         <hr size="1">
-        {% if object.wide %} 
-            <div id="content" style="width:45em; margin-left:auto; margin-right:auto;">
-        {% else %}
-            <div id="content" style="width:35em; margin-left:auto; margin-right:auto;">
-        {% endif %}
+        <div id="content">
             {% block content %}{% endblock %}
         </div>
         <hr size="1">
