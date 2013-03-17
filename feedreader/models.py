@@ -98,14 +98,15 @@ class Entry(models.Model):
     """
     feed = models.ForeignKey(Feed)
     title = models.CharField(max_length=250, blank=True, null=True)
-    link = models.CharField(max_length=250, unique=True)
+    link = models.CharField(max_length=250)
     description = models.TextField(blank=True, null=True)
     published_time = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-published_time']
-        verbose_name_plural = "entries"
+        verbose_name_plural = 'entries'
+        unique_together = ('feed', 'link')
 
     def __unicode__(self):
         return self.title

@@ -1098,7 +1098,7 @@
         "published_time": null, 
         "description": "Recent Blog Entries.", 
         "title": "ahernp.com blog", 
-        "last_polled_time": "2013-03-17T12:11:02", 
+        "last_polled_time": "2013-03-17T16:56:14", 
         "xml_url": "http://ahernp.com/blog/feed", 
         "link": "http://ahernp.com/blog/", 
         "group": null
@@ -1111,7 +1111,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by quill18", 
-        "last_polled_time": "2013-03-17T12:10:32", 
+        "last_polled_time": "2013-03-17T16:56:45", 
         "xml_url": "http://www.youtube.com/rss/user/quill18/videos.rss", 
         "link": "http://www.youtube.com/channel/UCbx1TZgxfIauUZyPuBzEwZg/videos", 
         "group": 2
@@ -1163,7 +1163,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Binge Thinking History Podcast", 
-        "last_polled_time": "2013-03-17T12:11:02", 
+        "last_polled_time": "2013-03-17T16:56:17", 
         "xml_url": "http://bingethinkinghistory.blogspot.com/feeds/posts/default", 
         "link": "http://bingethinkinghistory.blogspot.com/", 
         "group": 1
@@ -1189,7 +1189,7 @@
         "published_time": null, 
         "description": "History narrative, linguistic history trivia and history podcast reviews, all topped off with the current special feature, which is the War of the Spanish Succession. This stars, Louis XIV, the Duke of Marlborough, Prince Eugene, Anthony Heinsius and many thousands of supporting soldiers. Jim is a history enthusiast who loves telling stories and adores rummaging about amongst the delights and horrors of the past.", 
         "title": "Historyzine: The History Podcast", 
-        "last_polled_time": "2013-03-17T12:10:11", 
+        "last_polled_time": "2013-03-17T16:56:29", 
         "xml_url": "http://historyzine.com/feed/", 
         "link": "http://historyzine.com", 
         "group": 1
@@ -1202,7 +1202,7 @@
         "published_time": null, 
         "description": "From the first human civilizations to 500 BC in (around) twenty podcasts", 
         "title": "The Ancient World", 
-        "last_polled_time": "2013-03-17T12:10:20", 
+        "last_polled_time": "2013-03-17T16:56:38", 
         "xml_url": "http://ancientworldpodcast.blogspot.com/feeds/posts/default", 
         "link": "http://ancientworldpodcast.blogspot.com/", 
         "group": 1
@@ -1553,7 +1553,7 @@
         "published_time": null, 
         "description": "Weekly news and opinions from the UK's biggest tech monthly", 
         "title": "The PC Pro Podcast", 
-        "last_polled_time": "2013-03-17T12:10:25", 
+        "last_polled_time": "2013-03-17T16:56:42", 
         "xml_url": "http://podcast.pcpro.co.uk/?feed=podcast", 
         "link": "http://podcast.pcpro.co.uk", 
         "group": 4
@@ -1592,7 +1592,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Ian Bicking: a blog", 
-        "last_polled_time": "2013-03-17T12:10:13", 
+        "last_polled_time": "2013-03-17T16:56:31", 
         "xml_url": "http://blog.ianbicking.org/feed/", 
         "link": "http://blog.ianbicking.org", 
         "group": 5
@@ -1602,10 +1602,10 @@
     "pk": 77, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-17T12:08:04", 
+        "published_time": "2013-03-17T16:56:36", 
         "description": "", 
         "title": "Linuxtoday.com", 
-        "last_polled_time": "2013-03-17T12:08:14", 
+        "last_polled_time": "2013-03-17T16:56:32", 
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux", 
         "link": "http://www.linuxtoday.com/", 
         "group": 5
@@ -1618,7 +1618,7 @@
         "published_time": null, 
         "description": "A blog covering security and security technology.", 
         "title": "Schneier on Security", 
-        "last_polled_time": "2013-03-17T12:10:19", 
+        "last_polled_time": "2013-03-17T16:56:37", 
         "xml_url": "http://www.schneier.com/blog/index.xml", 
         "link": "http://www.schneier.com/blog/", 
         "group": 5
@@ -1631,7 +1631,7 @@
         "published_time": null, 
         "description": "Inkscape Help, Tutorials and Documentation Resources", 
         "title": "inkscape tutorials blog", 
-        "last_polled_time": "2013-03-17T12:10:14", 
+        "last_polled_time": "2013-03-17T16:56:32", 
         "xml_url": "http://inkscapetutorials.wordpress.com/feed/", 
         "link": "http://inkscapetutorials.wordpress.com", 
         "group": 5
@@ -1644,22 +1644,74 @@
         "published_time": null, 
         "description": "Biting the hand that feeds IT", 
         "title": "The Register", 
-        "last_polled_time": "2013-03-17T12:10:30", 
+        "last_polled_time": "2013-03-17T16:56:43", 
         "xml_url": "http://www.theregister.co.uk/headlines.rss", 
         "link": "http://www.theregister.co.uk/", 
         "group": 5
     }
 },
 {
-    "pk": 81, 
+    "pk": 82, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-17T06:20:26", 
-        "description": "Top stories of the day on TIME.com", 
-        "title": "TIME.com: Top Stories", 
-        "last_polled_time": "2013-03-17T10:17:12", 
-        "xml_url": "http://feeds.feedburner.com/time/topstories", 
-        "link": "http://www.time.com?xid=rss-topstories", 
+        "published_time": null, 
+        "description": "The latest stories from the Home section of the BBC News web site.", 
+        "title": "BBC News - Home", 
+        "last_polled_time": "2013-03-17T16:56:14", 
+        "xml_url": "http://feeds.bbci.co.uk/news/rss.xml", 
+        "link": "http://www.bbc.co.uk/news/#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa", 
+        "group": 3
+    }
+},
+{
+    "pk": 83, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": "2013-03-17T16:56:43", 
+        "description": "Google News", 
+        "title": "Top Stories - Google News", 
+        "last_polled_time": "2013-03-17T16:56:43", 
+        "xml_url": "http://news.google.com/news?pz=1&cf=all&ned=uk&hl=en&output=rss", 
+        "link": "http://news.google.com/news?pz=1&ned=uk&hl=en", 
+        "group": 3
+    }
+},
+{
+    "pk": 84, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": null, 
+        "description": "The latest stories from the Technology section of the BBC News web site.", 
+        "title": "BBC News - Technology", 
+        "last_polled_time": "2013-03-17T17:17:03", 
+        "xml_url": "http://feeds.bbci.co.uk/news/technology/rss.xml", 
+        "link": "http://www.bbc.co.uk/news/technology/#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa", 
+        "group": 3
+    }
+},
+{
+    "pk": 85, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": null, 
+        "description": "", 
+        "title": "", 
+        "last_polled_time": null, 
+        "xml_url": "http://feeds.bbci.co.uk/news/uk/rss.xml", 
+        "link": "", 
+        "group": 3
+    }
+},
+{
+    "pk": 86, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": null, 
+        "description": "", 
+        "title": "", 
+        "last_polled_time": null, 
+        "xml_url": "http://feeds.bbci.co.uk/news/world/rss.xml", 
+        "link": "", 
         "group": 3
     }
 }

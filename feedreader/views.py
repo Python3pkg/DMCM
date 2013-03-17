@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from feedreader.models import Options, Group, Feed, Entry
+from feedreader.utils import poll_feed
 
 @login_required
 def feeds(request):
@@ -23,9 +24,13 @@ def feeds(request):
     context = {}
     options = Options.objects.get(pk=1)
     if feed:
+        poll_feed(feed)
         entries = Entry.objects.filter(feed=feed)[:options.number_initially_displayed]
         context['entries_header'] = feed.title
     elif group:
+        feeds = Feed.objects.filter(group=group)
+        for feed in feeds:
+            poll_feed(feed)
         entries = Entry.objects.filter(feed__group=group)[:options.number_initially_displayed]
         context['entries_header'] = group.name
     else:
