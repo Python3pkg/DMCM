@@ -65,7 +65,7 @@ class Feed(models.Model):
             Group this feed is a part of.
     """
     title = models.TextField(blank=True, null=True)
-    xml_url = models.CharField(max_length=500, unique=True)
+    xml_url = models.CharField(max_length=255, unique=True)
     link = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     published_time = models.DateTimeField(blank=True, null=True)
