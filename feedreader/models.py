@@ -106,7 +106,6 @@ class Entry(models.Model):
     class Meta:
         ordering = ['-published_time']
         verbose_name_plural = 'entries'
-        unique_together = ('feed', 'link')
 
     def __unicode__(self):
         return self.title
