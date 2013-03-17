@@ -18,11 +18,9 @@ class Command(BaseCommand):
         """
         feeds = Feed.objects.all()
         for feed in feeds:
-            print(feed.xml_url)
             f = feedparser.parse(feed.xml_url)
             if hasattr(f.feed, 'bozo_exception'):
                 # Malformed feed
-                print(f.feed.bozo_exception)
                 continue
             if hasattr(f.feed, 'published_parsed'):
                 published_time = datetime.fromtimestamp(mktime(f.feed.published_parsed))
