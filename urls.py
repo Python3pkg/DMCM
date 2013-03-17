@@ -2,8 +2,7 @@ from django.conf.urls import patterns, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from feedreader.views import feeds
-from dmcm.views import server_status_dashboard
+from monitoring.views import server_status_dashboard
 from django.conf import settings
 
 admin.autodiscover()

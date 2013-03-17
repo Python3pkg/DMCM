@@ -1,6 +1,4 @@
 from django.contrib import admin
-from django.db import models
-from django.forms.widgets import TextInput, Textarea
 from feedreader.models import Options, Group, Feed, Entry
 from reversion.admin import VersionAdmin
 

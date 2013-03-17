@@ -64,8 +64,43 @@ INSTALLED_APPS = (
     'bugtracker',
     'dmcm',
     'feedreader',
+    'monitoring',
     'reversion',
 )
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+         'require_debug_false': {
+             '()': 'django.utils.log.RequireDebugFalse'
+         }
+     },
+    'handlers': {
+         'mail_admins': {
+             'level': 'ERROR',
+             'filters': ['require_debug_false'],
+             'class': 'django.utils.log.AdminEmailHandler'
+         },
+        'db_log': {
+            'level': 'INFO',
+           # Reference to handler in log.py below
+            'class': 'monitoring.log.DbLogHandler',
+        }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins', ],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'monitoring': {
+            'handlers': ['db_log', ],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    }
+}
 
 try:
     from localsettings import *

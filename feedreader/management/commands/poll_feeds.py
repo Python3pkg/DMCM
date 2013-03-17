@@ -7,6 +7,8 @@ from time import mktime
 from django.core.management.base import BaseCommand
 from feedreader.models import Feed, Entry
 
+import logging
+logger = logging.getLogger('monitoring')
 
 class Command(BaseCommand):
     args = 'none'
@@ -16,11 +18,13 @@ class Command(BaseCommand):
         """
         Read through all the feeds looking for new entries.
         """
+        logger.info('Feedreader poll_feeds started')
         feeds = Feed.objects.all()
         for feed in feeds:
             f = feedparser.parse(feed.xml_url)
             if hasattr(f.feed, 'bozo_exception'):
                 # Malformed feed
+                logger.warning('Feedreader poll_feeds found Malformed feed, %s: %s' % (feed.xml_url, f.feed.bozo_exception))
                 continue
             if hasattr(f.feed, 'published_parsed'):
                 published_time = datetime.fromtimestamp(mktime(f.feed.published_parsed))
@@ -44,3 +48,4 @@ class Command(BaseCommand):
                 entry.title = e.title
                 entry.description = e.description
                 entry.save()
+        logger.info('Feedreader poll_feeds ended')
