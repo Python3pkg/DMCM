@@ -61,4 +61,4 @@ def server_status_dashboard(request):
         })
 
     context['time_checked'] = datetime.now()
-    return render_to_response('server_status_dashboard.html', context, RequestContext(request))
+    return render_to_response('monitoring/server_status_dashboard.html', context, RequestContext(request))
