@@ -1,5 +1,5 @@
 from django.contrib import admin
-from project.bugtracker.models import Ticket, TicketUpdate
+from bugtracker.models import Ticket, TicketUpdate
 
 
 class TicketUpdateInline(admin.TabularInline):
