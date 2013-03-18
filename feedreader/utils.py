@@ -30,6 +30,10 @@ def poll_feed(feed):
     feed.last_polled_time = datetime.now()
     feed.save()
     for e in f.entries:
+        for attr in ['title', 'link', 'description']:
+            if not hasattr(e, attr):
+                logger.error('Feedreader poll_feeds. Entry "%s" has no %s' % (e.link, attr))
+                continue
         entry, created = Entry.objects.get_or_create(feed=feed, link=e.link)
         if hasattr(e, 'published_parsed'):
             published_time = datetime.fromtimestamp(mktime(e.published_parsed))
@@ -40,10 +44,6 @@ def poll_feed(feed):
             entry.published_time = published_time
         elif not created and entry.title == e.title and entry.description == e.description:
             continue
-        for attr in ['title', 'description']:
-            if not hasattr(e, attr):
-                logger.error('Feedreader poll_feeds. Entry "%s" has no %s' % (e.link, attr))
-                continue
         entry.feed = feed
         entry.title = e.title
         entry.description = e.description
