@@ -20,6 +20,10 @@ def poll_feed(feed):
         if feed.published_time and feed.published_time >= published_time:
             return
         feed.published_time = published_time
+    for attr in ['title', 'link', 'description']:
+        if not hasattr(f.feed, attr):
+            logger.error('Feedreader poll_feeds. Feed "%s" has no %s' % (feed.xml_url, attr))
+            return
     feed.title = f.feed.title
     feed.link = f.feed.link
     feed.description = f.feed.description
@@ -36,6 +40,10 @@ def poll_feed(feed):
             entry.published_time = published_time
         elif not created and entry.title == e.title and entry.description == e.description:
             continue
+        for attr in ['title', 'description']:
+            if not hasattr(e, attr):
+                logger.error('Feedreader poll_feeds. Entry "%s" has no %s' % (e.link, attr))
+                continue
         entry.feed = feed
         entry.title = e.title
         entry.description = e.description
