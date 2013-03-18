@@ -23,6 +23,9 @@ DATABASES = {
 }
 TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-gb'
+DATE_FORMAT = 'Y-m-d'  # yyyy-mm-dd
+DATETIME_FORMAT = 'Y-m-d H:i'  # yyyy-mm-dd hh:mm
+TIME_FORMAT = 'H:i'
 SITE_ID = 1
 USE_I18N = True
 MEDIA_ROOT = os.path.join(PROJECT_PATH, os.pardir, 'media') 
