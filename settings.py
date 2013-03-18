@@ -70,18 +70,8 @@ INSTALLED_APPS = (
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-         'require_debug_false': {
-             '()': 'django.utils.log.RequireDebugFalse'
-         }
-     },
+    'disable_existing_loggers': True,
     'handlers': {
-         'mail_admins': {
-             'level': 'ERROR',
-             'filters': ['require_debug_false'],
-             'class': 'django.utils.log.AdminEmailHandler'
-         },
         'db_log': {
             'level': 'INFO',
            # Reference to handler in log.py below
@@ -89,11 +79,6 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins', ],
-            'level': 'ERROR',
-            'propagate': True,
-        },
         'feedreader': {
             'handlers': ['db_log', ],
             'level': 'INFO',
