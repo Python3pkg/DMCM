@@ -7,6 +7,7 @@ from feedreader.utils import poll_feed
 @login_required
 def feeds(request):
     """Show most recent feed contents on page"""
+    poll = feed_id = request.GET.get('poll', None)
     feed = None
     feed_id = request.GET.get('feed', None)
     if feed_id:
@@ -24,13 +25,15 @@ def feeds(request):
     context = {}
     options = Options.objects.get(pk=1)
     if feed:
-        poll_feed(feed)
+        if poll:
+            poll_feed(feed)
         entries = Entry.objects.filter(feed=feed)[:options.number_initially_displayed]
         context['entries_header'] = feed.title
     elif group:
         feeds = Feed.objects.filter(group=group)
-        for feed in feeds:
-            poll_feed(feed)
+        if poll:
+            for feed in feeds:
+                poll_feed(feed)
         entries = Entry.objects.filter(feed__group=group)[:options.number_initially_displayed]
         context['entries_header'] = group.name
     else:

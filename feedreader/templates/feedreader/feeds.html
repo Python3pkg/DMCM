@@ -11,6 +11,7 @@
         p.feedreader_subtitle {font-size: small;}
         #content {width: 80%;}
         .feed_entry {padding: 0.2em 0.5em; margin: 0.5em; border: 1px solid #046; border-radius: 1em;}
+        .secondary_link {text-decoration:none;}
     </style>
     <script type="text/javascript">
         $(function() {
@@ -36,12 +37,24 @@
                         <a href="{% url 'feedreader.views.feeds' %}?group={{group.id}}">
                             All {{ group.name }}
                         </a>
+                        &nbsp;
+                        <a href="{% url 'feedreader.views.feeds' %}?group={{group.id}}&poll=1"
+                            title="Poll {{ group.name }} feeds"
+                            class="secondary_link">
+                            &darr;
+                        </a>
                     <p>
                     {% for feed in group.feed_set.all %}
                         <p class="feedreader_menu">
                             <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}" 
                                 title="{{ feed.description }}">
                                 {{ feed.title }}
+                            </a>
+                            &nbsp;
+                            <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}&poll=1" 
+                                title="Poll {{ feed.title }} feed"
+                                class="secondary_link">
+                                &darr;
                             </a>
                         </p>
                     {% endfor %}
@@ -53,6 +66,12 @@
                 <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}" 
                     title="{{ feed.description }}">
                     {{ feed.title }}
+                </a>
+                &nbsp;
+                <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}&poll=1" 
+                    title="Poll {{ feed.title }} feed"
+                    class="secondary_link">
+                    &darr;
                 </a>
             </p>
         {% endfor %}
