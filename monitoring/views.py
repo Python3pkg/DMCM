@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.conf import settings
+from monitoring.models import Log
 
 
 @login_required
@@ -59,6 +60,10 @@ def server_status_dashboard(request):
             'unexpected': expected != actual_setting,
             'actual': actual_setting
         })
+
+    context['error_msgs'] = Log.objects.filter(level='ERROR')[:4]
+    context['warning_msgs'] = Log.objects.filter(level='WARNING')[:4]
+    context['info_msgs'] = Log.objects.filter(level='INFO')[:4]
 
     context['time_checked'] = datetime.now()
     return render_to_response('monitoring/server_status_dashboard.html', context, RequestContext(request))

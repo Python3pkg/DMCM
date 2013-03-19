@@ -12,24 +12,49 @@
 
 {% block content %}
     <h1>Server Status at {{ time_checked|date:"Y-m-d H:i"}}</h1>
-    {% if hostname %}<p><strong>Hostname:</strong> {{ hostname }}</p>{% endif %}
-    <h2>Settings</h2>
-    {% for flag in settings_flags %}
-        <span {% if flag.unexpected %}style="background-color:maroon;color:white;{% endif %}">
-            {{ flag.name }}: {{flag.actual}}
-        </span> &ensp;
-    {% endfor %}
-    <h2>Versioning</h2>
-    {% if django_version %}<p><strong>Django:</strong> {{ django_version }}</p>{% endif %}
-    {% if markdown_version %}<p><strong>Python-Markdown:</strong> {{ markdown_version }}</p>{% endif %}
-    {% if reversion_version %}<p><strong>Django-Reversion:</strong> {{ reversion_version }}</p>{% endif %}
-    {% if mysql_version %}<p><strong>MySQL:</strong> {{ mysql_version }}</p>{% endif %}
-    {% if gitversion %}
-        <strong>Application code:</strong><br>
-        <div style="padding-left:1em;">
-            <pre>{{ gitversion }}</pre>
-        </div>
-    {% endif %}
+    <div style="width:49%;float:left">
+        {% if hostname %}<p><strong>Hostname:</strong> {{ hostname }}</p>{% endif %}
+        <h2>Settings</h2>
+        {% for flag in settings_flags %}
+            <span {% if flag.unexpected %}style="background-color:maroon;color:white;{% endif %}">
+                {{ flag.name }}: {{flag.actual}}
+            </span> &ensp;
+        {% endfor %}
+        <h2>Versioning</h2>
+        {% if django_version %}<p><strong>Django:</strong> {{ django_version }}</p>{% endif %}
+        {% if markdown_version %}<p><strong>Python-Markdown:</strong> {{ markdown_version }}</p>{% endif %}
+        {% if reversion_version %}<p><strong>Django-Reversion:</strong> {{ reversion_version }}</p>{% endif %}
+        {% if mysql_version %}<p><strong>MySQL:</strong> {{ mysql_version }}</p>{% endif %}
+        {% if gitversion %}
+            <strong>Application code:</strong><br>
+            <div style="padding-left:1em;">
+                <pre>{{ gitversion }}</pre>
+            </div>
+        {% endif %}
+    </div>
+    <div style="width:49%;float:left;padding-left:1em;">
+        <h2>Logs</h2>
+        {% if error_msgs %}
+            <h3>Errors</h3>
+            {% for error_msg in error_msgs %}
+                <p>{{ error_msg.datetime }}: {{ error_msg.msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% if warning_msgs %}
+            <h3>Warnings</h3>
+            {% for warning_msg in warning_msgs %}
+                <p>{{ warning_msg.datetime }}: {{ warning_msg.msg }}</p>
+            {% endfor %}
+        {% endif %}
+        {% if error_msgs %}
+            <h3>Information</h3>
+            {% for info_msg in info_msgs %}
+                <p>{{ info_msg.datetime }}: {{ info_msg.msg }}</p>
+            {% endfor %}
+        {% endif %}
+        <a href="/admin/monitoring/log/">All Logs</a>
+    </div>
+    <div style="clear:both"></div>
 {% endblock %}
 
 {% block footer %}<a href="/accounts/logout">Logout</a>{% endblock %}
