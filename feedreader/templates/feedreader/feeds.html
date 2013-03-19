@@ -12,11 +12,17 @@
         #content {width: 80%;}
         .feed_entry {padding: 0.2em 0.5em; margin: 0.5em; border: 1px solid #046; border-radius: 1em;}
         .secondary_link {text-decoration:none;}
+        #spinner {position: fixed; top: 50%; left: 50%; margin-top: -200px; margin-left: -200px; z-index: 3;}
     </style>
     <script type="text/javascript">
         $(function() {
             $('#accordion').accordion({heightStyle: 'content', collapsible: true, active: false});
             $('.ui-accordion-content').css({'padding': '1em'});
+            $('#spinner').hide().ajaxStart(function() {$(this).show();})
+                                .ajaxStop(function() {$(this).hide();});
+            $('.load_request').click(function() {
+                $('#entries').load('/feedreader/get_feeds/','group='+$(this).attr('id'));
+            });
         });
     </script>
 {% endblock %}
@@ -31,7 +37,7 @@
         <h3><a href="{% url 'feedreader.views.feeds' %}">All stories</a></h3>
         <div id="accordion">
             {% for group in groups %}
-                <h3>{{ group.name }}</h3>
+                <h3 id="{{ group.id }}" class="load_request">{{ group.name }}</h3>
                 <div>
                     <p class="feedreader_menu">
                         <a href="{% url 'feedreader.views.feeds' %}?group={{group.id}}">
@@ -76,7 +82,7 @@
             </p>
         {% endfor %}
     </div>
-    <div style="width:75%;float:left;padding-left:1em;">
+    <div id="entries" style="width:75%;float:left;padding-left:1em;">
         <h2>{{ entries_header }}</h2>
         {% if entries %}
             {% for entry in entries %}
@@ -97,6 +103,9 @@
         {% endif %}
     </div>
     <div style="clear:both"></div>
+    <div id="spinner">
+        <img src="{{ STATIC_URL }}spinner.gif" alt="Please wait" title="Please Wait" />
+    </div>
 {% endblock %}
 
 {% block footer %}

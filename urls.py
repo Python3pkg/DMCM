@@ -13,7 +13,7 @@ urlpatterns = patterns(
         {'template_name': 'admin/login.html'}),
     (r'^logout/$', 'django.contrib.auth.views.logout',
         {'next_page': '/'}),  # Redirect to home page on logout
-    (r'^feedreader/$', 'feedreader.views.feeds'),
+    (r'^feedreader/', include('feedreader.urls')),
     (r'^server_status/$', server_status_dashboard),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
