@@ -35,15 +35,11 @@ def poll_feed(feed):
                 logger.error('Feedreader poll_feeds. Entry "%s" has no %s' % (e.link, attr))
                 continue
         entry, created = Entry.objects.get_or_create(feed=feed, link=e.link)
+        if not created:
+            break
         if hasattr(e, 'published_parsed'):
             published_time = datetime.fromtimestamp(mktime(e.published_parsed))
-            if (not created and 
-                entry.published_time and 
-                entry.published_time >= published_time):
-                continue
             entry.published_time = published_time
-        elif not created and entry.title == e.title and entry.description == e.description:
-            continue
         entry.feed = feed
         entry.title = e.title
         entry.description = e.description
