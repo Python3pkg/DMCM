@@ -48,10 +48,9 @@
                             All {{ group.name }}
                         </a>
                         &nbsp;
-                        <a class="load_request" feedreader="group_id={{ group.id }}&poll_flag=1"
+                        <a class="secondary_link load_request" feedreader="group_id={{ group.id }}&poll_flag=1"
                             href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}&poll_flag=1"
-                            title="Poll All {{ group.name }} feeds"
-                            class="secondary_link">
+                            title="Poll All {{ group.name }} feeds">
                             &darr;
                         </a>
                     <p>
@@ -63,10 +62,9 @@
                                 {{ feed.title }}
                             </a>
                             &nbsp;
-                            <a class="load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
+                            <a class="secondary_link load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
                                 href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}&poll_flag=1" 
-                                title="Poll {{ feed.title }} feed"
-                                class="secondary_link">
+                                title="Poll {{ feed.title }} feed">
                                 &darr;
                             </a>
                         </p>
@@ -82,10 +80,9 @@
                     {{ feed.title }}
                 </a>
                 &nbsp;
-                <a class="load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
+                <a class="secondary_link load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
                     href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&poll_id=1" 
-                    title="Poll {{ feed.title }} feed"
-                    class="secondary_link">
+                    title="Poll {{ feed.title }} feed">
                     &darr;
                 </a>
             </p>
