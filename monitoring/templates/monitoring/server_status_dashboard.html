@@ -46,7 +46,7 @@
                 <p>{{ warning_msg.datetime }}: {{ warning_msg.msg }}</p>
             {% endfor %}
         {% endif %}
-        {% if error_msgs %}
+        {% if info_msgs %}
             <h3>Information</h3>
             {% for info_msg in info_msgs %}
                 <p>{{ info_msg.datetime }}: {{ info_msg.msg }}</p>
