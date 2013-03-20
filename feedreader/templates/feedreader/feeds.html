@@ -21,7 +21,10 @@
             $('#spinner').hide().ajaxStart(function() {$(this).show();})
                                 .ajaxStop(function() {$(this).hide();});
             $('.load_request').click(function() {
-                $('#entries').load('/feedreader/get_feeds/','group='+$(this).attr('id'));
+                $('#entries').load('/feedreader/get_feeds/',$(this).attr('feedreader'));
+            });
+            $('a.load_request').click(function(e) { // Disable links
+                e.preventDefault();
             });
         });
     </script>
@@ -34,30 +37,34 @@
 {% block content %}
     <h1>Feed Reader</h1>
     <div style="width:20%;float:left">
-        <h3><a href="{% url 'feedreader.views.feeds' %}">All stories</a></h3>
+        <h3><a class="load_request" href="{% url 'feedreader.views.feeds' %}">All stories</a></h3>
         <div id="accordion">
             {% for group in groups %}
-                <h3 id="{{ group.id }}" class="load_request">{{ group.name }}</h3>
+                <h3>{{ group.name }}</h3>
                 <div>
                     <p class="feedreader_menu">
-                        <a href="{% url 'feedreader.views.feeds' %}?group={{group.id}}">
+                        <a class="load_request" feedreader="group_id={{ group.id }}"
+                            href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}">
                             All {{ group.name }}
                         </a>
                         &nbsp;
-                        <a href="{% url 'feedreader.views.feeds' %}?group={{group.id}}&poll=1"
-                            title="Poll {{ group.name }} feeds"
+                        <a class="load_request" feedreader="group_id={{ group.id }}&poll_flag=1"
+                            href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}&poll_flag=1"
+                            title="Poll All {{ group.name }} feeds"
                             class="secondary_link">
                             &darr;
                         </a>
                     <p>
                     {% for feed in group.feed_set.all %}
                         <p class="feedreader_menu">
-                            <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}" 
+                            <a class="load_request" feedreader="feed_id={{ feed.id }}"
+                                href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}" 
                                 title="{{ feed.description }}">
                                 {{ feed.title }}
                             </a>
                             &nbsp;
-                            <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}&poll=1" 
+                            <a class="load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
+                                href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}&poll_flag=1" 
                                 title="Poll {{ feed.title }} feed"
                                 class="secondary_link">
                                 &darr;
@@ -69,12 +76,14 @@
         </div> <!-- accordion -->
         {% for feed in no_group %}
             <p>
-                <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}" 
+                <a class="load_request" feedreader="feed_id={{ feed.id }}"
+                    href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}" 
                     title="{{ feed.description }}">
                     {{ feed.title }}
                 </a>
                 &nbsp;
-                <a href="{% url 'feedreader.views.feeds' %}?feed={{feed.id}}&poll=1" 
+                <a class="load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
+                    href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&poll_id=1" 
                     title="Poll {{ feed.title }} feed"
                     class="secondary_link">
                     &darr;
@@ -83,24 +92,7 @@
         {% endfor %}
     </div>
     <div id="entries" style="width:75%;float:left;padding-left:1em;">
-        <h2>{{ entries_header }}</h2>
-        {% if entries %}
-            {% for entry in entries %}
-                <div class="feed_entry">
-                    <h3><a href="{{ entry.link }}">{{ entry.title }}</a></h3>
-                    <p class="feedreader_subtitle">
-                        from 
-                        <a href="{{ entry.feed.link }}" title="{{ entry.feed.description }}">
-                            {{ entry.feed.title}}
-                        </a>
-                        on {{ entry.published_time|date:"d M Y" }} ({{ entry.published_time|timesince }} ago)
-                    </p>
-                    <p>{{ entry.description|safe }}</p>
-                </div>
-            {% endfor %}
-        {% else %}
-            <p>No stories found</p>
-        {% endif %}
+        {% include "feedreader/feed_entries.html" %}
     </div>
     <div style="clear:both"></div>
     <div id="spinner">

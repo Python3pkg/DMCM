@@ -9,13 +9,13 @@ class OptionsAdmin(VersionAdmin):
 admin.site.register(Options, OptionsAdmin)
 
 
-class GroupAdmin(VersionAdmin):
+class GroupAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Group, GroupAdmin)
 
 
-class FeedAdmin(VersionAdmin):
+class FeedAdmin(admin.ModelAdmin):
     list_display = ['xml_url', 'title', 'group', 'published_time', 'last_polled_time']
     list_filter = ['group']
     search_fields = ['link', 'title']
@@ -34,7 +34,7 @@ class FeedAdmin(VersionAdmin):
 admin.site.register(Feed, FeedAdmin)
 
 
-class EntryAdmin(VersionAdmin):
+class EntryAdmin(admin.ModelAdmin):
     list_display = ['title', 'feed', 'published_time']
     list_filter = ['feed']
     search_fields = ['title', 'link']

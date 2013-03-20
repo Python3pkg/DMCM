@@ -26,16 +26,17 @@ class Command(BaseCommand):
         """
         logger.info('Feedreader poll_feeds started')
         verbose = options['verbose']
-        options = Options.objects.all()[0]
+        feedreader_options = Options.objects.all()[0]
         feeds = Feed.objects.all()
+        num_feeds = len(feeds)
         if verbose:
-            print('%d feeds to process' % (len(feeds)))
-        for feed in feeds:
+            print('%d feeds to process' % (num_feeds))
+        for i, feed in enumerate(feeds):
             if verbose:
-                print('Processing Feed %s' % (feed.title))
+                print('(%d/%d) Processing Feed %s' % (i + 1, num_feeds, feed.title))
             poll_feed(feed, verbose)
             # Remove older entries
-            entries = Entry.objects.filter(feed=feed)[options.max_entries_saved:]
+            entries = Entry.objects.filter(feed=feed)[feedreader_options.max_entries_saved:]
             for entry in entries:
                 entry.delete()
             if verbose:

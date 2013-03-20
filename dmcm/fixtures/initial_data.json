@@ -17,10 +17,10 @@
     "model": "dmcm.page", 
     "fields": {
         "wide": true, 
-        "updated": "2013-03-17T10:17:57", 
+        "updated": "2013-03-20T10:45:39", 
         "parent": 3, 
         "title": "ahernp.com", 
-        "content": "# Personal Website of Paul Ahern\r\n\r\nHere you will find some Application [Guides](/applications/ \"Application Guides\"),\r\na catalog for my [Library](/library/ \"Library\")\r\nand a [Gallery](/gallery/ \"Gallery\") of photographs.\r\n\r\nSee [Rooska](/rooska/ \"Rooska\") for maps and photographs of my mountain.\r\n\r\n<div style=\"width:53%;float:left\" markdown=\"1\">\r\n\r\n## External\r\n\r\nFavourite:\r\n[Contacts](http://www.google.com/contacts \"Useful section Google don't provide a link to\")\r\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\r\n[iGoogle](http://www.google.com/ig \"iGoogle\")\r\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\r\n<br>\r\nApps:\r\n[Geany](http://www.geany.org \"Text editor\")\r\n[Inkscape](http://inkscape.org/ \"SVG editor\")\r\n[KeePassX](http://www.keepassx.org/ \"Encrypted database\")\r\n[TiddlyWiki](http://www.tiddlywiki.com/ \"Offline Wiki software\")\r\n<br>\r\nBooks:\r\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\r\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\r\n[Baen](http://www.baen.com/ \"Baen book publisher\")\r\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\r\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\r\n<br>\r\nCartoons:\r\n[Dilbert](http://www.dilbert.com/fast \"Today's Dilbert comic\")\r\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\r\n[Garfield](http://www.garfield.com/comics/todayscomic.html \"Today's Garfield comic\")\r\n[Mac](http://www.dailymail.co.uk/coffeebreak/cartoons/mac.html \"Today's Mac comic\")\r\n[xkcd](http://xkcd.com/ \"IT Comic\")\r\n<br>\r\nGames:\r\n[AI War](http://www.arcengames.com/w/index.php/aiwar-features \"AI War: fleet Command\")\r\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\r\n[Defcon](http://www.introversion.co.uk/defcon/ \"Defcon\")\r\n[Dwarf Fortress](http://www.bay12games.com/dwarves/ \"Dwarf Fortress\")\r\n[Egosoft](http://www.egosoft.com \"Makers of X game series\")\r\n[EM](http://www.starwraith.com/evochronmercenary/index.htm \"Evochron Mercenary\")\r\n[HOI3](http://www.heartsofirongame.com/ \"Hearts of Iron 3\")\r\n[Minecraft](http://www.minecraftwiki.net/ \"Minecraft\")\r\n[quill18](http://www.youtube.com/user/quill18 \"Game playthrough videos\")\r\n[Star Ruler](http://starruler.blind-mind.com/ \"Star Ruler\")\r\n[TW](http://www.totalwar.com \"Total War game series\")\r\n<br>\r\nMedia:\r\n[BBC](http://www.bbc.co.uk/ \"BBC homepage\")\r\n[iPlayer](http://www.bbc.co.uk/iplayer/radio/bbc_radio_four \"BBC Radio 4 on iPlayer\")\r\n[PC Pro](http://www.pcpro.co.uk/ \"PC Pro magazine\")\r\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\r\n[THOR](http://thehistoryofrome.typepad.com/ \"The History of Rome podcast\")\r\n[Time](http://www.time.com/time/cartoonsoftheweek \"Best Cartoons of the Week\")\r\n<br>\r\nMisc:\r\n[AE](http://academicearth.org \"Academic Earth lectures\")\r\n[Justice](http://www.justiceharvard.org \"Lectures with Michael Sandel\")\r\n[London Walks](http://www.walks.com/ \"Guided walks\")\r\n[Map](http://www.openstreetmap.org/)\r\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\r\n[gov.uk](https://www.gov.uk/ \"Info from the UK Government\")\r\n<br>\r\nShopping:\r\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\r\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\r\n[Cam](http://www.thecambridgecollection.com/ \"Ties\")\r\n[Cloggs](http://www.cloggs.co.uk/ \"Footwear\")\r\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\r\n[GOG](http://www.gog.com/ \"Good Old Games\")\r\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\r\n<br>\r\nThis Site:\r\n[Django](http://www.djangoproject.com/ \"Web development framework\")\r\n[DMCM](https://github.com/ahernp/DMCM)\r\n[jQuery](http://jquery.com/ \"jQuery Javascript Library\")\r\n[DataTables](http://datatables.net/ \"jQuery plug-in\")\r\n<br>\r\nWeb:\r\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\r\n[Gibson](http://grc.com/default.htm \"PC security checks\")\r\n[W3Schools](http://w3schools.com/ \"Web standards\")\r\n\r\n</div>\r\n\r\n<div style=\"width:44%;float:left;padding-left:1em;\" markdown=\"1\">\r\n\r\n## Local\r\n\r\n[Apps](/applications/ \"Applications\") &rsaquo;\r\n[Chrome](/google-chrome/)\r\n[Firefox](/firefox/)\r\n[TiddlyWiki](/applications/#tiddlywiki)\r\n[Vim](/vim-editor/)\r\n<br>\r\n[Blog](/blog/) &rsaquo;\r\n[Archive](blog/archive/) \r\n[RSS Feed](/blog/feed/)\r\n<br>\r\n[Gallery](/gallery/ \"Gallery\") &rsaquo;\r\n[Ovens](/gallery/#ovens)\r\n[London](/gallery/#london)\r\n[Wallpaper](/gallery/#wallpaper)\r\n<br>\r\n[Library](/library/ \"Library\") &rsaquo;\r\n[Books](/books/)\r\n[CDs](/cds/)\r\n[DVDs](/dvds/)\r\n[Software](/software/)\r\n<br>\r\nMisc:\r\n[MSc](/msc/ \"MSc\")\r\n[Tea](/twinings-tea/ \"Twinings Tea\")\r\n[Site Map](/site_map/)\r\n<br>\r\nPersonal:\r\n[CV](/cv/ \"CV\")\r\n[Profile](/profile/ \"Personal Profile\")\r\n[Public Key](/public-key/ \"Public Key\")\r\n<br>\r\n[Ref](/reference/ \"Technical Reference\") &rsaquo;\r\n[Colours](/html-colours/ \"147 Named HTML Colours\")\r\n[Linux](/linux/)\r\n[MySQL](/mysql/)\r\n[Python](/python/)\r\n<br>\r\n[Rooska](/rooska/ \"Rooska by Bantry Bay\") &rsaquo;\r\n[Planting](/planting/ \"Planting Trees\")\r\n<br>\r\n[Tools](/tools/ \"Tools\") &rsaquo;\r\n[Cardgen](/tools/cardgen/)\r\n[Deduplicate](/tools/deduplicate/)\r\n[Feedreader](/feedreader/)\r\n\r\n</div>\r\n<div style=\"clear:both\"></div>", 
+        "content": "# Personal Website of Paul Ahern\r\n\r\nHere you will find some Application [Guides](/applications/ \"Application Guides\"),\r\na catalog for my [Library](/library/ \"Library\")\r\nand a [Gallery](/gallery/ \"Gallery\") of photographs.\r\n\r\nSee [Rooska](/rooska/ \"Rooska\") for maps and photographs of my mountain.\r\n\r\n<div style=\"width:53%;float:left\" markdown=\"1\">\r\n\r\n## External\r\n\r\nFavourite:\r\n[Contacts](http://www.google.com/contacts \"Useful section Google don't provide a link to\")\r\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\r\n[iGoogle](http://www.google.com/ig \"iGoogle\")\r\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\r\n<br>\r\nApps:\r\n[Geany](http://www.geany.org \"Text editor\")\r\n[Inkscape](http://inkscape.org/ \"SVG editor\")\r\n[KeePassX](http://www.keepassx.org/ \"Encrypted database\")\r\n[TiddlyWiki](http://www.tiddlywiki.com/ \"Offline Wiki software\")\r\n<br>\r\nBooks:\r\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\r\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\r\n[Baen](http://www.baen.com/ \"Baen book publisher\")\r\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\r\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\r\n<br>\r\nCartoons:\r\n[Dilbert](http://www.dilbert.com/fast \"Today's Dilbert comic\")\r\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\r\n[Garfield](http://www.garfield.com/comics/todayscomic.html \"Today's Garfield comic\")\r\n[Mac](http://www.dailymail.co.uk/coffeebreak/cartoons/mac.html \"Today's Mac comic\")\r\n[xkcd](http://xkcd.com/ \"IT Comic\")\r\n<br>\r\nGames:\r\n[AI War](http://www.arcengames.com/w/index.php/aiwar-features \"AI War: fleet Command\")\r\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\r\n[Defcon](http://www.introversion.co.uk/defcon/ \"Defcon\")\r\n[Dwarf Fortress](http://www.bay12games.com/dwarves/ \"Dwarf Fortress\")\r\n[Egosoft](http://www.egosoft.com \"Makers of X game series\")\r\n<br>\r\n[EM](http://www.starwraith.com/evochronmercenary/index.htm \"Evochron Mercenary\")\r\n[HOI3](http://www.heartsofirongame.com/ \"Hearts of Iron 3\")\r\n[Minecraft](http://www.minecraftwiki.net/ \"Minecraft\")\r\n[quill18](http://www.youtube.com/user/quill18 \"Game playthrough videos\")\r\n[Star Ruler](http://starruler.blind-mind.com/ \"Star Ruler\")\r\n[TW](http://www.totalwar.com \"Total War game series\")\r\n<br>\r\nMedia:\r\n[BBC](http://www.bbc.co.uk/ \"BBC homepage\")\r\n[iPlayer](http://www.bbc.co.uk/iplayer/radio/bbc_radio_four \"BBC Radio 4 on iPlayer\")\r\n[PC Pro](http://www.pcpro.co.uk/ \"PC Pro magazine\")\r\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\r\n[THOR](http://thehistoryofrome.typepad.com/ \"The History of Rome podcast\")\r\n[Time](http://www.time.com/time/cartoonsoftheweek \"Best Cartoons of the Week\")\r\n<br>\r\nMisc:\r\n[AE](http://academicearth.org \"Academic Earth lectures\")\r\n[Justice](http://www.justiceharvard.org \"Lectures with Michael Sandel\")\r\n[London Walks](http://www.walks.com/ \"Guided walks\")\r\n[Map](http://www.openstreetmap.org/)\r\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\r\n[gov.uk](https://www.gov.uk/ \"Info from the UK Government\")\r\n<br>\r\nShopping:\r\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\r\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\r\n[Cam](http://www.thecambridgecollection.com/ \"Ties\")\r\n[Cloggs](http://www.cloggs.co.uk/ \"Footwear\")\r\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\r\n[GOG](http://www.gog.com/ \"Good Old Games\")\r\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\r\n<br>\r\nThis Site:\r\n[Django](http://www.djangoproject.com/ \"Web development framework\")\r\n[DMCM](https://github.com/ahernp/DMCM)\r\n[jQuery](http://jquery.com/ \"jQuery Javascript Library\")\r\n[DataTables](http://datatables.net/ \"jQuery plug-in\")\r\n<br>\r\nWeb:\r\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\r\n[Gibson](http://grc.com/default.htm \"PC security checks\")\r\n[W3Schools](http://w3schools.com/ \"Web standards\")\r\n\r\n</div>\r\n\r\n<div style=\"width:44%;float:left;padding-left:1em;\" markdown=\"1\">\r\n\r\n## Local\r\n\r\n[Apps](/applications/ \"Applications\") &rsaquo;\r\n[Chrome](/google-chrome/)\r\n[Firefox](/firefox/)\r\n[TiddlyWiki](/applications/#tiddlywiki)\r\n[Vim](/vim-editor/)\r\n<br>\r\n[Blog](/blog/) &rsaquo;\r\n[Archive](blog/archive/) \r\n[RSS Feed](/blog/feed/)\r\n<br>\r\n[Gallery](/gallery/ \"Gallery\") &rsaquo;\r\n[Ovens](/gallery/#ovens)\r\n[London](/gallery/#london)\r\n[Wallpaper](/gallery/#wallpaper)\r\n<br>\r\n[Library](/library/ \"Library\") &rsaquo;\r\n[Books](/books/)\r\n[CDs](/cds/)\r\n[DVDs](/dvds/)\r\n[Software](/software/)\r\n<br>\r\nMisc:\r\n[MSc](/msc/ \"MSc\")\r\n[Tea](/twinings-tea/ \"Twinings Tea\")\r\n[Site Map](/site_map/)\r\n<br>\r\nPersonal:\r\n[CV](/cv/ \"CV\")\r\n[Profile](/profile/ \"Personal Profile\")\r\n[Public Key](/public-key/ \"Public Key\")\r\n<br>\r\n[Ref](/reference/ \"Technical Reference\") &rsaquo;\r\n[Colours](/html-colours/ \"147 Named HTML Colours\")\r\n[Linux](/linux/)\r\n[MySQL](/mysql/)\r\n[Python](/python/)\r\n<br>\r\n[Rooska](/rooska/ \"Rooska by Bantry Bay\") &rsaquo;\r\n[Planting](/planting/ \"Planting Trees\")\r\n<br>\r\n[Tools](/tools/ \"Tools\") &rsaquo;\r\n[Cardgen](/tools/cardgen/)\r\n[Deduplicate](/tools/deduplicate/)\r\n[Feedreader](/feedreader/)\r\n\r\n</div>\r\n<div style=\"clear:both\"></div>", 
         "published": null, 
         "slug": "ahernp-com"
     }
@@ -1098,7 +1098,7 @@
         "published_time": null, 
         "description": "Recent Blog Entries.", 
         "title": "ahernp.com blog", 
-        "last_polled_time": "2013-03-17T16:56:14", 
+        "last_polled_time": "2013-03-20T19:17:08", 
         "xml_url": "http://ahernp.com/blog/feed", 
         "link": "http://ahernp.com/blog/", 
         "group": null
@@ -1111,7 +1111,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by quill18", 
-        "last_polled_time": "2013-03-17T16:56:45", 
+        "last_polled_time": "2013-03-20T18:17:53", 
         "xml_url": "http://www.youtube.com/rss/user/quill18/videos.rss", 
         "link": "http://www.youtube.com/channel/UCbx1TZgxfIauUZyPuBzEwZg/videos", 
         "group": 2
@@ -1121,10 +1121,10 @@
     "pk": 40, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-17T05:00:00", 
+        "published_time": "2013-03-20T05:00:00", 
         "description": "The Official Dilbert Daily Comic Strip RSS Feed", 
         "title": "Dilbert Daily Strip", 
-        "last_polled_time": "2013-03-17T10:14:33", 
+        "last_polled_time": "2013-03-20T05:17:04", 
         "xml_url": "http://feedproxy.google.com/DilbertDailyStrip", 
         "link": "http://dilbert.com/", 
         "group": 2
@@ -1134,10 +1134,10 @@
     "pk": 41, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-15T06:00:01", 
+        "published_time": "2013-03-19T06:00:01", 
         "description": "Regular thoughts and updates from Dilbert.com", 
         "title": "Dilbert.com Blog", 
-        "last_polled_time": "2013-03-17T10:14:33", 
+        "last_polled_time": "2013-03-19T16:17:06", 
         "xml_url": "http://feedproxy.google.com/typepad/ihdT", 
         "link": "http://dilbert.com/blog", 
         "group": 2
@@ -1147,10 +1147,10 @@
     "pk": 42, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-16T12:36:18", 
+        "published_time": "2013-03-20T17:07:17", 
         "description": "Books", 
         "title": "NYT > Books", 
-        "last_polled_time": "2013-03-17T10:14:35", 
+        "last_polled_time": "2013-03-20T17:17:51", 
         "xml_url": "http://www.nytimes.com/services/xml/rss/nyt/Books.xml", 
         "link": "http://www.nytimes.com/pages/books/index.html?partner=rss&emc=rss", 
         "group": 2
@@ -1163,7 +1163,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Binge Thinking History Podcast", 
-        "last_polled_time": "2013-03-17T16:56:17", 
+        "last_polled_time": "2013-03-20T19:17:11", 
         "xml_url": "http://bingethinkinghistory.blogspot.com/feeds/posts/default", 
         "link": "http://bingethinkinghistory.blogspot.com/", 
         "group": 1
@@ -1176,22 +1176,9 @@
         "published_time": "2013-01-14T05:42:03", 
         "description": "In \"Hardcore History\" the very unconventional Dan Carlin takes his \"Martian\", outside-the-box way of thinking and applies it to the past. Was Alexander the Great as bad a person as Adolf Hitler? What would Apaches with modern weapons be like? Will our modern civilization ever fall like civilizations from past eras? This is a difficult-to-classify show that has a rather sharp edge. It's not for everyone. But the innovative style and approach has made \"Dan Carlin's Hardcore History\" a New Media hit.", 
         "title": "Dan Carlin's Hardcore History", 
-        "last_polled_time": "2013-03-17T10:14:37", 
+        "last_polled_time": "2013-03-17T18:56:23", 
         "xml_url": "http://feeds.feedburner.com/dancarlin/history?format=xml", 
         "link": "http://www.dancarlin.com", 
-        "group": 1
-    }
-},
-{
-    "pk": 45, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": null, 
-        "description": "History narrative, linguistic history trivia and history podcast reviews, all topped off with the current special feature, which is the War of the Spanish Succession. This stars, Louis XIV, the Duke of Marlborough, Prince Eugene, Anthony Heinsius and many thousands of supporting soldiers. Jim is a history enthusiast who loves telling stories and adores rummaging about amongst the delights and horrors of the past.", 
-        "title": "Historyzine: The History Podcast", 
-        "last_polled_time": "2013-03-17T16:56:29", 
-        "xml_url": "http://historyzine.com/feed/", 
-        "link": "http://historyzine.com", 
         "group": 1
     }
 },
@@ -1202,7 +1189,7 @@
         "published_time": null, 
         "description": "From the first human civilizations to 500 BC in (around) twenty podcasts", 
         "title": "The Ancient World", 
-        "last_polled_time": "2013-03-17T16:56:38", 
+        "last_polled_time": "2013-03-20T19:17:27", 
         "xml_url": "http://ancientworldpodcast.blogspot.com/feeds/posts/default", 
         "link": "http://ancientworldpodcast.blogspot.com/", 
         "group": 1
@@ -1215,7 +1202,7 @@
         "published_time": "2013-03-15T21:00:12", 
         "description": "Weekly reflections on topical issues from a range of contributors including historian Lisa Jardine, novelist Sarah Dunant and writer Alain de Botton.", 
         "title": "A Point of View", 
-        "last_polled_time": "2013-03-17T10:14:44", 
+        "last_polled_time": "2013-03-17T18:54:49", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qng8", 
         "group": 4
@@ -1225,51 +1212,12 @@
     "pk": 48, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-11T21:00:13", 
+        "published_time": "2013-03-18T21:00:12", 
         "description": "Analysis makes sense of the ideas that change the world. What made Islam political, whether the Government can make us go green, why we think the market in human organs is repugnant are just some of the subjects the series tackles. With thought-provoking and expert presenters, Analysis aims to make the world of policy and ideas both interesting and surprising. There are 26 episodes a year, in three series. Podcasts are available for a week after transmission while the programme is on air.", 
         "title": "Analysis", 
-        "last_polled_time": "2013-03-17T10:14:48", 
+        "last_polled_time": "2013-03-18T21:13:55", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006r4vz", 
-        "group": 4
-    }
-},
-{
-    "pk": 49, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2009-05-22T15:12:00", 
-        "description": "The latest news from the team behind BBC History Magazine - a popular History magazine. To find out more, visit www.historyextra.com", 
-        "title": "History Extra podcast", 
-        "last_polled_time": "2013-03-17T10:14:52", 
-        "xml_url": "http://www.bbchistorymagazine.com/podcast/historypodcast.xml", 
-        "link": "http://www.historyextra.com/podcasts", 
-        "group": 4
-    }
-},
-{
-    "pk": 50, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2011-12-14T17:00:04", 
-        "description": "Exploring the latest developments in from the world of information technology, and how these affect our lives. Click On brings you stories of digital developments, internet innovations, and technological triumphs and trials.  Mondays at 4.30pm on Radio 4. Find out more at bbc.co.uk/radio4/science/clickon.", 
-        "title": "Click On", 
-        "last_polled_time": "2013-03-17T10:14:57", 
-        "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/clickon/rss.xml", 
-        "link": "http://www.bbc.co.uk/programmes/b006tht9", 
-        "group": 4
-    }
-},
-{
-    "pk": 51, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2013-03-10T14:00:14", 
-        "description": "On the ground reporting from around the world which focuses on the human dimension of the big international stories.", 
-        "title": "Crossing Continents", 
-        "last_polled_time": "2013-03-17T10:14:58", 
-        "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/cc/rss.xml", 
-        "link": "http://www.bbc.co.uk/programmes/b006qt55", 
         "group": 4
     }
 },
@@ -1277,10 +1225,10 @@
     "pk": 52, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-11T20:00:10", 
+        "published_time": "2013-03-18T20:00:07", 
         "description": "Each week, Discovery takes an in-depth look at the most significant ideas, discoveries and trends in science, from the smallest microbe to the furthest corner of space.", 
         "title": "Discovery", 
-        "last_polled_time": "2013-03-17T10:15:02", 
+        "last_polled_time": "2013-03-18T20:17:19", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/p002w557", 
         "group": 4
@@ -1290,10 +1238,10 @@
     "pk": 53, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-16T02:30:12", 
+        "published_time": "2013-03-19T09:30:11", 
         "description": "Throughout the week BBC World Service offers a wide range of documentaries and other factual programmes. This podcast offers you the chance to access landmark series from our archive.", 
         "title": "Documentaries", 
-        "last_polled_time": "2013-03-17T10:15:08", 
+        "last_polled_time": "2013-03-19T10:17:06", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/docarchive/rss.xml", 
         "link": "http://www.bbc.co.uk/podcasts/series/docarchive", 
         "group": 4
@@ -1303,10 +1251,10 @@
     "pk": 54, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-12T21:00:21", 
+        "published_time": "2013-03-19T21:00:19", 
         "description": "A podcast offering Radio 4's award winning, flagship investigative series File on 4.", 
         "title": "File on 4", 
-        "last_polled_time": "2013-03-17T10:15:21", 
+        "last_polled_time": "2013-03-19T21:17:07", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006th08", 
         "group": 4
@@ -1319,22 +1267,9 @@
         "published_time": "2013-03-15T19:30:23", 
         "description": "Bringing you a satirical take on the week's news with The News Quiz and The Now Show from BBC Radio 4. Enjoy a satirical take on the week\u2019s news with the cream of UK comedy talent.", 
         "title": "Friday Night Comedy from BBC Radio 4", 
-        "last_polled_time": "2013-03-17T10:15:24", 
+        "last_polled_time": "2013-03-17T18:54:54", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/programmes/genres/comedy/satire/", 
-        "group": 4
-    }
-},
-{
-    "pk": 56, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2013-03-16T12:20:52", 
-        "description": "Insight, wit and analysis as BBC correspondents, journalists and writers take a closer look at the stories behind the headlines. Presented by Kate Adie. Broadcast on BBC Radio 4 in the UK on Thursdays at 1100 (local time) and Saturdays at 1130 (local time) for about 25 weeks of the year. BBC World Service broadcasts every day from Monday to Friday plus a weekend edition all year round, presented by Owen Bennett-Jones. For more information, a full list of programme broadcast times and the podcast Terms of Use go to  www.bbc.co.uk/fromourowncorrespondent", 
-        "title": "From Our Own Correspondent", 
-        "last_polled_time": "2013-03-17T10:15:24", 
-        "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fooc/rss.xml", 
-        "link": "http://www.bbc.co.uk/fromourowncorrespondent", 
         "group": 4
     }
 },
@@ -1342,10 +1277,10 @@
     "pk": 57, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-15T20:00:10", 
+        "published_time": "2013-03-19T20:00:54", 
         "description": "Interviews with leading novelists, musicians, film directors, artists and more, from Radio 4's flagship arts show, presented by Mark Lawson, Kirsty Lang and John Wilson.  Front Row is broadcast on BBC Radio 4 each weekday evening at 7.15 - 7.45pm.  New editions will be available each night following the live broadcast.", 
         "title": "Front Row Daily", 
-        "last_polled_time": "2013-03-17T10:15:33", 
+        "last_polled_time": "2013-03-19T20:17:21", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/frontrow/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/arts/frontrow", 
         "group": 4
@@ -1358,7 +1293,7 @@
         "published_time": "2013-01-29T17:00:12", 
         "description": "Biography series exploring the greatest people who ever lived. Matthew Parris interviews an eminent guest and an expert to reveal the truth behind their history heroes.", 
         "title": "Great Lives", 
-        "last_polled_time": "2013-03-17T10:15:48", 
+        "last_polled_time": "2013-03-17T18:54:59", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/greatlives/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/greatlives", 
         "group": 4
@@ -1371,7 +1306,7 @@
         "published_time": "2013-03-14T11:30:13", 
         "description": "Melvyn Bragg and his guests discuss the history of ideas - including topics  drawn from philosophy, science, history, religion and culture.", 
         "title": "In Our Time With Melvyn Bragg", 
-        "last_polled_time": "2013-03-17T10:15:50", 
+        "last_polled_time": "2013-03-17T18:55:00", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qykl", 
         "group": 4
@@ -1384,7 +1319,7 @@
         "published_time": "2013-03-12T16:30:06", 
         "description": "With wit, authority and insight, Joshua Rozenberg presents radio's celebrated and award-winning legal affairs programme. From police powers to how judges sentence offenders and from the problems of ensuring access to justice to the quirks of international law, Joshua each week presents a lively, entertaining and engaging perspective on the issues that matter.  Law in Action is broadcast on Tuesday afternoons at 4pm and Thursday evenings at 8pm on BBC Radio 4.", 
         "title": "Law in Action", 
-        "last_polled_time": "2013-03-17T10:15:53", 
+        "last_polled_time": "2013-03-17T18:55:00", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/law/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006tgy1", 
         "group": 4
@@ -1397,7 +1332,7 @@
         "published_time": "2013-03-14T18:11:12", 
         "description": "Weekly science conversation, on everything from archaeology to zoology, from abacus to the antipodean rodent zyzomys, by way of meteorites. Presented by Quentin Cooper, and airing every Thursday, 4:30 pm.", 
         "title": "Material World", 
-        "last_polled_time": "2013-03-17T10:15:54", 
+        "last_polled_time": "2013-03-17T18:55:01", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/material/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/science/thematerialworld.shtml", 
         "group": 4
@@ -1407,38 +1342,12 @@
     "pk": 62, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-13T17:26:34", 
+        "published_time": "2013-03-20T17:30:16", 
         "description": "BBC Radio 4's topical programme The Media Show, presented by journalist and former TV executive Steve Hewlett, featuring the latest stories and opinion from the fast-changing world of media in all its forms - print, television, radio, online and telecommunications.", 
         "title": "Media Show", 
-        "last_polled_time": "2013-03-17T10:15:59", 
+        "last_polled_time": "2013-03-20T18:17:31", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/factual/mediashow/", 
-        "group": 4
-    }
-},
-{
-    "pk": 63, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2013-03-13T14:19:21", 
-        "description": "Diverse conversation with Libby Purves and her four guests. The focus of Midweek is personal experience, the story behind the story. A mix of the famous, the infamous, and first time broadcasters. Forty-five minutes of lively conversation to start the day.", 
-        "title": "Midweek: Diverse Conversation", 
-        "last_polled_time": "2013-03-17T10:16:04", 
-        "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/midweek/rss.xml", 
-        "link": "http://www.bbc.co.uk/radio4/midweek", 
-        "group": 4
-    }
-},
-{
-    "pk": 64, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2009-05-04T07:29:00", 
-        "description": "Bringing you the strangest anecdotes, innovative technology, and most significant events in Military History.", 
-        "title": "Military History Podcast", 
-        "last_polled_time": "2013-03-17T10:16:09", 
-        "xml_url": "http://geo47.libsyn.com/rss", 
-        "link": "http://www.militaryhistorypodcast.com", 
         "group": 4
     }
 },
@@ -1446,10 +1355,10 @@
     "pk": 65, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-16T13:21:35", 
+        "published_time": "2013-03-19T16:38:55", 
         "description": "All that matters about money with Paul Lewis. News of savings and investments, credit cards and loans, pensions, banking, benefits and giving to charity.  The UK\u2019s premier weekly round-up of personal finance from the BBC.  Programme broadcast each Saturday at 1204 BST and episodes added each Saturday afternoon.  You will also receive podcasts of Money Box Live \u2013 the interactive programme answering questions about personal finance issues, hosted by either Paul Lewis or Vincent Duggleby.  Broadcast each Wednesday at 1502 BST and with episodes added every Wednesday afternoon. For more information go to www.bbc.co.uk/moneybox", 
         "title": "Money Box", 
-        "last_polled_time": "2013-03-17T10:16:14", 
+        "last_polled_time": "2013-03-19T17:17:15", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moneybox/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qjnv", 
         "group": 4
@@ -1459,10 +1368,10 @@
     "pk": 66, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-11T12:00:08", 
+        "published_time": "2013-03-18T12:00:10", 
         "description": "Tim Harford investigates numbers in the news. Numbers are used in every area of public debate. But are they always reliable? Tim and the More or Less team try to make sense of the statistics which surround us. A half-hour programme broadcast at 1600 on Friday afternoons and repeated at 2000 on Sundays on Radio 4. BBC World Service broadcasts a short edition over the weekend.", 
         "title": "More or Less: Behind the Stats", 
-        "last_polled_time": "2013-03-17T10:16:14", 
+        "last_polled_time": "2013-03-18T12:17:17", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qshd", 
         "group": 4
@@ -1475,7 +1384,7 @@
         "published_time": "2013-03-16T01:00:20", 
         "description": "Insights into the business world with Peter Day - featuring content from his Radio 4 In Business programme, and also Global Business from the BBC World Service.", 
         "title": "Peter Day's World of Business", 
-        "last_polled_time": "2013-03-17T10:16:19", 
+        "last_polled_time": "2013-03-17T18:55:06", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio/worldbiz/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/inbusiness/inbusiness.shtml", 
         "group": 4
@@ -1488,22 +1397,9 @@
         "published_time": "2013-03-16T19:30:17", 
         "description": "Series of profiles of people who are currently making headlines. Broadcast on BBC Radio 4 on Saturdays at 7pm.", 
         "title": "Profile", 
-        "last_polled_time": "2013-03-17T10:16:26", 
+        "last_polled_time": "2013-03-17T18:55:07", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/profile/", 
-        "group": 4
-    }
-},
-{
-    "pk": 69, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2013-03-11T12:46:16", 
-        "description": "Start The Week sets the cultural agenda for the week ahead, with  high-profile guests discussing the ideas behind their work in the fields of art, literature, film, science, history, society and politics.", 
-        "title": "Start the Week with Andrew Marr", 
-        "last_polled_time": "2013-03-17T10:16:29", 
-        "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/stw/rss.xml", 
-        "link": "http://www.bbc.co.uk/radio4/factual/starttheweek.shtml", 
         "group": 4
     }
 },
@@ -1514,7 +1410,7 @@
         "published_time": "2013-03-14T21:00:18", 
         "description": "Insight into business from the people at the top. Evan Davis meets influential business leaders for a round table conversation about the issues that matter to their companies and their customers. The BBC produces two radio versions of this programme - one for the UK audience that can be heard on BBC Radio 4 on Thursday evenings at 20:30 GMT, and one for the international audience that can be heard on BBC World Service on Fridays at 22:06 GMT.", 
         "title": "The Bottom Line with Evan Davis", 
-        "last_polled_time": "2013-03-17T10:16:33", 
+        "last_polled_time": "2013-03-17T18:55:08", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/bottomline", 
         "group": 4
@@ -1527,7 +1423,7 @@
         "published_time": "2013-03-14T17:00:17", 
         "description": "Interviews and analysis from the world of cinema. Francine Stock talks to directors, writers and critics about the latest film releases, classics on DVD and movies on television.", 
         "title": "The Film Programme", 
-        "last_polled_time": "2013-03-17T10:16:36", 
+        "last_polled_time": "2013-03-17T18:55:08", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/filmprogramme", 
         "group": 4
@@ -1540,10 +1436,10 @@
         "published_time": "2012-05-06T19:18:38", 
         "description": "A weekly podcast tracing the rise, decline and fall of the Roman Empire. Now complete! Visit us at http://thehistoryofrome.typepad.com", 
         "title": "The History of Rome", 
-        "last_polled_time": "2013-03-17T10:16:42", 
+        "last_polled_time": "2013-03-17T18:55:10", 
         "xml_url": "http://feeds.feedburner.com/TheHistoryOfRome", 
         "link": "http://thehistoryofrome.typepad.com/the_history_of_rome/", 
-        "group": 4
+        "group": 1
     }
 },
 {
@@ -1553,7 +1449,7 @@
         "published_time": null, 
         "description": "Weekly news and opinions from the UK's biggest tech monthly", 
         "title": "The PC Pro Podcast", 
-        "last_polled_time": "2013-03-17T16:56:42", 
+        "last_polled_time": "2013-03-20T18:17:47", 
         "xml_url": "http://podcast.pcpro.co.uk/?feed=podcast", 
         "link": "http://podcast.pcpro.co.uk", 
         "group": 4
@@ -1563,10 +1459,10 @@
     "pk": 74, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-13T16:54:53", 
+        "published_time": "2013-03-20T16:59:40", 
         "description": "Laurie Taylor explores the latest research into how society works and discusses current ideas on how we live today.", 
         "title": "Thinking Allowed", 
-        "last_polled_time": "2013-03-17T10:17:00", 
+        "last_polled_time": "2013-03-20T17:18:13", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/ta/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/factual/thinkingallowed/", 
         "group": 4
@@ -1576,10 +1472,10 @@
     "pk": 75, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-16T11:30:13", 
+        "published_time": "2013-03-18T11:30:05", 
         "description": "Top political commentators reflect on the week's political events in discussion with MPs, Peers and others.", 
         "title": "Weekly Political Review", 
-        "last_polled_time": "2013-03-17T10:17:05", 
+        "last_polled_time": "2013-03-18T12:17:27", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/weekinwest.shtml", 
         "group": 4
@@ -1592,7 +1488,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Ian Bicking: a blog", 
-        "last_polled_time": "2013-03-17T16:56:31", 
+        "last_polled_time": "2013-03-20T19:17:20", 
         "xml_url": "http://blog.ianbicking.org/feed/", 
         "link": "http://blog.ianbicking.org", 
         "group": 5
@@ -1602,10 +1498,10 @@
     "pk": 77, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-17T16:56:36", 
+        "published_time": "2013-03-20T19:14:47", 
         "description": "", 
         "title": "Linuxtoday.com", 
-        "last_polled_time": "2013-03-17T16:56:32", 
+        "last_polled_time": "2013-03-20T19:17:22", 
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux", 
         "link": "http://www.linuxtoday.com/", 
         "group": 5
@@ -1618,7 +1514,7 @@
         "published_time": null, 
         "description": "A blog covering security and security technology.", 
         "title": "Schneier on Security", 
-        "last_polled_time": "2013-03-17T16:56:37", 
+        "last_polled_time": "2013-03-20T19:17:26", 
         "xml_url": "http://www.schneier.com/blog/index.xml", 
         "link": "http://www.schneier.com/blog/", 
         "group": 5
@@ -1631,7 +1527,7 @@
         "published_time": null, 
         "description": "Inkscape Help, Tutorials and Documentation Resources", 
         "title": "inkscape tutorials blog", 
-        "last_polled_time": "2013-03-17T16:56:32", 
+        "last_polled_time": "2013-03-20T19:17:22", 
         "xml_url": "http://inkscapetutorials.wordpress.com/feed/", 
         "link": "http://inkscapetutorials.wordpress.com", 
         "group": 5
@@ -1644,74 +1540,48 @@
         "published_time": null, 
         "description": "Biting the hand that feeds IT", 
         "title": "The Register", 
-        "last_polled_time": "2013-03-17T16:56:43", 
+        "last_polled_time": "2013-03-20T18:17:48", 
         "xml_url": "http://www.theregister.co.uk/headlines.rss", 
         "link": "http://www.theregister.co.uk/", 
         "group": 5
     }
 },
 {
-    "pk": 82, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": null, 
-        "description": "The latest stories from the Home section of the BBC News web site.", 
-        "title": "BBC News - Home", 
-        "last_polled_time": "2013-03-17T16:56:14", 
-        "xml_url": "http://feeds.bbci.co.uk/news/rss.xml", 
-        "link": "http://www.bbc.co.uk/news/#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa", 
-        "group": 3
-    }
-},
-{
-    "pk": 83, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": "2013-03-17T16:56:43", 
-        "description": "Google News", 
-        "title": "Top Stories - Google News", 
-        "last_polled_time": "2013-03-17T16:56:43", 
-        "xml_url": "http://news.google.com/news?pz=1&cf=all&ned=uk&hl=en&output=rss", 
-        "link": "http://news.google.com/news?pz=1&ned=uk&hl=en", 
-        "group": 3
-    }
-},
-{
-    "pk": 84, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": null, 
-        "description": "The latest stories from the Technology section of the BBC News web site.", 
-        "title": "BBC News - Technology", 
-        "last_polled_time": "2013-03-17T17:17:03", 
-        "xml_url": "http://feeds.bbci.co.uk/news/technology/rss.xml", 
-        "link": "http://www.bbc.co.uk/news/technology/#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa", 
-        "group": 3
-    }
-},
-{
-    "pk": 85, 
+    "pk": 88, 
     "model": "feedreader.feed", 
     "fields": {
         "published_time": null, 
         "description": "", 
-        "title": "", 
-        "last_polled_time": null, 
-        "xml_url": "http://feeds.bbci.co.uk/news/uk/rss.xml", 
-        "link": "", 
-        "group": 3
+        "title": "Uploads by Paradoxplaza", 
+        "last_polled_time": "2013-03-20T18:17:52", 
+        "xml_url": "http://www.youtube.com/rss/user/Paradoxplaza/videos.rss", 
+        "link": "http://www.youtube.com/channel/UC1JOnWZrVWKzX3UMdpnvuMg/videos", 
+        "group": 2
     }
 },
 {
-    "pk": 86, 
+    "pk": 89, 
     "model": "feedreader.feed", 
     "fields": {
         "published_time": null, 
-        "description": "", 
-        "title": "", 
-        "last_polled_time": null, 
+        "description": "The latest stories from the World section of the BBC News web site.", 
+        "title": "BBC News - World", 
+        "last_polled_time": "2013-03-20T19:17:10", 
         "xml_url": "http://feeds.bbci.co.uk/news/world/rss.xml", 
-        "link": "", 
+        "link": "http://www.bbc.co.uk/news/world/#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa", 
+        "group": 3
+    }
+},
+{
+    "pk": 90, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": "2013-03-20T19:05:41", 
+        "description": "Top stories of the day on TIME.com", 
+        "title": "TIME.com: Top Stories", 
+        "last_polled_time": "2013-03-20T18:17:51", 
+        "xml_url": "http://feeds2.feedburner.com/time/topstories", 
+        "link": "http://www.time.com?xid=rss-topstories", 
         "group": 3
     }
 }

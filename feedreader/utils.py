@@ -1,50 +1,67 @@
 import feedparser
 from datetime import datetime
 from time import mktime
-from feedreader.models import Feed, Entry, Options
+from feedreader.models import Entry, Options
 
 import logging
 logger = logging.getLogger('feedreader')
 
-def poll_feed(feed, verbose=False):
+def poll_feed(db_feed, verbose=False):
     """
     Read through a feed looking for new entries.
     """
     options = Options.objects.all()[0]
-    f = feedparser.parse(feed.xml_url)
-    if hasattr(f.feed, 'bozo_exception'):
+    parsed = feedparser.parse(db_feed.xml_url)
+    if hasattr(parsed.feed, 'bozo_exception'):
         # Malformed feed
-        logger.warning('Feedreader poll_feeds found Malformed feed, %s: %s' % (feed.xml_url, f.feed.bozo_exception))
+        msg = 'Feedreader poll_feeds found Malformed feed, %s: %s' % (db_feed.xml_url, parsed.feed.bozo_exception)
+        logger.warning(msg)
+        if verbose:
+            print(msg)
         return
-    if hasattr(f.feed, 'published_parsed'):
-        published_time = datetime.fromtimestamp(mktime(f.feed.published_parsed))
-        if feed.published_time and feed.published_time >= published_time:
+    if hasattr(parsed.feed, 'published_parsed'):
+        published_time = datetime.fromtimestamp(mktime(parsed.feed.published_parsed))
+        if db_feed.published_time and db_feed.published_time >= published_time:
             return
-        feed.published_time = published_time
+        db_feed.published_time = published_time
     for attr in ['title', 'link', 'description']:
-        if not hasattr(f.feed, attr):
-            logger.error('Feedreader poll_feeds. Feed "%s" has no %s' % (feed.xml_url, attr))
+        if not hasattr(parsed.feed, attr):
+            msg = 'Feedreader poll_feeds. Feed "%s" has no %s' % (db_feed.xml_url, attr)
+            logger.error(msg)
+            if verbose:
+                print(msg)
             return
-    feed.title = f.feed.title
-    feed.link = f.feed.link
-    feed.description = f.feed.description
-    feed.last_polled_time = datetime.now()
-    feed.save()
+    db_feed.title = parsed.feed.title
+    db_feed.link = parsed.feed.link
+    db_feed.description = parsed.feed.description
+    db_feed.last_polled_time = datetime.now()
+    db_feed.save()
     if verbose:
-        print('%d entries to process in %s' % (len(f.entries), feed.title))
-    for i, e in enumerate(f.entries):
+        print('%d entries to process in %s' % (len(parsed.entries), db_feed.title))
+    for i, entry in enumerate(parsed.entries):
         if i > options.max_entries_saved:
             break
         for attr in ['title', 'link', 'description']:
-            if not hasattr(e, attr):
-                logger.error('Feedreader poll_feeds. Entry "%s" has no %s' % (e.link, attr))
+            if not hasattr(entry, attr):
+                msg = 'Feedreader poll_feeds. Entry "%s" has no %s' % (entry.link, attr)
+                logger.error(msg)
+                if verbose:
+                    print(msg)
                 continue
-        entry, created = Entry.objects.get_or_create(feed=feed, link=e.link)
+        if entry.title == "":
+            msg = 'Feedreader poll_feeds. Entry "%s" has a blank title' % (entry.link)
+            logger.warning(msg)
+            if verbose:
+                print(msg)
+            continue
+        db_entry, created = Entry.objects.get_or_create(feed=db_feed, link=entry.link)
         if created:
-            if hasattr(e, 'published_parsed'):
-                published_time = datetime.fromtimestamp(mktime(e.published_parsed))
-                entry.published_time = published_time
-            entry.feed = feed
-            entry.title = e.title
-            entry.description = e.description
-            entry.save()
+            if hasattr(entry, 'published_parsed'):
+                published_time = datetime.fromtimestamp(mktime(entry.published_parsed))
+                now = datetime.now()
+                if published_time > now:
+                    published_time = now
+                db_entry.published_time = published_time
+            db_entry.title = entry.title
+            db_entry.description = entry.description
+            db_entry.save()
