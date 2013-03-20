@@ -28,10 +28,12 @@ class Command(BaseCommand):
         verbose = options['verbose']
         options = Options.objects.all()[0]
         feeds = Feed.objects.all()
+        if verbose:
+            print('%d feeds to process' % (len(feeds)))
         for feed in feeds:
             if verbose:
                 print('Processing Feed %s' % (feed.title))
-            poll_feed(feed)
+            poll_feed(feed, verbose)
             # Remove older entries
             entries = Entry.objects.filter(feed=feed)[options.max_entries_saved:]
             for entry in entries:

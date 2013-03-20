@@ -1,15 +1,16 @@
 import feedparser
 from datetime import datetime
 from time import mktime
-from feedreader.models import Feed, Entry
+from feedreader.models import Feed, Entry, Options
 
 import logging
 logger = logging.getLogger('feedreader')
 
-def poll_feed(feed):
+def poll_feed(feed, verbose=False):
     """
     Read through a feed looking for new entries.
     """
+    options = Options.objects.all()[0]
     f = feedparser.parse(feed.xml_url)
     if hasattr(f.feed, 'bozo_exception'):
         # Malformed feed
@@ -29,7 +30,11 @@ def poll_feed(feed):
     feed.description = f.feed.description
     feed.last_polled_time = datetime.now()
     feed.save()
-    for e in f.entries:
+    if verbose:
+        print('%d entries to process in %s' % (len(f.entries), feed.title))
+    for i, e in enumerate(f.entries):
+        if i > options.max_entries_saved:
+            break
         for attr in ['title', 'link', 'description']:
             if not hasattr(e, attr):
                 logger.error('Feedreader poll_feeds. Entry "%s" has no %s' % (e.link, attr))

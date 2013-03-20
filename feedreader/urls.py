@@ -6,4 +6,3 @@ urlpatterns = patterns(
     url(r'^$', feeds),
     url(r'^get_feeds/$', ajax_get_feeds),
 )
-print urlpatterns
