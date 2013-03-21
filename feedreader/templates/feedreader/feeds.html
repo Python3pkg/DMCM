@@ -11,6 +11,7 @@
         p.feedreader_subtitle {font-size: small;}
         #content {width: 80%;}
         .feed_entry {padding: 0.2em 0.5em; margin: 0.5em; border: 1px solid #046; border-radius: 1em;}
+        .read_entry {color:#888;}
         .secondary_link {text-decoration:none;}
         #spinner {position: fixed; top: 50%; left: 50%; margin-top: -64px; margin-left: -64px; z-index: 3;}
     </style>
@@ -37,35 +38,62 @@
 {% block content %}
     <h1>Feed Reader</h1>
     <div style="width:20%;float:left">
-        <h3><a class="load_request" href="{% url 'feedreader.views.feeds' %}">All stories</a></h3>
+        <h3>
+            <a class="load_request" 
+                href="{% url 'feedreader.views.feeds' %}"
+                title="Show All feeds">
+                All stories
+            </a>
+            <a class="secondary_link mark_read_request" 
+                feedreader=""
+                href="{% url 'feedreader.views.feeds' %}?mark_read_flag=1"
+                title="Mark All entries as read">
+                {% if total_unread > 0 %}({{ total_unread }}){% endif %}
+            </a>
+        </h3>
         <div id="accordion">
             {% for group in groups %}
                 <h3>{{ group.name }}</h3>
                 <div>
                     <p class="feedreader_menu">
-                        <a class="load_request" feedreader="group_id={{ group.id }}"
-                            href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}">
+                        <a class="load_request" 
+                            feedreader="group_id={{ group.id }}"
+                            href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}"
+                            title="Show All {{ group.name }} feeds">
                             All {{ group.name }}
                         </a>
-                        &nbsp;
-                        <a class="secondary_link load_request" feedreader="group_id={{ group.id }}&poll_flag=1"
+                        <a class="secondary_link load_request" 
+                            feedreader="group_id={{ group.id }}&poll_flag=1"
                             href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}&poll_flag=1"
                             title="Poll All {{ group.name }} feeds">
                             &darr;
                         </a>
+                        <a class="secondary_link load_request" 
+                            feedreader="group_id={{ group.id }}&mark_read_flag=1"
+                            href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}&mark_read_flag=1"
+                            title="Mark All {{ group.name }} feed entries as read">
+                            {% if group.num_unread > 0 %}({{ group.num_unread }}){% endif %}
+                        </a>
                     <p>
                     {% for feed in group.feed_set.all %}
                         <p class="feedreader_menu">
-                            <a class="load_request" feedreader="feed_id={{ feed.id }}"
+                            <a class="load_request" 
+                                feedreader="feed_id={{ feed.id }}"
                                 href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}" 
                                 title="{{ feed.description }}">
                                 {{ feed.title }}
                             </a>
-                            &nbsp;
-                            <a class="secondary_link load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
+                            <a class="secondary_link load_request" 
+                                feedreader="feed_id={{ feed.id }}&poll_flag=1"
                                 href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}&poll_flag=1" 
                                 title="Poll {{ feed.title }} feed">
                                 &darr;
+                            </a>
+                            <a class="secondary_link load_request" 
+                                feedreader="feed_id={{ feed.id }}&mark_read_flag=1"
+                                href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}&mark_read_flag=1" 
+                                title="Mark {{ feed.title }} feed entries as read">
+                                {% if feed.num_unread > 0 %}({{ feed.num_unread }}){% endif %}
                             </a>
                         </p>
                     {% endfor %}
@@ -79,11 +107,17 @@
                     title="{{ feed.description }}">
                     {{ feed.title }}
                 </a>
-                &nbsp;
-                <a class="secondary_link load_request" feedreader="feed_id={{ feed.id }}&poll_flag=1"
-                    href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&poll_id=1" 
+                <a class="secondary_link load_request" 
+                    feedreader="feed_id={{ feed.id }}&poll_flag=1"
+                    href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&poll_flag=1" 
                     title="Poll {{ feed.title }} feed">
                     &darr;
+                </a>
+                <a class="secondary_link load_request" 
+                    feedreader="feed_id={{ feed.id }}&mark_read_flag=1"
+                    href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&mark_read_flag=1" 
+                    title="Mark {{ feed.title }} feed entries as read">
+                    {% if feed.num_unread > 0 %}({{ feed.num_unread }}){% endif %}
                 </a>
             </p>
         {% endfor %}

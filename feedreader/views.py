@@ -5,9 +5,10 @@ from feedreader.models import Options, Group, Feed, Entry
 from feedreader.utils import poll_feed
 
 
-def get_context(get):
+def build_context(get):
     """Build common context dictionary""" 
     poll_flag = get.get('poll_flag', None)
+    mark_read_flag = get.get('mark_read_flag', None)
     feed = None
     feed_id = get.get('feed_id', None)
     if feed_id:
@@ -25,35 +26,45 @@ def get_context(get):
     context = {}
     options = Options.objects.all()[0]
     if feed:
+        if mark_read_flag:
+            entries = Entry.objects.filter(feed=feed, read=False)
+            entries.update(read=True)
         if poll_flag:
             poll_feed(feed)
         entries = Entry.objects.filter(feed=feed)[:options.number_initially_displayed]
         context['entries_header'] = feed.title
     elif group:
         feeds = Feed.objects.filter(group=group)
+        if mark_read_flag:
+            entries = Entry.objects.filter(feed__group=group, read=False)
+            entries.update(read=True)
         if poll_flag:
             for feed in feeds:
                 poll_feed(feed)
         entries = Entry.objects.filter(feed__group=group)[:options.number_initially_displayed]
         context['entries_header'] = group.name
     else:
+        if mark_read_flag:
+            entries = Entry.objects.filter(read=False)
+            entries.update(read=True)
         entries = Entry.objects.all()[:options.number_initially_displayed]
         context['entries_header'] = 'All items'
     context['entries'] = entries
+    context['total_unread'] = len(Entry.objects.filter(read=False))
     return context
 
 
 @login_required
 def ajax_get_feeds(request):
     """Get feed contents"""
-    context = get_context(request.GET)
+    context = build_context(request.GET)
     return render_to_response('feedreader/feed_entries.html', context, RequestContext(request))
 
 
 @login_required
 def feeds(request):
     """Show most recent feed contents on page"""
-    context = get_context(request.GET)
+    context = build_context(request.GET)
     context['groups'] = Group.objects.all()
     context['no_group'] = Feed.objects.filter(group=None)
     context['feed_meta'] = Feed._meta

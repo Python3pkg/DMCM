@@ -42,6 +42,9 @@ class Group(models.Model):
     def __unicode__(self):
         return self.name
 
+    def num_unread(self):
+        return len(Entry.objects.filter(feed__group=self, read=False))
+
 
 class Feed(models.Model):
     """
@@ -78,6 +81,9 @@ class Feed(models.Model):
     def __unicode__(self):
         return self.title
 
+    def num_unread(self):
+        return len(Entry.objects.filter(feed=self, read=False))
+
 
 class Entry(models.Model):
     """
@@ -109,5 +115,4 @@ class Entry(models.Model):
 
     def __unicode__(self):
         return self.title
-
 
