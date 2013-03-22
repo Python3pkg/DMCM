@@ -1,4 +1,7 @@
+from datetime import datetime, timedelta
 from django.db import models
+
+RECENT = timedelta(days=1)
 
 
 class Log(models.Model):
@@ -8,3 +11,8 @@ class Log(models.Model):
 
     class Meta:
         ordering = ['-datetime']
+
+    def recent(self):
+        now = datetime.now()
+        recent = self.datetime > (now - RECENT) 
+        return recent
