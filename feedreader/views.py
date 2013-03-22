@@ -9,6 +9,7 @@ def build_context(get):
     """Build common context dictionary""" 
     poll_flag = get.get('poll_flag', None)
     mark_read_flag = get.get('mark_read_flag', None)
+    show_unread_flag = get.get('show_unread_flag', None)
     feed = None
     feed_id = get.get('feed_id', None)
     if feed_id:
@@ -31,7 +32,10 @@ def build_context(get):
             entries.update(read=True)
         if poll_flag:
             poll_feed(feed)
-        entries = Entry.objects.filter(feed=feed)[:options.number_initially_displayed]
+        if show_unread_flag:
+            entries = Entry.objects.filter(feed=feed)  # [:options.number_initially_displayed]
+        else:
+            entries = Entry.objects.filter(feed=feed, read=False)  # [:options.number_initially_displayed]
         context['entries_header'] = feed.title
     elif group:
         feeds = Feed.objects.filter(group=group)
@@ -41,13 +45,19 @@ def build_context(get):
         if poll_flag:
             for feed in feeds:
                 poll_feed(feed)
-        entries = Entry.objects.filter(feed__group=group)[:options.number_initially_displayed]
+        if show_unread_flag:
+            entries = Entry.objects.filter(feed__group=group)[:options.number_initially_displayed]
+        else:
+            entries = Entry.objects.filter(feed__group=group, read=False)[:options.number_initially_displayed]
         context['entries_header'] = group.name
     else:
         if mark_read_flag:
             entries = Entry.objects.filter(read=False)
             entries.update(read=True)
-        entries = Entry.objects.all()[:options.number_initially_displayed]
+        if show_unread_flag:
+            entries = Entry.objects.all()[:options.number_initially_displayed]
+        else:
+            entries = Entry.objects.filter(read=False)[:options.number_initially_displayed]
         context['entries_header'] = 'All items'
     context['entries'] = entries
     context['total_unread'] = len(Entry.objects.filter(read=False))
