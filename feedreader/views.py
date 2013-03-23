@@ -97,3 +97,26 @@ def feeds(request):
     context['no_group'] = Feed.objects.filter(group=None)
     context['feed_meta'] = Feed._meta
     return render_to_response('feedreader/feeds.html', context, RequestContext(request))
+
+
+from dmcm.forms import StringSearchForm
+
+def search_entries(request):
+    """
+    Simple string search.
+
+    Display entries with titles and/or descriptions which contain the string searched for.
+    """
+    form = StringSearchForm(request.GET)
+    search_string = form.cleaned_data['search_string'] if form.is_valid() else ''
+    if len(search_string) < 3:
+        return render_to_response('feedreader/search_results.html',
+                                  {'search_string': search_string, 'too_small': True},
+                                  RequestContext(request))
+    title_matches = Entry.objects.filter(title__icontains=search_string)
+    description_matches = Entry.objects.filter(description__icontains=search_string)
+    context = {'title_matches': title_matches,
+               'description_matches': description_matches,
+               'feedreader_search_string': search_string,
+              }
+    return render_to_response('feedreader/search_results.html', context, RequestContext(request))

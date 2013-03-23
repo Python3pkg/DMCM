@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+    <style type="text/css">
+        #content {width: 80%;}
+    </style>
+{% endblock %}
+
+{% block title %}ahernp.com: Feed Reader Search Results{% endblock %}
+
+{% block nav_path %}
+    <a href="/">ahernp.com</a> &rsaquo; 
+    <a href="{% url 'feedreader.views.feeds' %}">Feed Reader</a> &rsaquo; 
+    Search Results
+{% endblock %}
+
+{% block content %}
+    {% if too_small %}
+        <h1>No Search Results</h1>
+        <p>Search string "{{ feedreader_search_string }}" too small.</p>
+    {% else %}
+        <h1>Search Results for "{{ search_string }}"</h1>
+        <h2>Title Matches</h2> 
+        {% if title_matches %}
+            <ol>
+            {% for entry in title_matches %}
+                <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
+            {% endfor %}
+            </ol>
+        {% else %}
+            <p>No matching titles found.</p>
+        {% endif %}
+        <h2>Description Matches</h2> 
+        {% if description_matches %}
+            <ol>
+            {% for entry in description_matches %}
+                <li>
+                    <a href="{{ entry.link }}">{{ entry.title }}</a>:
+                    <p>{{ entry.description|safe }}</p>
+                </li>
+            {% endfor %}
+            </ol>
+        {% else %}
+            <p>No matching content found.</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}
