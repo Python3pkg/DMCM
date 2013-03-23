@@ -50,7 +50,7 @@
             $('.load_request').click(function() {
                 $('#entries').load('/feedreader/get_feeds/',
                     get_feedreader_attrs(this),
-                    populate_unread_nums()
+                    function () { populate_unread_nums();}
                 )
             });
             $('a.load_request').click(function(e) { // Disable links
