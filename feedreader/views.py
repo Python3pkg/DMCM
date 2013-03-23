@@ -1,17 +1,11 @@
+import time
 from django.contrib.auth.decorators import login_required
-from django.db import transaction
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import simplejson
 from feedreader.models import Options, Group, Feed, Entry
 from feedreader.utils import poll_feed
-
-
-@transaction.commit_manually
-def flush_transaction():
-    """Flush the current transaction so as not to read stale data."""
-    transaction.commit()
 
 
 def build_context(get):
@@ -76,7 +70,7 @@ def build_context(get):
 @login_required
 def ajax_get_num_unread(request):
     """Count numbers of unread entries"""
-    flush_transaction()  # Ensure latest data is read from database
+    time.sleep(0.3)  # Sometimes counts read entries without this delay
     context = {}
     context['unread_total'] = Entry.objects.filter(read=False).count()
     groups = Group.objects.all()
