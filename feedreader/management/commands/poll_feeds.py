@@ -24,7 +24,6 @@ class Command(BaseCommand):
         """
         Read through all the feeds looking for new entries.
         """
-        logger.info('Feedreader poll_feeds started')
         verbose = options['verbose']
         feedreader_options = Options.objects.all()[0]
         feeds = Feed.objects.all()
@@ -41,4 +40,4 @@ class Command(BaseCommand):
                 entry.delete()
             if verbose:
                 print('Deleted %d entries from feed %s' % ((len(entries), feed.title)))
-        logger.info('Feedreader poll_feeds ended')
+        logger.info('Feedreader poll_feeds completed successfully')

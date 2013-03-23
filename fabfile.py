@@ -104,8 +104,10 @@ def setup():
         CODE_DIR = '~/project'
         with cd(CODE_DIR):
             with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
-                run('python2.7 manage.py dumpdata --indent 4 dmcm sites.site feedreader.options feedreader.group feedreader.feed > ~/initial_data.json')
+                run('python2.7 manage.py dumpdata --indent 4 dmcm sites.site > ~/initial_data.json')
+                run('python2.7 manage.py dumpdata --indent 4 feedreader.options feedreader.group feedreader.feed > ~/feedreader.json')
         get('initial_data.json', os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
+        get('feedreader.json', os.path.join(PROJECT_PATH, 'feedreader', 'fixtures', 'initial_data.json'))
 
     # Recreate database
     with settings(warn_only=True), lcd(PROJECT_PATH):
@@ -113,6 +115,8 @@ def setup():
     manage('syncdb --noinput')
     manage('loaddata auth.json')
     manage('collectstatic --noinput')
+    with settings(warn_only=True), lcd(PROJECT_PATH):
+        local('echo "UPDATE feedreader_feed SET published_time = NULL;" | sqlite3 dmcm.sqlite3')
 
 
 @task
