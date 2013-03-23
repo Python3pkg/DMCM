@@ -1,3 +1,4 @@
+import time
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
@@ -69,7 +70,9 @@ def build_context(get):
 @login_required
 def ajax_get_num_unread(request):
     """Count numbers of unread entries"""
+    time.sleep(0.1)  # Sometimes counts read entries without this delay
     context = {}
+    context['unread_total'] = Entry.objects.filter(read=False).count()
     groups = Group.objects.all()
     for group in groups:
         num_unread = Entry.objects.filter(feed__group=group, read=False).count()
@@ -78,7 +81,6 @@ def ajax_get_num_unread(request):
     feeds = Feed.objects.all()
     for feed in feeds:
         context['unread_feed%s' % (feed.id)] = Entry.objects.filter(feed=feed, read=False).count()
-    context['unread_total'] = Entry.objects.filter(read=False).count()
     return HttpResponse(simplejson.dumps(context), mimetype='application/json')
 
 
