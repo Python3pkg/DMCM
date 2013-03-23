@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import simplejson
+from feedreader.forms import StringSearchForm
 from feedreader.models import Options, Group, Feed, Entry
 from feedreader.utils import poll_feed
 
@@ -99,8 +100,6 @@ def feeds(request):
     return render_to_response('feedreader/feeds.html', context, RequestContext(request))
 
 
-from dmcm.forms import StringSearchForm
-
 def search_entries(request):
     """
     Simple string search.
@@ -108,10 +107,10 @@ def search_entries(request):
     Display entries with titles and/or descriptions which contain the string searched for.
     """
     form = StringSearchForm(request.GET)
-    search_string = form.cleaned_data['search_string'] if form.is_valid() else ''
+    search_string = form.cleaned_data['feedreader_search_string'] if form.is_valid() else ''
     if len(search_string) < 3:
         return render_to_response('feedreader/search_results.html',
-                                  {'search_string': search_string, 'too_small': True},
+                                  {'feedreader_search_string': search_string, 'too_small': True},
                                   RequestContext(request))
     title_matches = Entry.objects.filter(title__icontains=search_string)
     description_matches = Entry.objects.filter(description__icontains=search_string)

@@ -5,4 +5,4 @@ class StringSearchForm(forms.Form):
     """
     Allow user to enter a string to search the for matching entries.
     """
-    search_string = forms.CharField()
+    feedreader_search_string = forms.CharField()
