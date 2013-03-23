@@ -1,15 +1,19 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.utils import simplejson
 from feedreader.models import Options, Group, Feed, Entry
 from feedreader.utils import poll_feed
 
 
 def build_context(get):
     """Build common context dictionary""" 
+    context = {}
     poll_flag = get.get('poll_flag', None)
     mark_read_flag = get.get('mark_read_flag', None)
-    show_unread_flag = get.get('show_unread_flag', None)
+    show_read_flag = get.get('show_read_flag', None)
+    context['show_read_flag'] = show_read_flag
     feed = None
     feed_id = get.get('feed_id', None)
     if feed_id:
@@ -24,7 +28,6 @@ def build_context(get):
             group = Group.objects.get(pk=group_id)
         except Group.DoesNotExist:
             pass
-    context = {}
     options = Options.objects.all()[0]
     if feed:
         if mark_read_flag:
@@ -32,7 +35,7 @@ def build_context(get):
             entries.update(read=True)
         if poll_flag:
             poll_feed(feed)
-        if show_unread_flag:
+        if show_read_flag:
             entries = Entry.objects.filter(feed=feed)  # [:options.number_initially_displayed]
         else:
             entries = Entry.objects.filter(feed=feed, read=False)  # [:options.number_initially_displayed]
@@ -45,7 +48,7 @@ def build_context(get):
         if poll_flag:
             for feed in feeds:
                 poll_feed(feed)
-        if show_unread_flag:
+        if show_read_flag:
             entries = Entry.objects.filter(feed__group=group)[:options.number_initially_displayed]
         else:
             entries = Entry.objects.filter(feed__group=group, read=False)[:options.number_initially_displayed]
@@ -54,14 +57,29 @@ def build_context(get):
         if mark_read_flag:
             entries = Entry.objects.filter(read=False)
             entries.update(read=True)
-        if show_unread_flag:
+        if show_read_flag:
             entries = Entry.objects.all()[:options.number_initially_displayed]
         else:
             entries = Entry.objects.filter(read=False)[:options.number_initially_displayed]
         context['entries_header'] = 'All items'
     context['entries'] = entries
-    context['total_unread'] = len(Entry.objects.filter(read=False))
     return context
+
+
+@login_required
+def ajax_get_num_unread(request):
+    """Count numbers of unread entries"""
+    context = {}
+    groups = Group.objects.all()
+    for group in groups:
+        num_unread = Entry.objects.filter(feed__group=group, read=False).count()
+        context['unread_group%s' % (group.id)] = num_unread
+        context['unread_group_button%s' % (group.id)] = num_unread
+    feeds = Feed.objects.all()
+    for feed in feeds:
+        context['unread_feed%s' % (feed.id)] = Entry.objects.filter(feed=feed, read=False).count()
+    context['unread_total'] = Entry.objects.filter(read=False).count()
+    return HttpResponse(simplejson.dumps(context), mimetype='application/json')
 
 
 @login_required

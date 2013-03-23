@@ -18,17 +18,45 @@
         #spinner {position: fixed; top: 50%; left: 50%; margin-top: -64px; margin-left: -64px; z-index: 3;}
     </style>
     <script type="text/javascript">
+        function get_feedreader_attrs(elem) {
+            var attrs = $(elem).attr('feedreader');
+            if (attrs != '') {
+                attrs += '&';
+            }
+            if ($('#show_read').prop('checked')) {
+                attrs +='show_read_flag=1';
+            }
+            return attrs
+        };
+        function populate_unread_nums() {
+            $.get('/feedreader/get_num_unread/',
+                function(json) {
+                    $.each(json, function(key, value) {
+                        if (value == 0) {
+                            $('#'+key).text('');
+                        }
+                        else {
+                            $('#'+key).text('('+value+')');
+                        }
+                    });
+                }
+            )
+        };
         $(function() {
             $('#accordion').accordion({heightStyle: 'content', collapsible: true, active: false});
             $('.ui-accordion-content').css({'padding': '1em'});
             $('#spinner').hide().ajaxStart(function() {$(this).show();})
                                 .ajaxStop(function() {$(this).hide();});
             $('.load_request').click(function() {
-                $('#entries').load('/feedreader/get_feeds/',$(this).attr('feedreader'));
+                $('#entries').load('/feedreader/get_feeds/',
+                    get_feedreader_attrs(this),
+                    populate_unread_nums()
+                )
             });
             $('a.load_request').click(function(e) { // Disable links
                 e.preventDefault();
             });
+            populate_unread_nums();
         });
     </script>
 {% endblock %}
@@ -40,27 +68,31 @@
 {% block content %}
     <h1>Feed Reader</h1>
     <div style="width:20%;float:left">
+        <p>
+            <input id="show_read" type="checkbox" name="Show Stories Already Read">
+            Show Read Stories
+        </p>
         <h3>
             <a class="load_request" 
                 href="{% url 'feedreader.views.feeds' %}"
-                title="Show All feeds">
+                title="Show All feeds"
+                feedreader="">
                 All stories
             </a>
-            <a class="secondary_link mark_read_request" 
-                feedreader=""
-                href="{% url 'feedreader.views.feeds' %}?mark_read_flag=1"
-                title="Mark All entries as read">
-                <span class="total_unread {% if total_unread = 0 %}hidden{% endif %}">
-                    ({{ total_unread }})
-                </span>
-            </a>
+            <span 
+                id="unread_total"
+                title="Mark as Read"
+                class="load_request total_unread"
+                feedreader="mark_read_flag=1">
+            </span>
         </h3>
         <div id="accordion">
             {% for group in groups %}
                 <h3>
                     {{ group.name }} 
-                    <span class="num_unread {% if group.num_unread = 0 %}hidden{% endif %}">
-                        ({{ group.num_unread }})
+                    <span 
+                        id="unread_group_button{{group.id}}" 
+                        class="num_unread load_request">
                     </span>
                 </h3>
                 <div>
@@ -77,14 +109,11 @@
                             title="Poll All {{ group.name }} feeds">
                             &darr;
                         </a>
-                        <a class="secondary_link mark_read_request" 
+                        <span id="unread_group{{group.id}}""
+                            title="Mark as Read"
                             feedreader="group_id={{ group.id }}&mark_read_flag=1"
-                            href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}&mark_read_flag=1"
-                            title="Mark All {{ group.name }} feed entries as read">
-                            <span class="num_unread {% if group.num_unread = 0 %}hidden{% endif %}">
-                                ({{ group.num_unread }})
-                            </span>
-                        </a>
+                            class="load_request num_unread">
+                        </span>
                     <p>
                     {% for feed in group.feed_set.all %}
                         <p class="feedreader_menu">
@@ -100,14 +129,11 @@
                                 title="Poll {{ feed.title }} feed">
                                 &darr;
                             </a>
-                            <a class="secondary_link mark_read_request" 
+                            <span id="unread_feed{{feed.id}}"
+                                title="Mark as Read"
                                 feedreader="feed_id={{ feed.id }}&mark_read_flag=1"
-                                href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}&mark_read_flag=1" 
-                                title="Mark {{ feed.title }} feed entries as read">
-                                <span class="num_unread {% if feed.num_unread = 0 %}hidden{% endif %}">
-                                    ({{ feed.num_unread }})
-                                </span>
-                            </a>
+                                class="num_unread load_request">
+                            </span>
                         </p>
                     {% endfor %}
                 </div>
@@ -126,14 +152,11 @@
                     title="Poll {{ feed.title }} feed">
                     &darr;
                 </a>
-                <a class="secondary_link mark_read_request" 
+                <span  id="unread_feed{{feed.id}}"
+                    title="Mark as Read"
                     feedreader="feed_id={{ feed.id }}&mark_read_flag=1"
-                    href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&mark_read_flag=1" 
-                    title="Mark {{ feed.title }} feed entries as read">
-                    <span class="num_unread {% if feed.num_unread = 0 %}hidden{% endif %}">
-                        ({{ feed.num_unread }})
-                    </span>
-                </a>
+                    class="num_unread load_request">
+                </span>
             </p>
         {% endfor %}
     </div>

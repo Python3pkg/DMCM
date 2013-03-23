@@ -14,5 +14,9 @@
                 </div>
             {% endfor %}
         {% else %}
-            <p>No stories found</p>
+            <p>
+                No
+                {% if show_read_flag %}{% else %}unread{% endif %} 
+                stories found
+            </p>
         {% endif %}
