@@ -36,7 +36,7 @@
             {% for entry in title_matches %}
                 <li>
                     <a href="{{ entry.link }}" title="{{ entry.description }}">{{ entry.title }}</a>
-                    ({{ entry.feed.title }}; {{ entry.published_time}})
+                    ({{ entry.feed.title }}; {{ entry.published_time}}; {{ entry.published_time|timesince }} ago)
                 </li>
             {% endfor %}
             </ol>
@@ -49,7 +49,7 @@
             {% for entry in description_matches %}
                 <li>
                     <a href="{{ entry.link }}">{{ entry.title }}</a>
-                    ({{ entry.feed.title }}; {{ entry.published_time}}):
+                    ({{ entry.feed.title }}; {{ entry.published_time}}; {{ entry.published_time|timesince }} ago):
                     <p>{{ entry.description|safe }}</p>
                 </li>
             {% endfor %}

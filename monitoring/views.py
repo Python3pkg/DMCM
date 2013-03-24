@@ -61,9 +61,9 @@ def server_status_dashboard(request):
             'actual': actual_setting
         })
 
-    context['error_msgs'] = Log.objects.filter(level='ERROR')[:4]
-    context['warning_msgs'] = Log.objects.filter(level='WARNING')[:4]
-    context['info_msgs'] = Log.objects.filter(level='INFO')[:4]
+    context['error_msgs'] = Log.objects.filter(level='ERROR')[:2]
+    context['warning_msgs'] = Log.objects.filter(level='WARNING')[:2]
+    context['info_msgs'] = Log.objects.filter(level='INFO')[:2]
 
     context['time_checked'] = datetime.now()
     return render_to_response('monitoring/server_status_dashboard.html', context, RequestContext(request))

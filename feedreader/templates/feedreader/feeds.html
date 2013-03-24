@@ -60,10 +60,6 @@
             $('a.load_request').click(function(e) { // Disable links
                 e.preventDefault();
             });
-            var curr_filter= {
-                group_id : null,
-                feed_id :null
-            };
             $('#accordion').accordion({heightStyle: 'content', collapsible: true, active: false});
             $('.ui-accordion-content').css({'padding': '1em'});
             $('#spinner').hide().ajaxStart(function() {$(this).show();})
