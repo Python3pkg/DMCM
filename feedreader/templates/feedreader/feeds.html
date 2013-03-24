@@ -17,30 +17,38 @@
         #spinner {position: fixed; top: 50%; left: 50%; margin-top: -64px; margin-left: -64px; z-index: 3;}
     </style>
     <script type="text/javascript">
-        function get_feedreader_attrs(elem) {
-            var group_id = $(elem).parents('div.group').attr('id');
-            var feed_id = $(elem).parents('div.feed').attr('id');
-            var attrs = '';
-            if (group_id != null) {
-                attrs = group_id;
+        function get_feedreader_filter(elem, current_filter) {
+            if ($(elem).attr('id') == 'show_read') {
+                var feedreader_filter = current_filter.group_id+'&'+current_filter.feed_id;
+                if ($(elem).prop('checked')) {
+                    feedreader_filter +='&show_read_flag=1';
+                };
             }
-            if (feed_id != null) {
-                if (attrs != '') {attrs += '&';}
-                attrs += feed_id;
-            };
-            if ($(elem).hasClass('poll_request')) {
-                if (attrs != '') {attrs += '&';}
-                attrs += 'poll_flag=1';
-            };
-            if ($(elem).hasClass('mark_read_request')) {
-                if (attrs != '') {attrs += '&';}
-                attrs += 'mark_read_flag=1';
-            };
-            if ($('#show_read').prop('checked')) {
-                if (attrs != '') {attrs += '&';}
-                attrs +='show_read_flag=1';
-            };
-            return attrs
+            else {
+                var group_id = $(elem).parents('div.group').attr('id');
+                var feed_id = $(elem).parents('div.feed').attr('id');
+                var feedreader_filter = '';
+                if (group_id != null) {
+                    feedreader_filter = group_id;
+                }
+                if (feed_id != null) {
+                    if (feedreader_filter != '') {feedreader_filter += '&';}
+                    feedreader_filter += feed_id;
+                };
+                if ($(elem).hasClass('poll_request')) {
+                    if (feedreader_filter != '') {feedreader_filter += '&';}
+                    feedreader_filter += 'poll_flag=1';
+                };
+                if ($(elem).hasClass('mark_read_request')) {
+                    if (feedreader_filter != '') {feedreader_filter += '&';}
+                    feedreader_filter += 'mark_read_flag=1';
+                };
+                if ($('#show_read').prop('checked')) {
+                    if (feedreader_filter != '') {feedreader_filter += '&';}
+                    feedreader_filter +='show_read_flag=1';
+                };
+            }
+            return feedreader_filter
         };
         function populate_unread_nums() {
             $.get('/feedreader/get_num_unread/',
@@ -57,6 +65,10 @@
             )
         };
         $(function() {
+            var current_filter = {
+                group_id: 'group_id=0',
+                feed_id: 'feed_id=0'
+            };
             $('a.load_request').click(function(e) { // Disable links
                 e.preventDefault();
             });
@@ -65,12 +77,40 @@
             $('#spinner').hide().ajaxStart(function() {$(this).show();})
                                 .ajaxStop(function() {$(this).hide();});
             $('.load_request').click(function() {
+                var request_elem = this;
                 $('#entries').load('/feedreader/get_feeds/',
-                    get_feedreader_attrs(this),
+                    get_feedreader_filter(this, current_filter),
                     function () {
                         populate_unread_nums();
+                        if ($(request_elem).attr('id') != 'show_read') {
+                            group_id = $(request_elem).parents('div.group').attr('id');
+                            if (group_id == null) {group_id = 'group_id=0';}
+                            current_filter.group_id = group_id;
+                            feed_id = $(request_elem).parents('div.feed').attr('id');
+                            if (feed_id == null) {feed_id = 'feed_id=0';}
+                            current_filter.feed_id = feed_id;
+                        }
                     }
                 )
+            });
+            $(window).scroll(function() {
+                if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+                    // Has reached bottom of the page
+                    $('#entries > .feed_entry').not('.read_entry').addClass('read_entry');
+                    var entry_id = $('#entries > .feed_entry').last().attr('id');
+                    var feedreader_filter = current_filter.group_id+'&'+current_filter.feed_id+'&'+entry_id;
+                    if ($('#show_read').prop('checked')) {
+                        feedreader_filter += '&show_read_flag=1';
+                    };
+                    if (entry_id == null) {entry_id = '';}
+                    $.get('/feedreader/get_feeds/',
+                        feedreader_filter,
+                        function (data) {
+                            $('#entries').append(data);
+                            populate_unread_nums();
+                        }
+                    );
+                }
             });
             populate_unread_nums();
         });
@@ -83,9 +123,12 @@
 
 {% block content %}
     <h1>Feed Reader</h1>
-    <div style="width:20%;float:left">
+    <div id="menu" style="width:20%;float:left">
         <p>
-            <input id="show_read" type="checkbox" name="Show Stories Already Read">
+            <input id="show_read" 
+                class="load_request"
+                type="checkbox" 
+                name="Show Stories Already Read">
             Show Read Stories
         </p>
         <h3>
@@ -171,7 +214,7 @@
         {% endfor %}
         <form name="input" action="{% url 'feedreader_search_entries' %}" method="get" style="padding-right:1em;">
             <input type="text" tabindex="2" size="10"
-                {% if feedreader_search_string %}style="color:#000;"{% else %}style="color:#ccc;"{% endif %}
+                style="margin-bottom: 15em; color:{% if feedreader_search_string %}#000;{% else %}#ccc{% endif %};"
                 name="feedreader_search_string" title="Search Feeds" class="text" 
                 value="{% if feedreader_search_string %}{{ feedreader_search_string }}{% else %}Search Feeds{% endif %}"/>
         </form> 

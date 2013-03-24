@@ -14,6 +14,14 @@ def build_context(get):
     poll_flag = get.get('poll_flag', None)
     mark_read_flag = get.get('mark_read_flag', None)
     show_read_flag = get.get('show_read_flag', None)
+
+    last_entry = None
+    last_entry_id = get.get('entry_id', None)  # Last entry on page
+    if last_entry_id:
+        try:
+            last_entry = Entry.objects.get(pk=last_entry_id)
+        except Entry.DoesNotExist:
+            pass
     context['show_read_flag'] = show_read_flag
     feed = None
     feed_id = get.get('feed_id', None)
@@ -29,6 +37,7 @@ def build_context(get):
             group = Group.objects.get(pk=group_id)
         except Group.DoesNotExist:
             pass
+
     options = Options.objects.all()[0]
     if feed:
         if mark_read_flag:
@@ -37,9 +46,9 @@ def build_context(get):
         if poll_flag:
             poll_feed(feed)
         if show_read_flag:
-            entries = Entry.objects.filter(feed=feed)  # [:options.number_initially_displayed]
+            entries = Entry.objects.filter(feed=feed)
         else:
-            entries = Entry.objects.filter(feed=feed, read=False)  # [:options.number_initially_displayed]
+            entries = Entry.objects.filter(feed=feed, read=False)
         context['entries_header'] = feed.title
     elif group:
         feeds = Feed.objects.filter(group=group)
@@ -50,20 +59,34 @@ def build_context(get):
             for feed in feeds:
                 poll_feed(feed)
         if show_read_flag:
-            entries = Entry.objects.filter(feed__group=group)[:options.number_initially_displayed]
+            entries = Entry.objects.filter(feed__group=group)
         else:
-            entries = Entry.objects.filter(feed__group=group, read=False)[:options.number_initially_displayed]
+            entries = Entry.objects.filter(feed__group=group, read=False)
         context['entries_header'] = group.name
     else:
         if mark_read_flag:
             entries = Entry.objects.filter(read=False)
             entries.update(read=True)
         if show_read_flag:
-            entries = Entry.objects.all()[:options.number_initially_displayed]
+            entries = Entry.objects.all()
         else:
-            entries = Entry.objects.filter(read=False)[:options.number_initially_displayed]
+            entries = Entry.objects.filter(read=False)
         context['entries_header'] = 'All items'
-    context['entries'] = entries
+    if last_entry:
+        entries = list(entries)
+        if last_entry in entries:
+            last_entry_pos = entries.index(last_entry)
+            for i in range(last_entry_pos + 1):
+                if entries[i].read == False:
+                    entries[i].read = True
+                    entries[i].save()
+            del entries[:last_entry_pos + 1]
+            context['entries'] = entries[:options.number_additionally_displayed]
+        else:
+            context['entries'] = []
+        context['entries_header'] = None
+    else:
+        context['entries'] = entries[:options.number_initially_displayed]
     return context
 
 
