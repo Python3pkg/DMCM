@@ -7,25 +7,39 @@
         href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" 
     />
     <style type="text/css">
-        .hidden {display:none;}
-        .num_unread {font-weight:bold;}
+        .mark_read_request {font-weight:bold;}
+        .poll_request {text-decoration:none;}
         p.feedreader_menu {font-size: small; margin: 0;}
         p.feedreader_subtitle {font-size: small;}
         #content {width: 80%;}
         .feed_entry {padding: 0.2em 0.5em; margin: 0.5em; border: 1px solid #046; border-radius: 1em;}
         .read_entry {color:#888;}
-        .secondary_link {text-decoration:none;}
         #spinner {position: fixed; top: 50%; left: 50%; margin-top: -64px; margin-left: -64px; z-index: 3;}
     </style>
     <script type="text/javascript">
         function get_feedreader_attrs(elem) {
-            var attrs = $(elem).attr('feedreader');
-            if (attrs != '') {
-                attrs += '&';
+            var group_id = $(elem).parents('div.group').attr('id');
+            var feed_id = $(elem).parents('div.feed').attr('id');
+            var attrs = '';
+            if (group_id != null) {
+                attrs = group_id;
             }
+            if (feed_id != null) {
+                if (attrs != '') {attrs += '&';}
+                attrs += feed_id;
+            };
+            if ($(elem).hasClass('poll_request')) {
+                if (attrs != '') {attrs += '&';}
+                attrs += 'poll_flag=1';
+            };
+            if ($(elem).hasClass('mark_read_request')) {
+                if (attrs != '') {attrs += '&';}
+                attrs += 'mark_read_flag=1';
+            };
             if ($('#show_read').prop('checked')) {
+                if (attrs != '') {attrs += '&';}
                 attrs +='show_read_flag=1';
-            }
+            };
             return attrs
         };
         function populate_unread_nums() {
@@ -43,6 +57,13 @@
             )
         };
         $(function() {
+            $('a.load_request').click(function(e) { // Disable links
+                e.preventDefault();
+            });
+            var curr_filter= {
+                group_id : null,
+                feed_id :null
+            };
             $('#accordion').accordion({heightStyle: 'content', collapsible: true, active: false});
             $('.ui-accordion-content').css({'padding': '1em'});
             $('#spinner').hide().ajaxStart(function() {$(this).show();})
@@ -50,11 +71,10 @@
             $('.load_request').click(function() {
                 $('#entries').load('/feedreader/get_feeds/',
                     get_feedreader_attrs(this),
-                    function () { populate_unread_nums();}
+                    function () {
+                        populate_unread_nums();
+                    }
                 )
-            });
-            $('a.load_request').click(function(e) { // Disable links
-                e.preventDefault();
             });
             populate_unread_nums();
         });
@@ -75,15 +95,13 @@
         <h3>
             <a class="load_request" 
                 href="{% url 'feedreader.views.feeds' %}"
-                title="Show All feeds"
-                feedreader="">
+                title="Show All feeds">
                 All stories
             </a>
             <span 
                 id="unread_total"
                 title="Mark as Read"
-                class="load_request total_unread"
-                feedreader="mark_read_flag=1">
+                class="load_request mark_read_request">
             </span>
         </h3>
         <div id="accordion">
@@ -92,72 +110,68 @@
                     {{ group.name }} 
                     <span 
                         id="unread_group_button{{group.id}}" 
-                        class="num_unread load_request">
+                        class="load_request mark_read">
                     </span>
                 </h3>
-                <div>
+                <div id="group_id={{ group.id }}" class="group">
                     <p class="feedreader_menu">
                         <a class="load_request" 
-                            feedreader="group_id={{ group.id }}"
                             href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}"
                             title="Show All {{ group.name }} feeds">
                             All {{ group.name }}
                         </a>
-                        <a class="secondary_link load_request" 
-                            feedreader="group_id={{ group.id }}&poll_flag=1"
+                        <a class="load_request poll_request" 
                             href="{% url 'feedreader.views.feeds' %}?group_id={{ group.id }}&poll_flag=1"
                             title="Poll All {{ group.name }} feeds">
                             &darr;
                         </a>
-                        <span id="unread_group{{group.id}}""
-                            title="Mark as Read"
-                            feedreader="group_id={{ group.id }}&mark_read_flag=1"
-                            class="load_request num_unread">
+                        <span id="unread_group{{group.id}}"
+                            class="load_request mark_read_request"
+                            title="Mark as Read">
                         </span>
                     <p>
                     {% for feed in group.feed_set.all %}
-                        <p class="feedreader_menu">
-                            <a class="load_request" 
-                                feedreader="feed_id={{ feed.id }}"
-                                href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}" 
-                                title="{{ feed.description }}">
-                                {{ feed.title }}
-                            </a>
-                            <a class="secondary_link load_request" 
-                                feedreader="feed_id={{ feed.id }}&poll_flag=1"
-                                href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}&poll_flag=1" 
-                                title="Poll {{ feed.title }} feed">
-                                &darr;
-                            </a>
-                            <span id="unread_feed{{feed.id}}"
-                                title="Mark as Read"
-                                feedreader="feed_id={{ feed.id }}&mark_read_flag=1"
-                                class="num_unread load_request">
-                            </span>
-                        </p>
+                        <div id="feed_id={{ feed.id }}" class="feed">
+                            <p class="feedreader_menu">
+                                <a class="load_request" 
+                                    href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}" 
+                                    title="{{ feed.description }}">
+                                    {{ feed.title }}
+                                </a>
+                                <a class="load_request poll_request" 
+                                    href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}&poll_flag=1" 
+                                    title="Poll {{ feed.title }} feed">
+                                    &darr;
+                                </a>
+                                <span id="unread_feed{{feed.id}}"
+                                    class="load_request mark_read_request"
+                                    title="Mark as Read">
+                                </span>
+                            </p>
+                        </div>
                     {% endfor %}
                 </div>
             {% endfor %}
         </div> <!-- accordion -->
         {% for feed in no_group %}
-            <p>
-                <a class="load_request" feedreader="feed_id={{ feed.id }}"
-                    href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}" 
-                    title="{{ feed.description }}">
-                    {{ feed.title }}
-                </a>
-                <a class="secondary_link load_request" 
-                    feedreader="feed_id={{ feed.id }}&poll_flag=1"
-                    href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&poll_flag=1" 
-                    title="Poll {{ feed.title }} feed">
-                    &darr;
-                </a>
-                <span  id="unread_feed{{feed.id}}"
-                    title="Mark as Read"
-                    feedreader="feed_id={{ feed.id }}&mark_read_flag=1"
-                    class="num_unread load_request">
-                </span>
-            </p>
+            <div id="feed_id={{ feed.id }}" class="feed">
+                <p>
+                    <a class="load_request"
+                        href="{% url 'feedreader.views.feeds' %}?feed_id={{ feed.id }}" 
+                        title="{{ feed.description }}">
+                        {{ feed.title }}
+                    </a>
+                    <a class="load_request poll_request" 
+                        href="{% url 'feedreader.views.feeds' %}?feed=_id{{ feed.id }}&poll_flag=1" 
+                        title="Poll {{ feed.title }} feed">
+                        &darr;
+                    </a>
+                    <span id="unread_feed{{feed.id}}"
+                        class="load_request mark_read_request"
+                        title="Mark as Read">
+                    </span>
+                </p>
+            </div>
         {% endfor %}
         <form name="input" action="{% url 'feedreader_search_entries' %}" method="get" style="padding-right:1em;">
             <input type="text" tabindex="2" size="10"
