@@ -6,7 +6,7 @@
                     <p class="feedreader_subtitle">
                         from 
                         <a href="{{ entry.feed.link }}" title="{{ entry.feed.description }}">
-                            {{ entry.feed.title}}
+                            {{ entry.feed.title|safe }}
                         </a>
                         on {{ entry.published_time|date:"d M Y" }} ({{ entry.published_time|timesince }} ago)
                     </p>

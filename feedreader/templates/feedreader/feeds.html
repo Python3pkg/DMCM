@@ -7,6 +7,7 @@
         href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" 
     />
     <style type="text/css">
+        #menu {margin-bottom: 1em;}
         .mark_read_request {font-weight:bold;}
         .poll_request {text-decoration:none;}
         p.feedreader_menu {font-size: small; margin: 0;}
@@ -214,7 +215,7 @@
         {% endfor %}
         <form name="input" action="{% url 'feedreader_search_entries' %}" method="get" style="padding-right:1em;">
             <input type="text" tabindex="2" size="10"
-                style="margin-bottom: 15em; color:{% if feedreader_search_string %}#000;{% else %}#ccc{% endif %};"
+                style="color:{% if feedreader_search_string %}#000;{% else %}#ccc{% endif %};"
                 name="feedreader_search_string" title="Search Feeds" class="text" 
                 value="{% if feedreader_search_string %}{{ feedreader_search_string }}{% else %}Search Feeds{% endif %}"/>
         </form> 

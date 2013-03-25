@@ -67,9 +67,9 @@ class Feed(models.Model):
         group : ForeignKey
             Group this feed is a part of.
     """
-    title = models.TextField(blank=True, null=True)
+    title = models.CharField(max_length=2000, blank=True, null=True)
     xml_url = models.CharField(max_length=255, unique=True)
-    link = models.TextField(blank=True, null=True)
+    link = models.CharField(max_length=2000, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     published_time = models.DateTimeField(blank=True, null=True)
     last_polled_time = models.DateTimeField(blank=True, null=True)
@@ -83,6 +83,16 @@ class Feed(models.Model):
 
     def num_unread(self):
         return len(Entry.objects.filter(feed=self, read=False))
+
+
+    def save(self, *args, **kwargs):
+        try:
+            Feed.objects.get(xml_url=self.xml_url)
+            super(Feed, self).save(*args, **kwargs)
+        except Feed.DoesNotExist:
+            super(Feed, self).save(*args, **kwargs)
+            from feedreader.utils import poll_feed
+            poll_feed(self)
 
 
 class Entry(models.Model):
@@ -103,8 +113,8 @@ class Entry(models.Model):
             When entry was last updated.
     """
     feed = models.ForeignKey(Feed)
-    title = models.TextField(blank=True, null=True)
-    link = models.CharField(max_length=500)
+    title = models.CharField(max_length=2000, blank=True, null=True)
+    link = models.CharField(max_length=2000)
     description = models.TextField(blank=True, null=True)
     published_time = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)

@@ -50,7 +50,7 @@
         "published_time": null, 
         "description": "Recent Blog Entries.", 
         "title": "ahernp.com blog", 
-        "last_polled_time": "2013-03-23T09:17:06", 
+        "last_polled_time": "2013-03-25T19:17:05", 
         "xml_url": "http://ahernp.com/blog/feed", 
         "link": "http://ahernp.com/blog/", 
         "group": null
@@ -63,7 +63,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by quill18", 
-        "last_polled_time": "2013-03-23T09:17:28", 
+        "last_polled_time": "2013-03-25T19:17:26", 
         "xml_url": "http://www.youtube.com/rss/user/quill18/videos.rss", 
         "link": "http://www.youtube.com/channel/UCbx1TZgxfIauUZyPuBzEwZg/videos", 
         "group": 2
@@ -73,10 +73,10 @@
     "pk": 40, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-23T05:00:00", 
+        "published_time": "2013-03-25T05:00:00", 
         "description": "The Official Dilbert Daily Comic Strip RSS Feed", 
         "title": "Dilbert Daily Strip", 
-        "last_polled_time": "2013-03-23T05:17:05", 
+        "last_polled_time": "2013-03-25T05:17:04", 
         "xml_url": "http://feedproxy.google.com/DilbertDailyStrip", 
         "link": "http://dilbert.com/", 
         "group": 2
@@ -86,10 +86,10 @@
     "pk": 41, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-21T06:00:01", 
+        "published_time": "2013-03-25T06:00:01", 
         "description": "Regular thoughts and updates from Dilbert.com", 
         "title": "Dilbert.com Blog", 
-        "last_polled_time": "2013-03-21T17:19:22", 
+        "last_polled_time": "2013-03-25T16:17:07", 
         "xml_url": "http://feedproxy.google.com/typepad/ihdT", 
         "link": "http://dilbert.com/blog", 
         "group": 2
@@ -99,10 +99,10 @@
     "pk": 42, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-23T03:36:24", 
+        "published_time": "2013-03-25T17:06:22", 
         "description": "Books", 
         "title": "NYT > Books", 
-        "last_polled_time": "2013-03-23T05:17:14", 
+        "last_polled_time": "2013-03-25T17:17:20", 
         "xml_url": "http://www.nytimes.com/services/xml/rss/nyt/Books.xml", 
         "link": "http://www.nytimes.com/pages/books/index.html?partner=rss&emc=rss", 
         "group": 2
@@ -115,7 +115,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Binge Thinking History Podcast", 
-        "last_polled_time": "2013-03-23T09:17:07", 
+        "last_polled_time": "2013-03-25T19:17:06", 
         "xml_url": "http://bingethinkinghistory.blogspot.com/feeds/posts/default", 
         "link": "http://bingethinkinghistory.blogspot.com/", 
         "group": 1
@@ -141,7 +141,7 @@
         "published_time": null, 
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts", 
         "title": "The Ancient World", 
-        "last_polled_time": "2013-03-23T09:17:21", 
+        "last_polled_time": "2013-03-25T19:17:18", 
         "xml_url": "http://ancientworldpodcast.blogspot.com/feeds/posts/default", 
         "link": "http://ancientworldpodcast.blogspot.com/", 
         "group": 1
@@ -177,10 +177,10 @@
     "pk": 52, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-18T20:00:07", 
+        "published_time": "2013-03-25T16:28:11", 
         "description": "Each week, Discovery takes an in-depth look at the most significant ideas, discoveries and trends in science, from the smallest microbe to the furthest corner of space.", 
         "title": "Discovery", 
-        "last_polled_time": "2013-03-18T20:17:19", 
+        "last_polled_time": "2013-03-25T17:17:09", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/p002w557", 
         "group": 4
@@ -307,10 +307,10 @@
     "pk": 65, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-22T15:00:07", 
+        "published_time": "2013-03-25T12:30:05", 
         "description": "All that matters about money with Paul Lewis. News of savings and investments, credit cards and loans, pensions, banking, benefits and giving to charity.  The UK\u2019s premier weekly round-up of personal finance from the BBC.  Programme broadcast each Saturday at 1204 BST and episodes added each Saturday afternoon.  You will also receive podcasts of Money Box Live \u2013 the interactive programme answering questions about personal finance issues, hosted by either Paul Lewis or Vincent Duggleby.  Broadcast each Wednesday at 1502 BST and with episodes added every Wednesday afternoon. For more information go to www.bbc.co.uk/moneybox", 
         "title": "Money Box", 
-        "last_polled_time": "2013-03-22T15:17:24", 
+        "last_polled_time": "2013-03-25T13:17:13", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moneybox/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qjnv", 
         "group": 4
@@ -320,10 +320,10 @@
     "pk": 66, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-18T12:00:10", 
+        "published_time": "2013-03-25T12:00:09", 
         "description": "Tim Harford investigates numbers in the news. Numbers are used in every area of public debate. But are they always reliable? Tim and the More or Less team try to make sense of the statistics which surround us. A half-hour programme broadcast at 1600 on Friday afternoons and repeated at 2000 on Sundays on Radio 4. BBC World Service broadcasts a short edition over the weekend.", 
         "title": "More or Less: Behind the Stats", 
-        "last_polled_time": "2013-03-18T12:17:17", 
+        "last_polled_time": "2013-03-25T12:17:16", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qshd", 
         "group": 4
@@ -401,7 +401,7 @@
         "published_time": null, 
         "description": "Weekly news and opinions from the UK's biggest tech monthly", 
         "title": "The PC Pro Podcast", 
-        "last_polled_time": "2013-03-23T09:17:25", 
+        "last_polled_time": "2013-03-25T19:17:23", 
         "xml_url": "http://podcast.pcpro.co.uk/?feed=podcast", 
         "link": "http://podcast.pcpro.co.uk", 
         "group": 5
@@ -424,10 +424,10 @@
     "pk": 75, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-18T11:30:05", 
+        "published_time": "2013-03-23T11:30:08", 
         "description": "Top political commentators reflect on the week's political events in discussion with MPs, Peers and others.", 
         "title": "Weekly Political Review", 
-        "last_polled_time": "2013-03-18T12:17:27", 
+        "last_polled_time": "2013-03-23T12:17:25", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/weekinwest.shtml", 
         "group": 4
@@ -440,7 +440,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Ian Bicking: a blog", 
-        "last_polled_time": "2013-03-23T09:17:15", 
+        "last_polled_time": "2013-03-25T19:17:13", 
         "xml_url": "http://blog.ianbicking.org/feed/", 
         "link": "http://blog.ianbicking.org", 
         "group": 5
@@ -450,10 +450,10 @@
     "pk": 77, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-23T09:04:20", 
+        "published_time": "2013-03-25T19:03:58", 
         "description": "", 
         "title": "Linuxtoday.com", 
-        "last_polled_time": "2013-03-23T09:17:17", 
+        "last_polled_time": "2013-03-25T19:17:14", 
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux", 
         "link": "http://www.linuxtoday.com/", 
         "group": 5
@@ -466,7 +466,7 @@
         "published_time": null, 
         "description": "A blog covering security and security technology.", 
         "title": "Schneier on Security", 
-        "last_polled_time": "2013-03-23T09:17:20", 
+        "last_polled_time": "2013-03-25T19:17:18", 
         "xml_url": "http://www.schneier.com/blog/index.xml", 
         "link": "http://www.schneier.com/blog/", 
         "group": 5
@@ -479,7 +479,7 @@
         "published_time": null, 
         "description": "Inkscape Help, Tutorials and Documentation Resources", 
         "title": "inkscape tutorials blog", 
-        "last_polled_time": "2013-03-23T09:17:16", 
+        "last_polled_time": "2013-03-25T19:17:14", 
         "xml_url": "http://inkscapetutorials.wordpress.com/feed/", 
         "link": "http://inkscapetutorials.wordpress.com", 
         "group": 5
@@ -492,7 +492,7 @@
         "published_time": null, 
         "description": "Biting the hand that feeds IT", 
         "title": "The Register", 
-        "last_polled_time": "2013-03-23T09:17:25", 
+        "last_polled_time": "2013-03-25T19:17:23", 
         "xml_url": "http://www.theregister.co.uk/headlines.rss", 
         "link": "http://www.theregister.co.uk/", 
         "group": 5
@@ -505,33 +505,20 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by Paradoxplaza", 
-        "last_polled_time": "2013-03-23T09:17:27", 
+        "last_polled_time": "2013-03-25T19:17:26", 
         "xml_url": "http://www.youtube.com/rss/user/Paradoxplaza/videos.rss", 
         "link": "http://www.youtube.com/channel/UC1JOnWZrVWKzX3UMdpnvuMg/videos", 
         "group": 2
     }
 },
 {
-    "pk": 89, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": null, 
-        "description": "The latest stories from the World section of the BBC News web site.", 
-        "title": "BBC News - World", 
-        "last_polled_time": "2013-03-23T09:17:07", 
-        "xml_url": "http://feeds.bbci.co.uk/news/world/rss.xml", 
-        "link": "http://www.bbc.co.uk/news/world/#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa", 
-        "group": 3
-    }
-},
-{
     "pk": 90, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-23T09:50:22", 
+        "published_time": "2013-03-25T20:05:19", 
         "description": "Top stories of the day on TIME.com", 
         "title": "TIME.com: Top Stories", 
-        "last_polled_time": "2013-03-23T09:17:26", 
+        "last_polled_time": "2013-03-25T19:17:25", 
         "xml_url": "http://feeds2.feedburner.com/time/topstories", 
         "link": "http://www.time.com?xid=rss-topstories", 
         "group": 3
@@ -544,7 +531,7 @@
         "published_time": null, 
         "description": "Mac and web curmudgeonry/nerdery. By John Gruber.", 
         "title": "Daring Fireball", 
-        "last_polled_time": "2013-03-23T09:17:09", 
+        "last_polled_time": "2013-03-25T19:17:07", 
         "xml_url": "http://daringfireball.net/index.xml", 
         "link": "http://daringfireball.net/", 
         "group": 5
