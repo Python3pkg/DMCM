@@ -117,7 +117,7 @@ class Entry(models.Model):
     link = models.CharField(max_length=2000)
     description = models.TextField(blank=True, null=True)
     published_time = models.DateTimeField(auto_now_add=True)
-    read = models.BooleanField(default=False)
+    read_flag = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-published_time']

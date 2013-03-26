@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load admin_urls %}
+
 {% block extra_head %}
     <style type="text/css">
         #content {width: 80%;}
@@ -53,9 +55,11 @@
                 <p>{{ info_msg.datetime }}: {{ info_msg.msg }}</p>
             {% endfor %}
         {% endif %}
-        <a href="/admin/monitoring/log/">All Logs</a>
     </div>
     <div style="clear:both"></div>
 {% endblock %}
 
-{% block footer %}<a href="/accounts/logout">Logout</a>{% endblock %}
+{% block footer %}
+    <a href="{% url log_meta|admin_urlname:"changelist" %}">All Logs</a>
+    <a href="/accounts/logout">Logout</a>
+{% endblock %}

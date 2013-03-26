@@ -41,44 +41,44 @@ def build_context(get):
     options = Options.objects.all()[0]
     if feed:
         if mark_read_flag:
-            entries = Entry.objects.filter(feed=feed, read=False)
-            entries.update(read=True)
+            entries = Entry.objects.filter(feed=feed, read_flag=False)
+            entries.update(read_flag=True)
         if poll_flag:
             poll_feed(feed)
         if show_read_flag:
             entries = Entry.objects.filter(feed=feed)
         else:
-            entries = Entry.objects.filter(feed=feed, read=False)
+            entries = Entry.objects.filter(feed=feed, read_flag=False)
         context['entries_header'] = feed.title
     elif group:
         feeds = Feed.objects.filter(group=group)
         if mark_read_flag:
-            entries = Entry.objects.filter(feed__group=group, read=False)
-            entries.update(read=True)
+            entries = Entry.objects.filter(feed__group=group, read_flag=False)
+            entries.update(read_flag=True)
         if poll_flag:
             for feed in feeds:
                 poll_feed(feed)
         if show_read_flag:
             entries = Entry.objects.filter(feed__group=group)
         else:
-            entries = Entry.objects.filter(feed__group=group, read=False)
+            entries = Entry.objects.filter(feed__group=group, read_flag=False)
         context['entries_header'] = group.name
     else:
         if mark_read_flag:
-            entries = Entry.objects.filter(read=False)
-            entries.update(read=True)
+            entries = Entry.objects.filter(read_flag=False)
+            entries.update(read_flag=True)
         if show_read_flag:
             entries = Entry.objects.all()
         else:
-            entries = Entry.objects.filter(read=False)
+            entries = Entry.objects.filter(read_flag=False)
         context['entries_header'] = 'All items'
     if last_entry:
         entries = list(entries)
         if last_entry in entries:
             last_entry_pos = entries.index(last_entry)
             for i in range(last_entry_pos + 1):
-                if entries[i].read == False:
-                    entries[i].read = True
+                if entries[i].read_flag == False:
+                    entries[i].read_flag = True
                     entries[i].save()
             del entries[:last_entry_pos + 1]
             context['entries'] = entries[:options.number_additionally_displayed]
@@ -94,15 +94,15 @@ def build_context(get):
 def ajax_get_num_unread(request):
     """Count numbers of unread entries"""
     context = {}
-    context['unread_total'] = Entry.objects.filter(read=False).count()
+    context['unread_total'] = Entry.objects.filter(read_flag=False).count()
     groups = Group.objects.all()
     for group in groups:
-        num_unread = Entry.objects.filter(feed__group=group, read=False).count()
+        num_unread = Entry.objects.filter(feed__group=group, read_flag=False).count()
         context['unread_group%s' % (group.id)] = num_unread
         context['unread_group_button%s' % (group.id)] = num_unread
     feeds = Feed.objects.all()
     for feed in feeds:
-        context['unread_feed%s' % (feed.id)] = Entry.objects.filter(feed=feed, read=False).count()
+        context['unread_feed%s' % (feed.id)] = Entry.objects.filter(feed=feed, read_flag=False).count()
     return HttpResponse(simplejson.dumps(context), mimetype='application/json')
 
 
