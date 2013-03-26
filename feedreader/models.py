@@ -3,7 +3,7 @@ from django.db import models
 
 class Options(models.Model):
     """
-    Options controlling fed reader behavior
+    Options controlling feed reader behavior
 
     :Fields:
 

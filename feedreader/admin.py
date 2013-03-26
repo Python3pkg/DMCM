@@ -19,14 +19,13 @@ class FeedAdmin(admin.ModelAdmin):
     list_display = ['xml_url', 'title', 'group', 'published_time', 'last_polled_time']
     list_filter = ['group']
     search_fields = ['link', 'title']
-    readonly_fields = ['last_polled_time']
+    readonly_fields = ['title', 'link', 'description', 'published_time', 'last_polled_time']
     fieldsets = (
         (None, {
-            'fields': (('title',),
-                       ('xml_url', 'link',),
-                       ('published_time', 'last_polled_time',),
+            'fields': (('xml_url', 'group',),
+                       ('title', 'link',),
                        ('description',),
-                       ('group',),
+                       ('published_time', 'last_polled_time',),
                        )
         }),
     )
@@ -38,14 +37,13 @@ class EntryAdmin(admin.ModelAdmin):
     list_display = ['title', 'feed', 'published_time']
     list_filter = ['feed']
     search_fields = ['title', 'link']
-    readonly_fields = ['published_time', 'feed']
+    readonly_fields = ['link', 'title', 'published_time', 'feed']
     fieldsets = (
         (None, {
-            'fields': (('title',),
-                       ('link',),
-                       ('published_time',),
+            'fields': (('link',),
+                       ('title', 'feed',),
                        ('description',),
-                       ('feed', 'read_flag'),
+                       ('published_time', 'read_flag'),
                        )
         }),
     )
