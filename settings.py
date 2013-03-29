@@ -30,7 +30,8 @@ USE_I18N = True
 MEDIA_ROOT = os.path.join(PROJECT_PATH, os.pardir, 'media') 
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
-STATIC_ROOT = os.path.join(PROJECT_PATH, 'dmcm', 'static')
+STATICFILES_DIRS = (os.path.join(PROJECT_PATH, 'static'),)
+STATIC_ROOT = os.path.join(PROJECT_PATH, os.pardir, 'static')
 STATIC_URL = '/static/'
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',

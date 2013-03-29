@@ -50,7 +50,7 @@
         {% block extra_head %}{% endblock %}
     </head>
     <body{% if DEVELOP %} style="background-color:#ddf"{% endif %}>
-        <div id="navigation" style="padding-bottom:0.2em; margin:0; width:100%;">
+        <div id="header" style="padding-bottom:0.2em; margin:0; width:100%;">
             <div style="width:65%;float:left;padding:0.2em 0em 0.2em 1em;">
                 {% block nav_path %}{% endblock %}
             </div>
@@ -63,7 +63,7 @@
                 </form> 
             </div>
             <div style="clear:both"></div>
-        </div>
+        </div> <!-- header -->
         <hr size="1">
         <div id="content">
             {% block content %}{% endblock %}

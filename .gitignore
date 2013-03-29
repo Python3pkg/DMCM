@@ -17,4 +17,3 @@
 *.pdf
 localsettings.py
 auth.json
-dmcm/static/admin
