@@ -8,9 +8,9 @@
     </script>
 {% endblock %}
 
-{% block title %}ahernp.com: Site Map{% endblock %}
+{% block title %}{{ site.domain }}: Site Map{% endblock %}
 
-{% block nav_path %}<a href="{% url 'dmcm_root' %}">ahernp.com</a> &rsaquo; Site Map{% endblock %}
+{% block nav_path %}<a href="{% url 'dmcm_root' %}">{{ site.domain }}</a> &rsaquo; Site Map{% endblock %}
 
 {% block content %}
     <h1>Site Map</h1>

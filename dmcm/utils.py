@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.sites.models import Site
 from django.contrib.syndication.views import Feed
 from dmcm.models import Page
 import markdown
@@ -10,9 +11,10 @@ class LatestBlogPostsFeed(Feed):
     """
     RSS feed containing the latest blog entries.
     """
-    title = "ahernp.com blog"
-    link = "/blog/"
-    description = "Recent Blog Entries."
+    site = Site.objects.get_current()
+    title = '%s blog' % (site.domain)
+    link = '/blog/'
+    description = 'Recent Blog Entries.'
 
     def items(self):
         return Page.objects.filter(parent__exact=BLOG_ROOT).order_by('-published')[:5]

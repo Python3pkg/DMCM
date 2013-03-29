@@ -7,7 +7,7 @@ from monitoring.models import Log
 
 
 @login_required
-def server_status_dashboard(request):
+def dashboard(request):
     """
     Build page providing information about the state of the system.
     """
@@ -65,7 +65,5 @@ def server_status_dashboard(request):
     context['warning_msgs'] = Log.objects.filter(level='WARNING')[:2]
     context['info_msgs'] = Log.objects.filter(level='INFO')[:2]
 
-    context['log_meta'] = Log._meta
-
     context['time_checked'] = datetime.now()
-    return render_to_response('monitoring/server_status_dashboard.html', context, RequestContext(request))
+    return render_to_response('monitoring/dashboard.html', context, RequestContext(request))

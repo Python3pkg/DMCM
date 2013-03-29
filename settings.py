@@ -11,9 +11,7 @@ DEBUG = False
 DEVELOP = False
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Paul Ahern', 'ahernp@ahernp.com'),
-)
+ADMINS = (('Your Name', 'your_email@example.com'),)
 MANAGERS = ADMINS
 DATABASES = {
     'default': {
@@ -22,6 +20,7 @@ DATABASES = {
     }
 }
 TIME_ZONE = 'Europe/London'
+USE_TZ = False
 LANGUAGE_CODE = 'en-gb'
 DATE_FORMAT = 'Y-m-d'  # yyyy-mm-dd
 DATETIME_FORMAT = 'Y-m-d H:i'  # yyyy-mm-dd hh:mm

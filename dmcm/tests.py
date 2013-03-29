@@ -17,7 +17,6 @@ TEST_URLS = [
     ('/profile/', 200, 'Paul Ahern'),
     ('/search_pages/?search_string=fred', 200, 'Search Results'),
     ('/edit/ahernp-com/', 302, ''),
-    ('/server_status/', 200, 'Server Status'),
 ]
 
 

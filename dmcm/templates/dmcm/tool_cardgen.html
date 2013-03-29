@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}ahernp.com: Cardgen{% endblock %}
+{% block title %}{{ site.domain }}: Cardgen{% endblock %}
 
 {% block nav_path %}
-    <a href="/">ahernp.com</a> &rsaquo; 
+    <a href="/">{{ site.domain }}</a> &rsaquo; 
     <a href="/tools">Tools</a> &rsaquo;
     Cardgen
 {% endblock %}
@@ -33,7 +33,6 @@
             $('#generate').button().click(function() { generate_cards() });
         });
     </script>
-    <link rel="stylesheet" href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
 {% endblock %}
 
 {% block content %}

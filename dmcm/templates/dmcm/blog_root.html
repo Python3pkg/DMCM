@@ -8,9 +8,9 @@
     </script>
 {% endblock %}
 
-{% block title %}ahernp.com: Blog{% endblock %}
+{% block title %}{{ site.domain }}: Blog{% endblock %}
 
-{% block nav_path %}<a href="{% url 'dmcm_root' %}">ahernp.com</a> &rsaquo; Blog{% endblock %}
+{% block nav_path %}<a href="{% url 'dmcm_root' %}">{{ site.domain }}</a> &rsaquo; Blog{% endblock %}
 
 {% load dmcm_markup %}
 

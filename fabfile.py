@@ -123,9 +123,9 @@ def setup():
 @hosts('localhost')
 @timer
 def test():
-    """Test dmcm."""
+    """Run Django Unit Tests."""
     with settings(warn_only=True), lcd(PROJECT_PATH):
-        result = local('python manage.py test dmcm', capture=True)
+        result = local('python manage.py test', capture=True)
     if result.failed and not confirm("Tests failed. Continue anyway?"):
         abort("Aborting at user request.")
 

@@ -10,12 +10,12 @@ class Options(models.Model):
         number_initially_displayed : integer
             Number of entries, from all feeds, initially displayed on webpage.
         number_additionally_displayed : integer
-            Number of entries added to webpage when scrolling down.
+            Number of entries added to displayed results when scrolling down.
         max_entries_saved : integer
             Maximum number of entries to store for each feed.
     """
     number_initially_displayed = models.IntegerField(default=10)
-    number_additionally_displayed = models.IntegerField(default=10)
+    number_additionally_displayed = models.IntegerField(default=5)
     max_entries_saved = models.IntegerField(default=100)
 
     class Meta:

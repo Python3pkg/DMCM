@@ -119,7 +119,6 @@ def feeds(request):
     context = build_context(request.GET)
     context['groups'] = Group.objects.all()
     context['no_group'] = Feed.objects.filter(group=None)
-    context['feed_meta'] = Feed._meta
     return render_to_response('feedreader/feeds.html', context, RequestContext(request))
 
 

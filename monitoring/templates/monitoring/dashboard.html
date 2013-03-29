@@ -9,12 +9,12 @@
     </style>
 {% endblock %}
 
-{% block title %}ahernp.com: Server Status Dashboard{% endblock %}
+{% block title %}{{ site.domain }}: Dashboard{% endblock %}
 
-{% block nav_path %}<a href="/">ahernp.com</a> &rsaquo; Server Status Dashboard{% endblock %}
+{% block nav_path %}<a href="/">{{ site.domain }}</a> &rsaquo; Dashboard{% endblock %}
 
 {% block content %}
-    <h1>Server Status <span style="font-size: small;">at {{ time_checked|date:"Y-m-d H:i"}}</span></h1>
+    <h1>Status <span style="font-size: small;">at {{ time_checked|date:"Y-m-d H:i"}}</span></h1>
     <div style="width:47%;float:left">
         {% if hostname %}<p><strong>Hostname:</strong> {{ hostname }}</p>{% endif %}
         <h2>Settings Flags</h2>
@@ -60,6 +60,6 @@
 {% endblock %}
 
 {% block footer %}
-    <a href="{% url log_meta|admin_urlname:"changelist" %}">All Logs</a>
+    <a href="/admin/monitoring/log/">All Logs</a>
     <a href="/accounts/logout">Logout</a>
 {% endblock %}

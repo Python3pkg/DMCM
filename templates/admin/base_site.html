@@ -1,7 +1,7 @@
 {% extends "admin/base.html" %}
 {% load i18n %}
 
-{% block title %}ahernp.com: {{ title }} {% endblock %}
+{% block title %}{{ site.domain }}: {{ title }} {% endblock %}
 
 {% block extrastyle %}
 <link rel="shortcut icon" href="/static/favicon.ico" type="image/ico" />
@@ -17,15 +17,11 @@ h1, h2, h3, h4, a, th {color:#046;}
 {% endblock %}
 
 {% block branding %}
-<h1 id="site-name"><a href="/">ahernp.com</a> administration</h1>
+<h1 id="site-name"><a href="/">{{ site.domain }}</a> admin</h1>
 {% endblock %}
 
 {% block userlinks %}
-    {% url 'django-admindocs-docroot' as docsroot %}
-    <a href="/server_status">{% trans 'Dashboard' %}</a> /
-    {% if docsroot %}
-        <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
-    {% endif %}
+    <a href="/monitoring/dashboard">{% trans 'Dashboard' %}</a> /
     {% url 'admin:logout' as logout_url %}
     {% if logout_url %}
         <a href="{{ logout_url }}">

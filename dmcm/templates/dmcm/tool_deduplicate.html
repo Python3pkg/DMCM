@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}ahernp.com: Deduplicate{% endblock %}
+{% block title %}{{ site.domain }}: Deduplicate{% endblock %}
 
 {% block nav_path %}
-    <a href="/">ahernp.com</a> &rsaquo; 
+    <a href="/">{{ site.domain }}</a> &rsaquo; 
     <a href="/tools">Tools</a> &rsaquo;
     Deduplicate
 {% endblock %}
@@ -29,7 +29,6 @@
             $('#deduplicate').button().click(function() { deduplicate() });
         });
     </script>
-    <link rel="stylesheet" href="/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
 {% endblock %}
 
 {% block content %}

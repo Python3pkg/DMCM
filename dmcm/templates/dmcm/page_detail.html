@@ -10,7 +10,7 @@
 
 {% block title %}
     {% if object.id != SITE_ROOT_ID %}
-        ahernp.com:
+        {{ site.domain }}:
     {% endif %}
     {{ object.title }}
 {% endblock %}
