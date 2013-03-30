@@ -4,7 +4,7 @@ import os
 from fabric.api import (env, local, lcd, cd, run,
                         task, hosts, settings, abort,
                         prefix)
-from fabric.colors import magenta
+from fabric.colors import magenta, yellow
 from fabric.contrib.console import confirm
 from fabric.operations import get
 from datetime import datetime
@@ -16,14 +16,15 @@ PARENT_PATH = os.path.join(PROJECT_PATH, os.pardir)
 VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packages')
 
 # PIP requirements file
-REQUIREMENTS = """Django<1.6
+REQUIREMENTS = """Django==1.5.1
 Markdown==2.2.1
 MySQL-python==1.2.4
 argparse==1.2.1
 django-reversion==1.7
 feedparser==5.1.3
 wsgiref==0.1.2
--e git://github.com/ahernp/django-feedreader.git#egg=django-feedreader
+#-e git://github.com/ahernp/django-feedreader.git#egg=django-feedreader
+django-feedreader==0.5.0
 """
 
 LOCALSETTINGS = """DEBUG = True
@@ -94,7 +95,7 @@ def setup():
     """Setup development environment in current virtualenv."""
     for output_file in STATIC_FILES:
         if not os.path.isfile(output_file['path']):
-            print('# Writing file \'%s\'' % (output_file['path']))
+            print(yellow('# Writing file \'%s\'' % (output_file['path'])))
             write_file(output_file['path'], output_file['data'])
 
     with lcd(PARENT_PATH):
