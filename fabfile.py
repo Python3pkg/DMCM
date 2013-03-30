@@ -16,13 +16,14 @@ PARENT_PATH = os.path.join(PROJECT_PATH, os.pardir)
 VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packages')
 
 # PIP requirements file
-REQUIREMENTS = """Django==1.5
+REQUIREMENTS = """Django<1.6
 Markdown==2.2.1
 MySQL-python==1.2.4
 argparse==1.2.1
 django-reversion==1.7
 feedparser==5.1.3
 wsgiref==0.1.2
+-e git://github.com/ahernp/django-feedreader.git#egg=django-feedreader
 """
 
 LOCALSETTINGS = """DEBUG = True
