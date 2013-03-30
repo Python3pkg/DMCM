@@ -17,3 +17,4 @@
 *.pdf
 localsettings.py
 auth.json
+feedreader
