@@ -1,7 +1,7 @@
 """
 DMCM Unit Test.
 
-Expects initial_data.json fixture contains a copy of the ahernp.com site.
+Expects initial_data.json fixture containing a copy of the ahernp.com site.
 """
 
 from django.test import TestCase
