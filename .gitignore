@@ -17,5 +17,6 @@
 *.pdf
 localsettings.py
 auth.json
+bugtracker
 feedreader
 monitoring

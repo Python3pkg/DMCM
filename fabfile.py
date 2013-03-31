@@ -23,7 +23,8 @@ argparse==1.2.1
 django-reversion==1.7
 feedparser==5.1.3
 wsgiref==0.1.2
-#-e git://github.com/ahernp/django-feedreader.git#egg=django-feedreader
+-e git://github.com/ahernp/django-monitoring.git#egg=django-bugtracker
+-e git://github.com/ahernp/django-monitoring.git#egg=django-monitoring
 django-feedreader==0.5.0
 """
 
@@ -106,10 +107,8 @@ def setup():
         CODE_DIR = '~/project'
         with cd(CODE_DIR):
             with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
-                run('python2.7 manage.py dumpdata --indent 4 dmcm sites.site > ~/initial_data.json')
-                run('python2.7 manage.py dumpdata --indent 4 feedreader.options feedreader.group feedreader.feed > ~/feedreader.json')
-        get('initial_data.json', os.path.join(PROJECT_PATH, 'dmcm', 'fixtures', 'initial_data.json'))
-        get('feedreader.json', os.path.join(PROJECT_PATH, 'feedreader', 'fixtures', 'initial_data.json'))
+                run('python2.7 manage.py dumpdata --indent 4 dmcm sites.site feedreader.options feedreader.group feedreader.feed > ~/initial_data.json')
+        get('initial_data.json', os.path.join(PROJECT_PATH, 'initial_data.json'))
 
     # Recreate database
     with settings(warn_only=True), lcd(PROJECT_PATH):

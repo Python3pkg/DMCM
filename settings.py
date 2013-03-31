@@ -20,14 +20,13 @@ DATABASES = {
     }
 }
 TIME_ZONE = 'Europe/London'
-USE_TZ = False
 LANGUAGE_CODE = 'en-gb'
 DATE_FORMAT = 'Y-m-d'  # yyyy-mm-dd
 DATETIME_FORMAT = 'Y-m-d H:i'  # yyyy-mm-dd hh:mm
 TIME_FORMAT = 'H:i'
 SITE_ID = 1
 USE_I18N = True
-MEDIA_ROOT = os.path.join(PROJECT_PATH, os.pardir, 'media') 
+MEDIA_ROOT = os.path.join(PROJECT_PATH, os.pardir, 'media')
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATICFILES_DIRS = (os.path.join(PROJECT_PATH, 'static'),)
