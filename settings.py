@@ -20,6 +20,7 @@ DATABASES = {
     }
 }
 TIME_ZONE = 'Europe/London'
+USE_TZ = True
 LANGUAGE_CODE = 'en-gb'
 DATE_FORMAT = 'Y-m-d'  # yyyy-mm-dd
 DATETIME_FORMAT = 'Y-m-d H:i'  # yyyy-mm-dd hh:mm
