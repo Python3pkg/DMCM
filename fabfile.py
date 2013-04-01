@@ -151,21 +151,25 @@ def deliver():
 @task
 @timer
 def deploy():
-    """Deploy dmcm onto live server."""
+    """Deploy dmcm into virtualenv on live server."""
     code_dir = '~/code/dmcm/project'
     with settings(warn_only=True):
         if run("test -d %s" % code_dir).failed:
             run("git clone git@github.com:ahernp/DMCM.git %s" % code_dir)
-
-    with cd(code_dir):
-        run("git pull")
+        else:
+            with cd(code_dir):
+                run("git pull")
 
     for output_file in STATIC_FILES:
         if not os.path.isfile(output_file['path']):
             print(yellow('# Writing file \'%s\'' % (output_file['path'])))
             write_file(output_file['path'], output_file['data'])
 
-    with lcd(PARENT_PATH):
+    with cd(PARENT_PATH):
+        with prefix('source ~/.zshrc && workon dmcm'):
+            run('pip install django-bugtracker --upgrade')
+            run('pip install django-feedreader --upgrade')
+            run('pip install django-monitoring --upgrade')
         run("~/webapps/django/apache2/bin/restart")
 
 
