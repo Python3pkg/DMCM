@@ -1,12 +1,9 @@
-"""
-DMCM Unit Test.
-
-Expects initial_data.json fixture containing a copy of the ahernp.com site.
-"""
+"""DMCM Unit Test."""
 
 from django.test import TestCase
 from django.test.client import Client
 from django.contrib.auth.models import User
+
 
 TEST_URLS = [
     ('/', 200, 'Personal Website of Paul Ahern'),
@@ -24,7 +21,7 @@ class WorkingURLsTest(TestCase):
     """
     Visit various URLs on the site to ensure they are working.
     """
-
+    fixtures = ['dmcm/fixtures/unit_test.json']
     # (url, status_code, text_on_page)
     def test_urls(self):
         "Visit each URL in turn"

@@ -105,10 +105,10 @@ def setup():
 
     # Get current data from live
     if confirm('Get data from live system?'):
-        CODE_DIR = '~/project'
+        CODE_DIR = '~/code/dmcm/project'
         with cd(CODE_DIR):
-            with prefix('export PYTHONPATH="/home/ahernp/webapps/django:$PYTHONPATH"'):
-                run('python2.7 manage.py dumpdata --indent 4 dmcm sites.site feedreader.options feedreader.group feedreader.feed > ~/initial_data.json')
+            with prefix('source ~/.zshrc && workon dmcm'):
+                run('python manage.py dumpdata --indent 4 dmcm sites.site feedreader.options feedreader.group feedreader.feed > ~/initial_data.json')
         get('initial_data.json', os.path.join(PROJECT_PATH, 'initial_data.json'))
 
     # Recreate database
@@ -152,12 +152,20 @@ def deliver():
 @timer
 def deploy():
     """Deploy dmcm onto live server."""
-    code_dir = '~/project'
+    code_dir = '~/code/dmcm/project'
     with settings(warn_only=True):
         if run("test -d %s" % code_dir).failed:
             run("git clone git@github.com:ahernp/DMCM.git %s" % code_dir)
+
     with cd(code_dir):
         run("git pull")
+
+    for output_file in STATIC_FILES:
+        if not os.path.isfile(output_file['path']):
+            print(yellow('# Writing file \'%s\'' % (output_file['path'])))
+            write_file(output_file['path'], output_file['data'])
+
+    with lcd(PARENT_PATH):
         run("~/webapps/django/apache2/bin/restart")
 
 
