@@ -166,10 +166,10 @@ def deploy():
             write_file(output_file['path'], output_file['data'])
 
     with cd(PARENT_PATH):
-        with prefix('source ~/.zshrc && workon dmcm'):
-            run('pip install django-bugtracker --upgrade')
+        with prefix('export WORKON_HOME="~/.virtualenvs" && source ~/bin/virtualenvwrapper.sh && workon dmcm'):
+            run('pip install --upgrade -e git://github.com/ahernp/django-bugtracker.git#egg=django-bugtracker')
             run('pip install django-feedreader --upgrade')
-            run('pip install django-monitoring --upgrade')
+            run('pip install --upgrade -e git://github.com/ahernp/django-monitoring.git#egg=django-monitoring')
         run("~/webapps/django/apache2/bin/restart")
 
 
