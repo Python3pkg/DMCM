@@ -105,9 +105,8 @@ def setup():
 
     # Get current data from live
     if confirm('Get data from live system?'):
-        CODE_DIR = '~/code/dmcm/project'
-        with cd(CODE_DIR):
-            with prefix('source ~/.zshrc && workon dmcm'):
+        with cd('~/code/dmcm/project'):
+            with prefix('export WORKON_HOME="~/.virtualenvs" && source ~/bin/virtualenvwrapper.sh && workon dmcm'):
                 run('python manage.py dumpdata --indent 4 dmcm sites.site feedreader.options feedreader.group feedreader.feed > ~/initial_data.json')
         get('initial_data.json', os.path.join(PROJECT_PATH, 'initial_data.json'))
 
@@ -170,6 +169,10 @@ def deploy():
             run('pip install --upgrade -e git://github.com/ahernp/django-bugtracker.git#egg=django-bugtracker')
             run('pip install django-feedreader --upgrade')
             run('pip install --upgrade -e git://github.com/ahernp/django-monitoring.git#egg=django-monitoring')
+
+    with cd('~/code/dmcm/project'):
+        with prefix('export WORKON_HOME="~/.virtualenvs" && source ~/bin/virtualenvwrapper.sh && workon dmcm'):
+            run('python manage.py collectstatic --noinput')
         run("~/webapps/django/apache2/bin/restart")
 
 
