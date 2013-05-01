@@ -18,7 +18,7 @@ VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packag
 # PIP requirements file
 REQUIREMENTS = """Django==1.5.1
 Markdown==2.2.1
-MySQL-python==1.2.4
+#MySQL-python==1.2.4
 argparse==1.2.1
 django-reversion==1.7
 feedparser==5.1.3
@@ -26,7 +26,7 @@ pytz==2013b
 wsgiref==0.1.2
 -e git://github.com/ahernp/django-bugtracker.git#egg=django-bugtracker
 -e git://github.com/ahernp/django-monitoring.git#egg=django-monitoring
-django-feedreader==0.5.0
+django-feedreader
 """
 
 LOCALSETTINGS = """DEBUG = True
