@@ -62,7 +62,7 @@ def search_pages(request):
               }
     return render_to_response('dmcm/search_results.html', context, RequestContext(request))
 
-TOOL_NAMES = ['cardgen', 'deduplicate', 'compare']
+TOOL_NAMES = ['cardgen', 'deduplicate', 'compare', 'match']
 
 
 def show_tool(request, tool_name=""):

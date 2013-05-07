@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="/static/favicon.ico" type="image/ico" /> 
+        <title>ahernp.com: Match Records</title>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="http://ahernp.com/static/jquery-ui-1.9.2.custom/css/ahernp-theme/jquery-ui-1.9.2.custom.min.css" />
+        <style type="text/css">
+            body {font-family:'Droid Sans', Arial, sans-serif; background:#fff;color:#444;}
+            h1, h2, h3, h4, a, th {color:#046;}
+            h1 {font-size:1.5em;}
+            h2 {font-size:1.25em;}
+            h3 {font-size:1em;}
+            h4 {font-size:.75em;}
+            code {font-family:'Droid Sans Mono', Monospace; color:#000;font-size:14px;}
+            hr {margin:0}
+            table {border-collapse:collapse;}
+            th, td {border:1px solid #000; padding:0 0.5em 0 0.5em;}
+            tr.even {background-color:#ddd;}
+            tr.even:hover {background-color:#ace;}
+            tr.odd:hover {background-color:#ace;}
+            #content {width:70%; margin-left:auto; margin-right:auto;}
+            #source_label {color:#046; text-decoration:underline; cursor:pointer;}
+        </style>
+        
+    <script type = "text/javascript">
+        function match_records() {
+            input_records = $('#input').val().split('\n');
+            key_records = $('#keys').val().split('\n');
+            exclude_flag = $('#exclude_flag').prop('checked');
+            output_records = "";
+            for (var i = 0; i < input_records.length; i++) {
+                var match_found = false;
+                for (var j = 0; j < key_records.length; j++) {
+                    if (input_records[i].indexOf(key_records[j]) > -1) {
+                        match_found = true;
+                        break;
+                    }
+                }
+                if ((!match_found && exclude_flag) || (match_found && !exclude_flag))
+                    output_records = output_records + input_records[i] + "\n";
+            }
+
+            $('#output').val(output_records);
+        }
+        $(document).ready(function() {
+            $('#match').button().click(function() { match_records() });
+        });
+    </script>
+
+    </head>
+    <body>
+        <div id="header" style="padding-bottom:0.2em; margin:0; width:100%;">
+            <div style="width:65%;float:left;padding:0.2em 0em 0.2em 1em;">
+                
+    <a href="/">ahernp.com</a> &rsaquo; 
+    <a href="/tools">Tools</a> &rsaquo;
+    Match
+
+            </div>
+            <div style="width:30%;float:right;padding:0em;text-align:right;">
+                <form name="input" action="/search_pages/" method="get" style="padding-right:1em;">
+                    <input type="text" tabindex="1" size="10"
+                        style="color:#ccc;"
+                        name="search_string" title="Search Site" class="text" 
+                        value="Search Site"/>
+                </form> 
+            </div>
+            <div style="clear:both"></div>
+        </div> <!-- header -->
+        <hr size="1">
+        <div id="content">
+            
+    <h1>Match Records</h1>
+    <p>Keep or exclude matching records.</p>
+    <p>
+        <label>Input:<br />
+        <textarea id = "input" rows = "4" cols = "56">
+Record3
+Record4
+Record4
+Record1</textarea>
+        </label>
+    </p>
+    <p>
+        <label>Keys:<br />
+        <textarea id = "keys" rows = "4" cols = "56">
+Record4
+Record1</textarea>
+        </label>
+    </p>
+    <p>
+        <span id="match">Check for Matches</span>   
+        <input id="exclude_flag" type="checkbox" name="Exclude matches">
+        Exclude matches
+    </p>
+    <p>
+        <label>Output:<br />
+        <textarea id = "output" rows = "4" cols = "56">
+Record4
+Record4
+Record1</textarea>
+        </label>
+    </p>
+
+
+        </div>
+        <hr size="1">
+        <div id="footer" style="font-size:.9em;padding-left:1em; margin-top:1em;">
+            
+        </div>
+    </body>
+</html>

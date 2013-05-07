@@ -147,10 +147,10 @@
     "model": "dmcm.page", 
     "fields": {
         "wide": false, 
-        "updated": "2013-03-25T10:42:18Z", 
+        "updated": "2013-05-02T15:59:06Z", 
         "parent": 5, 
         "title": "Firefox", 
-        "content": "# Firefox\r\n\r\n## Add-ons\r\n\r\n1. [Adblock Plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/): \r\nPrevents downloading of advertisements on web pages. Subscribe to EasyList.\r\n1. [ColorZilla](http://www.colorzilla.com/firefox/):\r\nAdvanced Eyedropper, Color Picker, Palette Viewer, etc.\r\n1. [Download Statusbar](https://addons.mozilla.org/en-US/firefox/addon/download-statusbar/):\r\nManage downloads from unobtrusive status bar.\r\n1. [EpubReader](https://addons.mozilla.org/en-US/firefox/addon/epubreader/):\r\nRead E-Books in epub format.\r\n1. [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/):\r\nJavaScript debugger.\r\n1. [FireFTP](https://addons.mozilla.org/en-US/firefox/addon/fireftp/):\r\nFTP client.\r\n1. [Firesizer](https://addons.mozilla.org/en-us/firefox/addon/firesizer/):\r\nSet window to specific size.\r\n1. [Font Finder](https://addons.mozilla.org/en-US/firefox/addon/font-finder/):\r\nAnalyze the font information of any element on a page.\r\n1. [Foxclocks](https://addons.mozilla.org/en-US/firefox/addon/foxclocks/):\r\nTimes around the world in Status Bar.\r\n1. [Gmail Watcher](https://addons.mozilla.org/en-US/firefox/addon/gmail-watcher/):\r\nNotifications & Status Bar.\r\n1. [iReader](https://addons.mozilla.org/en-US/firefox/addon/ireader/):\r\nMakes web pages more readable.\r\n1. [Noia 4](https://addons.mozilla.org/en-US/firefox/addon/noia-4/):\r\nTheme.\r\n1. [Nuke anything](https://addons.mozilla.org/en-US/firefox/addon/nuke-anything-enhanced/):\r\nHide selected objects on web page. Can be useful prior to printing.\r\n1. [Selenium IDE](http://seleniumhq.org/download/):\r\nRecord-and-playback of interactions with the browser.\r\n1. [Speed Dial](https://addons.mozilla.org/en-US/firefox/addon/speed-dial/developers):\r\nCustomize new tabs.\r\n1. [sqlite-manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/):\r\nManage all your [SQLite](http://www.sqlite.org/) databases.\r\n1. [TiddlyFox](https://addons.mozilla.org/en-US/firefox/addon/tiddlyfox/):\r\nAllow saving of TiddlyWikis.\r\n1. [Ubiquity](https://addons.mozilla.org/en-US/firefox/addon/mozilla-labs-ubiquity/):\r\nDynamic commands in Firefox.\r\n(Community [version](https://bitbucket.org/satyr/ubiquity/downloads/tip.xpi))\r\n1. [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/):\r\nMany Web Developer tools.\r\n\r\n## Configuration\r\n\r\n* Open links in same Tab/Window: `about:config` > `browser.link.open_newwindow` > Change value to 1.\r\n\r\n## AwesomeBar Wildcards\r\n\r\nUse one of these wildcards (delimited by a space) in the Firefox AwesomeBar to filter the results.\r\n\r\nEnter the filter `browser.urlbar` in about:config to see them all.\r\n\r\n1. **#** Returns results that match the text in the title.\r\n2. **@** Returns results that match the text in the URL.\r\n3. ***** Returns only results that are from the bookmarks.\r\n4. **^** Returns only results that are from the browser's history.\r\n5. **+** Returns only results that have been tagged.", 
+        "content": "# Firefox\r\n\r\n## Add-ons\r\n\r\n1. [Adblock Plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/): \r\nPrevents downloading of advertisements on web pages. Subscribe to EasyList.\r\n1. [Add to Search Bar](https://addons.mozilla.org/en-US/firefox/addon/add-to-search-bar/):\r\nMake any pages' search functionality available in the Search Bar.\r\n1. [ColorZilla](http://www.colorzilla.com/firefox/):\r\nAdvanced Eyedropper, Color Picker, Palette Viewer, etc.\r\n1. [EpubReader](https://addons.mozilla.org/en-US/firefox/addon/epubreader/):\r\nRead E-Books in epub format.\r\n1. [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/):\r\nJavaScript debugger.\r\n1. [FireFTP](https://addons.mozilla.org/en-US/firefox/addon/fireftp/):\r\nFTP client.\r\n1. [Firesizer](https://addons.mozilla.org/en-us/firefox/addon/firesizer/):\r\nSet window to specific size.\r\n1. [Font Finder](https://addons.mozilla.org/en-US/firefox/addon/font-finder/):\r\nAnalyze the font information of any element on a page.\r\n1. [Foxclocks](https://addons.mozilla.org/en-US/firefox/addon/foxclocks/):\r\nTimes around the world in Status Bar.\r\n1. [iReader](https://addons.mozilla.org/en-US/firefox/addon/ireader/):\r\nMakes web pages more readable.\r\n1. [Noia 4](https://addons.mozilla.org/en-US/firefox/addon/noia-4/):\r\nTheme.\r\n1. [Nuke anything](https://addons.mozilla.org/en-US/firefox/addon/nuke-anything-enhanced/):\r\nHide selected objects on web page. Can be useful prior to printing.\r\n1. [Selenium IDE](http://seleniumhq.org/download/):\r\nRecord-and-playback of interactions with the browser.\r\n1. [Speed Dial](https://addons.mozilla.org/en-US/firefox/addon/speed-dial/developers):\r\nCustomize new tabs.\r\n1. [sqlite-manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/):\r\nManage all your [SQLite](http://www.sqlite.org/) databases.\r\n1. [TiddlyFox](https://addons.mozilla.org/en-US/firefox/addon/tiddlyfox/):\r\nAllow saving of TiddlyWikis.\r\n1. [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/):\r\nMany Web Developer tools.\r\n\r\n## Configuration\r\n\r\n* Open links in same Tab/Window: `about:config` > `browser.link.open_newwindow` > Change value to 1.\r\n\r\n## AwesomeBar Wildcards\r\n\r\nUse one of these wildcards (delimited by a space) in the Firefox AwesomeBar to filter the results.\r\n\r\nEnter the filter `browser.urlbar` in about:config to see them all.\r\n\r\n1. **#** Returns results that match the text in the title.\r\n2. **@** Returns results that match the text in the URL.\r\n3. ***** Returns only results that are from the bookmarks.\r\n4. **^** Returns only results that are from the browser's history.\r\n5. **+** Returns only results that have been tagged.", 
         "published": null, 
         "slug": "firefox"
     }
@@ -1111,7 +1111,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by quill18", 
-        "last_polled_time": "2013-05-01T18:17:28Z", 
+        "last_polled_time": "2013-05-04T06:17:27Z", 
         "xml_url": "http://www.youtube.com/rss/user/quill18/videos.rss", 
         "link": "http://www.youtube.com/channel/UCbx1TZgxfIauUZyPuBzEwZg/videos", 
         "group": 2
@@ -1121,10 +1121,10 @@
     "pk": 40, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-01T05:00:00Z", 
+        "published_time": "2013-05-04T05:00:00Z", 
         "description": "The Official Dilbert Daily Comic Strip RSS Feed", 
         "title": "Dilbert Daily Strip", 
-        "last_polled_time": "2013-05-01T05:17:07Z", 
+        "last_polled_time": "2013-05-04T05:17:07Z", 
         "xml_url": "http://feedproxy.google.com/DilbertDailyStrip", 
         "link": "http://dilbert.com/", 
         "group": 2
@@ -1147,10 +1147,10 @@
     "pk": 42, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-01T15:21:42Z", 
+        "published_time": "2013-05-04T04:26:19Z", 
         "description": "Books", 
         "title": "NYT &gt; Books", 
-        "last_polled_time": "2013-05-01T16:17:13Z", 
+        "last_polled_time": "2013-05-04T05:17:14Z", 
         "xml_url": "http://www.nytimes.com/services/xml/rss/nyt/Books.xml", 
         "link": "http://www.nytimes.com/pages/books/index.html?partner=rss&emc=rss", 
         "group": 2
@@ -1163,7 +1163,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Binge Thinking History Podcast", 
-        "last_polled_time": "2013-05-01T18:17:07Z", 
+        "last_polled_time": "2013-05-04T06:17:06Z", 
         "xml_url": "http://bingethinkinghistory.blogspot.com/feeds/posts/default", 
         "link": "http://bingethinkinghistory.blogspot.com/", 
         "group": 1
@@ -1189,7 +1189,7 @@
         "published_time": null, 
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts", 
         "title": "The Ancient World", 
-        "last_polled_time": "2013-05-01T18:17:17Z", 
+        "last_polled_time": "2013-05-04T06:17:17Z", 
         "xml_url": "http://ancientworldpodcast.blogspot.com/feeds/posts/default", 
         "link": "http://ancientworldpodcast.blogspot.com/", 
         "group": 1
@@ -1225,10 +1225,10 @@
     "pk": 53, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-30T18:47:07Z", 
+        "published_time": "2013-05-03T13:26:52Z", 
         "description": "An indepth look at stories and issues from around the world. This podcast offers you the chance to access landmark series from our archive.", 
         "title": "Documentaries", 
-        "last_polled_time": "2013-04-30T19:17:09Z", 
+        "last_polled_time": "2013-05-03T14:17:10Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/docarchive/rss.xml", 
         "link": "http://www.bbc.co.uk/podcasts/series/docarchive", 
         "group": 4
@@ -1251,10 +1251,10 @@
     "pk": 55, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-26T18:00:10Z", 
+        "published_time": "2013-05-03T18:00:12Z", 
         "description": "Bringing you a satirical take on the week&#39;s news with The News Quiz and The Now Show from BBC Radio 4. Enjoy a satirical take on the week\u2019s news with the cream of UK comedy talent.", 
         "title": "Friday Night Comedy from BBC Radio 4", 
-        "last_polled_time": "2013-04-26T18:17:10Z", 
+        "last_polled_time": "2013-05-03T18:17:27Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/programmes/genres/comedy/satire/", 
         "group": 4
@@ -1264,10 +1264,10 @@
     "pk": 57, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-30T19:12:59Z", 
+        "published_time": "2013-05-03T18:58:15Z", 
         "description": "Interviews with leading novelists, musicians, film directors, artists and more, from Radio 4&#39;s flagship arts show, presented by Mark Lawson, Kirsty Lang and John Wilson.  Front Row is broadcast on BBC Radio 4 each weekday evening at 7.15 - 7.45pm.  New editions will be available each night following the live broadcast.", 
         "title": "Front Row Daily", 
-        "last_polled_time": "2013-04-30T19:17:10Z", 
+        "last_polled_time": "2013-05-03T19:17:12Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/frontrow/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/arts/frontrow", 
         "group": 4
@@ -1290,10 +1290,10 @@
     "pk": 59, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-25T10:00:14Z", 
+        "published_time": "2013-05-02T10:00:15Z", 
         "description": "Melvyn Bragg and his guests discuss the history of ideas - including topics  drawn from philosophy, science, history, religion and culture.", 
         "title": "In Our Time With Melvyn Bragg", 
-        "last_polled_time": "2013-04-25T10:17:11Z", 
+        "last_polled_time": "2013-05-02T10:17:11Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qykl", 
         "group": 4
@@ -1316,10 +1316,10 @@
     "pk": 61, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-25T16:33:59Z", 
+        "published_time": "2013-05-02T17:42:34Z", 
         "description": "Weekly science conversation, on everything from archaeology to zoology, from abacus to the antipodean rodent zyzomys, by way of meteorites. Presented by Quentin Cooper, and airing every Thursday, 4:30 pm.", 
         "title": "Material World", 
-        "last_polled_time": "2013-04-25T17:17:19Z", 
+        "last_polled_time": "2013-05-02T18:17:21Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/material/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/science/thematerialworld.shtml", 
         "group": 4
@@ -1342,10 +1342,10 @@
     "pk": 65, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-01T14:57:12Z", 
+        "published_time": "2013-05-03T14:00:57Z", 
         "description": "All that matters about money with Paul Lewis. News of savings and investments, credit cards and loans, pensions, banking, benefits and giving to charity.  The UK\u2019s premier weekly round-up of personal finance from the BBC.  Programme broadcast each Saturday at 1204 BST and episodes added each Saturday afternoon.  You will also receive podcasts of Money Box Live \u2013 the interactive programme answering questions about personal finance issues, hosted by either Paul Lewis or Vincent Duggleby.  Broadcast each Wednesday at 1502 BST and with episodes added every Wednesday afternoon. For more information go to www.bbc.co.uk/moneybox", 
         "title": "Money Box", 
-        "last_polled_time": "2013-05-01T15:17:13Z", 
+        "last_polled_time": "2013-05-03T14:17:14Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moneybox/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qjnv", 
         "group": 4
@@ -1355,10 +1355,10 @@
     "pk": 66, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-27T03:00:10Z", 
+        "published_time": "2013-05-03T15:30:12Z", 
         "description": "Tim Harford investigates numbers in the news. Numbers are used in every area of public debate. But are they always reliable? Tim and the More or Less team try to make sense of the statistics which surround us. A half-hour programme broadcast at 1600 on Friday afternoons and repeated at 2000 on Sundays on Radio 4. BBC World Service broadcasts a short edition over the weekend.", 
         "title": "More or Less: Behind the Stats", 
-        "last_polled_time": "2013-04-27T03:17:15Z", 
+        "last_polled_time": "2013-05-03T16:17:15Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qshd", 
         "group": 4
@@ -1368,10 +1368,10 @@
     "pk": 67, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-25T20:00:15Z", 
+        "published_time": "2013-05-02T20:00:16Z", 
         "description": "Insights into the business world with Peter Day - featuring content from his Radio 4 In Business programme, and also Global Business from the BBC World Service.", 
         "title": "Peter Day&#39;s World of Business", 
-        "last_polled_time": "2013-04-25T20:17:19Z", 
+        "last_polled_time": "2013-05-02T20:17:14Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio/worldbiz/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/inbusiness/inbusiness.shtml", 
         "group": 4
@@ -1407,10 +1407,10 @@
     "pk": 71, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-25T16:00:18Z", 
+        "published_time": "2013-05-02T15:54:26Z", 
         "description": "Interviews and analysis from the world of cinema. Francine Stock talks to directors, writers and critics about the latest film releases, classics on DVD and movies on television.", 
         "title": "The Film Programme", 
-        "last_polled_time": "2013-04-25T16:17:21Z", 
+        "last_polled_time": "2013-05-02T16:17:18Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/filmprogramme", 
         "group": 4
@@ -1436,7 +1436,7 @@
         "published_time": null, 
         "description": "Weekly news and opinions from the UK&#39;s biggest tech monthly", 
         "title": "The PC Pro Podcast", 
-        "last_polled_time": "2013-05-01T18:17:22Z", 
+        "last_polled_time": "2013-05-04T06:17:22Z", 
         "xml_url": "http://podcast.pcpro.co.uk/?feed=podcast", 
         "link": "http://podcast.pcpro.co.uk", 
         "group": 5
@@ -1472,10 +1472,10 @@
     "pk": 77, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-01T18:09:48Z", 
+        "published_time": "2013-05-04T06:04:31Z", 
         "description": "", 
         "title": "Linuxtoday.com", 
-        "last_polled_time": "2013-05-01T18:17:12Z", 
+        "last_polled_time": "2013-05-04T06:17:11Z", 
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux", 
         "link": "http://www.linuxtoday.com/", 
         "group": 5
@@ -1488,7 +1488,7 @@
         "published_time": null, 
         "description": "A blog covering security and security technology.", 
         "title": "Schneier on Security", 
-        "last_polled_time": "2013-05-01T18:17:16Z", 
+        "last_polled_time": "2013-05-04T06:17:17Z", 
         "xml_url": "http://www.schneier.com/blog/index.xml", 
         "link": "http://www.schneier.com/blog/", 
         "group": 5
@@ -1501,7 +1501,7 @@
         "published_time": null, 
         "description": "Inkscape Help, Tutorials and Documentation Resources", 
         "title": "inkscape tutorials blog", 
-        "last_polled_time": "2013-05-01T18:17:11Z", 
+        "last_polled_time": "2013-05-04T06:17:11Z", 
         "xml_url": "http://inkscapetutorials.wordpress.com/feed/", 
         "link": "http://inkscapetutorials.wordpress.com", 
         "group": 5
@@ -1514,7 +1514,7 @@
         "published_time": null, 
         "description": "Biting the hand that feeds IT", 
         "title": "The Register", 
-        "last_polled_time": "2013-05-01T18:17:22Z", 
+        "last_polled_time": "2013-05-04T06:17:23Z", 
         "xml_url": "http://www.theregister.co.uk/headlines.rss", 
         "link": "http://www.theregister.co.uk/", 
         "group": 5
@@ -1527,7 +1527,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by Paradoxplaza", 
-        "last_polled_time": "2013-05-01T18:17:27Z", 
+        "last_polled_time": "2013-05-04T06:17:27Z", 
         "xml_url": "http://www.youtube.com/rss/user/Paradoxplaza/videos.rss", 
         "link": "http://www.youtube.com/channel/UC1JOnWZrVWKzX3UMdpnvuMg/videos", 
         "group": 2
@@ -1537,10 +1537,10 @@
     "pk": 90, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-01T19:05:37Z", 
+        "published_time": "2013-05-04T05:05:21Z", 
         "description": "Top stories of the day on TIME.com", 
         "title": "TIME.com: Top Stories", 
-        "last_polled_time": "2013-05-01T18:17:23Z", 
+        "last_polled_time": "2013-05-04T04:17:23Z", 
         "xml_url": "http://feeds2.feedburner.com/time/topstories", 
         "link": "http://www.time.com?xid=rss-topstories", 
         "group": 3
@@ -1553,7 +1553,7 @@
         "published_time": null, 
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453", 
         "title": "The History of Byzantium", 
-        "last_polled_time": "2013-05-01T18:17:18Z", 
+        "last_polled_time": "2013-05-04T06:17:18Z", 
         "xml_url": "feed://www.thetvcritic.org/historypodcasts/feed.xml", 
         "link": "http://www.thetvcritic.org/historypodcasts/", 
         "group": 1
@@ -1563,10 +1563,10 @@
     "pk": 93, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-18T19:31:48Z", 
+        "published_time": "2013-05-03T00:30:23Z", 
         "description": "It&#39;s the history of our world from the Big Bang to the Modern Age! Well...eventually at least.", 
         "title": "The Podcast History Of Our World", 
-        "last_polled_time": "2013-04-18T20:17:24Z", 
+        "last_polled_time": "2013-05-03T01:17:20Z", 
         "xml_url": "http://podcasthistoryofourworld.libsyn.com/rss", 
         "link": "http://podcasthistoryofourworld.blogspot.com/", 
         "group": 1
@@ -1579,7 +1579,7 @@
         "published_time": null, 
         "description": "A History Of: Hannibal and the Punic Wars is a weekly biography of everybody&#39;s favourite Carthaginian general. We follow Hannibal throughout his campaigns as well as looking at the Punic Wars at large. This is done through a mixture of lecture style episodes as well as more relaxed Let&#39;s Talk episodes; in which I invite guests onto the show to talk about Hannibal, Rome, Carthage, the Punic Wars and the ancient world in general. Please note, I have recently upgraded my recording equipment and am updating the back-catalogue. Presently episodes 4 through 17 need to be re-recorded; so bear with me.", 
         "title": "A History Of: Hannibal and the Punic Wars", 
-        "last_polled_time": "2013-05-01T18:17:05Z", 
+        "last_polled_time": "2013-05-04T06:17:04Z", 
         "xml_url": "http://thehistoryofpodcast.weebly.com/uploads/1/3/4/7/13473658/hannibal_and_the_punic_wars.xml", 
         "link": "http://thehistoryofpodcast.blogspot.com", 
         "group": 1
@@ -1592,7 +1592,7 @@
         "published_time": null, 
         "description": "A look at the life of Alexander the Great, from his birth in Macedonia and his conquests to the edge of the world and back.", 
         "title": "A History Of: Alexander", 
-        "last_polled_time": "2013-05-01T18:17:04Z", 
+        "last_polled_time": "2013-05-04T06:17:04Z", 
         "xml_url": "http://thehistoryofpodcast.weebly.com/uploads/1/3/4/7/13473658/alexander.xml", 
         "link": "http://thehistoryofpodcast.blogspot.com", 
         "group": 1
@@ -1605,7 +1605,7 @@
         "published_time": null, 
         "description": "The &#39;Twilight Histories&#39; is an alternate history podcast by Jordan Harbour. Each episode, you will journey back in time to a world that is not your own. From the frozen wastes of the Ice Age to the dusty sands of Alexander&#39;s camp, from a London street during the Blitz to the Roman silver mines of Spain... you will encounter the people, the sights and the smells of a strange, exotic and sometimes chilling world.  So enter your time machine... enter the Twilight Histories.", 
         "title": "Twilight Histories, Alternate History Podcast", 
-        "last_polled_time": "2013-05-01T18:17:26Z", 
+        "last_polled_time": "2013-05-04T06:17:26Z", 
         "xml_url": "http://www.twilighthistories.com/feed/", 
         "link": "http://www.twilighthistories.com", 
         "group": 1
@@ -1628,10 +1628,10 @@
     "pk": 100, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-26T20:00:10Z", 
+        "published_time": "2013-05-03T20:00:10Z", 
         "description": "Weekly reflections on topical issues from a range of contributors including historian Lisa Jardine, novelist Sarah Dunant and writer Alain de Botton.", 
         "title": "A Point of View", 
-        "last_polled_time": "2013-04-26T20:17:09Z", 
+        "last_polled_time": "2013-05-03T20:17:05Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qng8", 
         "group": 4
@@ -1644,7 +1644,7 @@
         "published_time": null, 
         "description": "The latest stories from the Home section of the BBC News web site.", 
         "title": "BBC News - Home", 
-        "last_polled_time": "2013-05-01T18:17:06Z", 
+        "last_polled_time": "2013-05-04T06:17:05Z", 
         "xml_url": "http://feeds.bbci.co.uk/news/rss.xml?edition=int", 
         "link": "http://www.bbc.co.uk/news/#sa-ns_mchannel=rss&ns_source=PublicRSS20-sa", 
         "group": 3
@@ -1657,7 +1657,7 @@
         "published_time": null, 
         "description": "Recent Blog Entries.", 
         "title": "ahernp.com blog", 
-        "last_polled_time": "2013-05-01T18:17:05Z", 
+        "last_polled_time": "2013-05-04T06:17:05Z", 
         "xml_url": "http://ahernp.com/blog/feed", 
         "link": "http://ahernp.com/blog/", 
         "group": null
