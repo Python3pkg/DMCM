@@ -4,7 +4,7 @@ from dmcm.models import Page
 from blog.utils import LatestBlogPostsFeed
 from django.conf import settings
 
-BLOG_ROOT = Page.objects.get(pk=settings.BLOG_ROOT_ID)
+BLOG_ROOT = Page.objects.get(slug=settings.BLOG_ROOT_SLUG)
 
 urlpatterns = patterns(
     '',
@@ -20,12 +20,6 @@ urlpatterns = patterns(
         name='blog_archive'),
     url(r'^feed/$', LatestBlogPostsFeed(), 
         name='blog_feed'),
-#     url(r'^edit/(?P<slug>[-\w]+).html$', 
-#         edit_page, 
-#         name='blog_edit_emtry_html'),
-#     url(r'^edit/(?P<slug>[-\w]+)[|/]$', 
-#         edit_page, 
-#         name='dmcm_edit_page'),
     url(r'^(?P<slug>[-\w]+).html$', 
         DetailView.as_view(
             model=Page, 

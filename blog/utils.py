@@ -4,7 +4,7 @@ from django.contrib.syndication.views import Feed
 from dmcm.models import Page
 import markdown
 
-BLOG_ROOT = Page.objects.get(pk=settings.BLOG_ROOT_ID)
+BLOG_ROOT = Page.objects.get(slug=settings.BLOG_ROOT_SLUG)
 
 
 class LatestBlogPostsFeed(Feed):

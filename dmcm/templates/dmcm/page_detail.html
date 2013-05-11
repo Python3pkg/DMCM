@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block title %}
-    {% if object.id != SITE_ROOT_ID %}
+    {% if object.slug != SITE_ROOT_SLUG %}
         {{ site.domain }}:
     {% endif %}
     {{ object.title }}

@@ -1,11 +1,11 @@
-"""Django settings for dmcm project."""
+"""Django settings for ahernp.com project."""
 import sys
 import os
 
 PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
 
-SITE_ROOT_ID = 3  # Homepage
-BLOG_ROOT_ID = 1
+SITE_ROOT_SLUG = 'ahernp-com'  # Homepage
+BLOG_ROOT_SLUG = 'blog'
 
 DEBUG = False
 DEVELOP = False
