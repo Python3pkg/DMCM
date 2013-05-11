@@ -21,13 +21,13 @@
         <hr size="1">
         <p>
             Last Updated: {{ page.updated|date:"Y-m-d H:i" }};
-            <a href="/{{ page.slug }}/">Comments</a>. 
+            <a href="/blog/{{ page.slug }}/">Comments</a>. 
         </p>
     {% endfor %}
     <br>
 {% endblock %}
 
 {% block footer %}
-    <a href="{% url 'dmcm_blog_archive' %}">Blog Archive</a>;
-    <a href="{% url 'dmcm_blog_feed' %}">RSS Feed</a>.
+    <a href="{% url 'blog_archive' %}">Blog Archive</a>;
+    <a href="{% url 'blog_feed' %}">RSS Feed</a>.
 {% endblock %}

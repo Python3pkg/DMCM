@@ -3,19 +3,8 @@ from django.core.urlresolvers import reverse
 from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
-from django.views.generic import ListView
 from dmcm.forms import StringSearchForm
 from dmcm.models import Page
-
-
-class WideListView(ListView):
-    """
-    Add extra context value 'wide_page'. Gets base template to make content area wider.
-    """
-    def get_context_data(self, **kwargs):
-        context = super(WideListView, self).get_context_data(**kwargs)
-        context['wide_page'] = True
-        return context
 
 
 def search_pages(request):
