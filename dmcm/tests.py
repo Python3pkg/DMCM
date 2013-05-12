@@ -13,7 +13,7 @@ TEST_URLS = [
     ('/site_map/', 200, 'Site Map'),
     ('/profile/', 200, 'Paul Ahern'),
     ('/search_pages/?search_string=fred', 200, 'Search Results'),
-    ('/edit/ahernp-com/', 302, ''),
+    ('/dmcm/edit/ahernp-com/', 200, ''),
 ]
 
 
@@ -33,6 +33,7 @@ class WorkingURLsTest(TestCase):
         for url, status_code, expected_text in TEST_URLS:
             response = self.client.get(url)
             self.assertEqual(response.status_code, status_code,
-                             'URL %s: Unexpected status code, got %s expected %s' % (url, response.status_code, 200))
+                'URL %s: Unexpected status code, got %s expected %s' % 
+                    (url, response.status_code, status_code))
             if response.status_code == 200:
                 self.assertContains(response, expected_text, msg_prefix='URL %s' % (url))

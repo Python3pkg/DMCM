@@ -3,7 +3,6 @@
     "pk": 1, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-26T16:37:57Z", 
         "parent": 3, 
         "title": "Blog", 
@@ -16,7 +15,6 @@
     "pk": 3, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": true, 
         "updated": "2013-03-21T07:05:59Z", 
         "parent": 3, 
         "title": "ahernp.com", 
@@ -29,7 +27,6 @@
     "pk": 4, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-03-12T09:16:14Z", 
         "parent": 3, 
         "title": "Profile", 
@@ -42,7 +39,6 @@
     "pk": 5, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-11-23T18:22:40Z", 
         "parent": 3, 
         "title": "Applications", 
@@ -55,7 +51,6 @@
     "pk": 6, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:43:59Z", 
         "parent": 3, 
         "title": "Library", 
@@ -68,7 +63,6 @@
     "pk": 7, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-17T18:19:22Z", 
         "parent": 26, 
         "title": "Markdown", 
@@ -81,7 +75,6 @@
     "pk": 8, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-12-09T10:19:00Z", 
         "parent": 3, 
         "title": "Tools", 
@@ -94,7 +87,6 @@
     "pk": 9, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-17T18:13:28Z", 
         "parent": 5, 
         "title": "Libre Office", 
@@ -107,7 +99,6 @@
     "pk": 10, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-14T15:57:53Z", 
         "parent": 39, 
         "title": "UK Postcodes", 
@@ -120,7 +111,6 @@
     "pk": 11, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-11-03T11:19:29Z", 
         "parent": 6, 
         "title": "DVDs", 
@@ -133,7 +123,6 @@
     "pk": 12, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-09-01T09:54:43Z", 
         "parent": 6, 
         "title": "Software", 
@@ -146,7 +135,6 @@
     "pk": 14, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-03-25T10:42:18Z", 
         "parent": 5, 
         "title": "Firefox", 
@@ -159,7 +147,6 @@
     "pk": 15, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-01-26T10:43:57Z", 
         "parent": 39, 
         "title": "Linux", 
@@ -172,7 +159,6 @@
     "pk": 16, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-12T19:48:19Z", 
         "parent": 5, 
         "title": "Windows", 
@@ -185,7 +171,6 @@
     "pk": 17, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": true, 
         "updated": "2013-02-14T13:24:54Z", 
         "parent": 6, 
         "title": "Books", 
@@ -198,7 +183,6 @@
     "pk": 18, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": true, 
         "updated": "2012-04-21T11:52:39Z", 
         "parent": 6, 
         "title": "CDs", 
@@ -211,7 +195,6 @@
     "pk": 19, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-02-02T19:14:46Z", 
         "parent": 3, 
         "title": "Gallery", 
@@ -224,7 +207,6 @@
     "pk": 20, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:50:59Z", 
         "parent": 3, 
         "title": "Rooska", 
@@ -237,7 +219,6 @@
     "pk": 21, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-16T19:41:04Z", 
         "parent": 20, 
         "title": "Planting", 
@@ -250,7 +231,6 @@
     "pk": 22, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-11-24T11:02:20Z", 
         "parent": 3, 
         "title": "CV", 
@@ -263,7 +243,6 @@
     "pk": 23, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-17T07:45:52Z", 
         "parent": 3, 
         "title": "Public Key", 
@@ -276,7 +255,6 @@
     "pk": 24, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-01-24T09:53:19Z", 
         "parent": 3, 
         "title": "MSc", 
@@ -289,7 +267,6 @@
     "pk": 25, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-17T16:26:56Z", 
         "parent": 8, 
         "title": "Cardgen", 
@@ -302,7 +279,6 @@
     "pk": 26, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:45:03Z", 
         "parent": 8, 
         "title": "DMCM", 
@@ -315,7 +291,6 @@
     "pk": 27, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": true, 
         "updated": "2012-03-24T07:03:03Z", 
         "parent": 18, 
         "title": "Silmarillion", 
@@ -328,7 +303,6 @@
     "pk": 29, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-05-20T12:45:20Z", 
         "parent": 5, 
         "title": "emacs", 
@@ -341,7 +315,6 @@
     "pk": 30, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-16T18:13:01Z", 
         "parent": 3, 
         "title": "Twinings Tea", 
@@ -354,7 +327,6 @@
     "pk": 31, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:50:17Z", 
         "parent": 39, 
         "title": "HTML Status Codes", 
@@ -367,7 +339,6 @@
     "pk": 32, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-21T13:52:32Z", 
         "parent": 39, 
         "title": "HTML Colours", 
@@ -380,7 +351,6 @@
     "pk": 34, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-03-25T10:43:52Z", 
         "parent": 5, 
         "title": "Google Chrome", 
@@ -393,7 +363,6 @@
     "pk": 38, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-20T17:47:13Z", 
         "parent": 39, 
         "title": "Python", 
@@ -406,7 +375,6 @@
     "pk": 39, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-01-26T10:28:28Z", 
         "parent": 3, 
         "title": "Reference", 
@@ -419,7 +387,6 @@
     "pk": 75, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T16:45:32Z", 
         "parent": 1, 
         "title": "Sprouting", 
@@ -432,7 +399,6 @@
     "pk": 76, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-05-20T13:19:52Z", 
         "parent": 1, 
         "title": "New Arrival", 
@@ -445,7 +411,6 @@
     "pk": 77, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-07-18T15:29:36Z", 
         "parent": 1, 
         "title": "New Barn", 
@@ -458,7 +423,6 @@
     "pk": 78, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:54:13Z", 
         "parent": 1, 
         "title": "Managing Web Pages", 
@@ -471,7 +435,6 @@
     "pk": 79, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T08:29:54Z", 
         "parent": 1, 
         "title": "Glassy Bay", 
@@ -484,7 +447,6 @@
     "pk": 80, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T16:49:53Z", 
         "parent": 1, 
         "title": "Green Shoots of Recovery", 
@@ -497,7 +459,6 @@
     "pk": 81, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:54:57Z", 
         "parent": 1, 
         "title": "More Planting", 
@@ -510,7 +471,6 @@
     "pk": 82, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:56:19Z", 
         "parent": 1, 
         "title": "Planting Has Begun", 
@@ -523,7 +483,6 @@
     "pk": 83, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T16:52:03Z", 
         "parent": 1, 
         "title": "New Look Site", 
@@ -536,7 +495,6 @@
     "pk": 84, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T16:52:45Z", 
         "parent": 1, 
         "title": "New Roadbed", 
@@ -549,7 +507,6 @@
     "pk": 85, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T17:06:57Z", 
         "parent": 1, 
         "title": "Landscaping", 
@@ -562,7 +519,6 @@
     "pk": 86, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T16:55:30Z", 
         "parent": 1, 
         "title": "New Routine", 
@@ -575,7 +531,6 @@
     "pk": 87, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:56:44Z", 
         "parent": 1, 
         "title": "Premiere Fin", 
@@ -588,7 +543,6 @@
     "pk": 88, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T17:00:57Z", 
         "parent": 1, 
         "title": "Bridged and Resigned", 
@@ -601,7 +555,6 @@
     "pk": 89, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-09T17:01:47Z", 
         "parent": 1, 
         "title": "New Camera and Bridge", 
@@ -614,7 +567,6 @@
     "pk": 90, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-12T11:15:57Z", 
         "parent": 1, 
         "title": "Donkey Family", 
@@ -627,7 +579,6 @@
     "pk": 91, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-12T20:34:29Z", 
         "parent": 1, 
         "title": "DMCM version 0.2", 
@@ -640,7 +591,6 @@
     "pk": 92, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-06-25T21:40:30Z", 
         "parent": 1, 
         "title": "Finished Barn", 
@@ -653,7 +603,6 @@
     "pk": 93, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-07-18T13:34:46Z", 
         "parent": 1, 
         "title": "Return to London", 
@@ -666,7 +615,6 @@
     "pk": 94, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-07-23T08:11:10Z", 
         "parent": 1, 
         "title": "Bankers", 
@@ -679,7 +627,6 @@
     "pk": 95, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-08-06T08:48:40Z", 
         "parent": 1, 
         "title": "New Old Flat", 
@@ -692,7 +639,6 @@
     "pk": 96, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-08-16T08:01:08Z", 
         "parent": 1, 
         "title": "Ici Londres", 
@@ -705,7 +651,6 @@
     "pk": 97, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-08-26T15:20:36Z", 
         "parent": 1, 
         "title": "New Job", 
@@ -718,7 +663,6 @@
     "pk": 98, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-09-08T19:28:01Z", 
         "parent": 1, 
         "title": "New Old Routine", 
@@ -731,7 +675,6 @@
     "pk": 99, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-10-09T14:38:04Z", 
         "parent": 1, 
         "title": "Traffic Jam", 
@@ -744,7 +687,6 @@
     "pk": 100, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2010-10-24T14:42:02Z", 
         "parent": 1, 
         "title": "Dental Trauma", 
@@ -757,7 +699,6 @@
     "pk": 102, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:57:45Z", 
         "parent": 1, 
         "title": "Tea", 
@@ -770,7 +711,6 @@
     "pk": 103, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2011-03-12T21:18:57Z", 
         "parent": 1, 
         "title": "Barn Menaced by Giant Sheep", 
@@ -783,7 +723,6 @@
     "pk": 104, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2011-04-14T08:55:31Z", 
         "parent": 1, 
         "title": "rooska-growth", 
@@ -796,7 +735,6 @@
     "pk": 105, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2011-04-19T19:23:44Z", 
         "parent": 1, 
         "title": "demolition", 
@@ -809,7 +747,6 @@
     "pk": 106, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:58:15Z", 
         "parent": 1, 
         "title": "Tea Time", 
@@ -822,7 +759,6 @@
     "pk": 107, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2011-09-09T08:55:30Z", 
         "parent": 1, 
         "title": "Delay at Tower Bridge", 
@@ -835,7 +771,6 @@
     "pk": 108, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:57:13Z", 
         "parent": 1, 
         "title": "Taken Over", 
@@ -848,7 +783,6 @@
     "pk": 109, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-03-26T16:59:41Z", 
         "parent": 1, 
         "title": "New Job 2011", 
@@ -861,7 +795,6 @@
     "pk": 110, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-05-19T19:22:35Z", 
         "parent": 1, 
         "title": "Site Redesign", 
@@ -874,7 +807,6 @@
     "pk": 111, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-01-09T10:06:20Z", 
         "parent": 39, 
         "title": "MySQL", 
@@ -887,7 +819,6 @@
     "pk": 112, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-13T13:14:41Z", 
         "parent": 1, 
         "title": "Rooska 2012", 
@@ -900,7 +831,6 @@
     "pk": 113, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-12-13T07:14:36Z", 
         "parent": 5, 
         "title": "Vim Editor", 
@@ -913,7 +843,6 @@
     "pk": 114, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-14T11:12:25Z", 
         "parent": 39, 
         "title": "Android", 
@@ -926,7 +855,6 @@
     "pk": 115, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-03-22T10:03:53Z", 
         "parent": 39, 
         "title": "git", 
@@ -939,7 +867,6 @@
     "pk": 116, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:55:41Z", 
         "parent": 39, 
         "title": "Personal Finance", 
@@ -952,7 +879,6 @@
     "pk": 117, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-05-12T09:09:04Z", 
         "parent": 15, 
         "title": "vcprompt", 
@@ -965,7 +891,6 @@
     "pk": 118, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-04-21T11:48:31Z", 
         "parent": 39, 
         "title": "HTML Currencies", 
@@ -978,7 +903,6 @@
     "pk": 119, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-05-12T09:16:45Z", 
         "parent": 39, 
         "title": "Django", 
@@ -991,7 +915,6 @@
     "pk": 120, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2012-05-20T11:33:44Z", 
         "parent": 1, 
         "title": "Use of Fabric", 
@@ -1004,7 +927,6 @@
     "pk": 121, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-03-15T14:28:20Z", 
         "parent": 1, 
         "title": "Digitalis", 
@@ -1017,7 +939,6 @@
     "pk": 122, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-01-26T10:29:59Z", 
         "parent": 39, 
         "title": "Regex", 
@@ -1030,7 +951,6 @@
     "pk": 123, 
     "model": "dmcm.page", 
     "fields": {
-        "wide": false, 
         "updated": "2013-03-27T07:01:53Z", 
         "parent": 1, 
         "title": "Django 1.5", 
