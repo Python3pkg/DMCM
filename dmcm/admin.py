@@ -7,9 +7,8 @@ from reversion.admin import VersionAdmin
 
 class PageAdmin(VersionAdmin):
     search_fields = ['title']
-    list_display = ['title', 'parent', 'updated', 'wide']
-    list_filter = ['wide']
-    list_editable = ['wide']
+    list_display = ['title', 'parent', 'updated']
+    list_editable = ['parent']
     prepopulated_fields = {'slug': ('title',)}
     readonly_fields = ['updated']
     ordering = ['parent', 'title']
@@ -20,7 +19,6 @@ class PageAdmin(VersionAdmin):
                        ('title', 'parent',),
                        ('slug',),
                        ('published', 'updated'),
-                       ('wide',),
                        )
         }),
     )

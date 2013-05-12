@@ -1,5 +1,6 @@
 """Models used to store web pages."""
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class Page(models.Model):
@@ -19,9 +20,6 @@ class Page(models.Model):
             When page was last updated.
         content : text
             Page content in markdown format.
-        wide : boolean
-            If page is rendered in a wide format (2-column home page and some
-            html tables).
     """
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
@@ -30,7 +28,6 @@ class Page(models.Model):
     updated = models.DateTimeField(verbose_name='Time Updated', auto_now=True)
     content = models.TextField(verbose_name='Page body',
                                help_text='Use Markdown syntax.')
-    wide = models.BooleanField(verbose_name='Wider Page')
 
     def navigation_path(self):
         path = []
@@ -42,7 +39,10 @@ class Page(models.Model):
                 parent = parent.parent
             path.insert(0, {'title': parent.title, 'address': '/'})
         return path
-
+    
+    def get_absolute_url(self):
+        return reverse('dmcm_page_detail', kwargs={'slug': self.slug})
+    
     class Meta:
         ordering = ['title']
 
