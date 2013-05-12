@@ -34,7 +34,7 @@
         Last Updated: {{ object.updated|date:"Y-m-d H:i" }};
         <span id="source_label">Source</span>;
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
-        <a href="/dmcm/edit/{{ object.slug }}/" title="Edit this page">Edit</a>.
+        <a href="{% url 'dmcm_edit_update_page' object.slug %}" title="Edit this page">Edit</a>.
     </p>
     <div id="source_body" style="display: none">
         <pre>{{object.content}}</pre>

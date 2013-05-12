@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}Update Page{% endblock %}
+{% block title %}
+	{% if page %}
+		Update Page {{ page.title }}
+	{% else %}
+		Add Page
+	{% endif %}
+{% endblock %}
 
 {% block extra_head %}
     <style type="text/css">
@@ -28,19 +34,25 @@
 
 {% block nav_path %}
 	<a href="{% url 'dmcm_root' %}">{{ site.domain }}</a> &rsaquo; 
-	<a href="{% url 'dmcm_edit' %}">Admin</a> &rsaquo; 
-	Page
+	<a href="{% url 'dmcm_edit' %}">Edit</a> &rsaquo; 
+	{% if page %}{{ page.title }}{% else %}Add Page{% endif %} 
 {% endblock %}
 
 {% block content %}
-	<h1>Update Page</h1>
+	<h1>{% if page %}Update Page {{ page.title }}{% else %}Add Page{% endif %}</h1>
     {% include "dmcm/edit/form_snippet.html" %}
 {% endblock %}
 
 {% block footer %}
     <p>
-    	<a href="/monitoring/dashboard" title="System Status">Dashboard</a>;
+		{% if page.title %}
+			<a href="{% url 'dmcm_page_detail'  page.slug %}" title="Return to Site">Site</a>;
+		{% else %}
+			<a href="{% url 'dmcm_root' %}" title="Return to Site">{{ site.domain }}</a>;
+		{% endif %} 
+    	<a href="{% url 'dmcm_root' %}monitoring/dashboard" title="System Status">Dashboard</a>;
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
-        <a href="/admin/" title="Django Admin">Admin</a>.
+        <a href="/admin/" title="Django Admin">Admin</a>;
+        <a href="/accounts/logout">Logout</a>.
     </p>
 {% endblock %}
