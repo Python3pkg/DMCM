@@ -135,10 +135,10 @@
     "pk": 14, 
     "model": "dmcm.page", 
     "fields": {
-        "updated": "2013-05-02T15:59:06Z", 
+        "updated": "2013-06-01T13:58:13Z", 
         "parent": 5, 
         "title": "Firefox", 
-        "content": "# Firefox\r\n\r\n## Add-ons\r\n\r\n1. [Adblock Plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/): \r\nPrevents downloading of advertisements on web pages. Subscribe to EasyList.\r\n1. [Add to Search Bar](https://addons.mozilla.org/en-US/firefox/addon/add-to-search-bar/):\r\nMake any pages' search functionality available in the Search Bar.\r\n1. [ColorZilla](http://www.colorzilla.com/firefox/):\r\nAdvanced Eyedropper, Color Picker, Palette Viewer, etc.\r\n1. [EpubReader](https://addons.mozilla.org/en-US/firefox/addon/epubreader/):\r\nRead E-Books in epub format.\r\n1. [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/):\r\nJavaScript debugger.\r\n1. [FireFTP](https://addons.mozilla.org/en-US/firefox/addon/fireftp/):\r\nFTP client.\r\n1. [Firesizer](https://addons.mozilla.org/en-us/firefox/addon/firesizer/):\r\nSet window to specific size.\r\n1. [Font Finder](https://addons.mozilla.org/en-US/firefox/addon/font-finder/):\r\nAnalyze the font information of any element on a page.\r\n1. [Foxclocks](https://addons.mozilla.org/en-US/firefox/addon/foxclocks/):\r\nTimes around the world in Status Bar.\r\n1. [iReader](https://addons.mozilla.org/en-US/firefox/addon/ireader/):\r\nMakes web pages more readable.\r\n1. [Noia 4](https://addons.mozilla.org/en-US/firefox/addon/noia-4/):\r\nTheme.\r\n1. [Nuke anything](https://addons.mozilla.org/en-US/firefox/addon/nuke-anything-enhanced/):\r\nHide selected objects on web page. Can be useful prior to printing.\r\n1. [Selenium IDE](http://seleniumhq.org/download/):\r\nRecord-and-playback of interactions with the browser.\r\n1. [Speed Dial](https://addons.mozilla.org/en-US/firefox/addon/speed-dial/developers):\r\nCustomize new tabs.\r\n1. [sqlite-manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/):\r\nManage all your [SQLite](http://www.sqlite.org/) databases.\r\n1. [TiddlyFox](https://addons.mozilla.org/en-US/firefox/addon/tiddlyfox/):\r\nAllow saving of TiddlyWikis.\r\n1. [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/):\r\nMany Web Developer tools.\r\n\r\n## Configuration\r\n\r\n* Open links in same Tab/Window: `about:config` > `browser.link.open_newwindow` > Change value to 1.\r\n\r\n## AwesomeBar Wildcards\r\n\r\nUse one of these wildcards (delimited by a space) in the Firefox AwesomeBar to filter the results.\r\n\r\nEnter the filter `browser.urlbar` in about:config to see them all.\r\n\r\n1. **#** Returns results that match the text in the title.\r\n2. **@** Returns results that match the text in the URL.\r\n3. ***** Returns only results that are from the bookmarks.\r\n4. **^** Returns only results that are from the browser's history.\r\n5. **+** Returns only results that have been tagged.", 
+        "content": "# Firefox\r\n\r\n## Add-ons\r\n\r\n1. [Adblock Plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/): \r\nPrevents downloading of advertisements on web pages. Subscribe to EasyList.\r\n1. [Add to Search Bar](https://addons.mozilla.org/en-US/firefox/addon/add-to-search-bar/):\r\nMake any pages' search functionality available in the Search Bar.\r\n1. [ColorZilla](http://www.colorzilla.com/firefox/):\r\nAdvanced Eyedropper, Color Picker, Palette Viewer, etc.\r\n1. [EpubReader](https://addons.mozilla.org/en-US/firefox/addon/epubreader/):\r\nRead E-Books in epub format.\r\n1. [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/):\r\nJavaScript debugger.\r\n1. [FireFTP](https://addons.mozilla.org/en-US/firefox/addon/fireftp/):\r\nFTP client.\r\n1. [Firesizer](https://addons.mozilla.org/en-us/firefox/addon/firesizer/):\r\nSet window to specific size.\r\n1. [Font Finder](https://addons.mozilla.org/en-US/firefox/addon/font-finder/):\r\nAnalyze the font information of any element on a page.\r\n1. [Foxclocks](https://addons.mozilla.org/en-US/firefox/addon/foxclocks/):\r\nTimes around the world in Status Bar.\r\n1. [iReader](https://addons.mozilla.org/en-US/firefox/addon/ireader/):\r\nMakes web pages more readable.\r\n1. [Noia 4](https://addons.mozilla.org/en-US/firefox/addon/noia-4/):\r\nTheme.\r\n1. [Nuke anything](https://addons.mozilla.org/en-US/firefox/addon/nuke-anything-enhanced/):\r\nHide selected objects on web page. Can be useful prior to printing.\r\n1. [Selenium IDE](http://seleniumhq.org/download/):\r\nRecord-and-playback of interactions with the browser.\r\n1. [Speed Dial](https://addons.mozilla.org/en-US/firefox/addon/speed-dial/developers):\r\nCustomize new tabs.\r\n1. [sqlite-manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/):\r\nManage all your [SQLite](http://www.sqlite.org/) databases.\r\n1. [TiddlyFox](https://addons.mozilla.org/en-US/firefox/addon/tiddlyfox/):\r\nAllow saving of TiddlyWikis.\r\n1. [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/):\r\nMany Web Developer tools.\r\n\r\n## Configuration\r\n\r\n* Open links in same Tab/Window: `about:config` > `browser.link.open_newwindow` > Change value to 1.\r\n\r\n## AwesomeBar Wildcards\r\n\r\nUse one of these wildcards (delimited by a space) in the Firefox AwesomeBar to filter the results.\r\n\r\nEnter the filter `browser.urlbar` in about:config to see them all.\r\n\r\n1. **#** Returns results that match the text in the title.\r\n2. **@** Returns results that match the text in the URL.\r\n3. ***** Returns only results that are from the bookmarks.\r\n4. **^** Returns only results that are from the browser's history.\r\n5. **+** Returns only results that have been tagged.\r\n\r\n## Clear Cache\r\n\r\n1. At the top of the Firefox window, click the History menu, and select Clear Recent History....\r\n1. In the Time range to clear field choose everything.\r\n1. Press the Details button if a list of tickboxes is not visible.\r\n1. Tick all the boxes.\r\n1. Press Clear Now button", 
         "published": null, 
         "slug": "firefox"
     }
@@ -351,10 +351,10 @@
     "pk": 34, 
     "model": "dmcm.page", 
     "fields": {
-        "updated": "2013-03-25T10:43:52Z", 
+        "updated": "2013-06-06T08:28:07Z", 
         "parent": 5, 
         "title": "Google Chrome", 
-        "content": "# Google Chrome\r\n\r\nDownload from [www.google.com/chrome](http://www.google.com/chrome).\r\n\r\n## Extensions\r\n\r\n1. [Adblock Plus](https://chrome.google.com/extensions/detail/cfhdojbkjhnklbpkdaibdccddilifddb): \r\nPrevents downloading of advertisements on web pages.\r\n2. [Clickable Links](https://chrome.google.com/extensions/detail/mblbciejcodpealifnhfjbdlkedplodp): \r\nTurns unclickable urls & email addresses into clickable ones.\r\n3. [Docs PDF/PowerPoint Viewer](https://chrome.google.com/extensions/detail/nnbmlagghjjcbdhgmkedmbmedengocbn): \r\nAutomatically previews pdfs, powerpoint presentations, and other documents in Google Docs Viewer.\r\n4. [Firebug Lite](https://chrome.google.com/extensions/search?itemlang=&hl=en-gb&q=firebug): \r\nJavascript Debugger.\r\n1. [Chromey Calculator](https://chrome.google.com/extensions/detail/acgimceffoceigocablmjdpebeodphgc): \r\nScrolling calculator for Chrome. Results are generated using Google and Wolfram|Alpha. ([CC Enhancer](https://chrome.google.com/extensions/detail/hfgnndipkjcpghbagmmcemdbjfclkcla))\r\n1. [No More Windows](https://chrome.google.com/webstore/detail/no-more-windows/ppljpblaiplljblignkngnkpnhdilkmd):\r\nStop links opening new tabs or windows.\r\n1. [Search Results Blacklist](https://chrome.google.com/webstore/detail/nolijncfnkgaikbjbdaogikpmpbdcdef):\r\nPersonal Blocklist from Google.\r\n1. [Speed Dial](https://chrome.google.com/webstore/detail/speed-dial/dgpdioedihjhncjafcpgbbjdpbbkikmi):\r\nCustomize new tabs.\r\n\r\nNeed to select Settings > Extensions > Developer Mode to allow synchronising of Extensions and Themes.", 
+        "content": "# Google Chrome\r\n\r\nDownload from [www.google.com/chrome](http://www.google.com/chrome).\r\n\r\n## Extensions\r\n\r\n1. [Adblock Plus](https://chrome.google.com/extensions/detail/cfhdojbkjhnklbpkdaibdccddilifddb): \r\nPrevents downloading of advertisements on web pages.\r\n2. [Clickable Links](https://chrome.google.com/extensions/detail/mblbciejcodpealifnhfjbdlkedplodp): \r\nTurns unclickable urls & email addresses into clickable ones.\r\n3. [Docs PDF/PowerPoint Viewer](https://chrome.google.com/extensions/detail/nnbmlagghjjcbdhgmkedmbmedengocbn): \r\nAutomatically previews pdfs, powerpoint presentations, and other documents in Google Docs Viewer.\r\n4. [Firebug Lite](https://chrome.google.com/extensions/search?itemlang=&hl=en-gb&q=firebug): \r\nJavascript Debugger.\r\n1. [Chromey Calculator](https://chrome.google.com/extensions/detail/acgimceffoceigocablmjdpebeodphgc): \r\nScrolling calculator for Chrome. Results are generated using Google and Wolfram|Alpha. ([CC Enhancer](https://chrome.google.com/extensions/detail/hfgnndipkjcpghbagmmcemdbjfclkcla))\r\n1. [No More Windows](https://chrome.google.com/webstore/detail/no-more-windows/ppljpblaiplljblignkngnkpnhdilkmd): \r\nStop links opening new tabs or windows.\r\n1. [Readability Redux](https://chrome.google.com/webstore/detail/readability-redux/jggheggpdocamneaacmfoipeehedigia):\r\nMakes web pages more readable by eliminating boilerplate.\r\n1. [Search Results Blacklist](https://chrome.google.com/webstore/detail/nolijncfnkgaikbjbdaogikpmpbdcdef):\r\nPersonal Blocklist from Google.\r\n1. [Speed Dial](https://chrome.google.com/webstore/detail/speed-dial/dgpdioedihjhncjafcpgbbjdpbbkikmi):\r\nCustomize new tabs.\r\n\r\nNeed to select Settings > Extensions > Developer Mode to allow synchronising of Extensions and Themes.\r\n\r\n## Search\r\n\r\nDefault to getting Last Year's results:\r\n\r\n1. Open Chrome's Settings Manage Search Engines\r\n1. Add a new search engine under the list of ''Other search engines'' with the following values.\r\n    * Name: *Google (recent)*\r\n    * Keyword: *recent*\r\n    * URL: `http://www.google.com/search?q=%s&tbs=qdr:y&tbo=1`\r\n1. Change this to be your default search\r\nTo use `encrypted.google.com` the URL is `https://encrypted.google.com/search?q=%s`.\r\n\r\n## Clear Cache\r\n\r\n1. Click the Chrome menu  on the browser toolbar.\r\n1. Select Tools.\r\n1. Select Clear browsing data.\r\n1. In the dialogue that appears, select the tickboxes for the types of information that you want to remove.\r\n1. Use the menu at the top to select the amount of data that you want to delete. Select beginning of time to delete everything.\r\n1. Click Clear browsing data.", 
         "published": null, 
         "slug": "google-chrome"
     }
@@ -903,10 +903,10 @@
     "pk": 119, 
     "model": "dmcm.page", 
     "fields": {
-        "updated": "2012-05-12T09:16:45Z", 
+        "updated": "2013-06-01T13:54:47Z", 
         "parent": 39, 
         "title": "Django", 
-        "content": "# Django\r\n\r\nContents:\r\n[Commands](#commands),\r\n[Admin](#admin),\r\n[Models](#models),\r\n[Tips](#tips).\r\n\r\nDjango is a high-level Python web framework. It has very good documentation at \r\n[www.djangoproject.com](https://www.djangoproject.com/).\r\n\r\n## Commands\r\n\r\n* `python manage.py runserver` Run Django development server.\r\n* `python manage.py test [app][.TestCase]` Run unit tests.\r\n* `python manage.py syncdb --noinput` Build database.\r\n* `python manage.py shell` Start interactive Python shell with Django environment settings.\r\n\r\n### Reset Password using shell\r\n\r\n1. `python manage.py shell`\r\n1. `from django.contrib.auth.models import User`\r\n1. `u=User.objects.get(username__exact='[userid]')`\r\n1. `u.set_password('[new_password]');`\r\n1. `u.save()`\r\n\r\n## Admin\r\n\r\n* Site-wide disable deletion on lists: `admin.site.disable_action('delete_selected')` \r\nin `admin.py`.\r\n* Inline Admin\r\n    * Remove empty rows: By default Django displays three empty rows in each inline \r\n    list. To prevent this add `extra = 0` to the Inline admin declaration.\r\n    * Remove Delete option: `can_delete = False`\r\n    * Remove Add button: `max_num = 0`\r\n\r\n## Models\r\n\r\n### Meta\r\n\r\n* Ordering of objects: `ordering = ['commodity__name', 'price_region__name']` \r\nWill be used when listing objects on Admin pages.\r\n\r\n### Generic ForeignKey\r\n\r\n    from django.db import models\r\n    from django.contrib.contenttypes.models import ContentType\r\n    from django.contrib.contenttypes import generic\r\n\r\n    class TaggedItem(models.Model):\r\n        tag = models.SlugField()\r\n        content_type = models.ForeignKey(ContentType)\r\n        object_id = models.PositiveIntegerField()\r\n        content_object = generic.GenericForeignKey('content_type', 'object_id')\r\n\r\n        def __unicode__(self):\r\n            return self.tag\r\n\r\n## Tips\r\n\r\n* Return data (not template) from view: `return HttpResponse(data)`\r\n* Show raw SQL of queryset: `print qs.query`\r\n\r\n### Fomfield For ForeignKey\r\n\r\nThe `formfield_for_foreignkey` method on a ModelAdmin allows you to override \r\nthe default formfield for a foreign key field. For example, to return a subset of \r\nobjects for this foreign key field based on the user:\r\n\r\n    class MyModelAdmin(admin.ModelAdmin):\r\n        def formfield_for_foreignkey(self, db_field, request, **kwargs):\r\n            if db_field.name == \"car\":\r\n                kwargs[\"queryset\"] = Car.objects.filter(owner=request.user)\r\n            return super(MyModelAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)\r\n\r\n### Natural Keys\r\n\r\nA natural key is a tuple of values that can be used to uniquely identify an object instance without using the primary key value. They can be used to serialise data into fixtures to avoid the problem of needing foreign-keyed data to always have the same primary key.\r\n\r\nAdd a `get_by_natural_key` function to the model's manager which gets and returns the unique row which matches its parameters. Add a `natural_key` function to the model to return the tuple of data which uniquely identifies a model instance.\r\n\r\nSerialise the data using `dumpdata` by adding a `--natural` parameter. `python manage.py dumpdata --natural --indent 4 cm > [app]/fixtures/initial_data.json`.", 
+        "content": "# Django\r\n\r\nContents:\r\n[Commands](#commands),\r\n[Admin](#admin),\r\n[Models](#models),\r\n[Tips](#tips).\r\n\r\nDjango is a high-level Python web framework. It has very good documentation at \r\n[www.djangoproject.com](https://www.djangoproject.com/).\r\n\r\n## Commands\r\n\r\n* `python manage.py runserver` Run Django development server.\r\n* `python manage.py test [app][.TestCase]` Run unit tests.\r\n* `python manage.py syncdb --noinput` Build database.\r\n* `python manage.py shell` Start interactive Python shell with Django environment settings. Uses iPython if it is available.\r\n* `python manage.py dumpdata --indent 2 --format xml controller auth.user` Create fixture.\r\n* `python manage.py help` List all available manage commands.\r\n* `python manage.py startapp appname` Create a new application.\r\n\r\n### Reset Password using shell\r\n\r\n1. `python manage.py shell`\r\n1. `from django.contrib.auth.models import User`\r\n1. `u=User.objects.get(username__exact='[userid]')`\r\n1. `u.set_password('[new_password]');`\r\n1. `u.save()`\r\n\r\n## Admin\r\n\r\n* Site-wide disable deletion on lists: `admin.site.disable_action('delete_selected')` \r\nin `admin.py`.\r\n* Inline Admin\r\n    * Remove empty rows: By default Django displays three empty rows in each inline \r\n    list. To prevent this add `extra = 0` to the Inline admin declaration.\r\n    * Remove Delete option: `can_delete = False`\r\n    * Remove Add button: `max_num = 0`\r\n\r\n## Models\r\n\r\n* `get_or_create` looks for an existing entry where all the data matches. If one of these is a numeric then it must be rounded to match the database contents for this processing to work. Also timestamps of rows created in unit tests may differ by 1 second - can cause intermittent problems of attempting to create duplicates.\r\n\r\n### Meta\r\n\r\n* The `app_label` model Meta data item must always match the name of the application that the model is declared under. Otherwise the `syncdb` does not pick up the model.\r\n* Ordering of objects: `ordering = ['commodity__name', 'price_region__name']` \r\nWill be used when listing objects on Admin pages.\r\n\r\n### Generic ForeignKey\r\n\r\n    from django.db import models\r\n    from django.contrib.contenttypes.models import ContentType\r\n    from django.contrib.contenttypes import generic\r\n\r\n    class TaggedItem(models.Model):\r\n        tag = models.SlugField()\r\n        content_type = models.ForeignKey(ContentType)\r\n        object_id = models.PositiveIntegerField()\r\n        content_object = generic.GenericForeignKey('content_type', 'object_id')\r\n\r\n        def __unicode__(self):\r\n            return self.tag\r\n\r\n## Tips\r\n\r\n* Return data (not template) from view: `return HttpResponse(data)`\r\n* Show raw SQL of queryset: `print qs.query`\r\n\r\n### Fomfield For ForeignKey\r\n\r\nThe `formfield_for_foreignkey` method on a ModelAdmin allows you to override \r\nthe default formfield for a foreign key field. For example, to return a subset of \r\nobjects for this foreign key field based on the user:\r\n\r\n    class MyModelAdmin(admin.ModelAdmin):\r\n        def formfield_for_foreignkey(self, db_field, request, **kwargs):\r\n            if db_field.name == \"car\":\r\n                kwargs[\"queryset\"] = Car.objects.filter(owner=request.user)\r\n            return super(MyModelAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)\r\n\r\n### Natural Keys\r\n\r\nA natural key is a tuple of values that can be used to uniquely identify an object instance without using the primary key value. They can be used to serialise data into fixtures to avoid the problem of needing foreign-keyed data to always have the same primary key.\r\n\r\nAdd a `get_by_natural_key` function to the model's manager which gets and returns the unique row which matches its parameters. Add a `natural_key` function to the model to return the tuple of data which uniquely identifies a model instance.\r\n\r\nSerialise the data using `dumpdata` by adding a `--natural` parameter. `python manage.py dumpdata --natural --indent 4 cm > [app]/fixtures/initial_data.json`.", 
         "published": null, 
         "slug": "django"
     }
@@ -1030,7 +1030,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by quill18", 
-        "last_polled_time": "2013-05-12T10:17:24Z", 
+        "last_polled_time": "2013-06-14T18:17:18Z", 
         "xml_url": "http://www.youtube.com/rss/user/quill18/videos.rss", 
         "link": "http://www.youtube.com/channel/UCbx1TZgxfIauUZyPuBzEwZg/videos", 
         "group": 2
@@ -1040,10 +1040,10 @@
     "pk": 40, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-12T05:00:00Z", 
+        "published_time": "2013-06-14T05:00:00Z", 
         "description": "The Official Dilbert Daily Comic Strip RSS Feed", 
         "title": "Dilbert Daily Strip", 
-        "last_polled_time": "2013-05-12T05:17:05Z", 
+        "last_polled_time": "2013-06-14T05:17:03Z", 
         "xml_url": "http://feedproxy.google.com/DilbertDailyStrip", 
         "link": "http://dilbert.com/", 
         "group": 2
@@ -1053,10 +1053,10 @@
     "pk": 41, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-09T06:00:01Z", 
+        "published_time": "2013-06-10T06:00:01Z", 
         "description": "Regular thoughts and updates from Dilbert.com", 
         "title": "Dilbert.com Blog", 
-        "last_polled_time": "2013-05-09T14:17:07Z", 
+        "last_polled_time": "2013-06-10T15:17:04Z", 
         "xml_url": "http://feedproxy.google.com/typepad/ihdT", 
         "link": "http://dilbert.com/blog", 
         "group": 2
@@ -1069,7 +1069,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Binge Thinking History Podcast", 
-        "last_polled_time": "2013-05-12T10:17:04Z", 
+        "last_polled_time": "2013-06-14T18:17:02Z", 
         "xml_url": "http://bingethinkinghistory.blogspot.com/feeds/posts/default", 
         "link": "http://bingethinkinghistory.blogspot.com/", 
         "group": 1
@@ -1095,7 +1095,7 @@
         "published_time": null, 
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts", 
         "title": "The Ancient World", 
-        "last_polled_time": "2013-05-12T10:17:13Z", 
+        "last_polled_time": "2013-06-14T18:17:10Z", 
         "xml_url": "http://ancientworldpodcast.blogspot.com/feeds/posts/default", 
         "link": "http://ancientworldpodcast.blogspot.com/", 
         "group": 1
@@ -1105,10 +1105,10 @@
     "pk": 48, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-25T21:00:12Z", 
+        "published_time": "2013-06-10T20:00:14Z", 
         "description": "Analysis makes sense of the ideas that change the world. What made Islam political, whether the Government can make us go green, why we think the market in human organs is repugnant are just some of the subjects the series tackles. With thought-provoking and expert presenters, Analysis aims to make the world of policy and ideas both interesting and surprising. There are 26 episodes a year, in three series. Podcasts are available for a week after transmission while the programme is on air.", 
         "title": "Analysis", 
-        "last_polled_time": "2013-03-25T21:17:04Z", 
+        "last_polled_time": "2013-06-10T20:17:02Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006r4vz", 
         "group": 4
@@ -1118,10 +1118,10 @@
     "pk": 52, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-06T19:00:10Z", 
+        "published_time": "2013-06-10T19:00:13Z", 
         "description": "An in-depth look at the most significant ideas, discoveries and trends in science, from the smallest microbe to the furthest corner of space. Podcast weekly on Mondays.", 
         "title": "Discovery", 
-        "last_polled_time": "2013-05-06T19:17:07Z", 
+        "last_polled_time": "2013-06-10T19:17:04Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/p002w557", 
         "group": 4
@@ -1131,10 +1131,10 @@
     "pk": 53, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-09T07:30:12Z", 
+        "published_time": "2013-06-13T07:30:12Z", 
         "description": "An indepth look at stories and issues from around the world. This podcast offers you the chance to access landmark series from our archive.", 
         "title": "Documentaries", 
-        "last_polled_time": "2013-05-09T08:17:07Z", 
+        "last_polled_time": "2013-06-13T08:17:05Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/docarchive/rss.xml", 
         "link": "http://www.bbc.co.uk/podcasts/series/docarchive", 
         "group": 4
@@ -1144,10 +1144,10 @@
     "pk": 54, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-26T21:00:17Z", 
-        "description": "A podcast offering Radio 4's award winning, flagship investigative series File on 4.", 
+        "published_time": "2013-06-11T20:00:22Z", 
+        "description": "A podcast offering Radio 4&#39;s award winning, flagship investigative series File on 4.", 
         "title": "File on 4", 
-        "last_polled_time": "2013-03-26T21:17:08Z", 
+        "last_polled_time": "2013-06-11T20:17:05Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006th08", 
         "group": 4
@@ -1157,10 +1157,10 @@
     "pk": 55, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-10T18:00:12Z", 
+        "published_time": "2013-06-14T18:00:07Z", 
         "description": "Bringing you a satirical take on the week&#39;s news with The News Quiz and The Now Show from BBC Radio 4. Enjoy a satirical take on the week\u2019s news with the cream of UK comedy talent.", 
         "title": "Friday Night Comedy from BBC Radio 4", 
-        "last_polled_time": "2013-05-10T18:17:08Z", 
+        "last_polled_time": "2013-06-14T18:17:05Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/programmes/genres/comedy/satire/", 
         "group": 4
@@ -1170,10 +1170,10 @@
     "pk": 57, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-10T19:00:14Z", 
+        "published_time": "2013-06-13T19:00:13Z", 
         "description": "Interviews with leading novelists, musicians, film directors, artists and more, from Radio 4&#39;s flagship arts show, presented by Mark Lawson, Kirsty Lang and John Wilson.  Front Row is broadcast on BBC Radio 4 each weekday evening at 7.15 - 7.45pm.  New editions will be available each night following the live broadcast.", 
         "title": "Front Row Daily", 
-        "last_polled_time": "2013-05-10T19:17:17Z", 
+        "last_polled_time": "2013-06-13T19:17:06Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/frontrow/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/arts/frontrow", 
         "group": 4
@@ -1183,10 +1183,10 @@
     "pk": 58, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-07T16:00:14Z", 
+        "published_time": "2013-06-05T14:30:43Z", 
         "description": "Biography series exploring the greatest people who ever lived. Matthew Parris interviews an eminent guest and an expert to reveal the truth behind their history heroes.", 
         "title": "Great Lives", 
-        "last_polled_time": "2013-05-07T16:17:12Z", 
+        "last_polled_time": "2013-06-05T15:17:09Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/greatlives/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/greatlives", 
         "group": 4
@@ -1196,10 +1196,10 @@
     "pk": 59, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-09T10:00:16Z", 
+        "published_time": "2013-06-13T10:30:12Z", 
         "description": "Melvyn Bragg and his guests discuss the history of ideas - including topics  drawn from philosophy, science, history, religion and culture.", 
         "title": "In Our Time With Melvyn Bragg", 
-        "last_polled_time": "2013-05-09T10:17:09Z", 
+        "last_polled_time": "2013-06-13T11:17:06Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qykl", 
         "group": 4
@@ -1209,10 +1209,10 @@
     "pk": 60, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-04-11T15:30:06Z", 
+        "published_time": "2013-06-11T16:31:44Z", 
         "description": "With wit, authority and insight, Joshua Rozenberg presents radio&#39;s celebrated and award-winning legal affairs programme. From police powers to how judges sentence offenders and from the problems of ensuring access to justice to the quirks of international law, Joshua each week presents a lively, entertaining and engaging perspective on the issues that matter.  Law in Action is broadcast on Tuesday afternoons at 4pm and Thursday evenings at 8pm on BBC Radio 4.", 
         "title": "Law in Action", 
-        "last_polled_time": "2013-04-11T16:17:12Z", 
+        "last_polled_time": "2013-06-11T17:17:06Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/law/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006tgy1", 
         "group": 4
@@ -1222,10 +1222,10 @@
     "pk": 61, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-09T16:55:49Z", 
+        "published_time": "2013-06-13T19:10:31Z", 
         "description": "Weekly science conversation, on everything from archaeology to zoology, from abacus to the antipodean rodent zyzomys, by way of meteorites. Presented by Quentin Cooper, and airing every Thursday, 4:30 pm.", 
         "title": "Material World", 
-        "last_polled_time": "2013-05-09T17:17:10Z", 
+        "last_polled_time": "2013-06-13T19:17:07Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/material/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/science/thematerialworld.shtml", 
         "group": 4
@@ -1235,10 +1235,10 @@
     "pk": 62, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-08T16:30:13Z", 
+        "published_time": "2013-06-12T16:19:12Z", 
         "description": "BBC Radio 4&#39;s topical programme The Media Show, presented by journalist and former TV executive Steve Hewlett, featuring the latest stories and opinion from the fast-changing world of media in all its forms - print, television, radio, online and telecommunications.", 
         "title": "Media Show", 
-        "last_polled_time": "2013-05-08T17:17:12Z", 
+        "last_polled_time": "2013-06-12T17:17:07Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/factual/mediashow/", 
         "group": 4
@@ -1248,10 +1248,10 @@
     "pk": 65, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-11T11:30:10Z", 
+        "published_time": "2013-06-14T14:00:11Z", 
         "description": "All that matters about money with Paul Lewis. News of savings and investments, credit cards and loans, pensions, banking, benefits and giving to charity.  The UK\u2019s premier weekly round-up of personal finance from the BBC.  Programme broadcast each Saturday at 1204 BST and episodes added each Saturday afternoon.  You will also receive podcasts of Money Box Live \u2013 the interactive programme answering questions about personal finance issues, hosted by either Paul Lewis or Vincent Duggleby.  Broadcast each Wednesday at 1502 BST and with episodes added every Wednesday afternoon. For more information go to www.bbc.co.uk/moneybox", 
         "title": "Money Box", 
-        "last_polled_time": "2013-05-11T12:17:10Z", 
+        "last_polled_time": "2013-06-14T14:17:07Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moneybox/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qjnv", 
         "group": 4
@@ -1261,10 +1261,10 @@
     "pk": 66, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-10T16:00:24Z", 
+        "published_time": "2013-06-10T11:00:19Z", 
         "description": "Tim Harford investigates numbers in the news. Numbers are used in every area of public debate. But are they always reliable? Tim and the More or Less team try to make sense of the statistics which surround us. A half-hour programme broadcast at 1600 on Friday afternoons and repeated at 2000 on Sundays on Radio 4. BBC World Service broadcasts a short edition over the weekend.", 
         "title": "More or Less: Behind the Stats", 
-        "last_polled_time": "2013-05-10T16:17:10Z", 
+        "last_polled_time": "2013-06-10T11:17:08Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qshd", 
         "group": 4
@@ -1274,10 +1274,10 @@
     "pk": 67, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-11T00:00:13Z", 
+        "published_time": "2013-06-08T00:00:14Z", 
         "description": "Insights into the business world with Peter Day - featuring content from his Radio 4 In Business programme, and also Global Business from the BBC World Service.", 
         "title": "Peter Day&#39;s World of Business", 
-        "last_polled_time": "2013-05-11T00:17:12Z", 
+        "last_polled_time": "2013-06-08T00:17:10Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio/worldbiz/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/inbusiness/inbusiness.shtml", 
         "group": 4
@@ -1300,10 +1300,10 @@
     "pk": 70, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-03-28T21:00:19Z", 
+        "published_time": "2013-06-13T20:00:18Z", 
         "description": "Insight into business from the people at the top. Evan Davis meets influential business leaders for a round table conversation about the issues that matter to their companies and their customers. The BBC produces two radio versions of this programme - one for the UK audience that can be heard on BBC Radio 4 on Thursday evenings at 20:30 GMT, and one for the international audience that can be heard on BBC World Service on Fridays at 22:06 GMT.", 
         "title": "The Bottom Line with Evan Davis", 
-        "last_polled_time": "2013-03-28T21:17:18Z", 
+        "last_polled_time": "2013-06-13T20:17:13Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/bottomline", 
         "group": 4
@@ -1313,10 +1313,10 @@
     "pk": 71, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-09T15:30:11Z", 
+        "published_time": "2013-06-13T16:43:52Z", 
         "description": "Interviews and analysis from the world of cinema. Francine Stock talks to directors, writers and critics about the latest film releases, classics on DVD and movies on television.", 
         "title": "The Film Programme", 
-        "last_polled_time": "2013-05-09T16:17:14Z", 
+        "last_polled_time": "2013-06-13T17:17:15Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/filmprogramme", 
         "group": 4
@@ -1326,10 +1326,10 @@
     "pk": 72, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2012-05-06T19:18:38Z", 
+        "published_time": "2013-05-30T15:18:57Z", 
         "description": "A weekly podcast tracing the rise, decline and fall of the Roman Empire. Now complete! Visit us at http://thehistoryofrome.typepad.com", 
         "title": "The History of Rome", 
-        "last_polled_time": "2013-03-17T18:55:10Z", 
+        "last_polled_time": "2013-05-30T16:17:12Z", 
         "xml_url": "http://feeds.feedburner.com/TheHistoryOfRome", 
         "link": "http://thehistoryofrome.typepad.com/the_history_of_rome/", 
         "group": 1
@@ -1342,7 +1342,7 @@
         "published_time": null, 
         "description": "Weekly news and opinions from the UK&#39;s biggest tech monthly", 
         "title": "The PC Pro Podcast", 
-        "last_polled_time": "2013-05-12T10:17:18Z", 
+        "last_polled_time": "2013-06-14T18:17:16Z", 
         "xml_url": "http://podcast.pcpro.co.uk/?feed=podcast", 
         "link": "http://podcast.pcpro.co.uk", 
         "group": 5
@@ -1352,10 +1352,10 @@
     "pk": 74, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-08T16:17:58Z", 
+        "published_time": "2013-06-12T16:04:10Z", 
         "description": "Laurie Taylor explores the latest research into how society works and discusses current ideas on how we live today.", 
         "title": "Thinking Allowed", 
-        "last_polled_time": "2013-05-08T17:17:23Z", 
+        "last_polled_time": "2013-06-12T16:17:16Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/ta/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/factual/thinkingallowed/", 
         "group": 4
@@ -1365,10 +1365,10 @@
     "pk": 75, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-11T10:30:09Z", 
+        "published_time": "2013-06-10T10:30:10Z", 
         "description": "Top political commentators reflect on the week&#39;s political events in discussion with MPs, Peers and others.", 
         "title": "Weekly Political Review", 
-        "last_polled_time": "2013-05-11T11:17:26Z", 
+        "last_polled_time": "2013-06-10T11:17:19Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/weekinwest.shtml", 
         "group": 4
@@ -1378,10 +1378,10 @@
     "pk": 77, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-12T10:14:23Z", 
+        "published_time": "2013-06-14T18:15:27Z", 
         "description": "", 
         "title": "Linuxtoday.com", 
-        "last_polled_time": "2013-05-12T10:17:08Z", 
+        "last_polled_time": "2013-06-14T18:17:06Z", 
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux", 
         "link": "http://www.linuxtoday.com/", 
         "group": 5
@@ -1394,7 +1394,7 @@
         "published_time": null, 
         "description": "A blog covering security and security technology.", 
         "title": "Schneier on Security", 
-        "last_polled_time": "2013-05-12T10:17:12Z", 
+        "last_polled_time": "2013-06-14T18:17:09Z", 
         "xml_url": "http://www.schneier.com/blog/index.xml", 
         "link": "http://www.schneier.com/blog/", 
         "group": 5
@@ -1407,7 +1407,7 @@
         "published_time": null, 
         "description": "Inkscape Help, Tutorials and Documentation Resources", 
         "title": "inkscape tutorials blog", 
-        "last_polled_time": "2013-05-12T10:17:08Z", 
+        "last_polled_time": "2013-06-14T18:17:06Z", 
         "xml_url": "http://inkscapetutorials.wordpress.com/feed/", 
         "link": "http://inkscapetutorials.wordpress.com", 
         "group": 5
@@ -1420,7 +1420,7 @@
         "published_time": null, 
         "description": "Biting the hand that feeds IT", 
         "title": "The Register", 
-        "last_polled_time": "2013-05-12T10:17:19Z", 
+        "last_polled_time": "2013-06-14T18:17:16Z", 
         "xml_url": "http://www.theregister.co.uk/headlines.rss", 
         "link": "http://www.theregister.co.uk/", 
         "group": 5
@@ -1433,7 +1433,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by Paradoxplaza", 
-        "last_polled_time": "2013-05-12T10:17:23Z", 
+        "last_polled_time": "2013-06-14T18:17:18Z", 
         "xml_url": "http://www.youtube.com/rss/user/Paradoxplaza/videos.rss", 
         "link": "http://www.youtube.com/channel/UC1JOnWZrVWKzX3UMdpnvuMg/videos", 
         "group": 2
@@ -1443,10 +1443,10 @@
     "pk": 90, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-12T05:51:02Z", 
+        "published_time": "2013-06-14T18:35:30Z", 
         "description": "Top stories of the day on TIME.com", 
         "title": "TIME.com: Top Stories", 
-        "last_polled_time": "2013-05-12T05:17:19Z", 
+        "last_polled_time": "2013-06-14T18:17:16Z", 
         "xml_url": "http://feeds2.feedburner.com/time/topstories", 
         "link": "http://www.time.com?xid=rss-topstories", 
         "group": 3
@@ -1459,7 +1459,7 @@
         "published_time": null, 
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453", 
         "title": "The History of Byzantium", 
-        "last_polled_time": "2013-05-12T10:17:14Z", 
+        "last_polled_time": "2013-06-14T18:17:12Z", 
         "xml_url": "feed://www.thetvcritic.org/historypodcasts/feed.xml", 
         "link": "http://www.thetvcritic.org/historypodcasts/", 
         "group": 1
@@ -1469,25 +1469,12 @@
     "pk": 93, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-03T00:30:23Z", 
+        "published_time": "2013-05-15T21:26:56Z", 
         "description": "It&#39;s the history of our world from the Big Bang to the Modern Age! Well...eventually at least.", 
         "title": "The Podcast History Of Our World", 
-        "last_polled_time": "2013-05-03T01:17:20Z", 
+        "last_polled_time": "2013-05-15T22:17:20Z", 
         "xml_url": "http://podcasthistoryofourworld.libsyn.com/rss", 
         "link": "http://podcasthistoryofourworld.blogspot.com/", 
-        "group": 1
-    }
-},
-{
-    "pk": 98, 
-    "model": "feedreader.feed", 
-    "fields": {
-        "published_time": null, 
-        "description": "The &#39;Twilight Histories&#39; is an alternate history podcast by Jordan Harbour. Each episode, you will journey back in time to a world that is not your own. From the frozen wastes of the Ice Age to the dusty sands of Alexander&#39;s camp, from a London street during the Blitz to the Roman silver mines of Spain... you will encounter the people, the sights and the smells of a strange, exotic and sometimes chilling world.  So enter your time machine... enter the Twilight Histories.", 
-        "title": "Twilight Histories, Alternate History Podcast", 
-        "last_polled_time": "2013-05-12T10:17:22Z", 
-        "xml_url": "http://www.twilighthistories.com/feed/", 
-        "link": "http://www.twilighthistories.com", 
         "group": 1
     }
 },
@@ -1508,10 +1495,10 @@
     "pk": 100, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-05-10T20:00:10Z", 
+        "published_time": "2013-06-07T20:00:10Z", 
         "description": "Weekly reflections on topical issues from a range of contributors including historian Lisa Jardine, novelist Sarah Dunant and writer Alain de Botton.", 
         "title": "A Point of View", 
-        "last_polled_time": "2013-05-10T20:17:03Z", 
+        "last_polled_time": "2013-06-07T20:17:05Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qng8", 
         "group": 4
@@ -1524,10 +1511,62 @@
         "published_time": null, 
         "description": "Recent Blog Entries.", 
         "title": "ahernp.com blog", 
-        "last_polled_time": "2013-05-12T10:17:03Z", 
+        "last_polled_time": "2013-06-14T18:17:02Z", 
         "xml_url": "http://ahernp.com/blog/feed", 
         "link": "http://ahernp.com/blog/", 
         "group": null
+    }
+},
+{
+    "pk": 103, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": null, 
+        "description": "", 
+        "title": "Uploads by The Game Station", 
+        "last_polled_time": "2013-06-14T18:17:19Z", 
+        "xml_url": "http://www.youtube.com/rss/user/TheGameStation/videos.rss", 
+        "link": "http://www.youtube.com/channel/UCCBuCjSIg4gFFUSoqlLQViQ/videos", 
+        "group": 2
+    }
+},
+{
+    "pk": 104, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": null, 
+        "description": "", 
+        "title": "Uploads by AngryJoeShow", 
+        "last_polled_time": "2013-06-14T18:17:17Z", 
+        "xml_url": "http://www.youtube.com/rss/user/AngryJoeShow/videos.rss", 
+        "link": "http://www.youtube.com/channel/UCsgv2QHkT2ljEixyulzOnUQ/videos", 
+        "group": 2
+    }
+},
+{
+    "pk": 105, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": "2013-05-26T00:55:32Z", 
+        "description": "When Diplomacy Fails is a podcast containing solo informative and dual TALK episodes that cover the build up to, break out of and consequences of various wars throughout history, with a focus on diplomacy and international relations. Please subscribe, rate or review the podcast here, like the Facebook page, visit the blog: wdfpodcast.blogspot.ie and contact Zack directly at his email address: wdfpodcast@hotmail.com  Thanks history friends!", 
+        "title": "When Diplomacy Fails Podcast", 
+        "last_polled_time": "2013-05-26T09:24:00Z", 
+        "xml_url": "http://whendiplomacyfails.libsyn.com/rss", 
+        "link": "http://whendiplomacyfails.libsyn.com", 
+        "group": 1
+    }
+},
+{
+    "pk": 106, 
+    "model": "feedreader.feed", 
+    "fields": {
+        "published_time": null, 
+        "description": "The British History Podcast discusses the human drama that changed a small island into a towering empire. The podcast is organized chronologically from Britain&#39;s early beginnings to present day.", 
+        "title": "The British History Podcast", 
+        "last_polled_time": "2013-06-14T18:17:11Z", 
+        "xml_url": "http://feeds.feedburner.com/TheBritishHistoryPodcast", 
+        "link": "http://thebritishhistorypodcast.com", 
+        "group": 1
     }
 }
 ]
