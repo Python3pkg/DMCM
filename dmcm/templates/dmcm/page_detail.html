@@ -27,6 +27,10 @@
 {% block content %}
     {% if object.published %}<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>{% endif %}
     {{ object.content|markdown:"extra,tables,toc" }}
+    <div id="source_body" style="display: none">
+    	<h1>Page Source</h1>
+        <pre>{{object.content}}</pre>
+    </div>
 {% endblock %}
 
 {% block footer %}
@@ -36,7 +40,4 @@
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
         <a href="{% url 'dmcm_edit_update_page' object.slug %}" title="Edit this page">Edit</a>.
     </p>
-    <div id="source_body" style="display: none">
-        <pre>{{object.content}}</pre>
-    </div>
 {% endblock %}
