@@ -16,13 +16,13 @@ PARENT_PATH = os.path.join(PROJECT_PATH, os.pardir)
 VIRTUALENV_PACKAGES = os.path.join(PARENT_PATH, 'lib', 'python2.7', 'site-packages')
 
 # PIP requirements file
-REQUIREMENTS = """Django==1.5.4
-Markdown==2.2.1
+REQUIREMENTS = """Django==1.6.1
+Markdown==2.3.1
 #MySQL-python==1.2.4
 argparse==1.2.1
-django-reversion==1.7
+django-reversion==1.8.0
 feedparser==5.1.3
-pytz==2013b
+pytz==2013.8
 wsgiref==0.1.2
 -e git://github.com/ahernp/django-bugtracker.git#egg=django-bugtracker
 -e git://github.com/ahernp/django-monitoring.git#egg=django-monitoring
