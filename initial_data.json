@@ -15,10 +15,10 @@
     "pk": 3, 
     "model": "dmcm.page", 
     "fields": {
-        "updated": "2013-12-03T07:05:20Z", 
+        "updated": "2013-12-25T10:02:43Z", 
         "parent": 3, 
         "title": "ahernp.com", 
-        "content": "# Personal Website of Paul Ahern\r\n\r\nHere you will find some Application [Guides](/applications/ \"Application Guides\"),\r\na catalog for my [Library](/library/ \"Library\")\r\nand a [Gallery](/gallery/ \"Gallery\") of photographs.\r\n\r\nSee [Rooska](/rooska/ \"Rooska\") for maps and photographs of my mountain.\r\n\r\n<div style=\"width:53%;float:left\" markdown=\"1\">\r\n\r\n## External\r\n\r\nFavourite:\r\n[Contacts](http://www.google.com/contacts \"Useful section Google don't provide a link to\")\r\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\r\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\r\n<br>\r\nApps:\r\n[Geany](http://www.geany.org \"Text editor\")\r\n[Inkscape](http://inkscape.org/ \"SVG editor\")\r\n[KeePassX](http://www.keepassx.org/ \"Encrypted database\")\r\n<br>\r\nBooks:\r\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\r\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\r\n[Baen](http://www.baen.com/ \"Baen book publisher\")\r\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\r\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\r\n<br>\r\nCartoons:\r\n[Dilbert](http://www.dilbert.com/fast \"Today's Dilbert comic\")\r\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\r\n[Garfield](http://www.garfield.com/comics/todayscomic.html \"Today's Garfield comic\")\r\n[Mac](http://www.dailymail.co.uk/coffeebreak/cartoons/mac.html \"Today's Mac comic\")\r\n[xkcd](http://xkcd.com/ \"IT Comic\")\r\n<br>\r\nGames:\r\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\r\n[Defcon](http://www.introversion.co.uk/defcon/ \"Defcon\")\r\n[Dwarf Fortress](http://www.bay12games.com/dwarves/ \"Dwarf Fortress\")\r\n[Star Ruler](http://starruler.blind-mind.com/ \"Star Ruler\")\r\n<br>\r\nMedia:\r\n[BBC](http://www.bbc.co.uk/weather \"BBC Weather\")\r\n[iPlayer](http://www.bbc.co.uk/iplayer/radio/bbc_radio_four \"BBC Radio 4 on iPlayer\")\r\n[PC Pro](http://www.pcpro.co.uk/ \"PC Pro magazine\")\r\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\r\n[THOR](http://thehistoryofrome.typepad.com/ \"The History of Rome podcast\")\r\n[YouTube](https://www.youtube.com/feed/subscriptions)\r\n<br>\r\nMisc:\r\n[AE](http://academicearth.org \"Academic Earth lectures\")\r\n[Justice](http://www.justiceharvard.org \"Lectures with Michael Sandel\")\r\n[London Walks](http://www.walks.com/ \"Guided walks\")\r\n[Map](http://www.openstreetmap.org/)\r\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\r\n[gov.uk](https://www.gov.uk/ \"Info from the UK Government\")\r\n<br>\r\nShopping:\r\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\r\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\r\n[Cam](http://www.thecambridgecollection.com/ \"Ties\")\r\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\r\n[GOG](http://www.gog.com/ \"Good Old Games\")\r\n[Humble](https://www.humblebundle.com \"Humble Indie Bundles\")\r\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\r\n<br>\r\nThis Site:\r\n[DataTables](http://datatables.net/ \"jQuery plug-in\")\r\n[Django](http://www.djangoproject.com/ \"Web development framework\")\r\n[GitHub](https://github.com/ahernp)\r\n[jQuery](http://jquery.com/ \"jQuery Javascript Library\")\r\n<br>\r\nWeb:\r\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\r\n[Gibson](http://grc.com/default.htm \"PC security checks\")\r\n[PyPI](https://pypi.python.org/pypi \"Python Package Index\")\r\n[W3Schools](http://w3schools.com/ \"Web standards\")\r\n\r\n</div>\r\n\r\n<div style=\"width:44%;float:left;padding-left:1em;\" markdown=\"1\">\r\n\r\n## Local\r\n\r\n[Apps](/applications/ \"Applications\") &rsaquo;\r\n[Chrome](/google-chrome/)\r\n[Firefox](/firefox/)\r\n[TiddlyWiki](/applications/#tiddlywiki)\r\n[Vim](/vim-editor/)\r\n<br>\r\n[Blog](/blog/) &rsaquo;\r\n[Archive](blog/archive/) \r\n[RSS Feed](/blog/feed/)\r\n<br>\r\n[Gallery](/gallery/ \"Gallery\") &rsaquo;\r\n[Ovens](/gallery/#ovens)\r\n[London](/gallery/#london)\r\n[Wallpaper](/gallery/#wallpaper)\r\n<br>\r\n[Library](/library/ \"Library\") &rsaquo;\r\n[Books](/books/)\r\n[CDs](/cds/)\r\n[DVDs](/dvds/)\r\n[Software](/software/)\r\n<br>\r\nMisc:\r\n[MSc](/msc/ \"MSc\")\r\n[Tea](/twinings-tea/ \"Twinings Tea\")\r\n[Site Map](/site_map/)\r\n<br>\r\nPersonal:\r\n[CV](/cv/ \"CV\")\r\n[Profile](/profile/ \"Personal Profile\")\r\n[Public Key](/public-key/ \"Public Key\")\r\n<br>\r\n[Ref](/reference/ \"Technical Reference\") &rsaquo;\r\n[Colours](/html-colours/ \"147 Named HTML Colours\")\r\n[Linux](/linux/)\r\n[MySQL](/mysql/)\r\n[Python](/python/)\r\n<br>\r\n[Rooska](/rooska/ \"Rooska by Bantry Bay\") &rsaquo;\r\n[Planting](/planting/ \"Planting Trees\")\r\n<br>\r\n[Tools](/tools/ \"Tools\") &rsaquo;\r\n[Cardgen](/tools/cardgen/)\r\n[Deduplicate](/tools/deduplicate/)\r\n[Feedreader](/feedreader/)\r\n\r\n</div>\r\n<div style=\"clear:both\"></div>", 
+        "content": "# Personal Website of Paul Ahern\r\n\r\nHere you will find some Application [Guides](/applications/ \"Application Guides\"),\r\na catalog for my [Library](/library/ \"Library\")\r\nand a [Gallery](/gallery/ \"Gallery\") of photographs.\r\n\r\nSee [Rooska](/rooska/ \"Rooska\") for maps and photographs of my mountain.\r\n\r\n<div style=\"width:53%;float:left\" markdown=\"1\">\r\n\r\n## External\r\n\r\nFavourite:\r\n[Contacts](http://www.google.com/contacts \"Useful section Google don't provide a link to\")\r\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\r\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\r\n<br>\r\nApps:\r\n[Geany](http://www.geany.org \"Text editor\")\r\n[Inkscape](http://inkscape.org/ \"SVG editor\")\r\n[KeePassX](http://www.keepassx.org/ \"Encrypted database\")\r\n<br>\r\nBooks:\r\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\r\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\r\n[Baen](http://www.baen.com/ \"Baen book publisher\")\r\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\r\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\r\n<br>\r\nCartoons:\r\n[Dilbert](http://www.dilbert.com/fast \"Today's Dilbert comic\")\r\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\r\n[Garfield](http://www.garfield.com/comics/todayscomic.html \"Today's Garfield comic\")\r\n[Mac](http://www.dailymail.co.uk/coffeebreak/cartoons/mac.html \"Today's Mac comic\")\r\n[xkcd](http://xkcd.com/ \"IT Comic\")\r\n<br>\r\nGames:\r\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\r\n[Defcon](http://www.introversion.co.uk/defcon/ \"Defcon\")\r\n[Dwarf Fortress](http://www.bay12games.com/dwarves/ \"Dwarf Fortress\")\r\n[Star Ruler](http://starruler.blind-mind.com/ \"Star Ruler\")\r\n<br>\r\nMedia:\r\n[BBC](http://www.bbc.co.uk/weather \"BBC Weather\")\r\n[iPlayer](http://www.bbc.co.uk/iplayer/radio/bbc_radio_four \"BBC Radio 4 on iPlayer\")\r\n[PC Pro](http://www.pcpro.co.uk/ \"PC Pro magazine\")\r\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\r\n[Revolutions](http://www.revolutionspodcast.com/ \"by Mike Duncan\")\r\n[YouTube](https://www.youtube.com/feed/subscriptions)\r\n<br>\r\nMisc:\r\n[AE](http://academicearth.org \"Academic Earth lectures\")\r\n[Justice](http://www.justiceharvard.org \"Lectures with Michael Sandel\")\r\n[London Walks](http://www.walks.com/ \"Guided walks\")\r\n[Map](http://www.openstreetmap.org/)\r\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\r\n[gov.uk](https://www.gov.uk/ \"Info from the UK Government\")\r\n<br>\r\nShopping:\r\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\r\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\r\n[Cam](http://www.thecambridgecollection.com/ \"Ties\")\r\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\r\n[GOG](http://www.gog.com/ \"Good Old Games\")\r\n[Humble](https://www.humblebundle.com \"Humble Indie Bundles\")\r\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\r\n<br>\r\nThis Site:\r\n[DataTables](http://datatables.net/ \"jQuery plug-in\")\r\n[Django](http://www.djangoproject.com/ \"Web development framework\")\r\n[GitHub](https://github.com/ahernp)\r\n[jQuery](http://jquery.com/ \"jQuery Javascript Library\")\r\n<br>\r\nWeb:\r\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\r\n[Gibson](http://grc.com/default.htm \"PC security checks\")\r\n[PyPI](https://pypi.python.org/pypi \"Python Package Index\")\r\n[W3Schools](http://w3schools.com/ \"Web standards\")\r\n\r\n</div>\r\n\r\n<div style=\"width:44%;float:left;padding-left:1em;\" markdown=\"1\">\r\n\r\n## Local\r\n\r\n[Apps](/applications/ \"Applications\") &rsaquo;\r\n[Chrome](/google-chrome/)\r\n[Firefox](/firefox/)\r\n[TiddlyWiki](/applications/#tiddlywiki)\r\n[Vim](/vim-editor/)\r\n<br>\r\n[Blog](/blog/) &rsaquo;\r\n[Archive](blog/archive/) \r\n[RSS Feed](/blog/feed/)\r\n<br>\r\n[Gallery](/gallery/ \"Gallery\") &rsaquo;\r\n[Ovens](/gallery/#ovens)\r\n[London](/gallery/#london)\r\n[Wallpaper](/gallery/#wallpaper)\r\n<br>\r\n[Library](/library/ \"Library\") &rsaquo;\r\n[Books](/books/)\r\n[CDs](/cds/)\r\n[DVDs](/dvds/)\r\n[Software](/software/)\r\n<br>\r\nMisc:\r\n[MSc](/msc/ \"MSc\")\r\n[Tea](/twinings-tea/ \"Twinings Tea\")\r\n[Site Map](/site_map/)\r\n<br>\r\nPersonal:\r\n[CV](/cv/ \"CV\")\r\n[Profile](/profile/ \"Personal Profile\")\r\n[Public Key](/public-key/ \"Public Key\")\r\n<br>\r\n[Ref](/reference/ \"Technical Reference\") &rsaquo;\r\n[Colours](/html-colours/ \"147 Named HTML Colours\")\r\n[Linux](/linux/)\r\n[MySQL](/mysql/)\r\n[Python](/python/)\r\n<br>\r\n[Rooska](/rooska/ \"Rooska by Bantry Bay\") &rsaquo;\r\n[Planting](/planting/ \"Planting Trees\")\r\n<br>\r\n[Tools](/tools/ \"Tools\") &rsaquo;\r\n[Cardgen](/tools/cardgen/)\r\n[Deduplicate](/tools/deduplicate/)\r\n[Feedreader](/feedreader/)\r\n\r\n</div>\r\n<div style=\"clear:both\"></div>", 
         "published": null, 
         "slug": "ahernp-com"
     }
@@ -231,10 +231,10 @@
     "pk": 22, 
     "model": "dmcm.page", 
     "fields": {
-        "updated": "2013-05-09T15:10:52Z", 
+        "updated": "2014-01-07T13:38:42Z", 
         "parent": 3, 
         "title": "CV", 
-        "content": "# Paul Ahern, Python Programmer\r\n\r\n## My Story So Far\r\n\r\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\r\n\r\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\r\n\r\n## Technical Skills\r\n\r\n*Programming:* Python, Javascript, COBOL, Java\r\n<br>\r\n*Scripting:* Bash, JCL, Rexx, Clist\r\n<br>\r\n*Databases:* MySQL, SQLite, DB2\r\n<br>\r\n*Web:* Django, HTML, CSS\r\n<br>\r\n*Version Control:* Git, Mercurial, Endevor\r\n<br>\r\n*Management:* Pivotal Tracker, INFOSYS\r\n<br>\r\n*IDE:* Eclipse/Aptana\r\n\r\n## Education\r\n\r\n**1987-1990** BA Computer Studies, University College Cork: \r\n\r\n* Majored in Information Technology; Minored in Geography. \r\n\r\n**2006-2007** MSc Computer Science, UCC: \r\n\r\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\r\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\r\n\r\n## Experience\r\n\r\n**November 2012** joined Digitalis Reputations in London as a Web Developer.\r\n\r\n**2011-2012** at ReportLab in London:\r\n\r\n> Worked as a Web Developer building and maintaining sites using the Django web framework and the Python and Javascript programming languages.\r\n\r\n> Built several web sites which allow organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\r\n\r\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions. We are now in the process of internationalising it by using different languages and local currencies.\r\n\r\n**2010-2011** at Steel Business Briefing in London:\r\n\r\n> Worked as a Web Developer building sites using the Django web framework and the Python and Javascript programming languages.\r\n\r\n> Main components built:\r\n\r\n>* *Advanced Filter* &ndash; Subclassed ModelAdmin to allow filtering on ranges of data and many-to-many relationships as well as ForeignKeys.\r\n>* *Data Import Harness* &ndash; Programs and control data to populate the new database with legacy data.\r\n>* *Invoicing* &ndash; Redesigned creation and processing of invoices.\r\n\r\n**2008-2010** at Premiere Global Services in Ireland:\r\n\r\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\r\n\r\n**2006-2007** in Ireland:\r\n\r\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\r\n\r\n> Learned to drive.\r\n\r\n**1990-2006** at Natwest Bank in London:\r\n\r\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\r\n\r\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \r\n\r\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \r\n\r\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \r\n\r\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems. ", 
+        "content": "# Paul Ahern, Python Programmer\r\n\r\n## My Story So Far\r\n\r\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\r\n\r\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\r\n\r\n## Technical Skills\r\n\r\n*Programming:* Python, Javascript, COBOL, Java\r\n<br>\r\n*Scripting:* Bash, JCL, Rexx, Clist\r\n<br>\r\n*Databases:* MySQL, SQLite, DB2\r\n<br>\r\n*Web:* Django, HTML, CSS\r\n<br>\r\n*Version Control:* Git, Mercurial, Endevor\r\n<br>\r\n*Management:* Pivotal Tracker, INFOSYS\r\n<br>\r\n*IDE:* Eclipse/Aptana\r\n\r\n## Education\r\n\r\n**1987-1990** BA Computer Studies, University College Cork: \r\n\r\n* Majored in Information Technology; Minored in Geography. \r\n\r\n**2006-2007** MSc Computer Science, UCC: \r\n\r\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\r\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\r\n\r\n## Experience\r\n\r\n**2012-present** at Digitalis Reputations in London:\r\n\r\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework.\r\n\r\n**2011-2012** at ReportLab in London:\r\n\r\n> Worked as a Web Developer building and maintaining sites using the Django web framework and the Python and Javascript programming languages.\r\n\r\n> Built several web sites which allow organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\r\n\r\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions. We are now in the process of internationalising it by using different languages and local currencies.\r\n\r\n**2010-2011** at Steel Business Briefing in London:\r\n\r\n> Worked as a Web Developer building sites using the Django web framework and the Python and Javascript programming languages.\r\n\r\n> Main components built:\r\n\r\n>* *Advanced Filter* &ndash; Subclassed ModelAdmin to allow filtering on ranges of data and many-to-many relationships as well as ForeignKeys.\r\n>* *Data Import Harness* &ndash; Programs and control data to populate the new database with legacy data.\r\n>* *Invoicing* &ndash; Redesigned creation and processing of invoices.\r\n\r\n**2008-2010** at Premiere Global Services in Ireland:\r\n\r\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\r\n\r\n**2006-2007** in Ireland:\r\n\r\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\r\n\r\n> Learned to drive.\r\n\r\n**1990-2006** at Natwest Bank in London:\r\n\r\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\r\n\r\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \r\n\r\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \r\n\r\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \r\n\r\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems. ", 
         "published": null, 
         "slug": "cv"
     }
@@ -243,10 +243,10 @@
     "pk": 23, 
     "model": "dmcm.page", 
     "fields": {
-        "updated": "2012-03-17T07:45:52Z", 
+        "updated": "2013-12-29T09:31:36Z", 
         "parent": 3, 
         "title": "Public Key", 
-        "content": "# Public Key\r\n\r\nUse this key to send me encrypted emails or to check signed emails I have sent.\r\n\r\n    -----BEGIN PGP PUBLIC KEY BLOCK-----\r\n    Version: GnuPG v1.4.6 (GNU/Linux)\r\n    \r\n    mQGiBEgsTrMRBADI//tQcWPMPo8HyXbawUXkkMLc2I/0r9wyp6+LH29Ap37CDtbY\r\n    BMirAiy/Y7Sk19+RpdIXNBj/yiyOb0R1YWRrp/7MrgceNEjTwyZAqWj2oBqH9jDe\r\n    gvymjA8w39FhtxSpJnRszRye4fNLkasM9Xd3HTjT7iluJlZ3W14FeFUW1wCg2Cfq\r\n    Hgj59AeSSE+PkHQ0P4CMQ7ED/34TrNMQAAbpWWMY/1Mxyd5dof3iU0oSBfI+UABj\r\n    DHKbAAEeCtuGllHd1bV7w9puchbgMN8eec0INkVSyT05MR+GAdyMKN+Cyku4VKrv\r\n    PYsmRiVK2Wrry5O+lbe99Uw7UA0dX1YR+S6R/vrfgGh2wjAXVVu848vZeb0Rqx0+\r\n    loh9BACQkpG/3gno4wYFd/LPzLG/6QsrZikmu1Y+79RCuFuVabAYDe6VioUwq03g\r\n    WO3ocLksk3Zdr0MCsvzp5bAIY6tuLLBUjMOcIL2m0oKCaOTA4IVDAfXpkKcHPvii\r\n    /qCgmzWxmJOMvtiaTBh5Thaied+cnS7ETrorNQCmDwg5NGOavbQeUGF1bCBBaGVy\r\n    biA8YWhlcm5wQGFoZXJucC5jb20+iGAEExECACAFAkgsTrMCGwMGCwkIBwMCBBUC\r\n    CAMEFgIDAQIeAQIXgAAKCRBXFUfMwRnyLqgRAKDDZyHUgmIlo5U5zjLWaIi6vVoN\r\n    cgCgqeKzWOL2EYcZNnfY9aiu3UcDdh25Ag0ESCxOuRAIAMQ/b15vY9ziEE/upnWP\r\n    ewO0klCFYKYAKjv/xhNR85QvtLbQJkiPAKMzywuHg/PsDspiuTCnpMZJyNJiBZlP\r\n    z+aeeO14f+pj4B6K6P/ajawYOtXx8/R+ec129H6RstpkokChyNSr06Kt19pT4YEx\r\n    XTNBieaXSUTLFbrP1zLnD3U0DMXU/jWc0DXSYcOxDT1EROK/c99Ww6TmMTj4EAL7\r\n    3gEffkqXEhLfjFN2NKnOv4QZS59LTQsHLf4pq+MVHtFOmSsrfCs8yi4ybq+mud/v\r\n    URrLLrj8Qs83tfFsAdk6mVmd2aCk3D34lnoZqplP5lH54K52fsnQljgpzF/B8xHC\r\n    5ScAAwUH/1k6TCKcSAoP3Hd6WsU7Sx3oR0duQJcRONGNQ2NN1UW5maBacctUOve/\r\n    XUVH0wIfJKJEx7E28YRuGIwNB0t/hU6bzb4vJtG4gDYGdnyaAvEglu/lPgTF+cGA\r\n    GlWcEFhEmWEXgopIqxHF945TZGQ1qkovHwplmt+EPpRgbNapTva7355WgyKVaMMx\r\n    vwAkzjSZWOR5prgwTTRN91PwdTa/of6rWtI7HcDhmu/hxHaXsFVwg17zVeSMjxHx\r\n    i3SYCYWfU8uaWiMrE3mhynpCJ4UoJnlqhMrQdJDLtXdX4JG8jtQTulpiG4p12XSj\r\n    rBu22p7slm/j5EEdrrWHNcKDUyrGG6WISQQYEQIACQUCSCxOuQIbDAAKCRBXFUfM\r\n    wRnyLh98AKCSdVYuqpc9yWCLlwIVWZjQ4WgGyACgocQSSZMhre5cGId8g5QbEHEd\r\n    RAo=\r\n    =mi5w\r\n    -----END PGP PUBLIC KEY BLOCK-----", 
+        "content": "# Public Key\r\n\r\nUse this key to send me encrypted emails or to check signed emails I have sent.\r\n\r\n\t-----BEGIN PGP PUBLIC KEY BLOCK-----\r\n\tVersion: GnuPG v1.4.12 (GNU/Linux)\r\n\r\n\tmQENBFK/51IBCADrG6Z8YOtP00kwltWE2pyAacF437lkJG5zwtqsS0OzyL7SZlEz\r\n\tfWFOBzcSFxtf+2fs6U+k+wVR9sa6U5/RP1wiqovHj/BY1oH9tEolzyYXieVA0idi\r\n\tLdNj0pL03FByil5QDUher0embbcizNerf/0DSGe6jOgXfry+c3KOex9fR4t4pjic\r\n\tLC7yjgm758yH2aQ8NddDrcwBFvAzO915SOu+9LvNE7SaVf356Lic0xpbAiwR+Wor\r\n\tSVCW1OVqvGKfoJH4f0Lsemh9K11+VMr92aTsg23IfwuaGm12LLDTnHDkhsQ5C029\r\n\ty3UDOhcHFVs6hLayiRIiwZ4R3wu6NEL+Q9RRABEBAAG0OFBhdWwgQWhlcm4gKFB1\r\n\tYmxpYyBLZXkgZm9yIEVtYWlsaW5nKSA8YWhlcm5wQGFoZXJucC5jb20+iQE4BBMB\r\n\tAgAiBQJSv+dSAhsDBgsJCAcDAgYVCAIJCgsEFgIDAQIeAQIXgAAKCRAZDhx5aWHO\r\n\tNCwrB/4vBJNU3WI6Wtm1gitjL1IKelUBMLwjkc283RNSBDQA7JukSSf8giY/QePt\r\n\t+RK6Z4YQ1Phf1c/SGt++s9m7qikstDLSWQ68XwtpbSqnSfFlV/3i58zbbGmLjhbN\r\n\t6iWAljppxvdNi6I+cE+hT/8DJ/u/TVxLdC5+ktqIqKhqM5544D1dx4jNEm6aaOc8\r\n\tc5hoNynm3EpVY6P9kC3FzPDg0WQJkjMTPsGRwPikQTobI1GXXAlpKTTjmV1PB/K7\r\n\t7rCKSFwNFa1eaAVmVEKpw+n6e1wtSIWIO2KwrrYwqeRzdcB98KoXYrSv0xXpSH8L\r\n\tNat/Ad+7Cp7YByuajDcFs+zi/xoauQENBFK/51IBCADOmpodYjDd+wcnM9g0JgQb\r\n\tpvlvsAVrQFUVEp28MmqRN78msqQ+r9t/Iu3KyEq04T/P0ibr730ECTnrgqjd1pij\r\n\tRWrg4HrztD4nR+TlMiC0LYaHYzdJ60tC+u9Xxuvw2qCkb28m635vAbpOSEVDB6h4\r\n\tgCVuDwIiIUk+MUWWxuMW1ZQCpgXlzJQK+Sqx3dBGmwzSLnbMzepm0ZPZJRktp/r0\r\n\tX2tRLNrtsoOssrD9Ete933qLm/fIung+xb71Gxidnzk880b0b7a4WPg6oE/ypInE\r\n\tOEiRHQOtyemyrC7bs1R/FMyZ+iZ7kl1VS6Eo5onDkhsM8gIuXbPFehWRkHhr1lad\r\n\tABEBAAGJAR8EGAECAAkFAlK/51ICGwwACgkQGQ4ceWlhzjQMzAgAs6O6GDKlyIE0\r\n\t8NNEHK9IPLmUljPYbdCY4moTzlSB4l8Ghk/rBWZ//f5Yys2d5PE1DGOUBST51lVT\r\n\th0uclD/R4il1faf/vnjXEviVeErGoMDzbHAuD8+4JJP8vLayiotFzh/gsQdKlVkw\r\n\tYui6VqIliR3fbP/zpsloKdeNXxm7bkyLund6LxNYle4Y1rFvr8xsrWBqdTFMPkpr\r\n\tBgOBQqVVQRey0w3LAu8EeTE98obk/brNUdp5tF/pgjussjbWuhKiXhBivCcmBK/3\r\n\tARuOK6zFhqin9DO+AQPGf7xlfHW1x90ZwuWKhXubi0TZDxj7FyUKj7CrL3i4mt74\r\n\tx+h8/Ki+gw==\r\n\t=cMKm\r\n\t-----END PGP PUBLIC KEY BLOCK-----\r\n", 
         "published": null, 
         "slug": "public-key"
     }
@@ -363,10 +363,10 @@
     "pk": 38, 
     "model": "dmcm.page", 
     "fields": {
-        "updated": "2013-06-28T09:54:01Z", 
+        "updated": "2014-01-16T08:27:14Z", 
         "parent": 39, 
         "title": "Python", 
-        "content": "# Python Programming Language\r\n\r\nContents:\r\n[Notes](#notes)\r\n([Python Debugger](#python-debugger),\r\n[Dictionaries](#dictionaries),\r\n[Exceptions](#exceptions),\r\n[Operators](#operators),\r\n[Interaction with Operating System](#interaction-with-operating-system),\r\n[Slicing](#slicing)).\r\n[Recipes](#recipes)\r\n([Write File](#write-file),\r\n[Remove Substring](#remove-substring),\r\n[FTP](#ftp),\r\n[Sort, Pickle, Hash](#sort-pickle-hash),\r\n[Display Progress Percentage](#display-progress-percentage),\r\n[Default encoding](#default-encoding)),\r\n\r\n## Notes\r\n\r\n* Get last 3 parts of path: `'/'.join(path.split('/')[-3:]`) (e.g. `/a/b/c/d` to `b/c/d`)\r\n* In a loop: `break` ends the entire loop; `continue` ends the current iteration.\r\n* List attributes of an object: `dir(object)`. \r\n* Reference object attributes and values via: `object.__dict__`.\r\n* Check if string is numeric: `s.isdigit()`\r\n* String and Integer formatting: `'%s%07d' % ('RPT', 7)` gives `RPT0000007`.\r\n* Identify subclasses: `issubclass(A,B)` returns `True` if A is a subclass of B. (e.g. `issubclass(self.model,Config)`)\r\n* Check for attribute: `hasattr(object,string)` Returns `True` if the string matches an attribute name.\r\n\r\n### Python Debugger\r\n\r\nAdd the following line to start a debug session at that point in the code at runtime:\r\n\r\n    import pdb; pdb.set_trace() # Start debugging\r\n\r\nCommands (hit enter to repeat previous command):\r\n\r\n* `n` Next\r\n* `p [name]` Print\r\n* `c` Continue\r\n* `r` Continue to next Return\r\n* `s` Step Into\r\n* `l` List\r\n* `b` Breakpoint\r\n* `q` Quit\r\n\r\n### Dictionaries\r\n\r\nLoop through keys and values in a dictionary: `for key, value in lookup_address.items()`.\r\n\r\nIterate through dictionary in key order: \r\n\r\n    for key in sorted(mydict.iterkeys()):\r\n        print \"%s: %s\" % (key, mydict[key])\r\n\r\nAssign matching key or default: `var = dict.get(key, default_value)`. Ditto and remove matching entry: `var = dict.pop(key, default_value)`.\r\n\r\n### Exceptions\r\n\r\nAccess ongoing Exception information: `sys.exc_info()`:\r\n\r\n* Capture last line of traceback and line describing problem to include in a message:\r\n\r\n        from traceback import format_exc\r\n        . . .\r\n        except Exception as e:\r\n            trace_info = format_exc(sys.exc_info()).split(\"\\n\")[-4:-2]\r\n\r\n* Print traceback: `print 'traceback %s' % (traceback.extract_tb(sys.exc_info()[2]))`.\r\n\r\n### Operators\r\n\r\n* Increment `[var] += 1`; Modulo `%`.\r\n* Ternary operator: `x if a > b else y` Return `x` is `a > b` otherwise return `y` (equivalent to `a > b ? x : y;` in Java).\r\n\r\n### Interaction with Operating System\r\n\r\n* Directory containing current module: `cwd = os.path.realpath(os.path.dirname(__file__))`\r\n* Relative Paths: `DATABASE_NAME = os.path.expanduser('~/django-reversion/default.sqlite')` or `DATABASE_NAME = os.path.join(os.path.dirname(__file__), 'default.sqlite')`\r\n* Build path: `PROJECT_PATH = os.path.join(os.path.expanduser('~/code'), 'dmcm/project')`\r\n* Run command: `p = Popen(\"grep -r --include='*.py' \\\"%s\\\" %s\" % (string.strip(), PROJECT_PATH), shell=True, stdout=PIPE)`\r\n* Run a script from the Python shell: `execfile(\"/home/ahernp/test.py\")`\r\n* To find where a module was imported from check its `.__file__` attribute.\r\n\r\n### Slicing\r\n\r\n* `a[start:end]` Items start through end-1.\r\n* `a[start:]` Items start through the rest of the array.\r\n* `a[:end]` Items from the beginning through end-1.\r\n* `a[:]` A copy of the whole array.\r\n\r\nA step value can be used with any of the above: `a[start:end:step]`. \r\n\r\nThe `:end` value represents the first value that is not in the selected slice. The difference between end and start is the number of elements selected (if step is 1, the default). \r\n\r\nAlso start or end may be a negative number, which means it counts from the end of the array instead of the beginning.\r\n\r\n* `a[-1]` Last item in the array.\r\n* `a[-2:]` Last two items in the array.\r\n* `a[:-2]` Everything except the last two items.\r\n\r\nPython is forgiving if there are fewer items than you ask for. For example, if you ask for `a[:-2]` and a only contains one element, you get an empty list instead of an error.\r\n\r\n## Recipes\r\n\r\n### Write File\r\n\r\n    import codecs\r\n    def write_file(filename, data):\r\n        output_filepath = os.path.join(settings.PROJECT_DIR, filename)\r\n        output_file = codecs.open(output_filepath, 'w', 'utf-8')\r\n        output_file.write(data)\r\n        output_file.close()\r\n        print('Data written to %s' % (output_filepath))\r\n\r\nAdd to existing file: `open(output_filepath, 'a', 'utf-8')`\r\n\r\n### Remove Substring\r\n\r\n1. Find start of substring: `start_pos = big_string.index('/home/')`\r\n1. Find end of substring: `end_pos = big_string.index(\"'\",start_pos)`\r\n1. Remove substring: `big_string = big_string[:start_pos] + big_string[end_pos:]`\r\n\r\nTo check if substring is present use: `start_pos = big_string.find('/home/')`\r\n\r\n### FTP\r\n\r\n    import ftplib\r\n    . . .\r\n    def ftp_to(filename, pdf_stringio):\r\n        ftp_serv = ftplib.FTP(settings.FTP_HOSTNAME, \r\n                              settings.FTP_USERNAME, \r\n                              settings.FTP_PASSWORD)\r\n        pdf_stringio.seek(0) # Put file position at beginning of StringIO\r\n        resp = ftp_serv.storbinary('STOR ' + filename, pdf_stringio)\r\n        ftp_serv.close\r\n\r\n### Sort, Pickle, Hash\r\n\r\n    import hashlib\r\n    import cPickle as pickle\r\n    . . .\r\n    # hash a pickle of a sorted dictionary\r\n    sorted_context = sorted(context.items(), key=lambda t: t[0])\r\n    pickle_str = pickle.dumps(sorted_context)\r\n    rml_hash = hashlib.sha224(pickle_str).hexdigest()\r\n\r\n### Display Progress Percentage\r\n\r\nCalculate and display percentage progress:\r\n\r\n    rows = source_class.objects.using('legacy').all()\r\n    total = len(rows)\r\n    . . .\r\n    for i, row in enumerate(rows):\r\n       . . .\r\n       percent = float(i) / total * 100\r\n       sys.stdout.write(\"\\r%2.3f%%\" % percent)\r\n       sys.stdout.flush()\r\n\r\nExample shows percentage to three decimal places, to show percentage as integer use `\"\\r%2d%%\"`.\r\n\r\n### Default encoding\r\n\r\nCheck the default encoding in python at a terminal with the following commands:\r\n\r\n    import sys\r\n    sys.getdefaultencoding()\r\n\r\nIf it is `ascii` then you may get the following error `UnicodeError: ASCII encoding error: ordinal not in range(128)` when processing unicode data.\r\n\r\nAvoid this by changing the default encoding to `utf-8` by adding the following as `sitecustomize.py` to the PYTHONPATH and restart python:\r\n\r\n    # sitecustomize.py                                                              \r\n    # this file can be anywhere in your Python path,                                \r\n    # but it usually goes in ${pythondir}/lib/site-packages/                        \r\n    import sys\r\n    sys.setdefaultencoding('utf-8')\r\n", 
+        "content": "# Python Programming Language\r\n\r\nContents:\r\n[Notes](#notes)\r\n([Python Debugger](#python-debugger),\r\n[Dictionaries](#dictionaries),\r\n[Exceptions](#exceptions),\r\n[Operators](#operators),\r\n[Interaction with Operating System](#interaction-with-operating-system),\r\n[Slicing](#slicing)).\r\n[Recipes](#recipes)\r\n([Write File](#write-file),\r\n[Remove Substring](#remove-substring),\r\n[FTP](#ftp),\r\n[Sort, Pickle, Hash](#sort-pickle-hash),\r\n[Display Progress Percentage](#display-progress-percentage),\r\n[Default encoding](#default-encoding)),\r\n\r\n## Notes\r\n\r\n* Get last 3 parts of path: `'/'.join(path.split('/')[-3:]`) (e.g. `/a/b/c/d` to `b/c/d`)\r\n* In a loop: `break` ends the entire loop; `continue` ends the current iteration.\r\n* List attributes of an object: `dir(object)`. \r\n* Reference object attributes and values via: `object.__dict__`.\r\n* Check if string is numeric: `s.isdigit()`\r\n* String and Integer formatting: `'%s%07d' % ('RPT', 7)` gives `RPT0000007`.\r\n* Identify subclasses: `issubclass(A,B)` returns `True` if A is a subclass of B. (e.g. `issubclass(self.model,Config)`)\r\n* Check for attribute: `hasattr(object,string)` Returns `True` if the string matches an attribute name.\r\n\r\n### Python Debugger\r\n\r\nAdd the following line to start a debug session at that point in the code at runtime:\r\n\r\n    import pdb; pdb.set_trace() # Start debugging\r\n\r\nCommands (hit enter to repeat previous command):\r\n\r\n* `n` Next\r\n* `p [name]` Print\r\n* `c` Continue\r\n* `r` Continue to next Return\r\n* `s` Step Into\r\n* `l` List\r\n* `b` Breakpoint\r\n* `q` Quit\r\n\r\n### Dictionaries\r\n\r\nLoop through keys and values in a dictionary: `for key, value in lookup_address.items()`.\r\n\r\nIterate through dictionary in key order: \r\n\r\n    for key in sorted(mydict.iterkeys()):\r\n        print \"%s: %s\" % (key, mydict[key])\r\n\r\nAssign matching key or default: `var = dict.get(key, default_value)`. Ditto and remove matching entry: `var = dict.pop(key, default_value)`.\r\n\r\n### Exceptions\r\n\r\nAccess ongoing Exception information: `sys.exc_info()`:\r\n\r\n* Capture last line of traceback and line describing problem to include in a message:\r\n\r\n        from traceback import format_exc\r\n        . . .\r\n        except Exception as e:\r\n            trace_info = format_exc(sys.exc_info()).split(\"\\n\")[-4:-2]\r\n\r\n* Print traceback: `print 'traceback %s' % (traceback.extract_tb(sys.exc_info()[2]))`.\r\n\r\n### Operators\r\n\r\n* Increment `[var] += 1`; Modulo `%`.\r\n* Ternary operator: `x if a > b else y` Return `x` is `a > b` otherwise return `y` (equivalent to `a > b ? x : y;` in Java).\r\n\r\n### Interaction with Operating System\r\n\r\n* Directory containing current module: `cwd = os.path.realpath(os.path.dirname(__file__))`\r\n* Relative Paths: `DATABASE_NAME = os.path.expanduser('~/django-reversion/default.sqlite')` or `DATABASE_NAME = os.path.join(os.path.dirname(__file__), 'default.sqlite')`\r\n* Build path: `PROJECT_PATH = os.path.join(os.path.expanduser('~/code'), 'dmcm/project')`\r\n* Run command: `p = Popen(\"grep -r --include='*.py' \\\"%s\\\" %s\" % (string.strip(), PROJECT_PATH), shell=True, stdout=PIPE)`\r\n* Run a script from the Python shell: `execfile(\"/home/ahernp/test.py\")`\r\n* To find where a module was imported from check its `.__file__` attribute.\r\n\r\n### Slicing\r\n\r\n* `a[start:end]` Items start through end-1.\r\n* `a[start:]` Items start through the rest of the array.\r\n* `a[:end]` Items from the beginning through end-1.\r\n* `a[:]` A copy of the whole array.\r\n* `a[::-1]` Reverse the array.\r\n\r\nA step value can be used with any of the above: `a[start:end:step]`. \r\n\r\nThe `:end` value represents the first value that is not in the selected slice. The difference between end and start is the number of elements selected (if step is 1, the default). \r\n\r\nAlso start or end may be a negative number, which means it counts from the end of the array instead of the beginning.\r\n\r\n* `a[-1]` Last item in the array.\r\n* `a[-2:]` Last two items in the array.\r\n* `a[:-2]` Everything except the last two items.\r\n\r\nPython is forgiving if there are fewer items than you ask for. For example, if you ask for `a[:-2]` and a only contains one element, you get an empty list instead of an error.\r\n\r\n## Recipes\r\n\r\n### Write File\r\n\r\n    import codecs\r\n    def write_file(filename, data):\r\n        output_filepath = os.path.join(settings.PROJECT_DIR, filename)\r\n        output_file = codecs.open(output_filepath, 'w', 'utf-8')\r\n        output_file.write(data)\r\n        output_file.close()\r\n        print('Data written to %s' % (output_filepath))\r\n\r\nAdd to existing file: `open(output_filepath, 'a', 'utf-8')`\r\n\r\n### Remove Substring\r\n\r\n1. Find start of substring: `start_pos = big_string.index('/home/')`\r\n1. Find end of substring: `end_pos = big_string.index(\"'\",start_pos)`\r\n1. Remove substring: `big_string = big_string[:start_pos] + big_string[end_pos:]`\r\n\r\nTo check if substring is present use: `start_pos = big_string.find('/home/')`\r\n\r\n### FTP\r\n\r\n    import ftplib\r\n    . . .\r\n    def ftp_to(filename, pdf_stringio):\r\n        ftp_serv = ftplib.FTP(settings.FTP_HOSTNAME, \r\n                              settings.FTP_USERNAME, \r\n                              settings.FTP_PASSWORD)\r\n        pdf_stringio.seek(0) # Put file position at beginning of StringIO\r\n        resp = ftp_serv.storbinary('STOR ' + filename, pdf_stringio)\r\n        ftp_serv.close\r\n\r\n### Sort, Pickle, Hash\r\n\r\n    import hashlib\r\n    import cPickle as pickle\r\n    . . .\r\n    # hash a pickle of a sorted dictionary\r\n    sorted_context = sorted(context.items(), key=lambda t: t[0])\r\n    pickle_str = pickle.dumps(sorted_context)\r\n    rml_hash = hashlib.sha224(pickle_str).hexdigest()\r\n\r\n### Display Progress Percentage\r\n\r\nCalculate and display percentage progress:\r\n\r\n    rows = source_class.objects.using('legacy').all()\r\n    total = len(rows)\r\n    . . .\r\n    for i, row in enumerate(rows):\r\n       . . .\r\n       percent = float(i) / total * 100\r\n       sys.stdout.write(\"\\r%2.3f%%\" % percent)\r\n       sys.stdout.flush()\r\n\r\nExample shows percentage to three decimal places, to show percentage as integer use `\"\\r%2d%%\"`.\r\n\r\n### Default encoding\r\n\r\nCheck the default encoding in python at a terminal with the following commands:\r\n\r\n    import sys\r\n    sys.getdefaultencoding()\r\n\r\nIf it is `ascii` then you may get the following error `UnicodeError: ASCII encoding error: ordinal not in range(128)` when processing unicode data.\r\n\r\nAvoid this by changing the default encoding to `utf-8` by adding the following as `sitecustomize.py` to the PYTHONPATH and restart python:\r\n\r\n    # sitecustomize.py                                                              \r\n    # this file can be anywhere in your Python path,                                \r\n    # but it usually goes in ${pythondir}/lib/site-packages/                        \r\n    import sys\r\n    sys.setdefaultencoding('utf-8')\r\n", 
         "published": null, 
         "slug": "python"
     }
@@ -1030,7 +1030,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by quill18", 
-        "last_polled_time": "2013-12-23T18:17:32Z", 
+        "last_polled_time": "2014-01-18T20:17:38Z", 
         "xml_url": "http://www.youtube.com/rss/user/quill18/videos.rss", 
         "link": "http://www.youtube.com/channel/UCbx1TZgxfIauUZyPuBzEwZg/videos", 
         "group": 2
@@ -1040,10 +1040,10 @@
     "pk": 41, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-23T07:00:01Z", 
+        "published_time": "2014-01-17T07:00:01Z", 
         "description": "Regular thoughts and updates from Dilbert.com", 
         "title": "Dilbert.com Blog", 
-        "last_polled_time": "2013-12-23T17:17:07Z", 
+        "last_polled_time": "2014-01-17T15:17:06Z", 
         "xml_url": "http://feedproxy.google.com/typepad/ihdT", 
         "link": "http://dilbert.com/blog", 
         "group": 2
@@ -1056,7 +1056,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Binge Thinking History Podcast", 
-        "last_polled_time": "2013-12-23T18:17:05Z", 
+        "last_polled_time": "2014-01-18T20:17:06Z", 
         "xml_url": "http://bingethinkinghistory.blogspot.com/feeds/posts/default", 
         "link": "http://bingethinkinghistory.blogspot.com/", 
         "group": 1
@@ -1082,7 +1082,7 @@
         "published_time": null, 
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts", 
         "title": "The Ancient World", 
-        "last_polled_time": "2013-12-23T18:17:22Z", 
+        "last_polled_time": "2014-01-18T20:17:26Z", 
         "xml_url": "http://ancientworldpodcast.blogspot.com/feeds/posts/default", 
         "link": "http://ancientworldpodcast.blogspot.com/", 
         "group": 1
@@ -1105,10 +1105,10 @@
     "pk": 52, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-16T21:00:16Z", 
+        "published_time": "2014-01-13T21:00:19Z", 
         "description": "The science documentary series that looks in depth at the most significant ideas, discoveries and trends in science. \r\n\r\nAvailable to download weekly on Mondays.", 
         "title": "Discovery", 
-        "last_polled_time": "2013-12-16T21:17:06Z", 
+        "last_polled_time": "2014-01-13T21:17:07Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/p002w557", 
         "group": 4
@@ -1118,10 +1118,10 @@
     "pk": 53, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-19T00:30:15Z", 
+        "published_time": "2014-01-16T00:30:14Z", 
         "description": "An indepth look at stories and issues from around the world. This podcast offers you the chance to access landmark series from our archive.", 
         "title": "Documentaries", 
-        "last_polled_time": "2013-12-19T01:17:08Z", 
+        "last_polled_time": "2014-01-16T01:17:13Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/docarchive/rss.xml", 
         "link": "http://www.bbc.co.uk/podcasts/series/docarchive", 
         "group": 4
@@ -1131,10 +1131,10 @@
     "pk": 54, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-11-12T21:00:20Z", 
+        "published_time": "2014-01-14T21:00:23Z", 
         "description": "A podcast offering Radio 4&#39;s award winning, flagship investigative series File on 4.", 
         "title": "File on 4", 
-        "last_polled_time": "2013-11-12T21:17:07Z", 
+        "last_polled_time": "2014-01-14T21:17:08Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006th08", 
         "group": 4
@@ -1144,10 +1144,10 @@
     "pk": 55, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-20T19:00:13Z", 
+        "published_time": "2014-01-17T19:00:14Z", 
         "description": "Bringing you a satirical take on the week&#39;s news with The News Quiz and The Now Show from BBC Radio 4. Enjoy a satirical take on the week\u2019s news with the cream of UK comedy talent.", 
         "title": "Friday Night Comedy from BBC Radio 4", 
-        "last_polled_time": "2013-12-20T19:17:08Z", 
+        "last_polled_time": "2014-01-17T19:17:09Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/programmes/genres/comedy/satire/", 
         "group": 4
@@ -1157,10 +1157,10 @@
     "pk": 57, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-20T20:06:19Z", 
+        "published_time": "2014-01-17T20:00:16Z", 
         "description": "Interviews with leading novelists, musicians, film directors, artists and more, from Radio 4&#39;s flagship arts show, presented by Mark Lawson, Kirsty Lang and John Wilson.  Front Row is broadcast on BBC Radio 4 each weekday evening at 7.15 - 7.45pm.  New editions will be available each night following the live broadcast.", 
         "title": "Front Row Daily", 
-        "last_polled_time": "2013-12-20T20:17:08Z", 
+        "last_polled_time": "2014-01-17T20:17:11Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/frontrow/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qsq5", 
         "group": 4
@@ -1170,10 +1170,10 @@
     "pk": 58, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-17T16:30:15Z", 
+        "published_time": "2014-01-14T16:30:13Z", 
         "description": "Biography series exploring the greatest people who ever lived. Matthew Parris interviews an eminent guest and an expert to reveal the truth behind their history heroes.", 
         "title": "Great Lives", 
-        "last_polled_time": "2013-12-17T17:17:12Z", 
+        "last_polled_time": "2014-01-14T17:17:09Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/greatlives/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/greatlives", 
         "group": 4
@@ -1183,10 +1183,10 @@
     "pk": 59, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-19T11:00:42Z", 
+        "published_time": "2014-01-16T11:00:14Z", 
         "description": "Melvyn Bragg and his guests discuss the history of ideas - including topics  drawn from philosophy, science, history, religion and culture.", 
         "title": "In Our Time With Melvyn Bragg", 
-        "last_polled_time": "2013-12-19T11:17:09Z", 
+        "last_polled_time": "2014-01-16T11:17:20Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qykl", 
         "group": 4
@@ -1222,10 +1222,10 @@
     "pk": 62, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-18T17:37:23Z", 
+        "published_time": "2014-01-15T17:27:06Z", 
         "description": "BBC Radio 4&#39;s topical programme The Media Show, presented by journalist and former TV executive Steve Hewlett, featuring the latest stories and opinion from the fast-changing world of media in all its forms - print, television, radio, online and telecommunications.", 
         "title": "Media Show", 
-        "last_polled_time": "2013-12-18T18:17:13Z", 
+        "last_polled_time": "2014-01-15T18:17:13Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/factual/mediashow/", 
         "group": 4
@@ -1235,10 +1235,10 @@
     "pk": 65, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-23T12:30:08Z", 
+        "published_time": "2014-01-18T13:20:05Z", 
         "description": "All that matters about money with Paul Lewis. News of savings and investments, credit cards and loans, pensions, banking, benefits and giving to charity.  The UK\u2019s premier weekly round-up of personal finance from the BBC.  Programme broadcast each Saturday at 1204 BST and episodes added each Saturday afternoon.  You will also receive podcasts of Money Box Live \u2013 the interactive programme answering questions about personal finance issues, hosted by either Paul Lewis or Vincent Duggleby.  Broadcast each Wednesday at 1502 BST and with episodes added every Wednesday afternoon. For more information go to www.bbc.co.uk/moneybox", 
         "title": "Money Box", 
-        "last_polled_time": "2013-12-23T13:17:15Z", 
+        "last_polled_time": "2014-01-18T14:17:15Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moneybox/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qjnv", 
         "group": 4
@@ -1248,10 +1248,10 @@
     "pk": 66, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-21T06:00:24Z", 
+        "published_time": "2014-01-17T17:39:27Z", 
         "description": "Tim Harford investigates numbers in the news. Numbers are used in every area of public debate. But are they always reliable? Tim and the More or Less team try to make sense of the statistics which surround us. A half-hour programme broadcast at 1600 on Friday afternoons and repeated at 2000 on Sundays on Radio 4. BBC World Service broadcasts a short edition over the weekend.", 
         "title": "More or Less: Behind the Stats", 
-        "last_polled_time": "2013-12-21T06:17:11Z", 
+        "last_polled_time": "2014-01-17T18:17:15Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qshd", 
         "group": 4
@@ -1261,10 +1261,10 @@
     "pk": 67, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-19T21:00:24Z", 
+        "published_time": "2014-01-16T21:00:25Z", 
         "description": "Insights into the business world with Peter Day - featuring content from his Radio 4 In Business programme, and also Global Business from the BBC World Service.", 
         "title": "Peter Day&#39;s World of Business", 
-        "last_polled_time": "2013-12-19T21:17:14Z", 
+        "last_polled_time": "2014-01-16T21:17:47Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio/worldbiz/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/inbusiness/inbusiness.shtml", 
         "group": 4
@@ -1274,10 +1274,10 @@
     "pk": 68, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-21T19:30:22Z", 
+        "published_time": "2014-01-04T19:30:15Z", 
         "description": "Series of profiles of people who are currently making headlines. Broadcast on BBC Radio 4 on Saturdays at 7pm.", 
         "title": "Profile", 
-        "last_polled_time": "2013-12-21T20:17:13Z", 
+        "last_polled_time": "2014-01-04T20:17:16Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/profile/", 
         "group": 4
@@ -1300,10 +1300,10 @@
     "pk": 71, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-19T16:58:05Z", 
+        "published_time": "2014-01-16T17:00:15Z", 
         "description": "Interviews and analysis from the world of cinema. Francine Stock talks to directors, writers and critics about the latest film releases, classics on DVD and movies on television.", 
         "title": "The Film Programme", 
-        "last_polled_time": "2013-12-19T17:17:21Z", 
+        "last_polled_time": "2014-01-16T17:17:41Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/filmprogramme", 
         "group": 4
@@ -1329,7 +1329,7 @@
         "published_time": null, 
         "description": "Weekly news and opinions from the UK&#39;s biggest tech monthly", 
         "title": "The PC Pro Podcast", 
-        "last_polled_time": "2013-12-23T18:17:29Z", 
+        "last_polled_time": "2014-01-18T20:17:34Z", 
         "xml_url": "http://podcast.pcpro.co.uk/?feed=podcast", 
         "link": "http://podcast.pcpro.co.uk", 
         "group": 5
@@ -1339,10 +1339,10 @@
     "pk": 74, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-18T16:58:56Z", 
+        "published_time": "2014-01-15T16:53:23Z", 
         "description": "Laurie Taylor explores the latest research into how society works and discusses current ideas on how we live today.", 
         "title": "Thinking Allowed", 
-        "last_polled_time": "2013-12-18T17:17:32Z", 
+        "last_polled_time": "2014-01-15T17:17:29Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/ta/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/factual/thinkingallowed/", 
         "group": 4
@@ -1352,10 +1352,10 @@
     "pk": 75, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-23T11:30:12Z", 
+        "published_time": "2014-01-18T11:30:16Z", 
         "description": "Top political commentators reflect on the week&#39;s political events in discussion with MPs, Peers and others.", 
         "title": "Weekly Political Review", 
-        "last_polled_time": "2013-12-23T12:17:29Z", 
+        "last_polled_time": "2014-01-18T12:17:34Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml", 
         "link": "http://www.bbc.co.uk/radio4/news/weekinwest.shtml", 
         "group": 4
@@ -1365,10 +1365,10 @@
     "pk": 77, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-23T18:17:14Z", 
+        "published_time": "2014-01-18T20:08:18Z", 
         "description": "", 
         "title": "Linuxtoday.com", 
-        "last_polled_time": "2013-12-23T18:17:16Z", 
+        "last_polled_time": "2014-01-18T20:17:16Z", 
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux", 
         "link": "http://www.linuxtoday.com/", 
         "group": 5
@@ -1381,7 +1381,7 @@
         "published_time": null, 
         "description": "A blog covering security and security technology.", 
         "title": "Schneier on Security", 
-        "last_polled_time": "2013-12-23T18:17:21Z", 
+        "last_polled_time": "2014-01-18T20:17:25Z", 
         "xml_url": "http://www.schneier.com/blog/index.xml", 
         "link": "https://www.schneier.com/blog/", 
         "group": 5
@@ -1394,7 +1394,7 @@
         "published_time": null, 
         "description": "Inkscape Tutorials, News and Resources", 
         "title": "inkscape tutorials blog", 
-        "last_polled_time": "2013-12-23T18:17:15Z", 
+        "last_polled_time": "2014-01-18T20:17:16Z", 
         "xml_url": "http://inkscapetutorials.wordpress.com/feed/", 
         "link": "http://inkscapetutorials.wordpress.com", 
         "group": 5
@@ -1407,7 +1407,7 @@
         "published_time": null, 
         "description": "Biting the hand that feeds IT", 
         "title": "The Register", 
-        "last_polled_time": "2013-12-23T18:17:29Z", 
+        "last_polled_time": "2014-01-18T20:17:34Z", 
         "xml_url": "http://www.theregister.co.uk/headlines.rss", 
         "link": "http://www.theregister.co.uk/", 
         "group": 5
@@ -1420,7 +1420,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by Paradox Interactive", 
-        "last_polled_time": "2013-12-23T18:17:31Z", 
+        "last_polled_time": "2014-01-18T20:17:36Z", 
         "xml_url": "http://www.youtube.com/rss/user/Paradoxplaza/videos.rss", 
         "link": "http://www.youtube.com/channel/UC1JOnWZrVWKzX3UMdpnvuMg/videos", 
         "group": 2
@@ -1430,10 +1430,10 @@
     "pk": 90, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-23T18:05:24Z", 
+        "published_time": "2014-01-18T19:35:23Z", 
         "description": "Top stories of the day on TIME.com", 
         "title": "TIME.com: Top Stories", 
-        "last_polled_time": "2013-12-23T18:17:30Z", 
+        "last_polled_time": "2014-01-18T20:17:35Z", 
         "xml_url": "http://feeds2.feedburner.com/time/topstories", 
         "link": "http://www.time.com?xid=rss-topstories", 
         "group": 3
@@ -1446,7 +1446,7 @@
         "published_time": null, 
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453", 
         "title": "The History of Byzantium", 
-        "last_polled_time": "2013-12-23T18:17:25Z", 
+        "last_polled_time": "2014-01-18T20:17:30Z", 
         "xml_url": "feed://www.thetvcritic.org/historypodcasts/feed.xml", 
         "link": "http://www.thetvcritic.org/historypodcasts/", 
         "group": 1
@@ -1456,10 +1456,10 @@
     "pk": 93, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-17T03:14:57Z", 
+        "published_time": "2013-12-27T21:10:22Z", 
         "description": "It&#39;s the history of our world from the Big Bang to the Modern Age! Well...eventually at least.", 
         "title": "The Podcast History Of Our World", 
-        "last_polled_time": "2013-12-17T03:17:48Z", 
+        "last_polled_time": "2013-12-27T21:17:26Z", 
         "xml_url": "http://podcasthistoryofourworld.libsyn.com/rss", 
         "link": "http://podcasthistoryofourworld.blogspot.com/", 
         "group": 1
@@ -1482,10 +1482,10 @@
     "pk": 100, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-20T21:00:14Z", 
+        "published_time": "2014-01-17T21:00:13Z", 
         "description": "Weekly reflections on topical issues from a range of contributors including historian Lisa Jardine, novelist Sarah Dunant and writer Alain de Botton.", 
         "title": "A Point of View", 
-        "last_polled_time": "2013-12-20T21:17:05Z", 
+        "last_polled_time": "2014-01-17T21:17:06Z", 
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml", 
         "link": "http://www.bbc.co.uk/programmes/b006qng8", 
         "group": 4
@@ -1498,7 +1498,7 @@
         "published_time": null, 
         "description": "Recent Blog Entries.", 
         "title": "ahernp.com blog", 
-        "last_polled_time": "2013-12-23T18:17:04Z", 
+        "last_polled_time": "2014-01-18T20:17:06Z", 
         "xml_url": "http://ahernp.com/blog/feed", 
         "link": "http://ahernp.com/blog/", 
         "group": null
@@ -1508,10 +1508,10 @@
     "pk": 105, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-10-15T16:16:05Z", 
+        "published_time": "2014-01-13T01:13:45Z", 
         "description": "When Diplomacy Fails is a podcast containing solo informative and dual TALK episodes that cover the build up to, break out of and consequences of various wars throughout history, with a focus on diplomacy and international relations. Please subscribe, rate or review the podcast here, like the Facebook page, visit the blog: wdfpodcast.blogspot.ie and contact Zack directly at his email address: wdfpodcast@hotmail.com  Thanks history friends!", 
         "title": "When Diplomacy Fails Podcast", 
-        "last_polled_time": "2013-10-15T16:17:26Z", 
+        "last_polled_time": "2014-01-13T01:17:31Z", 
         "xml_url": "http://whendiplomacyfails.libsyn.com/rss", 
         "link": "http://whendiplomacyfails.libsyn.com", 
         "group": 1
@@ -1524,7 +1524,7 @@
         "published_time": null, 
         "description": "The British History Podcast discusses the human drama that changed a small island into a towering empire. The podcast is organized chronologically from Britain&#39;s early beginnings to present day.", 
         "title": "The British History Podcast", 
-        "last_polled_time": "2013-12-23T18:17:24Z", 
+        "last_polled_time": "2014-01-18T20:17:28Z", 
         "xml_url": "http://feeds.feedburner.com/TheBritishHistoryPodcast", 
         "link": "http://thebritishhistorypodcast.com", 
         "group": 1
@@ -1534,10 +1534,10 @@
     "pk": 107, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-23T17:39:45Z", 
+        "published_time": "2014-01-18T18:25:19Z", 
         "description": "Reuters.com is your source for breaking news, business, financial and investing news, including personal finance and stocks. Reuters is the leading global provider of news, financial information and technology solutions to the world's media, financial institutions, businesses and individuals.", 
         "title": "Reuters: Most Read Articles", 
-        "last_polled_time": "2013-12-23T18:17:18Z", 
+        "last_polled_time": "2014-01-18T19:17:19Z", 
         "xml_url": "http://feeds.reuters.com/reuters/MostRead?format=xml", 
         "link": "http://www.reuters.com", 
         "group": 3
@@ -1547,10 +1547,10 @@
     "pk": 108, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-23T03:16:28Z", 
+        "published_time": "2014-01-06T06:22:00Z", 
         "description": "Two brothers telling the story of the Italian Unification, 1790-1870. Our story will start with a quick recap of Italian history from Roman times to 1790, then we&#39;ll slow down and examine the complex social, political, and economic themes as we cover the events of the Italian Unification.", 
         "title": "Talking History: The Italian Unification", 
-        "last_polled_time": "2013-12-23T03:17:26Z", 
+        "last_polled_time": "2014-01-06T07:17:16Z", 
         "xml_url": "http://talkinghistorypodcast.libsyn.com/rss", 
         "link": "http://talkinghistorypodcast.com", 
         "group": 1
@@ -1560,10 +1560,10 @@
     "pk": 109, 
     "model": "feedreader.feed", 
     "fields": {
-        "published_time": "2013-12-22T23:03:06Z", 
+        "published_time": "2014-01-12T23:42:54Z", 
         "description": "A weekly podcast series examining great political revolutions. Now: The English Revolution. Next: The American Revolution Visit us at revolutionspodcast.com", 
         "title": "Revolutions", 
-        "last_polled_time": "2013-12-22T23:17:13Z", 
+        "last_polled_time": "2014-01-13T00:17:27Z", 
         "xml_url": "http://revolutionspodcast.libsyn.com/rss/", 
         "link": "http://www.revolutionspodcast.com", 
         "group": 1
@@ -1576,7 +1576,7 @@
         "published_time": null, 
         "description": "Roguelike Radio is a podcast dedicated to roguelikes. We&#39;ll be discussing old favourites like NetHack, Angband, Dungeon Crawl and Adom as well as newer releases and less well known gems.", 
         "title": "Roguelike Radio", 
-        "last_polled_time": "2013-12-23T18:17:19Z", 
+        "last_polled_time": "2014-01-18T20:17:24Z", 
         "xml_url": "http://feeds.feedburner.com/RoguelikeRadio", 
         "link": "http://www.roguelikeradio.com/", 
         "group": 2
@@ -1589,7 +1589,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by TotalBiscuit, The Cynical Brit", 
-        "last_polled_time": "2013-12-23T18:17:33Z", 
+        "last_polled_time": "2014-01-18T20:17:39Z", 
         "xml_url": "http://www.youtube.com/rss/user/TotalHalibut/videos.rss", 
         "link": "http://www.youtube.com/channel/UCy1Ms_5qBTawC-k7PVjHXKQ/videos", 
         "group": 2
@@ -1602,7 +1602,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by Jesse Cox", 
-        "last_polled_time": "2013-12-23T18:17:30Z", 
+        "last_polled_time": "2014-01-18T20:17:35Z", 
         "xml_url": "http://www.youtube.com/rss/user/OMFGcata/videos.rss", 
         "link": "http://www.youtube.com/channel/UCCbfB3cQtkEAiKfdRQnfQvw/videos", 
         "group": 2
@@ -1615,7 +1615,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by PressHeartToContinue", 
-        "last_polled_time": "2013-12-23T18:17:32Z", 
+        "last_polled_time": "2014-01-18T20:17:37Z", 
         "xml_url": "http://www.youtube.com/rss/user/PressHeartToContinue/videos.rss", 
         "link": "http://www.youtube.com/channel/UC_ufxdQbKBrrMOiZ4LzrUyA/videos", 
         "group": 2
@@ -1628,7 +1628,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by Polaris", 
-        "last_polled_time": "2013-12-23T18:17:31Z", 
+        "last_polled_time": "2014-01-18T20:17:37Z", 
         "xml_url": "http://www.youtube.com/rss/user/polaris/videos.rss", 
         "link": "http://www.youtube.com/channel/UCSvQyDawUyfXzrSq4dTVraQ/videos", 
         "group": 2
@@ -1641,7 +1641,7 @@
         "published_time": null, 
         "description": "Where History Podcasters Meet...", 
         "title": "History Podcasters \u00bb Podcast Feed", 
-        "last_polled_time": "2013-12-23T18:17:15Z", 
+        "last_polled_time": "2014-01-18T20:17:14Z", 
         "xml_url": "http://historypodcasters.com/feed/podcast/", 
         "link": "http://historypodcasters.com", 
         "group": 1
@@ -1654,7 +1654,7 @@
         "published_time": null, 
         "description": "", 
         "title": "Uploads by quill18creates", 
-        "last_polled_time": "2013-12-23T18:17:33Z", 
+        "last_polled_time": "2014-01-18T20:17:38Z", 
         "xml_url": "http://www.youtube.com/rss/user/quill18creates/videos.rss", 
         "link": "http://www.youtube.com/channel/UCPXOQq7PWh5OdCwEO60Y8jQ/videos", 
         "group": 5
