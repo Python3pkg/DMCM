@@ -110,14 +110,12 @@ def setup():
                 run('python manage.py dumpdata --indent 4 dmcm sites.site feedreader.options feedreader.group feedreader.feed > ~/initial_data.json')
         get('initial_data.json', os.path.join(PROJECT_PATH, 'initial_data.json'))
 
-    # Recreate database
-    with settings(warn_only=True), lcd(PROJECT_PATH):
-        local('rm dmcm.sqlite3')
+    # Reload database
     manage('syncdb --noinput')
     manage('loaddata auth.json')
     manage('collectstatic --noinput')
     with settings(warn_only=True), lcd(PROJECT_PATH):
-        local('echo "UPDATE feedreader_feed SET published_time = NULL;" | sqlite3 dmcm.sqlite3')
+        local('psql dmcm -c "UPDATE feedreader_feed SET published_time = NULL;"')
 
 
 @task

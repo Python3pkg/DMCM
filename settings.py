@@ -15,8 +15,11 @@ ADMINS = (('Your Name', 'your_email@example.com'),)
 MANAGERS = ADMINS
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_PATH, 'dmcm.sqlite3')
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dmcm',                      
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': ''
     }
 }
 TIME_ZONE = 'Europe/London'
