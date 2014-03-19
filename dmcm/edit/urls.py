@@ -1,8 +1,11 @@
+from __future__ import absolute_import
+
 from django.contrib.auth.decorators import login_required
 from django.conf.urls import patterns, url
 from django.views.generic import ListView
-from dmcm.edit.views import PageCreateView, PageUpdateView
-from dmcm.models import Page
+
+from ..edit.views import PageCreateView, PageUpdateView
+from ..models import Page
 
 urlpatterns = patterns(
     '',

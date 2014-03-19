@@ -1,8 +1,12 @@
+from __future__ import absolute_import
+
 from django.contrib import admin
 from django.db import models
 from django.forms.widgets import TextInput, Textarea
-from dmcm.models import Page
+
 from reversion.admin import VersionAdmin
+
+from .models import Page
 
 
 class PageAdmin(VersionAdmin):

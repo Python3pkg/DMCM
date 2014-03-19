@@ -1,8 +1,12 @@
+from __future__ import absolute_import
+
+import markdown
+
 from django.conf import settings
 from django.contrib.sites.models import Site
 from django.contrib.syndication.views import Feed
+
 from dmcm.models import Page
-import markdown
 
 BLOG_ROOT = Page.objects.get(slug=settings.BLOG_ROOT_SLUG)
 

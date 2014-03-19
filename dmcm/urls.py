@@ -1,8 +1,11 @@
+from __future__ import absolute_import
+
 from django.conf.urls import patterns, url, include
 from django.views.generic import DetailView, ListView
-from dmcm.models import Page
-from dmcm.views import search_pages, show_tool
 from django.conf import settings
+
+from .models import Page
+from .views import search_pages, show_tool
 
 urlpatterns = patterns(
     '',

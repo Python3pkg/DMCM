@@ -3,6 +3,7 @@ from django.contrib.sites.models import Site
 
 site = Site.objects.get_current()
 
+
 def context_processor(request):
     """
     Add values to the context of all templates.

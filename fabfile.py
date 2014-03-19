@@ -1,14 +1,16 @@
 """Fabfile for DMCM."""
 import codecs
 import os
+from datetime import datetime
+
+from decorator import decorator
+
 from fabric.api import (env, local, lcd, cd, run,
                         task, hosts, settings, abort,
                         prefix)
 from fabric.colors import magenta, yellow
 from fabric.contrib.console import confirm
 from fabric.operations import get
-from datetime import datetime
-from decorator import decorator
 
 PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))
 PARENT_PATH = os.path.join(PROJECT_PATH, os.pardir)
@@ -171,7 +173,7 @@ def deploy():
     with cd('~/code/dmcm/project'):
         with prefix('export WORKON_HOME="~/.virtualenvs" && source ~/bin/virtualenvwrapper.sh && workon dmcm'):
             run('python manage.py collectstatic --noinput')
-        run("~/webapps/django/apache2/bin/restart")
+        run('~/webapps/django/apache2/bin/restart')
 
 
 @task

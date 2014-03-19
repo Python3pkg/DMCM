@@ -1,8 +1,12 @@
+from __future__ import absolute_import
+
 from django.conf.urls import patterns, url
 from django.views.generic import DetailView, ListView
-from dmcm.models import Page
-from blog.utils import LatestBlogPostsFeed
 from django.conf import settings
+
+from dmcm.models import Page
+
+from .utils import LatestBlogPostsFeed
 
 BLOG_ROOT = Page.objects.get(slug=settings.BLOG_ROOT_SLUG)
 

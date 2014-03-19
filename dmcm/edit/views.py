@@ -1,7 +1,10 @@
+from __future__ import absolute_import
+
 from django.core.urlresolvers import reverse
 from django.views.generic.edit import CreateView, UpdateView
-from dmcm.models import Page
-from dmcm.edit.forms import PageForm
+
+from ..models import Page
+from ..edit.forms import PageForm
 
 
 class PageCreateView(CreateView):

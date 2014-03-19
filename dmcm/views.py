@@ -1,10 +1,13 @@
+from __future__ import absolute_import
+
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
-from dmcm.forms import StringSearchForm
-from dmcm.models import Page
+
+from .forms import StringSearchForm
+from .models import Page
 
 
 def search_pages(request):

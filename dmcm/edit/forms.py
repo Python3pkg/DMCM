@@ -1,6 +1,9 @@
+from __future__ import absolute_import
+
 from django import forms
 from django.forms.util import ErrorList
-from dmcm.models import Page
+
+from ..models import Page
 
 
 class TextErrorList(ErrorList):
