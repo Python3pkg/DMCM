@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block nav_path %}
-	<a href="{% url 'dmcm_root' %}">{{ site.domain }}</a> &rsaquo; 
+	<a href="{% url 'dmcm:root' %}">{{ site.domain }}</a> &rsaquo; 
 	Edit
 {% endblock %}
 
@@ -21,7 +21,7 @@
         <h1>Pages</h1>
     </div>
     <div style="width:45%; float:right;">
-        <a id="add_page" href="{% url 'dmcm_edit_add_page' %}">Add Page</a>
+        <a id="add_page" href="{% url 'dmcm:edit_add_page' %}">Add Page</a>
     </div>
     <div style="clear:both"></div>
     <table>
@@ -43,8 +43,8 @@
 
 {% block footer %}
     <p>
-    	<a href="{% url 'dmcm_root' %}" title="Return to Site">{{ site.domain }}</a>;
-    	<a href="{% url 'dmcm_root' %}/monitoring/dashboard" title="System Status">Dashboard</a>;
+    	<a href="{% url 'dmcm:root' %}" title="Return to Site">{{ site.domain }}</a>;
+    	<a href="{% url 'dmcm:root' %}/monitoring/dashboard" title="System Status">Dashboard</a>;
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
         <a href="/admin/" title="Django Admin">Admin</a>;
         <a href="/accounts/logout">Logout</a>.

@@ -958,13 +958,5 @@
         "published": "2013-03-02", 
         "slug": "django-15"
     }
-},
-{
-    "pk": 1, 
-    "model": "sites.site", 
-    "fields": {
-        "domain": "ahernp.com", 
-        "name": "ahernp.com"
-    }
 }
 ]

@@ -4,6 +4,7 @@ Markdown template filter.
 Requires the Python-markdown library from
       http://www.freewisdom.org/projects/python-markdown
 """
+from __future__ import absolute_import
 
 from django import template
 from django.conf import settings

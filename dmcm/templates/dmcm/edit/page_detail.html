@@ -33,8 +33,8 @@
 {% endblock %}
 
 {% block nav_path %}
-	<a href="{% url 'dmcm_root' %}">{{ site.domain }}</a> &rsaquo; 
-	<a href="{% url 'dmcm_edit' %}">Edit</a> &rsaquo; 
+	<a href="{% url 'dmcm:root' %}">{{ site.domain }}</a> &rsaquo; 
+	<a href="{% url 'dmcm:edit:edit' %}">Edit</a> &rsaquo; 
 	{% if page %}{{ page.title }}{% else %}Add Page{% endif %} 
 {% endblock %}
 
@@ -46,11 +46,11 @@
 {% block footer %}
     <p>
 		{% if page.title %}
-			<a href="{% url 'dmcm_page_detail'  page.slug %}" title="Return to Site">Site</a>;
+			<a href="{% url 'dmcm:page_detail'  page.slug %}" title="Return to Site">Site</a>;
 		{% else %}
-			<a href="{% url 'dmcm_root' %}" title="Return to Site">{{ site.domain }}</a>;
+			<a href="{% url 'dmcm:root' %}" title="Return to Site">{{ site.domain }}</a>;
 		{% endif %} 
-    	<a href="{% url 'dmcm_root' %}monitoring/dashboard" title="System Status">Dashboard</a>;
+    	<a href="{% url 'dmcm:root' %}monitoring/dashboard" title="System Status">Dashboard</a>;
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
         <a href="/admin/" title="Django Admin">Admin</a>;
         <a href="/accounts/logout">Logout</a>.

@@ -1,14 +1,28 @@
 from __future__ import absolute_import
 
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
+from django.views.generic import DetailView, ListView
 
 from .forms import StringSearchForm
 from .models import Page
 
+
+class PageListView(ListView):
+    model = Page
+
+
+class PageDetailView(DetailView):
+    model = Page
+
+
+class RootPageDetailView(PageDetailView):
+    def get_object(self, queryset=None):
+        return Page.objects.get(slug=settings.SITE_ROOT_SLUG)
 
 def search_pages(request):
     """
