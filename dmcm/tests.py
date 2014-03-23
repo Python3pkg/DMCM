@@ -10,7 +10,7 @@ TEST_URLS = [
     ('/', 200, 'Personal Website of Paul Ahern'),
     ('/site_map/', 200, 'Site Map'),
     ('/profile/', 200, 'Paul Ahern'),
-    ('/search_pages/?search_string=fred', 200, 'Search Results'),
+    ('/search/?search_string=fred', 200, 'Search Results'),
     ('/dmcm/edit/ahernp-com/', 200, ''),
 ]
 
