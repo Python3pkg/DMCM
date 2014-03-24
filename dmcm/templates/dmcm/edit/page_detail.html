@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
 {% block title %}
 	{% if page %}
 		Update Page {{ page.title }}
@@ -17,9 +19,9 @@
         .field_required {font-weight: bold;}
         .non_field_error {text-align: center;}
     </style>
-    <link rel="stylesheet" href="{{ STATIC_URL }}chosen/chosen.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="{{ STATIC_URL }}chosen/chosen.jquery.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.slugify.js"></script>
+    <link rel="stylesheet" href="{% static 'chosen/chosen.css' %}" type="text/css" media="screen" />
+    <script type="text/javascript" src="{% static 'chosen/chosen.jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.slugify.js' %}"></script>
     <script type="text/javascript">
         $(function() {
         	$('input:text').addClass('ui-corner-all');
