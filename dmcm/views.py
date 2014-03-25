@@ -71,13 +71,3 @@ class Search(TemplateView):
             context['title_matches'] = title_matches
             context['content_matches'] = content_matches
         return self.render_to_response(context)
-
-
-@login_required
-def edit_page(request, slug=""):
-    """
-    Redirect edit requests to Admin.
-    """
-    page = get_object_or_404(Page, slug=slug)
-    return redirect(reverse('admin:dmcm_page_change', args=(page.id,)))
-
