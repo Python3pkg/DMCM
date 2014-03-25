@@ -26,7 +26,7 @@
 
 {% block content %}
     {% if object.published %}<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>{% endif %}
-    {{ object.content|markdown:"extra,tables,toc" }}
+    {{ object.content|markdown }}
     <div id="source_body" style="display: none">
         <h1>Page Source</h1>
         <pre>{{object.content}}</pre>
