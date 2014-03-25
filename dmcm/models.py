@@ -38,12 +38,12 @@ class Page(models.Model):
                 path.insert(0, {'title': parent.title,
                                 'address': '/' + parent.slug + '/'})
                 parent = parent.parent
-            path.insert(0, {'title': parent.title, 'address': '/'})
+            path.insert(0, {'title': parent.title, 'address':  reverse('dmcm:root')})
         return path
-    
+
     def get_absolute_url(self):
-        return reverse('dmcm_page_detail', kwargs={'slug': self.slug})
-    
+        return reverse('dmcm:page_detail', kwargs={'slug': self.slug})
+
     class Meta:
         ordering = ['title']
 

@@ -9,24 +9,35 @@ in Markdown.
 Quick start
 -----------
 
-1. Add "dmcm" to your INSTALLED\_APPS setting like this::
+1. Add "dmcm" to your INSTALLED\_APPS settings.
 
-     INSTALLED\_APPS = ( ... 'feedreader', )
+2. The DMCM pages are orgaised in a tree structure. A default root page
+   is called "home" is included. Add "SITE_ROOT_SLUG" to settings::
 
-2. Include the feedreader URLconf in your project urls.py like this::
+     SITE_ROOT_SLUG = 'home'  # Homepage
 
-     url(r'^dmcm/', include('dmcm.urls')),
+3. Include the feedreader URLconf in your project urls.py like this::
 
-3. Run ``python manage.py syncdb`` to create the dmcm models.
+     url(r'^dmcm/', include('dmcm.urls', namespace='dmcm')),
 
-4. Run ``python manage.py collectstatic`` to copy static files to your
+4. Run ``python manage.py syncdb`` to create the dmcm models.
+
+5. Run ``python manage.py collectstatic`` to copy static files to your
    project's static root.
 
+6. Visit ``/dmcm/`` on your site to see a default home page in DMCM.
+
+   Visit ``/dmcm/dmcm/edit/`` to see a list of all DMCM pages and to add more.
+
+   Editing in DMCM requires that Django login be enabled.
 
 Dependencies
 ------------
 
 -  `Django 1.6.2 <https://pypi.python.org/pypi/Django/1.6.2>`__
--  `feedparser <https://pypi.python.org/pypi/feedparser>`__
+-  `django-braces 1.4.0 <https://pypi.python.org/pypi/django-braces/1.4.0>`__
+-  `django-reversion 1.8.0` <https://pypi.python.org/pypi/django-reversion/1.8.0>`__
+-  `feedparser 5.1.3 <https://pypi.python.org/pypi/feedparser/5.1.3>`__
+-  `Markdown 2.4 <https://pypi.python.org/pypi/Markdown/2.4>`__
 -  `pytz <https://pypi.python.org/pypi/pytz/2013.9>`__
 

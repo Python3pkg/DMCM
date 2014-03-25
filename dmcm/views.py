@@ -11,8 +11,6 @@ from django.views.generic import DetailView, ListView, TemplateView
 from .forms import StringSearchForm
 from .models import Page
 
-TOOL_NAMES = ['cardgen', 'deduplicate', 'compare', 'match']
-
 
 class PageListView(ListView):
     model = Page
@@ -73,18 +71,6 @@ class Search(TemplateView):
             context['title_matches'] = title_matches
             context['content_matches'] = content_matches
         return self.render_to_response(context)
-
-
-def show_tool(request, tool_name=""):
-    """
-    Render template containing requested (javascript) tool.
-    """
-    context = {}
-    if tool_name in TOOL_NAMES:
-        template = 'dmcm/tool_%s.html' % (tool_name)
-        return render_to_response(template, context, RequestContext(request))
-    else:
-        raise Http404
 
 
 @login_required

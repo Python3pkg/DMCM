@@ -2,7 +2,7 @@ from __future__ import absolute_import
 
 from django.conf.urls import patterns, url, include
 
-from .views import (Search, show_tool, PageDetailView,
+from .views import (Search, PageDetailView,
                     PageListView, RootPageDetailView)
 
 urlpatterns = patterns('',
@@ -15,12 +15,6 @@ urlpatterns = patterns('',
     url(regex=r'^site_map/$',
         view=PageListView.as_view(),
         name='site_map'),
-    url(regex=r'^tools/(?P<tool_name>[-\w]+).html$',
-        view=show_tool,
-        name='show_tool_html'),
-    url(regex=r'^tools/(?P<tool_name>[-\w]+)/$',
-        view=show_tool,
-        name='show_tool'),
     url(regex=r'^dmcm/edit/',
         view=include('dmcm.edit.urls', namespace='edit')),
     url(regex=r'^(?P<slug>[-\w]+).html$',

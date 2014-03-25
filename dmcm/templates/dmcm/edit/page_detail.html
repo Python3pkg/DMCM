@@ -52,7 +52,6 @@
 		{% else %}
 			<a href="{% url 'dmcm:root' %}" title="Return to Site">{{ site.domain }}</a>;
 		{% endif %} 
-    	<a href="{% url 'monitoring:dashboard' %}" title="System Status">Dashboard</a>;
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
         <a href="{% url 'admin:index' %}" title="Django Admin">Admin</a>;
         <a href="{% url 'logout' %}">Logout</a>.
