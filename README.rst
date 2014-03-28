@@ -36,6 +36,6 @@ Dependencies
 
 -  `Django 1.6.2 <https://pypi.python.org/pypi/Django/1.6.2>`__
 -  `django-braces 1.4.0 <https://pypi.python.org/pypi/django-braces/1.4.0>`__
--  `django-reversion 1.8.0` <https://pypi.python.org/pypi/django-reversion/1.8.0>`__
+-  `django-reversion 1.8.0 `<https://pypi.python.org/pypi/django-reversion/1.8.0>`__
 -  `Markdown 2.4 <https://pypi.python.org/pypi/Markdown/2.4>`__
 

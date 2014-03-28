@@ -5,7 +5,7 @@ long_description = open(os.path.join(os.path.dirname(__file__), 'README.rst')).r
 
 setup(
     name = 'django-dmcm',
-    version = '0.5.3',
+    version = '0.5.4',
     packages = ['dmcm'],
     include_package_data = True,
     license = 'BSD License',
