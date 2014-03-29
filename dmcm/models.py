@@ -2,6 +2,12 @@
 
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils.encoding import force_text
+from django.utils.safestring import mark_safe
+
+import markdown
+
+MARKDOWN_EXTENSIONS = ['extra', 'tables', 'toc']
 
 
 class Page(models.Model):
@@ -29,6 +35,15 @@ class Page(models.Model):
     updated = models.DateTimeField(verbose_name='Time Updated', auto_now=True)
     content = models.TextField(verbose_name='Page body',
                                help_text='Use Markdown syntax.')
+
+    def content_as_html(self):
+        """
+        Runs Markdown over a given value, using various
+        extensions python-markdown supports.
+        """
+        return mark_safe(markdown.markdown(force_text(self.content),
+                                           MARKDOWN_EXTENSIONS,
+                                           safe_mode=False))
 
     def navigation_path(self):
         path = []

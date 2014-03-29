@@ -22,11 +22,9 @@
     {{ object.title }}
 {% endblock %}
 
-{% load dmcm_markup %}
-
 {% block content %}
     {% if object.published %}<h2 style="text-align:right;">{{ page.published|date:"d F Y" }}</h2>{% endif %}
-    {{ object.content|markdown }}
+    {{ object.content_as_html }}
     <div id="source_body" style="display: none">
         <h1>Page Source</h1>
         <pre>{{object.content}}</pre>
