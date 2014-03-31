@@ -1,11 +1,14 @@
 import os
 from setuptools import setup
 
+import dmcm
+
+version = dmcm.__version__
 long_description = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 setup(
     name = 'django-dmcm',
-    version = '0.5.4',
+    version = version,
     packages = ['dmcm'],
     include_package_data = True,
     license = 'BSD License',

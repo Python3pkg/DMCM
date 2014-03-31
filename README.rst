@@ -9,10 +9,10 @@ in Markdown.
 Quick start
 -----------
 
-1. Add "dmcm" to your INSTALLED\_APPS settings.
+1. Add "dmcm" to your ``INSTALLED_APPS`` settings.
 
 2. The DMCM pages are orgaised in a tree structure. A default root page
-   is called "home" is included. Add "SITE_ROOT_SLUG" to settings::
+   called "home" is included. Add ``SITE_ROOT_SLUG`` to ``settings``::
 
      SITE_ROOT_SLUG = 'home'  # Homepage
 
