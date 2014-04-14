@@ -28,7 +28,7 @@
         	$('textarea').addClass('ui-widget ui-corner-all');
             $('input:submit').button();
             $('#id_slug').slugify('#id_title');
-            $('#id_published').datepicker();
+            $('#id_published').datepicker({ dateFormat: "dd/mm/yy" });
             $('#id_parent').chosen();
         });
     </script>
