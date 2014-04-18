@@ -52,14 +52,14 @@ class Search(TemplateView):
                 # Display each line containing matches only once.
                 matching_lines = []
                 match_pos = content_lower.find(search_string_lower)
-                while match_pos > 0:
+                while match_pos >= 0:
                     prev_newline = content_lower.rfind('\n', 0, match_pos)
                     next_newline = content_lower.find('\n', match_pos)
                     if prev_newline > 0 and next_newline > 0:
                         matching_line = page.content[prev_newline:next_newline]
                     elif prev_newline < 0 and next_newline > 0:
                         matching_line = page.content[0:next_newline]
-                    elif  prev_newline > 0 and next_newline < 0:
+                    elif prev_newline > 0 and next_newline < 0:
                         matching_line = page.content[prev_newline:]
                     else:
                         matching_line = page.content
