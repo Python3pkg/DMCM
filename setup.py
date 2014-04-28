@@ -33,5 +33,6 @@ setup(
         'django-braces==1.4.0',
         'django-reversion==1.8.0',
         'Markdown==2.4',
+        'factory-boy==2.3.1',
     ],
 )

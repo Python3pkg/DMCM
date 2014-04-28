@@ -22,7 +22,7 @@ class PageDetailView(DetailView):
 
 class RootPageDetailView(PageDetailView):
     def get_object(self, queryset=None):
-        return Page.objects.get(slug=settings.SITE_ROOT_SLUG)
+        return Page.root.get_or_create_root_page()
 
 
 class Search(TemplateView):
