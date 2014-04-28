@@ -3,10 +3,15 @@
 History
 -------
 
+1.0.2 (2014-04-28)
+++++++++++++++++++
+
+* Replace fixture test data with factories.
+
 1.0.1 (2014-04-14)
 ++++++++++++++++++
 
-* Correct date format in datepicker
+* Correct date format in datepicker.
 
 1.0.0 (2014-03-30)
 ++++++++++++++++++
