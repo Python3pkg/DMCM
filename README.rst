@@ -12,7 +12,7 @@ Quick start
 1. Add "dmcm" to your ``INSTALLED_APPS`` settings.
 
 2. The DMCM pages are orgaised in a tree structure. A default root page
-   called "home" is included. Add ``SITE_ROOT_SLUG`` to ``settings``::
+   called "Root" will be created. Add ``SITE_ROOT_SLUG`` to ``settings``::
 
      SITE_ROOT_SLUG = 'home'  # Homepage
 
@@ -37,5 +37,6 @@ Dependencies
 -  `Django 1.6.2 <https://pypi.python.org/pypi/Django/1.6.2>`__
 -  `django-braces 1.4.0 <https://pypi.python.org/pypi/django-braces/1.4.0>`__
 -  `django-reversion 1.8.0 <https://pypi.python.org/pypi/django-reversion/1.8.0>`__
+-  `factory_boy 2.3.1 <https://pypi.python.org/pypi/factory_boy/2.3.1>`__
 -  `Markdown 2.4 <https://pypi.python.org/pypi/Markdown/2.4>`__
 
