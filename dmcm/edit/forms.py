@@ -24,3 +24,4 @@ class PageForm(BaseModelForm):
     """Form for Page Model"""
     class Meta:
         model = Page
+        fields = '__all__'
