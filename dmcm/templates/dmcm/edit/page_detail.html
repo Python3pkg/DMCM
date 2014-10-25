@@ -54,7 +54,11 @@
 			<a href="{% url 'dmcm:root' %}" title="Return to Site">{{ site.domain }}</a>;
 		{% endif %} 
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
-        <a href="{% url 'admin:dmcm_page_change' page.id %}" title="Django Admin">Admin</a>;
+        {% if page %}
+            <a href="{% url 'admin:dmcm_page_change' page.id %}" title="Django Admin">Admin</a>;
+        {% else %}
+            <a href="{% url 'admin:index' %}" title="Django Admin">Admin</a>;
+        {% endif %}
         <a href="{% url 'logout' %}">Logout</a>.
     </p>
 {% endblock %}
