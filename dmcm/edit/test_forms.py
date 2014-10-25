@@ -24,7 +24,8 @@ class ErrorFormTest(TestCase):
         self.client.login(username='john', password='password')
 
         response = self.client.post('/dmcm/edit/page/add/',
-                                    {})
+                                    {},
+                                    secure=True)
 
         self.assertEqual(response.status_code,
                          200,

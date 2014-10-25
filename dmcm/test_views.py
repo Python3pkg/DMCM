@@ -47,7 +47,8 @@ class PageViewTest(TestCase):
                                      'slug': 'test-page',
                                      'parent': self.root_page.pk,
                                      'content': 'Test Content',
-                                     })
+                                     },
+                                    secure=True)
         self.assertEqual(response.status_code,
                          302,
                          'Unexpected status code on add, got %s expected 302' %
@@ -62,7 +63,8 @@ class PageViewTest(TestCase):
     def test_search_view(self):
         """Use the search view"""
 
-        response = self.client.get('/search/?search_string=Test+Content')
+        response = self.client.get('/search/?search_string=Test+Content', 
+                                   secure=True)
 
         self.assertEqual(response.status_code,
                          200,

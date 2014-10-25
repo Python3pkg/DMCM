@@ -41,7 +41,8 @@ class PageCreateUpdateTest(TestCase):
                                      'slug': 'test-page',
                                      'parent': self.root_page.pk,
                                      'content': 'Test Content',
-                                     })
+                                    },
+                                    secure=True)
         self.assertEqual(response.status_code,
                          302,
                          'Unexpected status code on add, got %s expected 302' %
@@ -59,7 +60,8 @@ class PageCreateUpdateTest(TestCase):
                                      'slug': 'test-page',
                                      'parent': self.root_page.pk,
                                      'content': '# Test Content Updated',
-                                     })
+                                    },
+                                    secure=True)
 
         self.assertEqual(response.status_code,
                          302,
