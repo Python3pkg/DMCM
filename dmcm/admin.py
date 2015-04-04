@@ -4,12 +4,10 @@ from django.contrib import admin
 from django.db import models
 from django.forms.widgets import TextInput, Textarea
 
-from reversion.admin import VersionAdmin
-
 from .models import Page
 
 
-class PageAdmin(VersionAdmin):
+class PageAdmin(admin.ModelAdmin):
     search_fields = ['title']
     list_display = ['title', 'parent', 'updated']
     list_editable = ['parent']

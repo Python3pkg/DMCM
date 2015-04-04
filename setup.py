@@ -29,10 +29,9 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
     install_requires=[
-        'Django>=1.7',
+        'Django==1.8',
         'django-braces==1.4.0',
-        'django-reversion==1.8.4',
-        'Markdown==2.4',
-        'factory-boy==2.3.1',
+        'Markdown==2.6.1',
+        'factory-boy==2.5.1',
     ],
 )

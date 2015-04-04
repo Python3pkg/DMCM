@@ -6,7 +6,9 @@ from .models import Page
 import factory
 
 class PageFactory(factory.DjangoModelFactory):
-    FACTORY_FOR = Page
+    class Meta:
+        model = Page
+        abstract = False
 
     title = factory.Sequence(lambda n: 'Test Page {0}'.format(n))
     slug = title

@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
 from django import forms
-from django.forms.util import ErrorList
+from django.forms.utils import ErrorList
 
 from ..models import Page
 
