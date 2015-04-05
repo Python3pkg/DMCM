@@ -21,12 +21,13 @@ class PageAdmin(admin.ModelAdmin):
                        ('title', 'parent',),
                        ('slug',),
                        ('published', 'updated'),
-                       )
+            )
         }),
     )
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size': 60})},
         models.TextField: {'widget': Textarea(attrs={'rows': 25, 'cols': 110})},
     }
+
 
 admin.site.register(Page, PageAdmin)

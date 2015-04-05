@@ -12,6 +12,7 @@ class PageTest(TestCase):
     """
     Create and access Page.
     """
+
     def setUp(self):
         root_page = PageFactory.create()
         root_page.slug = settings.SITE_ROOT_SLUG

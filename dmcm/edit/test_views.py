@@ -6,7 +6,6 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.test.client import Client
-from django.views.decorators.csrf import csrf_exempt
 
 from ..factories import PageFactory
 from ..models import Page
@@ -15,7 +14,6 @@ from ..models import Page
 class PageCreateUpdateTest(TestCase):
     """Create and Update Page."""
 
-#    @csrf_exempt
     def setUp(self):
         """Create test data and Login Test Client"""
         root_page = PageFactory.create()
@@ -46,13 +44,13 @@ class PageCreateUpdateTest(TestCase):
         self.assertEqual(response.status_code,
                          302,
                          'Unexpected status code on add, got %s expected 302' %
-                             (response.status_code))
+                         (response.status_code))
 
         test_page = Page.objects.get(slug='test-page')
         self.assertEqual(test_page.title,
                          'Test Page',
                          'Unexpected Page title after add, got "%s" expected "Test Page"' %
-                             (response.status_code))
+                         (response.status_code))
 
         # Update the test Page
         response = self.client.post('/dmcm/edit/test-page/',
@@ -66,4 +64,4 @@ class PageCreateUpdateTest(TestCase):
         self.assertEqual(response.status_code,
                          302,
                          'Unexpected status code on add, got %s expected 302' %
-                             (response.status_code))
+                         (response.status_code))

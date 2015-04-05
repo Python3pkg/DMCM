@@ -13,7 +13,6 @@ from ..edit.forms import PageForm
 
 
 class LogoutUrlMixin(ContextMixin):
-
     def get_context_data(self, **kwargs):
         if 'logout_url' not in kwargs:
             kwargs['logout_url'] = settings.LOGOUT_URL

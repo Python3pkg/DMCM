@@ -23,6 +23,7 @@ class WorkingURLsTest(TestCase):
     """
     Visit various URLs on the site to ensure they are working.
     """
+
     def setUp(self):
         """Create test data and Login Test Client"""
         root_page = PageFactory.create()
@@ -49,7 +50,7 @@ class WorkingURLsTest(TestCase):
             self.assertEqual(response.status_code,
                              status_code,
                              'URL %s: Unexpected status code, got %s expected %s' %
-                                (url, response.status_code, status_code))
+                             (url, response.status_code, status_code))
             if response.status_code == 200:
                 self.assertContains(response,
                                     expected_text,

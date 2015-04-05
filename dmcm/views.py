@@ -1,11 +1,5 @@
 from __future__ import absolute_import
 
-from django.conf import settings
-from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse
-from django.http import Http404
-from django.shortcuts import render_to_response, get_object_or_404, redirect
-from django.template import RequestContext
 from django.views.generic import DetailView, ListView, TemplateView
 
 from .forms import StringSearchForm
@@ -29,7 +23,7 @@ class Search(TemplateView):
     """
     Simple string search.
 
-    Display entries with titles and/or content which 
+    Display entries with titles and/or content which
     contain the string searched for.
     """
     template_name = 'dmcm/search_results.html'

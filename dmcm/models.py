@@ -18,9 +18,9 @@ class RootPageManager(models.Manager):
             root_page = Page.objects.get(slug=settings.SITE_ROOT_SLUG)
         except Page.DoesNotExist:
             root_page = Page.objects.create(title='Root',
-                                           slug=settings.SITE_ROOT_SLUG,
-                                           content='Default Root Page')
-            root_page.parent= root_page
+                                            slug=settings.SITE_ROOT_SLUG,
+                                            content='Default Root Page')
+            root_page.parent = root_page
             root_page.save()
         return root_page
 
@@ -45,7 +45,7 @@ class Page(models.Model):
     """
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
-    parent = models.ForeignKey('self',null=True)
+    parent = models.ForeignKey('self', null=True)
     published = models.DateField(null=True, blank=True)
     updated = models.DateTimeField(verbose_name='Time Updated', auto_now=True)
     content = models.TextField(verbose_name='Page body',
@@ -80,7 +80,7 @@ class Page(models.Model):
                 path.insert(0, {'title': parent.title,
                                 'address': '/' + parent.slug + '/'})
                 parent = parent.parent
-            path.insert(0, {'title': parent.title, 'address':  reverse('dmcm:root')})
+            path.insert(0, {'title': parent.title, 'address': reverse('dmcm:root')})
         return path
 
     def save(self, *args, **kwargs):

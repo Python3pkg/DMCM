@@ -12,4 +12,4 @@ def context_processor(request):
             'SITE_ROOT_SLUG': settings.SITE_ROOT_SLUG,
             'BLOG_ROOT_SLUG': settings.BLOG_ROOT_SLUG,
             'site': site
-            }
+    }

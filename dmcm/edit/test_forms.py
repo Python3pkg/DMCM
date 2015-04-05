@@ -24,13 +24,13 @@ class ErrorFormTest(TestCase):
         self.client.login(username='john', password='password')
 
         response = self.client.post('/dmcm/edit/page/add/',
-                                    {},
+            {},
                                     secure=True)
 
         self.assertEqual(response.status_code,
                          200,
                          'Unexpected status code on add, got %s expected 200' %
-                             (response.status_code))
+                         (response.status_code))
 
         # Check error message is present in response
         self.assertContains(response,

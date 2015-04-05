@@ -5,6 +5,7 @@ from .models import Page
 
 import factory
 
+
 class PageFactory(factory.DjangoModelFactory):
     class Meta:
         model = Page
