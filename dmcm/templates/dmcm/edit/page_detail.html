@@ -27,18 +27,16 @@
         $(function() {
         	$('input:text').addClass('ui-corner-all');
         	$('textarea').addClass('ui-widget ui-corner-all');
-            $('input:submit').button();
             $('#id_slug').slugify('#id_title');
-            $('#id_published').datepicker({ dateFormat: "dd/mm/yy" });
             $('#id_parent').chosen();
         });
     </script>
 {% endblock %}
 
 {% block nav_path %}
-	<a href="{% url 'dmcm:root' %}">{{ site.domain }}</a> &rsaquo; 
-	<a href="{% url 'dmcm:edit:edit' %}">Edit</a> &rsaquo; 
-	{% if page %}{{ page.title }}{% else %}Add Page{% endif %} 
+	<a href="{% url 'dmcm:root' %}">{{ site.domain }}</a> &rsaquo;
+	<a href="{% url 'dmcm:edit:edit' %}">Edit</a> &rsaquo;
+	{% if page %}{{ page.title }}{% else %}Add Page{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -52,7 +50,7 @@
 			<a href="{% url 'dmcm:page_detail'  page.slug %}" title="Go to this page on Site">Site</a>;
 		{% else %}
 			<a href="{% url 'dmcm:root' %}" title="Return to Site">{{ site.domain }}</a>;
-		{% endif %} 
+		{% endif %}
         <a href="/markdown/" title="Markdown Markup">Markdown</a>;
         {% if page %}
             <a href="{% url 'admin:dmcm_page_change' page.id %}" title="Django Admin">Admin</a>;

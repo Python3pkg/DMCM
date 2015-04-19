@@ -46,7 +46,7 @@ class Page(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
     parent = models.ForeignKey('self', null=True)
-    published = models.DateField(null=True, blank=True)
+    published = models.DateField(null=True, blank=True, help_text='dd/mm/yyyy')
     updated = models.DateTimeField(verbose_name='Time Updated', auto_now=True)
     content = models.TextField(verbose_name='Page body',
                                help_text='Use Markdown syntax.')

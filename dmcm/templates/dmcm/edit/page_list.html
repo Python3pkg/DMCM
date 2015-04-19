@@ -6,13 +6,12 @@
     <script type="text/javascript">
         $(function() {
             $('table').dataTable({'bPaginate': false, 'aaSorting': []});
-            $('#add_page').button();
         });
     </script>
 {% endblock %}
 
 {% block nav_path %}
-	<a href="{% url 'dmcm:root' %}">{{ site.domain }}</a> &rsaquo; 
+	<a href="{% url 'dmcm:root' %}">{{ site.domain }}</a> &rsaquo;
 	Edit
 {% endblock %}
 
