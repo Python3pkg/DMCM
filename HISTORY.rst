@@ -3,6 +3,11 @@
 History
 -------
 
+1.1.2 (2015-05-24)
+++++++++++++++++++
+
+* Added DataTables plugins to detect and sort file-size data.
+
 1.1.1 (2015-04-19)
 ++++++++++++++++++
 
