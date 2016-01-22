@@ -1,7 +1,7 @@
 Django Markdown Content Manager
 ===============================
 
-DMCM is a Django 1.8 app which implements a content management
+DMCM is a Django 1.9 app which implements a content management
 system where every item is a page and all the content is written
 in Markdown.
 
@@ -34,8 +34,8 @@ Quick start
 Dependencies
 ------------
 
--  `Django 1.8 <https://pypi.python.org/pypi/Django/1.8>`__
--  `django-braces 1.4.0 <https://pypi.python.org/pypi/django-braces/1.4.0>`__
--  `factory_boy 2.5.1 <https://pypi.python.org/pypi/factory_boy/2.5.1>`__
--  `Markdown 2.6.1 <https://pypi.python.org/pypi/Markdown/2.6.1>`__
+-  `Django 1.9.1 <https://pypi.python.org/pypi/Django/1.9.1>`__
+-  `django-braces 1.8.1 <https://pypi.python.org/pypi/django-braces/1.8.1>`__
+-  `factory_boy 2.6.0 <https://pypi.python.org/pypi/factory_boy/2.6.0>`__
+-  `Markdown 2.6.5 <https://pypi.python.org/pypi/Markdown/2.6.5>`__
 
