@@ -1,5 +1,5 @@
 """Factories used to create data for testing."""
-from __future__ import absolute_import
+
 
 from .models import Page
 

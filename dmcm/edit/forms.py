@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 
 from django import forms
 from django.forms.utils import ErrorList
@@ -10,8 +10,8 @@ class TextErrorList(ErrorList):
     """Format list of errors as text with breaks"""
 
     def as_textlist(self):
-        if not self: return u''
-        return u'%s' % '<br>'.join([u'%s' % e for e in self])
+        if not self: return ''
+        return '%s' % '<br>'.join(['%s' % e for e in self])
 
 
 class BaseModelForm(forms.ModelForm):

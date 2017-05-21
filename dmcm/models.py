@@ -84,5 +84,5 @@ class Page(models.Model):
         return path
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(unicode(self.slug))
+        self.slug = slugify(str(self.slug))
         super(Page, self).save(*args, **kwargs)
